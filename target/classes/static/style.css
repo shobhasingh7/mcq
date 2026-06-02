@@ -73,6 +73,40 @@ input[type='radio'] {
   border-color: #9ca3af;
 }
 
+.submit-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.submit-button:hover {
+  background: #1d4ed8;
+}
+
+.question-result {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  display: none;
+  font-weight: 600;
+}
+
+.question-result.success {
+  display: block;
+  background: #ecfdf5;
+  color: var(--success);
+}
+
+.question-result.error {
+  display: block;
+  background: #fff1f2;
+  color: var(--danger);
+}
+
 #final-submit-section {
   margin-top: 1.5rem;
   display: flex;

@@ -22,7 +22,9 @@ function renderQuestion(question) {
     <div class="choices"></div>
     <div class="button-group">
       <button class="clear-button">Clear</button>
+      <button class="submit-button">Submit</button>
     </div>
+    <div class="question-result" aria-live="polite"></div>
   `;
 
   const choicesElement = section.querySelector('.choices');
@@ -39,6 +41,9 @@ function renderQuestion(question) {
   const clearButton = section.querySelector('.clear-button');
   clearButton.addEventListener('click', () => clearAnswer(question.id, section));
 
+  const submitBtn = section.querySelector('.submit-button');
+  submitBtn.addEventListener('click', () => submitSingleAnswer(question.id, section));
+
   const radios = section.querySelectorAll('input[type="radio"]');
   radios.forEach(radio => {
     radio.addEventListener('change', () => {
@@ -53,8 +58,51 @@ function clearAnswer(questionId, section) {
   const radios = section.querySelectorAll('input[type="radio"]');
   radios.forEach(radio => radio.checked = false);
   delete answers[questionId];
-  resultContainer.textContent = '';
-  resultContainer.className = '';
+  const qres = section.querySelector('.question-result');
+  if (qres) {
+    qres.textContent = '';
+    qres.className = 'question-result';
+  }
+}
+
+function submitSingleAnswer(questionId, section) {
+  const selected = section.querySelector('input[type="radio"]:checked');
+  const qres = section.querySelector('.question-result');
+  if (!selected) {
+    if (qres) {
+      qres.textContent = 'Please select an answer before submitting.';
+      qres.className = 'question-result error';
+    }
+    return;
+  }
+
+  const payload = {
+    questionId,
+    selectedIndex: Number(selected.value)
+  };
+
+  fetch('/api/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (qres) {
+        qres.textContent = data.feedback;
+        qres.className = data.correct ? 'question-result success' : 'question-result error';
+      }
+      // keep the selected answer stored
+      answers[questionId] = Number(selected.value);
+    })
+    .catch(() => {
+      if (qres) {
+        qres.textContent = 'Error submitting answer. Please try again.';
+        qres.className = 'question-result error';
+      }
+    });
 }
 
 function renderFinalSubmitButton() {
