@@ -1,0 +1,4 @@
+id,text,choices,correctIndex
+1,"Which of the following is a Java keyword?","class|define|function|variable",0
+2,"What does HTML stand for?","HyperText Markup Language|HighText Machine Language|Hyperloop Machine Language|Hyperlink Text Multi Language",0
+3,"Which HTTP method is used to retrieve data?","POST|PUT|DELETE|GET",3

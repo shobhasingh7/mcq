@@ -1,0 +1,142 @@
+:root {
+  --bg: #f6f9fb;
+  --surface: #ffffff;
+  --text: #111827;
+  --primary: #2563eb;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+  --border: #d1d5db;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.question-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.question-text {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.choice-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  margin-right: 0.75rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.clear-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.clear-button:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+#final-submit-section {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.final-submit-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.final-submit-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+#result {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 12px;
+  display: none;
+}
+
+#result.success {
+  display: block;
+  background: #dcfce7;
+  color: var(--success);
+}
+
+#result.warning {
+  display: block;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+#result.error {
+  display: block;
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.score-card {
+  text-align: center;
+}
+
+.score-message {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.score-details {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
