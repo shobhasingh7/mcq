@@ -107,11 +107,47 @@ input[type='radio'] {
   color: var(--danger);
 }
 
-#final-submit-section {
-  margin-top: 1.5rem;
+#pagination-section {
+  margin: 1.5rem 0;
   display: flex;
   justify-content: center;
 }
+
+.pagination-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-weight: 600;
+  min-width: 120px;
+  text-align: center;
+}
+
 
 .final-submit-button {
   padding: 0.75rem 1.5rem;

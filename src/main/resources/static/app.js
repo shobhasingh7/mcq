@@ -1,17 +1,36 @@
 const quizContainer = document.getElementById('quiz-container');
+const paginationSection = document.getElementById('pagination-section');
 const finalSubmitSection = document.getElementById('final-submit-section');
 const resultContainer = document.getElementById('result');
 const answers = {};
 
+const QUESTIONS_PER_PAGE = 10;
+let allQuestions = [];
+let currentPage = 1;
+
 fetch('/api/questions')
   .then(response => response.json())
   .then(questions => {
-    questions.forEach(question => renderQuestion(question));
+    allQuestions = questions;
+    renderPage(1);
+    renderPaginationControls();
     renderFinalSubmitButton();
   })
   .catch(() => {
     quizContainer.innerHTML = '<p>Unable to load questions. Please try again later.</p>';
   });
+
+function renderPage(pageNumber) {
+  quizContainer.innerHTML = '';
+  currentPage = pageNumber;
+  
+  const startIndex = (pageNumber - 1) * QUESTIONS_PER_PAGE;
+  const endIndex = Math.min(startIndex + QUESTIONS_PER_PAGE, allQuestions.length);
+  const questionsToShow = allQuestions.slice(startIndex, endIndex);
+  
+  questionsToShow.forEach(question => renderQuestion(question));
+  updatePaginationControls();
+}
 
 function renderQuestion(question) {
   const section = document.createElement('section');
@@ -37,6 +56,14 @@ function renderQuestion(question) {
     `;
     choicesElement.appendChild(label);
   });
+
+  // Restore previous answer if it exists
+  if (answers[question.id] !== undefined) {
+    const radio = section.querySelector(`input[value="${answers[question.id]}"]`);
+    if (radio) {
+      radio.checked = true;
+    }
+  }
 
   const clearButton = section.querySelector('.clear-button');
   clearButton.addEventListener('click', () => clearAnswer(question.id, section));
@@ -94,7 +121,6 @@ function submitSingleAnswer(questionId, section) {
         qres.textContent = data.feedback;
         qres.className = data.correct ? 'question-result success' : 'question-result error';
       }
-      // keep the selected answer stored
       answers[questionId] = Number(selected.value);
     })
     .catch(() => {
@@ -103,6 +129,64 @@ function submitSingleAnswer(questionId, section) {
         qres.className = 'question-result error';
       }
     });
+}
+
+function renderPaginationControls() {
+  const totalPages = Math.ceil(allQuestions.length / QUESTIONS_PER_PAGE);
+  
+  if (totalPages <= 1) {
+    paginationSection.innerHTML = '';
+    return;
+  }
+
+  const nav = document.createElement('nav');
+  nav.className = 'pagination-nav';
+  
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'pagination-button prev-button';
+  prevBtn.textContent = '← Previous';
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+      renderPage(currentPage - 1);
+    }
+  });
+  
+  const pageInfo = document.createElement('span');
+  pageInfo.className = 'page-info';
+  
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'pagination-button next-button';
+  nextBtn.textContent = 'Next →';
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      renderPage(currentPage + 1);
+    }
+  });
+  
+  nav.appendChild(prevBtn);
+  nav.appendChild(pageInfo);
+  nav.appendChild(nextBtn);
+  paginationSection.appendChild(nav);
+  
+  updatePaginationControls();
+}
+
+function updatePaginationControls() {
+  const totalPages = Math.ceil(allQuestions.length / QUESTIONS_PER_PAGE);
+  const pageInfo = document.querySelector('.page-info');
+  if (pageInfo) {
+    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+  }
+  
+  const prevBtn = document.querySelector('.prev-button');
+  const nextBtn = document.querySelector('.next-button');
+  
+  if (prevBtn) {
+    prevBtn.disabled = currentPage === 1;
+  }
+  if (nextBtn) {
+    nextBtn.disabled = currentPage === totalPages;
+  }
 }
 
 function renderFinalSubmitButton() {
@@ -114,12 +198,12 @@ function renderFinalSubmitButton() {
 }
 
 function submitAllAnswers() {
-  const questionElements = document.querySelectorAll('[data-question-id]');
-  const allAnswered = Array.from(questionElements).every(el => {
-    const questionId = Number(el.getAttribute('data-question-id'));
-    return answers[questionId] !== undefined;
-  });
+  if (allQuestions.length === 0) {
+    return;
+  }
 
+  const allAnswered = allQuestions.every(q => answers[q.id] !== undefined);
+  
   if (!allAnswered) {
     resultContainer.textContent = 'Please answer all questions before submitting.';
     resultContainer.className = 'error';
