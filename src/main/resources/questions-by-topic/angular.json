@@ -141,5 +141,1305 @@
     "correctIndex": 0,
     "topic": "Angular",
     "explanation": "<p><strong>ng build --prod</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: Run <code>ng build --prod</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 1001,
+    "text": "Which Angular decorator marks a class as injectable for dependency injection?",
+    "choices": [
+      "@Injectable",
+      "@Component",
+      "@Directive",
+      "@Pipe"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@Injectable</strong> is correct because @Injectable marks a class as available for the dependency injection system.</p><p>Example: in an Angular project, you would use <code>@Injectable</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1002,
+    "text": "Which Angular feature lets you define navigation between views?",
+    "choices": [
+      "Router",
+      "HttpClient",
+      "NgZone",
+      "Renderer2"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Router</strong> is correct because The Angular Router handles navigation and URL-based view changes.</p><p>Example: in an Angular project, you would use <code>Router</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1003,
+    "text": "Which directive is commonly used to switch between multiple template cases?",
+    "choices": [
+      "*ngSwitch",
+      "*ngIf",
+      "*ngFor",
+      "[ngClass]"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>*ngSwitch</strong> is correct because ngSwitch is used for case-based conditional rendering in templates.</p><p>Example: in an Angular project, you would use <code>*ngSwitch</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1004,
+    "text": "Which Angular decorator is used to declare an input property on a component?",
+    "choices": [
+      "@Input",
+      "@Output",
+      "@ViewChild",
+      "@HostBinding"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@Input</strong> is correct because @Input allows a parent component to pass data to a child component.</p><p>Example: in an Angular project, you would use <code>@Input</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1005,
+    "text": "Which Angular decorator is used to emit events from a child component to a parent?",
+    "choices": [
+      "@Output",
+      "@Input",
+      "@Inject",
+      "@Optional"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@Output</strong> is correct because @Output is used with EventEmitter to send events upward.</p><p>Example: in an Angular project, you would use <code>@Output</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1006,
+    "text": "Which class is commonly paired with @Output to emit custom events?",
+    "choices": [
+      "EventEmitter",
+      "Subject",
+      "Promise",
+      "Observable"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>EventEmitter</strong> is correct because EventEmitter is the standard Angular class for component output events.</p><p>Example: in an Angular project, you would use <code>EventEmitter</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1007,
+    "text": "Which Angular package provides reactive forms support?",
+    "choices": [
+      "@angular/forms",
+      "@angular/router",
+      "@angular/common",
+      "@angular/platform-browser"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@angular/forms</strong> is correct because Reactive forms APIs such as FormGroup and FormControl come from @angular/forms.</p><p>Example: in an Angular project, you would use <code>@angular/forms</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1008,
+    "text": "Which class represents a group of form controls in reactive forms?",
+    "choices": [
+      "FormGroup",
+      "FormArray",
+      "FormBuilder",
+      "NgForm"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>FormGroup</strong> is correct because FormGroup groups related controls into a single object.</p><p>Example: in an Angular project, you would use <code>FormGroup</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1009,
+    "text": "Which class represents a single control in Angular reactive forms?",
+    "choices": [
+      "FormControl",
+      "FormGroup",
+      "FormState",
+      "ValidatorRef"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>FormControl</strong> is correct because FormControl models the value and validation state of one form field.</p><p>Example: in an Angular project, you would use <code>FormControl</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1010,
+    "text": "Which class is used for a dynamic list of controls in reactive forms?",
+    "choices": [
+      "FormArray",
+      "FormCollection",
+      "FormControlList",
+      "NgModelGroup"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>FormArray</strong> is correct because FormArray stores an ordered list of controls or groups.</p><p>Example: in an Angular project, you would use <code>FormArray</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1011,
+    "text": "Which service is commonly used to make HTTP requests in Angular?",
+    "choices": [
+      "HttpClient",
+      "Router",
+      "Location",
+      "ElementRef"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>HttpClient</strong> is correct because HttpClient is Angular’s standard service for calling APIs.</p><p>Example: in an Angular project, you would use <code>HttpClient</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1012,
+    "text": "Which method of HttpClient is commonly used to retrieve data from an API?",
+    "choices": [
+      "get()",
+      "post()",
+      "delete()",
+      "patch()"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>get()</strong> is correct because get() is used when you want to fetch resources from an endpoint.</p><p>Example: in an Angular project, you would use <code>get()</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1013,
+    "text": "Which method of HttpClient is commonly used to create a resource on a server?",
+    "choices": [
+      "post()",
+      "get()",
+      "head()",
+      "trace()"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>post()</strong> is correct because post() is typically used to send new resource data to a backend.</p><p>Example: in an Angular project, you would use <code>post()</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1014,
+    "text": "Which Angular concept transforms displayed values in templates?",
+    "choices": [
+      "Pipe",
+      "Directive",
+      "Guard",
+      "Resolver"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Pipe</strong> is correct because Pipes format values such as dates, currency, and text in templates.</p><p>Example: in an Angular project, you would use <code>Pipe</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1015,
+    "text": "Which built-in pipe formats dates in Angular templates?",
+    "choices": [
+      "date",
+      "json",
+      "async",
+      "currency"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>date</strong> is correct because The date pipe formats Date values for display.</p><p>Example: in an Angular project, you would use <code>date</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1016,
+    "text": "Which built-in pipe subscribes to an Observable or Promise in the template?",
+    "choices": [
+      "async",
+      "json",
+      "slice",
+      "uppercase"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>async</strong> is correct because The async pipe handles subscription and unsubscription automatically.</p><p>Example: in an Angular project, you would use <code>async</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1017,
+    "text": "Which lifecycle hook runs whenever input-bound properties change?",
+    "choices": [
+      "ngOnChanges",
+      "ngOnInit",
+      "ngOnDestroy",
+      "ngAfterContentInit"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ngOnChanges</strong> is correct because ngOnChanges runs when Angular detects changes to input properties.</p><p>Example: in an Angular project, you would use <code>ngOnChanges</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1018,
+    "text": "Which lifecycle hook runs just before a component is destroyed?",
+    "choices": [
+      "ngOnDestroy",
+      "ngOnInit",
+      "ngDoCheck",
+      "ngAfterViewChecked"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ngOnDestroy</strong> is correct because ngOnDestroy is used for cleanup such as unsubscribing.</p><p>Example: in an Angular project, you would use <code>ngOnDestroy</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1019,
+    "text": "Which lifecycle hook runs after Angular initializes the component view?",
+    "choices": [
+      "ngAfterViewInit",
+      "ngAfterContentInit",
+      "ngOnChanges",
+      "constructor"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ngAfterViewInit</strong> is correct because ngAfterViewInit is used when you need the component view to exist first.</p><p>Example: in an Angular project, you would use <code>ngAfterViewInit</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1020,
+    "text": "Which lifecycle hook is useful after projected content has been initialized?",
+    "choices": [
+      "ngAfterContentInit",
+      "ngAfterViewInit",
+      "ngOnDestroy",
+      "ngDoCheck"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ngAfterContentInit</strong> is correct because ngAfterContentInit runs after content projection setup completes.</p><p>Example: in an Angular project, you would use <code>ngAfterContentInit</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1021,
+    "text": "Which Angular directive applies CSS classes conditionally?",
+    "choices": [
+      "[ngClass]",
+      "[ngStyle]",
+      "*ngIf",
+      "ngModel"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>[ngClass]</strong> is correct because ngClass adds or removes CSS classes based on expressions.</p><p>Example: in an Angular project, you would use <code>[ngClass]</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1022,
+    "text": "Which Angular directive applies inline styles dynamically?",
+    "choices": [
+      "[ngStyle]",
+      "[styleClass]",
+      "*ngSwitch",
+      "[routerLink]"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>[ngStyle]</strong> is correct because ngStyle binds an object of style rules to an element.</p><p>Example: in an Angular project, you would use <code>[ngStyle]</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1023,
+    "text": "Which binding syntax is used for two-way data binding in Angular?",
+    "choices": [
+      "[(ngModel)]",
+      "[ngModel]",
+      "(ngModel)",
+      "{{ngModel}}"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>[(ngModel)]</strong> is correct because Banana-in-a-box syntax combines property and event binding for two-way binding.</p><p>Example: in an Angular project, you would use <code>[(ngModel)]</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1024,
+    "text": "Which Angular module is typically imported for template-driven forms?",
+    "choices": [
+      "FormsModule",
+      "RouterModule",
+      "CommonModule",
+      "BrowserAnimationsModule"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>FormsModule</strong> is correct because FormsModule provides ngModel and other template-driven forms features.</p><p>Example: in an Angular project, you would use <code>FormsModule</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1025,
+    "text": "Which Angular module is typically imported for reactive forms?",
+    "choices": [
+      "ReactiveFormsModule",
+      "FormsModule",
+      "HttpClientModule",
+      "BrowserModule"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ReactiveFormsModule</strong> is correct because ReactiveFormsModule provides FormControl, FormGroup, and related directives.</p><p>Example: in an Angular project, you would use <code>ReactiveFormsModule</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1026,
+    "text": "Which service is used to navigate programmatically between routes?",
+    "choices": [
+      "Router",
+      "ActivatedRoute",
+      "HttpClient",
+      "LocationStrategy"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Router</strong> is correct because Router provides navigate() and navigateByUrl() methods.</p><p>Example: in an Angular project, you would use <code>Router</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1027,
+    "text": "Which Angular service gives access to route parameters and route data?",
+    "choices": [
+      "ActivatedRoute",
+      "RouterOutlet",
+      "RouteReuseStrategy",
+      "Injector"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ActivatedRoute</strong> is correct because ActivatedRoute exposes params, query params, and static route data.</p><p>Example: in an Angular project, you would use <code>ActivatedRoute</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1028,
+    "text": "Which route guard is used to decide whether a route can be activated?",
+    "choices": [
+      "CanActivate",
+      "CanLoad",
+      "Resolve",
+      "CanDeactivate only"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>CanActivate</strong> is correct because CanActivate determines whether navigation to a route is allowed.</p><p>Example: in an Angular project, you would use <code>CanActivate</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1029,
+    "text": "Which route guard helps prevent navigation away from a component with unsaved changes?",
+    "choices": [
+      "CanDeactivate",
+      "CanActivate",
+      "CanMatch",
+      "Resolve"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>CanDeactivate</strong> is correct because CanDeactivate can ask for confirmation before leaving a route.</p><p>Example: in an Angular project, you would use <code>CanDeactivate</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1030,
+    "text": "Which Angular feature lets you load route code only when needed?",
+    "choices": [
+      "Lazy loading",
+      "Ahead-of-time compilation",
+      "View encapsulation",
+      "Interpolation"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Lazy loading</strong> is correct because Lazy loading reduces initial bundle size by loading feature areas on demand.</p><p>Example: in an Angular project, you would use <code>Lazy loading</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1031,
+    "text": "Which directive marks where routed components should be rendered?",
+    "choices": [
+      "router-outlet",
+      "router-link",
+      "ng-container",
+      "app-root"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>router-outlet</strong> is correct because router-outlet is the placeholder for activated route components.</p><p>Example: in an Angular project, you would use <code>router-outlet</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1032,
+    "text": "Which directive is commonly used to create a link to another route?",
+    "choices": [
+      "routerLink",
+      "hrefLink",
+      "routeTo",
+      "navigateTo"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>routerLink</strong> is correct because routerLink binds navigation targets in templates.</p><p>Example: in an Angular project, you would use <code>routerLink</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1033,
+    "text": "Which Angular feature allows a component to work without being declared in an NgModule?",
+    "choices": [
+      "Standalone components",
+      "Content projection",
+      "Signals",
+      "Template references"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Standalone components</strong> is correct because Standalone components can be imported directly instead of declared in a module.</p><p>Example: in an Angular project, you would use <code>Standalone components</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1034,
+    "text": "Which Angular API is used to declare a component as standalone?",
+    "choices": [
+      "standalone: true",
+      "module: true",
+      "isolated: true",
+      "export: standalone"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>standalone: true</strong> is correct because The standalone: true flag enables standalone component behavior.</p><p>Example: in an Angular project, you would use <code>standalone: true</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1035,
+    "text": "Which Angular reactivity primitive stores reactive state in newer Angular versions?",
+    "choices": [
+      "signal()",
+      "Subject()",
+      "BehaviorStore()",
+      "StateRef()"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>signal()</strong> is correct because signal() creates fine-grained reactive state in Angular.</p><p>Example: in an Angular project, you would use <code>signal()</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1036,
+    "text": "Which Angular API derives a reactive value from one or more signals?",
+    "choices": [
+      "computed()",
+      "effect()",
+      "inject()",
+      "memoize()"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>computed()</strong> is correct because computed() creates derived state based on other signals.</p><p>Example: in an Angular project, you would use <code>computed()</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1037,
+    "text": "Which Angular API runs side effects in response to signal changes?",
+    "choices": [
+      "effect()",
+      "watch()",
+      "observe()",
+      "detect()"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>effect()</strong> is correct because effect() reacts to signal updates and runs side-effect logic.</p><p>Example: in an Angular project, you would use <code>effect()</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1038,
+    "text": "Which helper is used in Angular to inject dependencies outside a constructor?",
+    "choices": [
+      "inject()",
+      "resolve()",
+      "provide()",
+      "use()"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>inject()</strong> is correct because inject() allows dependency lookup in supported injection contexts.</p><p>Example: in an Angular project, you would use <code>inject()</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1039,
+    "text": "Which Angular compilation mode compiles templates during the build step?",
+    "choices": [
+      "AOT",
+      "JIT only",
+      "SSR",
+      "CSR"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>AOT</strong> is correct because Ahead-of-Time compilation compiles templates before runtime.</p><p>Example: in an Angular project, you would use <code>AOT</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1040,
+    "text": "Which Angular compilation mode compiles templates in the browser at runtime?",
+    "choices": [
+      "JIT",
+      "AOT",
+      "SSR",
+      "SSG"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>JIT</strong> is correct because Just-in-Time compilation happens during runtime, often in development contexts.</p><p>Example: in an Angular project, you would use <code>JIT</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1041,
+    "text": "Which Angular strategy improves rendering performance by checking a component only when inputs or events change?",
+    "choices": [
+      "OnPush",
+      "DefaultFast",
+      "Manual",
+      "Lazy"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>OnPush</strong> is correct because ChangeDetectionStrategy.OnPush reduces unnecessary checks.</p><p>Example: in an Angular project, you would use <code>OnPush</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1042,
+    "text": "Which enum contains OnPush and Default change detection strategies?",
+    "choices": [
+      "ChangeDetectionStrategy",
+      "ChangeDetectorRef",
+      "RenderMode",
+      "ViewStrategy"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ChangeDetectionStrategy</strong> is correct because Angular exposes change detection strategies through ChangeDetectionStrategy.</p><p>Example: in an Angular project, you would use <code>ChangeDetectionStrategy</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1043,
+    "text": "Which service can manually trigger change detection when needed?",
+    "choices": [
+      "ChangeDetectorRef",
+      "Renderer2",
+      "ElementRef",
+      "Injector"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ChangeDetectorRef</strong> is correct because ChangeDetectorRef provides methods like markForCheck and detectChanges.</p><p>Example: in an Angular project, you would use <code>ChangeDetectorRef</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1044,
+    "text": "Which Angular reference type gives direct access to a DOM element?",
+    "choices": [
+      "ElementRef",
+      "TemplateRef",
+      "ViewContainerRef",
+      "Renderer2"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ElementRef</strong> is correct because ElementRef wraps a native DOM element.</p><p>Example: in an Angular project, you would use <code>ElementRef</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1045,
+    "text": "Which Angular abstraction is preferred over direct DOM access for safe DOM manipulation?",
+    "choices": [
+      "Renderer2",
+      "ElementRef",
+      "NgZone",
+      "PlatformRef"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Renderer2</strong> is correct because Renderer2 offers a framework-friendly API for DOM changes.</p><p>Example: in an Angular project, you would use <code>Renderer2</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1046,
+    "text": "Which decorator can query a child component or element from the component view?",
+    "choices": [
+      "@ViewChild",
+      "@ContentChild",
+      "@HostListener",
+      "@Self"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@ViewChild</strong> is correct because @ViewChild retrieves a reference from the component’s own view.</p><p>Example: in an Angular project, you would use <code>@ViewChild</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1047,
+    "text": "Which decorator can query projected content from outside the component view?",
+    "choices": [
+      "@ContentChild",
+      "@ViewChild",
+      "@HostBinding",
+      "@Output"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@ContentChild</strong> is correct because @ContentChild accesses elements projected via ng-content.</p><p>Example: in an Angular project, you would use <code>@ContentChild</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1048,
+    "text": "Which Angular feature lets one component project external markup into its template?",
+    "choices": [
+      "Content projection",
+      "Lazy loading",
+      "Dependency injection",
+      "Signals"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Content projection</strong> is correct because Content projection uses ng-content to insert external content.</p><p>Example: in an Angular project, you would use <code>Content projection</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1049,
+    "text": "Which element is used in Angular templates for content projection?",
+    "choices": [
+      "<ng-content>",
+      "<router-outlet>",
+      "<ng-template>",
+      "<ng-slot>"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong><ng-content></strong> is correct because ng-content is the placeholder for projected content.</p><p>Example: in an Angular project, you would use <code><ng-content></code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1050,
+    "text": "Which Angular template structure defines inert template content that is not rendered immediately?",
+    "choices": [
+      "<ng-template>",
+      "<ng-content>",
+      "<template-outlet>",
+      "<ng-host>"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong><ng-template></strong> is correct because ng-template stores template fragments for later rendering.</p><p>Example: in an Angular project, you would use <code><ng-template></code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1051,
+    "text": "Which directive is commonly used to render an ng-template dynamically?",
+    "choices": [
+      "ngTemplateOutlet",
+      "ngContentOutlet",
+      "ngViewOutlet",
+      "templateRef"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ngTemplateOutlet</strong> is correct because ngTemplateOutlet renders a template reference in a chosen location.</p><p>Example: in an Angular project, you would use <code>ngTemplateOutlet</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1052,
+    "text": "Which Angular element groups template nodes without adding an actual DOM element?",
+    "choices": [
+      "<ng-container>",
+      "<ng-group>",
+      "<fragment>",
+      "<ng-host>"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong><ng-container></strong> is correct because ng-container is useful for structural directives without extra DOM wrappers.</p><p>Example: in an Angular project, you would use <code><ng-container></code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1053,
+    "text": "Which Angular syntax is used for interpolation in templates?",
+    "choices": [
+      "{{ value }}",
+      "[[ value ]]",
+      "${ value }",
+      "<%= value %>"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>{{ value }}</strong> is correct because Interpolation inserts component values into template text.</p><p>Example: in an Angular project, you would use <code>{{ value }}</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1054,
+    "text": "Which RxJS type can emit multiple asynchronous values over time and is heavily used by Angular?",
+    "choices": [
+      "Observable",
+      "Promise",
+      "Iterator",
+      "Callback"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Observable</strong> is correct because Angular uses Observables for streams such as HTTP and route data.</p><p>Example: in an Angular project, you would use <code>Observable</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1055,
+    "text": "Which RxJS operator is commonly used to transform values emitted by an Observable?",
+    "choices": [
+      "map",
+      "reduceSync",
+      "bind",
+      "render"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>map</strong> is correct because map transforms each emitted value into a new value.</p><p>Example: in an Angular project, you would use <code>map</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1056,
+    "text": "Which RxJS operator switches to a new Observable and cancels the previous one?",
+    "choices": [
+      "switchMap",
+      "mergeAll",
+      "concat",
+      "forkJoin"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>switchMap</strong> is correct because switchMap is often used for HTTP calls based on changing input streams.</p><p>Example: in an Angular project, you would use <code>switchMap</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1057,
+    "text": "Which RxJS operator is useful for cleaning up subscriptions when a destroy signal emits?",
+    "choices": [
+      "takeUntil",
+      "map",
+      "filter",
+      "pairwise"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>takeUntil</strong> is correct because takeUntil completes a stream when another notifier emits.</p><p>Example: in an Angular project, you would use <code>takeUntil</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1058,
+    "text": "Which Angular pattern is commonly used to avoid memory leaks from manual subscriptions?",
+    "choices": [
+      "Unsubscribe on destroy",
+      "Use any type",
+      "Disable change detection",
+      "Use only setTimeout"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Unsubscribe on destroy</strong> is correct because Cleaning up subscriptions prevents components from holding stale observers.</p><p>Example: in an Angular project, you would use <code>Unsubscribe on destroy</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1059,
+    "text": "Which Angular file commonly contains environment-specific values such as API URLs?",
+    "choices": [
+      "environment.ts",
+      "main.ts",
+      "polyfills.ts",
+      "angular.json"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>environment.ts</strong> is correct because environment.ts is often used for environment-specific configuration.</p><p>Example: in an Angular project, you would use <code>environment.ts</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1060,
+    "text": "Which Angular CLI command is commonly used to start the local development server?",
+    "choices": [
+      "ng serve",
+      "ng ship",
+      "ng watch-app",
+      "npm angular-start"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng serve</strong> is correct because ng serve builds and hosts the application locally during development.</p><p>Example: in an Angular project, you would use <code>ng serve</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1061,
+    "text": "Which Angular CLI command generates a new service?",
+    "choices": [
+      "ng generate service my-service",
+      "ng new service my-service",
+      "ng add service my-service",
+      "npm create service my-service"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng generate service my-service</strong> is correct because ng generate service scaffolds a new Angular service.</p><p>Example: in an Angular project, you would use <code>ng generate service my-service</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1062,
+    "text": "Which Angular CLI command generates a new directive?",
+    "choices": [
+      "ng generate directive my-directive",
+      "ng add directive my-directive",
+      "ng new directive my-directive",
+      "ng build directive my-directive"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng generate directive my-directive</strong> is correct because ng generate directive scaffolds a new directive class and files.</p><p>Example: in an Angular project, you would use <code>ng generate directive my-directive</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1063,
+    "text": "Which Angular CLI command generates a new pipe?",
+    "choices": [
+      "ng generate pipe my-pipe",
+      "ng add pipe my-pipe",
+      "ng create pipe my-pipe",
+      "ng inject pipe my-pipe"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng generate pipe my-pipe</strong> is correct because ng generate pipe creates a custom pipe scaffold.</p><p>Example: in an Angular project, you would use <code>ng generate pipe my-pipe</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1064,
+    "text": "Which Angular CLI workspace configuration file defines build and serve targets?",
+    "choices": [
+      "angular.json",
+      "package-lock.json",
+      "tsconfig.base.json",
+      "proxy.conf.json"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>angular.json</strong> is correct because angular.json contains CLI project configuration such as build targets and assets.</p><p>Example: in an Angular project, you would use <code>angular.json</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1065,
+    "text": "Which Angular concept allows custom validation logic in forms?",
+    "choices": [
+      "Validators",
+      "Resolvers",
+      "Guards",
+      "Interceptors"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Validators</strong> is correct because Validators are used to enforce form rules and validation logic.</p><p>Example: in an Angular project, you would use <code>Validators</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1066,
+    "text": "Which built-in validator checks that a form control has a value?",
+    "choices": [
+      "Validators.required",
+      "Validators.email only",
+      "Validators.minLength only",
+      "Validators.pattern only"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Validators.required</strong> is correct because Validators.required ensures the control is not empty.</p><p>Example: in an Angular project, you would use <code>Validators.required</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1067,
+    "text": "Which built-in validator checks that a form value matches an email format?",
+    "choices": [
+      "Validators.email",
+      "Validators.mail",
+      "Validators.patternEmail",
+      "Validators.domain"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Validators.email</strong> is correct because Validators.email validates common email address structure.</p><p>Example: in an Angular project, you would use <code>Validators.email</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1068,
+    "text": "Which Angular form property is true when all validators pass?",
+    "choices": [
+      "valid",
+      "touched",
+      "dirty",
+      "pending"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>valid</strong> is correct because A form control or group is valid when it has no validation errors.</p><p>Example: in an Angular project, you would use <code>valid</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1069,
+    "text": "Which Angular form property becomes true after a control loses focus?",
+    "choices": [
+      "touched",
+      "dirty",
+      "valid",
+      "submitted"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>touched</strong> is correct because touched indicates the user has visited and then left the control.</p><p>Example: in an Angular project, you would use <code>touched</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1070,
+    "text": "Which Angular form property becomes true after the user changes the control value?",
+    "choices": [
+      "dirty",
+      "touched",
+      "pristine",
+      "disabled"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>dirty</strong> is correct because dirty means the control value has been modified by the user.</p><p>Example: in an Angular project, you would use <code>dirty</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1071,
+    "text": "Which Angular pipe is commonly used to preview an object or array as JSON in a template?",
+    "choices": [
+      "json",
+      "slice",
+      "date",
+      "keyvalue"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>json</strong> is correct because The json pipe is helpful for debugging structured data in templates.</p><p>Example: in an Angular project, you would use <code>json</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1072,
+    "text": "Which Angular pipe converts text to uppercase?",
+    "choices": [
+      "uppercase",
+      "capitalcase",
+      "titlecase only",
+      "upper"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>uppercase</strong> is correct because The uppercase pipe transforms string output to upper case.</p><p>Example: in an Angular project, you would use <code>uppercase</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1073,
+    "text": "Which Angular pipe converts text to lowercase?",
+    "choices": [
+      "lowercase",
+      "smallcase",
+      "mincase",
+      "downcase"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>lowercase</strong> is correct because The lowercase pipe transforms string output to lower case.</p><p>Example: in an Angular project, you would use <code>lowercase</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1074,
+    "text": "Which Angular pipe formats monetary values?",
+    "choices": [
+      "currency",
+      "number",
+      "percent",
+      "money"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>currency</strong> is correct because The currency pipe formats numeric values as currencies.</p><p>Example: in an Angular project, you would use <code>currency</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1075,
+    "text": "Which Angular pipe formats percentages?",
+    "choices": [
+      "percent",
+      "ratio",
+      "fraction",
+      "scale"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>percent</strong> is correct because The percent pipe formats decimal numbers as percentages.</p><p>Example: in an Angular project, you would use <code>percent</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1076,
+    "text": "Which Angular feature allows code to run before route activation and supply data to the route?",
+    "choices": [
+      "Resolver",
+      "Pipe",
+      "Interceptor",
+      "Template outlet"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Resolver</strong> is correct because Resolvers fetch or prepare data before navigation completes.</p><p>Example: in an Angular project, you would use <code>Resolver</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1077,
+    "text": "Which Angular service can intercept outgoing HTTP requests and incoming responses?",
+    "choices": [
+      "HTTP interceptor",
+      "Route resolver",
+      "Guard service",
+      "Signal effect"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>HTTP interceptor</strong> is correct because HTTP interceptors are used for cross-cutting concerns such as auth headers and logging.</p><p>Example: in an Angular project, you would use <code>HTTP interceptor</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1078,
+    "text": "Which Angular provider token is commonly used to register an HTTP interceptor?",
+    "choices": [
+      "HTTP_INTERCEPTORS",
+      "HTTP_PROVIDERS",
+      "ROUTER_INTERCEPTORS",
+      "NG_INTERCEPTOR"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>HTTP_INTERCEPTORS</strong> is correct because HTTP_INTERCEPTORS is the multi-provider token for interceptors.</p><p>Example: in an Angular project, you would use <code>HTTP_INTERCEPTORS</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1079,
+    "text": "Which Angular testing utility creates a test module environment for components and services?",
+    "choices": [
+      "TestBed",
+      "SpecRunner",
+      "NgHarness",
+      "FixtureHost"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>TestBed</strong> is correct because TestBed configures the Angular testing environment.</p><p>Example: in an Angular project, you would use <code>TestBed</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1080,
+    "text": "Which Angular testing class wraps a created component instance and rendered DOM?",
+    "choices": [
+      "ComponentFixture",
+      "RenderHarness",
+      "TestInstance",
+      "DebugHost"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ComponentFixture</strong> is correct because ComponentFixture provides access to the component and its template during tests.</p><p>Example: in an Angular project, you would use <code>ComponentFixture</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1081,
+    "text": "Which Angular testing helper triggers change detection in a fixture?",
+    "choices": [
+      "fixture.detectChanges()",
+      "fixture.update()",
+      "fixture.render()",
+      "fixture.sync()"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>fixture.detectChanges()</strong> is correct because detectChanges() updates the template to reflect component state.</p><p>Example: in an Angular project, you would use <code>fixture.detectChanges()</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1082,
+    "text": "Which Angular router feature lets parts of a URL be captured as named variables?",
+    "choices": [
+      "Route parameters",
+      "Signals",
+      "Guards",
+      "Pipes"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Route parameters</strong> is correct because Route parameters capture dynamic path values like an id.</p><p>Example: in an Angular project, you would use <code>Route parameters</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1083,
+    "text": "Which Angular syntax defines a route parameter named id?",
+    "choices": [
+      "users/:id",
+      "users/{id}",
+      "users/[id]",
+      "users/$id"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>users/:id</strong> is correct because Angular route config uses colon syntax for path parameters.</p><p>Example: in an Angular project, you would use <code>users/:id</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1084,
+    "text": "Which Angular feature helps render lists more efficiently by identifying items with stable keys?",
+    "choices": [
+      "trackBy",
+      "ViewChild",
+      "OnPush only",
+      "content projection"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>trackBy</strong> is correct because trackBy reduces DOM churn when rendering lists with ngFor.</p><p>Example: in an Angular project, you would use <code>trackBy</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1085,
+    "text": "Which Angular directive can add or remove an element from the DOM based on a condition?",
+    "choices": [
+      "*ngIf",
+      "[hidden]",
+      "[class.hidden]",
+      "style.display"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>*ngIf</strong> is correct because ngIf structurally creates or removes elements based on an expression.</p><p>Example: in an Angular project, you would use <code>*ngIf</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1086,
+    "text": "Which Angular package provides most common directives like ngIf and ngFor?",
+    "choices": [
+      "@angular/common",
+      "@angular/core",
+      "@angular/router",
+      "@angular/compiler-cli"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@angular/common</strong> is correct because @angular/common contains commonly used directives and pipes.</p><p>Example: in an Angular project, you would use <code>@angular/common</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1087,
+    "text": "Which Angular concept lets you share logic and state across multiple components?",
+    "choices": [
+      "Service",
+      "Pipe",
+      "Template outlet",
+      "Content child"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Service</strong> is correct because Services are commonly injected into multiple components for shared logic.</p><p>Example: in an Angular project, you would use <code>Service</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1088,
+    "text": "Which Angular decorator can listen to DOM events on the host element of a directive or component?",
+    "choices": [
+      "@HostListener",
+      "@ViewChild",
+      "@Injectable",
+      "@Pipe"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@HostListener</strong> is correct because HostListener binds host events to class methods.</p><p>Example: in an Angular project, you would use <code>@HostListener</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1089,
+    "text": "Which Angular decorator can bind a class property to a host element property or class?",
+    "choices": [
+      "@HostBinding",
+      "@Output",
+      "@Input",
+      "@ContentChild"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@HostBinding</strong> is correct because HostBinding links component or directive state to host element properties.</p><p>Example: in an Angular project, you would use <code>@HostBinding</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1090,
+    "text": "Which Angular strategy can reduce the initial bundle size by splitting features into separate route bundles?",
+    "choices": [
+      "Lazy-loaded feature routes",
+      "Template-driven forms",
+      "View encapsulation",
+      "Content projection"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Lazy-loaded feature routes</strong> is correct because Lazy-loaded routes keep less code in the initial bundle.</p><p>Example: in an Angular project, you would use <code>Lazy-loaded feature routes</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1091,
+    "text": "Which Angular feature controls whether component styles are scoped to the component?",
+    "choices": [
+      "View encapsulation",
+      "Router outlet",
+      "Module federation",
+      "Dependency tree"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>View encapsulation</strong> is correct because View encapsulation defines how component CSS is scoped.</p><p>Example: in an Angular project, you would use <code>View encapsulation</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1092,
+    "text": "Which Angular enum value scopes styles by emulating Shadow DOM behavior by default?",
+    "choices": [
+      "ViewEncapsulation.Emulated",
+      "ViewEncapsulation.None",
+      "ViewEncapsulation.Global",
+      "ViewEncapsulation.NativeOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ViewEncapsulation.Emulated</strong> is correct because Emulated is the default style scoping mode in Angular.</p><p>Example: in an Angular project, you would use <code>ViewEncapsulation.Emulated</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1093,
+    "text": "Which Angular enum value disables component style scoping entirely?",
+    "choices": [
+      "ViewEncapsulation.None",
+      "ViewEncapsulation.Emulated",
+      "ViewEncapsulation.Closed",
+      "ViewEncapsulation.Static"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ViewEncapsulation.None</strong> is correct because None applies styles globally without component scoping.</p><p>Example: in an Angular project, you would use <code>ViewEncapsulation.None</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1094,
+    "text": "Which Angular CLI command updates framework packages in a project?",
+    "choices": [
+      "ng update",
+      "ng refresh",
+      "ng upgrade only",
+      "npm angular-update"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng update</strong> is correct because ng update is the standard CLI command for updating Angular packages.</p><p>Example: in an Angular project, you would use <code>ng update</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1095,
+    "text": "Which Angular feature allows client-side rendering to be enhanced with server-generated HTML for faster first paint?",
+    "choices": [
+      "Server-side rendering",
+      "Lazy loading",
+      "Reactive forms",
+      "AOT only"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>Server-side rendering</strong> is correct because Server-side rendering sends HTML from the server before the app becomes interactive.</p><p>Example: in an Angular project, you would use <code>Server-side rendering</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1096,
+    "text": "Which Angular package is commonly associated with animations support?",
+    "choices": [
+      "@angular/animations",
+      "@angular/motion",
+      "@angular/effects",
+      "@angular/transitions"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@angular/animations</strong> is correct because Angular animations support is provided by @angular/animations.</p><p>Example: in an Angular project, you would use <code>@angular/animations</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1097,
+    "text": "Which Angular router configuration option can redirect one path to another?",
+    "choices": [
+      "redirectTo",
+      "reroute",
+      "navigateTo",
+      "forwardPath"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>redirectTo</strong> is correct because redirectTo is used in route definitions for path redirection.</p><p>Example: in an Angular project, you would use <code>redirectTo</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1098,
+    "text": "Which Angular form builder service helps create FormGroup and FormControl instances with less boilerplate?",
+    "choices": [
+      "FormBuilder",
+      "ControlFactory",
+      "FormFactory",
+      "NgBuilder"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>FormBuilder</strong> is correct because FormBuilder provides helper methods for concise reactive form creation.</p><p>Example: in an Angular project, you would use <code>FormBuilder</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1099,
+    "text": "Which Angular option in route definitions is commonly used to protect child routes?",
+    "choices": [
+      "canActivateChild",
+      "canProject",
+      "canCompose",
+      "canListen"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>canActivateChild</strong> is correct because canActivateChild applies guard logic to child routes.</p><p>Example: in an Angular project, you would use <code>canActivateChild</code> when implementing this behavior or configuration.</p>"
+  },
+  {
+    "id": 1100,
+    "text": "Which Angular guard can prevent even matching a route based on custom logic in newer router APIs?",
+    "choices": [
+      "CanMatch",
+      "CanRender",
+      "CanSchedule",
+      "CanResolveChild"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>CanMatch</strong> is correct because CanMatch can control whether a route configuration is considered a match.</p><p>Example: in an Angular project, you would use <code>CanMatch</code> when implementing this behavior or configuration.</p>"
   }
 ]

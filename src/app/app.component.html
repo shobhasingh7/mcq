@@ -5,6 +5,9 @@
     <p class="hero-copy">
       Pick one topic, answer only questions from that topic, and review explanations for the ones you get right.
     </p>
+    <p *ngIf="visitCount !== null" class="visit-counter">
+      Total app visits recorded: {{ visitCount }}
+    </p>
   </header>
 
   <section *ngIf="errorMessage" class="status-card error">

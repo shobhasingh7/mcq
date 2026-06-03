@@ -38,6 +38,10 @@ interface BatchAnswerResponse {
   message: string;
 }
 
+interface VisitCounterResponse {
+  count: number;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -61,8 +65,10 @@ export class AppComponent {
   loading = false;
   errorMessage = '';
   finalResult: BatchAnswerResponse | null = null;
+  visitCount: number | null = null;
 
   constructor() {
+    this.trackVisit();
     this.loadTopics();
   }
 
@@ -97,6 +103,19 @@ export class AppComponent {
         this.errorMessage = 'Unable to load topics. If you are running locally, start the API with `npm run serve:api`.';
       }
     });
+  }
+
+  private trackVisit(): void {
+    this.http.post<VisitCounterResponse>('/api/visits', {})
+      .pipe(timeout(this.apiTimeoutMs))
+      .subscribe({
+        next: (response) => {
+          this.visitCount = response.count;
+        },
+        error: () => {
+          this.visitCount = null;
+        }
+      });
   }
 
   trackQuestion(_index: number, question: Question): number {

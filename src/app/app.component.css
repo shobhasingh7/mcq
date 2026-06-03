@@ -25,6 +25,13 @@ h1 {
   line-height: 1.6;
 }
 
+.visit-counter {
+  margin: 0.9rem 0 0;
+  color: #0f766e;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 .status-card {
   padding: 1rem 1.25rem;
   border: 1px solid rgba(15, 23, 42, 0.08);

@@ -1,5 +1,6 @@
 const http = require('http');
 const { listTopics, normalizeTopic, readQuestions } = require('./api/_lib/questions');
+const { incrementVisitCount } = require('./api/_lib/visits');
 
 const PORT = Number.parseInt(process.env.PORT ?? '3000', 10);
 
@@ -53,6 +54,11 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === 'GET' && requestUrl.pathname === '/api/topics') {
     sendJson(res, 200, listTopics());
+    return;
+  }
+
+  if (req.method === 'POST' && requestUrl.pathname === '/api/visits') {
+    sendJson(res, 200, { count: incrementVisitCount() });
     return;
   }
 
