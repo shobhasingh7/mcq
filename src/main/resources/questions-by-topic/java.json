@@ -10,7 +10,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>class</strong> is correct because Java uses the <code>class</code> keyword to declare a new class type.</p><p>Example:</p><pre><code class=\"language-java\">public class User {\n    private String name;\n}</code></pre>"
+    "explanation": "<p><strong>class</strong> is correct because Java declares a new reference type with the <code>class</code> keyword. A class groups state and behavior together, and objects are created from that class as instances.</p><p>Example:</p><pre><code class=\"language-java\">public class User {\n    private String name;\n\n    public User(String name) {\n        this.name = name;\n    }\n}</code></pre>"
   },
   {
     "id": 302,
@@ -23,7 +23,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>main</strong> is correct because the JVM starts a standalone Java application by calling the <code>main</code> method.</p><p>Example:</p><pre><code class=\"language-java\">public class App {\n    public static void main(String[] args) {\n        System.out.println(\"Hello Java\");\n    }\n}</code></pre>"
+    "explanation": "<p><strong>main</strong> is correct because The JVM starts a standard standalone Java program by looking for a <code>public static void main(String[] args)</code> method. Without that signature, the program is not a normal application entry point.</p><p>Example:</p><pre><code class=\"language-java\">public class App {\n    public static void main(String[] args) {\n        System.out.println(\"Application started\");\n    }\n}</code></pre>"
   },
   {
     "id": 303,
@@ -36,7 +36,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>private</strong> is correct because a <code>private</code> field or method can only be accessed inside the class that declares it.</p><p>Example:</p><pre><code class=\"language-java\">public class Account {\n    private double balance;\n}</code></pre>"
+    "explanation": "<p><strong>private</strong> is correct because A <code>private</code> member is visible only inside the class that declares it. This is a core encapsulation tool because outside code must use public methods instead of touching the field directly.</p><p>Example:</p><pre><code class=\"language-java\">public class Account {\n    private double balance;\n\n    public void deposit(double amount) {\n        balance += amount;\n    }\n}</code></pre>"
   },
   {
     "id": 304,
@@ -49,7 +49,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>List</strong> is correct because a Java <code>List</code> preserves element order and can contain duplicate values.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;String&gt; names = new ArrayList&lt;&gt;();\nnames.add(\"A\");\nnames.add(\"A\");</code></pre>"
+    "explanation": "<p><strong>List</strong> is correct because A <code>List</code> preserves insertion order and allows duplicate values. That makes it a better fit than <code>Set</code> when order matters or repeated values are valid.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;String&gt; tags = new ArrayList&lt;&gt;();\ntags.add(\"java\");\ntags.add(\"java\");\nSystem.out.println(tags); // [java, java]</code></pre>"
   },
   {
     "id": 305,
@@ -62,7 +62,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>extends</strong> is correct because Java uses <code>extends</code> when one class inherits from another class.</p><p>Example:</p><pre><code class=\"language-java\">public class AdminUser extends User {\n}</code></pre>"
+    "explanation": "<p><strong>extends</strong> is correct because Java uses <code>extends</code> when one class inherits state or behavior from another class. The subclass can reuse the parent implementation and optionally override selected methods.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    String role() {\n        return \"USER\";\n    }\n}\n\nclass AdminUser extends User {\n    @Override\n    String role() {\n        return \"ADMIN\";\n    }\n}</code></pre>"
   },
   {
     "id": 306,
@@ -75,7 +75,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>implements</strong> is correct because classes use <code>implements</code> to provide the behavior required by an interface.</p><p>Example:</p><pre><code class=\"language-java\">public class EmailSender implements MessageSender {\n    public void send(String message) {\n    }\n}</code></pre>"
+    "explanation": "<p><strong>implements</strong> is correct because A class uses <code>implements</code> to promise that it will provide the methods declared by an interface. This is how Java models contracts separately from inheritance of a concrete class.</p><p>Example:</p><pre><code class=\"language-java\">interface MessageSender {\n    void send(String message);\n}\n\nclass EmailSender implements MessageSender {\n    public void send(String message) {\n        System.out.println(message);\n    }\n}</code></pre>"
   },
   {
     "id": 307,
@@ -88,7 +88,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>try-catch</strong> is correct because Java handles exceptions by placing risky code inside a <code>try</code> block and responding in a <code>catch</code> block.</p><p>Example:</p><pre><code class=\"language-java\">try {\n    Integer.parseInt(\"abc\");\n} catch (NumberFormatException ex) {\n    System.out.println(\"Invalid number\");\n}</code></pre>"
+    "explanation": "<p><strong>try-catch</strong> is correct because A <code>try-catch</code> block wraps code that may fail and lets Java recover or respond when an exception is thrown. It keeps error-handling logic explicit instead of silently ignoring failures.</p><p>Example:</p><pre><code class=\"language-java\">try {\n    int value = Integer.parseInt(\"abc\");\n} catch (NumberFormatException ex) {\n    System.out.println(\"Input was not a valid number\");\n}</code></pre>"
   },
   {
     "id": 308,
@@ -101,7 +101,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>boolean</strong> is correct because Java represents logical true or false values with the <code>boolean</code> type.</p><p>Example:</p><pre><code class=\"language-java\">boolean isActive = true;</code></pre>"
+    "explanation": "<p><strong>boolean</strong> is correct because The primitive type <code>boolean</code> stores only <code>true</code> or <code>false</code>. It is the correct type for flags, conditions, and method results that answer yes/no questions.</p><p>Example:</p><pre><code class=\"language-java\">boolean active = true;\nif (active) {\n    System.out.println(\"User is active\");\n}</code></pre>"
   },
   {
     "id": 309,
@@ -114,7 +114,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>new</strong> is correct because Java creates object instances with the <code>new</code> keyword.</p><p>Example:</p><pre><code class=\"language-java\">User user = new User();</code></pre>"
+    "explanation": "<p><strong>new</strong> is correct because The <code>new</code> keyword allocates memory for an object and calls its constructor. Without <code>new</code>, you only have a class definition, not an actual instance to work with.</p><p>Example:</p><pre><code class=\"language-java\">User user = new User(\"Mia\");\nSystem.out.println(user);</code></pre>"
   },
   {
     "id": 310,
@@ -127,7 +127,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>ArrayList</strong> is correct because it is a resizable array implementation of the <code>List</code> interface.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();\nnumbers.add(10);</code></pre>"
+    "explanation": "<p><strong>ArrayList</strong> is correct because <code>ArrayList</code> is the most common resizable-array implementation of <code>List</code>. It is a strong default when you need ordered elements and fast indexed reads.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;Integer&gt; scores = new ArrayList&lt;&gt;();\nscores.add(10);\nscores.add(20);\nSystem.out.println(scores.get(1)); // 20</code></pre>"
   },
   {
     "id": 311,
@@ -140,7 +140,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>@Override</strong> is correct because it tells the compiler that the method is intended to override a parent class or interface method.</p><p>Example:</p><pre><code class=\"language-java\">@Override\npublic String toString() {\n    return \"User\";\n}</code></pre>"
+    "explanation": "<p><strong>@Override</strong> is correct because <code>@Override</code> tells the compiler that a method is intended to override a parent or interface method. It improves safety because the compiler can catch signature mistakes immediately.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    public String toString() {\n        return \"User\";\n    }\n}\n\nclass AdminUser extends User {\n    @Override\n    public String toString() {\n        return \"AdminUser\";\n    }\n}</code></pre>"
   },
   {
     "id": 312,
@@ -153,7 +153,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>final</strong> is correct because a <code>final</code> variable can be assigned once and then cannot be changed to reference a different value.</p><p>Example:</p><pre><code class=\"language-java\">final String appName = \"QuizApp\";</code></pre>"
+    "explanation": "<p><strong>final</strong> is correct because <code>final</code> is used in Java to prevent reassignment or extension depending on context. For variables, it means the reference or value is assigned once; for classes, it prevents subclassing.</p><p>Example:</p><pre><code class=\"language-java\">final String appName = \"QuizApp\";\n// appName = \"Other\"; // compile error</code></pre>"
   },
   {
     "id": 2001,
@@ -166,7 +166,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>int</strong> is correct because The int type stores 32-bit signed integer values.</p><p>Example: in a Java application, you would use <code>int</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>int</strong> is correct because <code>int</code> is the standard 32-bit primitive for whole numbers in Java. Use it when fractional precision is not needed and the value range fits normal integer arithmetic.</p><p>Example:</p><pre><code class=\"language-java\">int quantity = 42;\nint total = quantity + 8;\nSystem.out.println(total); // 50</code></pre>"
   },
   {
     "id": 2002,
@@ -179,7 +179,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>double</strong> is correct because double stores floating-point numbers with decimal precision.</p><p>Example: in a Java application, you would use <code>double</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>double</strong> is correct because <code>double</code> stores floating-point values and is commonly used when decimal precision is needed. It is appropriate for measurements and calculations that are not strictly whole numbers.</p><p>Example:</p><pre><code class=\"language-java\">double price = 19.99;\ndouble total = price * 2;\nSystem.out.println(total);</code></pre>"
   },
   {
     "id": 2003,
@@ -192,7 +192,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>char</strong> is correct because char stores a single 16-bit Unicode character.</p><p>Example: in a Java application, you would use <code>char</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>char</strong> is correct because <code>char</code> stores one UTF-16 code unit and is used for a single character rather than a whole string. It is useful when you need to examine or compare one character at a time.</p><p>Example:</p><pre><code class=\"language-java\">char grade = 'A';\nif (grade == 'A') {\n    System.out.println(\"Excellent\");\n}</code></pre>"
   },
   {
     "id": 2004,
@@ -205,7 +205,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>this</strong> is correct because this refers to the current object and is often used inside constructors and methods.</p><p>Example: in a Java application, you would use <code>this</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>this</strong> is correct because <code>this</code> refers to the current object instance. It is commonly used to distinguish fields from constructor parameters or to call another instance method on the same object.</p><p>Example:</p><pre><code class=\"language-java\">public class User {\n    private String name;\n\n    public User(String name) {\n        this.name = name;\n    }\n}</code></pre>"
   },
   {
     "id": 2005,
@@ -218,7 +218,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>super</strong> is correct because super refers to members of the parent class.</p><p>Example: in a Java application, you would use <code>super</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>super</strong> is correct because <code>super</code> refers to the immediate parent class and is used to call parent constructors or parent method implementations. It is especially useful when a subclass extends existing behavior instead of replacing it entirely.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    User(String name) {\n        System.out.println(name);\n    }\n}\n\nclass AdminUser extends User {\n    AdminUser() {\n        super(\"Admin\");\n    }\n}</code></pre>"
   },
   {
     "id": 2006,
@@ -231,7 +231,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>void</strong> is correct because void is the return type for methods that do not produce a result.</p><p>Example: in a Java application, you would use <code>void</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>void</strong> is correct because A method declared with <code>void</code> performs work but does not return a value to its caller. This is the right choice for actions such as logging, updating state, or printing output.</p><p>Example:</p><pre><code class=\"language-java\">public void printSummary() {\n    System.out.println(\"Summary generated\");\n}</code></pre>"
   },
   {
     "id": 2007,
@@ -244,7 +244,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>break</strong> is correct because break terminates the nearest loop or switch block immediately.</p><p>Example: in a Java application, you would use <code>break</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>break</strong> is correct because <code>break</code> exits the nearest loop or switch immediately. It is useful when continuing the loop no longer makes sense after a condition is met.</p><p>Example:</p><pre><code class=\"language-java\">for (int i = 0; i &lt; 10; i++) {\n    if (i == 5) {\n        break;\n    }\n    System.out.println(i);\n}</code></pre>"
   },
   {
     "id": 2008,
@@ -257,7 +257,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>continue</strong> is correct because continue jumps to the next iteration of the loop.</p><p>Example: in a Java application, you would use <code>continue</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>continue</strong> is correct because <code>continue</code> skips the rest of the current loop iteration and moves to the next one. It is useful when one condition should ignore a particular item but not end the whole loop.</p><p>Example:</p><pre><code class=\"language-java\">for (int i = 0; i &lt; 5; i++) {\n    if (i == 2) {\n        continue;\n    }\n    System.out.println(i);\n}</code></pre>"
   },
   {
     "id": 2009,
@@ -270,7 +270,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>HashMap</strong> is correct because HashMap stores values associated with keys.</p><p>Example: in a Java application, you would use <code>HashMap</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>HashMap</strong> is correct because <code>HashMap</code> stores key-value pairs and provides fast lookup by key in typical cases. It is one of the most common choices when you need to associate one value with another.</p><p>Example:</p><pre><code class=\"language-java\">Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();\nscores.put(\"Mia\", 90);\nscores.put(\"Noah\", 85);\nSystem.out.println(scores.get(\"Mia\"));</code></pre>"
   },
   {
     "id": 2010,
@@ -283,7 +283,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Set</strong> is correct because Set implementations enforce uniqueness of elements.</p><p>Example: in a Java application, you would use <code>Set</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Set</strong> is correct because A <code>Set</code> does not allow duplicate elements, which makes it a good choice when uniqueness matters more than index-based access.</p><p>Example:</p><pre><code class=\"language-java\">Set&lt;String&gt; roles = new HashSet&lt;&gt;();\nroles.add(\"ADMIN\");\nroles.add(\"ADMIN\");\nSystem.out.println(roles.size()); // 1</code></pre>"
   },
   {
     "id": 2011,
@@ -296,7 +296,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>TreeSet</strong> is correct because TreeSet stores elements in sorted order.</p><p>Example: in a Java application, you would use <code>TreeSet</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>TreeSet</strong> is correct because <code>TreeSet</code> keeps unique elements sorted in their natural order or by a supplied comparator. It is useful when you need both uniqueness and sorted iteration.</p><p>Example:</p><pre><code class=\"language-java\">Set&lt;Integer&gt; values = new TreeSet&lt;&gt;();\nvalues.add(5);\nvalues.add(1);\nvalues.add(3);\nSystem.out.println(values); // [1, 3, 5]</code></pre>"
   },
   {
     "id": 2012,
@@ -309,7 +309,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>LinkedHashMap</strong> is correct because LinkedHashMap preserves insertion order while mapping keys to values.</p><p>Example: in a Java application, you would use <code>LinkedHashMap</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>LinkedHashMap</strong> is correct because <code>LinkedHashMap</code> preserves insertion order while still storing key-value pairs. It is helpful when order of iteration should match the order entries were added.</p><p>Example:</p><pre><code class=\"language-java\">Map&lt;String, Integer&gt; order = new LinkedHashMap&lt;&gt;();\norder.put(\"first\", 1);\norder.put(\"second\", 2);\nSystem.out.println(order.keySet()); // [first, second]</code></pre>"
   },
   {
     "id": 2013,
@@ -322,7 +322,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>String</strong> is correct because String objects are immutable once created.</p><p>Example: in a Java application, you would use <code>String</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>String</strong> is correct because <code>String</code> represents immutable text in Java. Because strings cannot be changed after creation, they are thread-safe to share and safe to use as keys or values.</p><p>Example:</p><pre><code class=\"language-java\">String greeting = \"Hello\";\nString name = \"Java\";\nSystem.out.println(greeting + \" \" + name);</code></pre>"
   },
   {
     "id": 2014,
@@ -335,7 +335,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>StringBuilder</strong> is correct because StringBuilder is efficient for repeated string changes in single-threaded code.</p><p>Example: in a Java application, you would use <code>StringBuilder</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>StringBuilder</strong> is correct because <code>StringBuilder</code> is designed for efficient mutable string construction in single-threaded code. It avoids creating many intermediate <code>String</code> objects when text is built step by step.</p><p>Example:</p><pre><code class=\"language-java\">StringBuilder builder = new StringBuilder();\nbuilder.append(\"Java\");\nbuilder.append(\" \");\nbuilder.append(\"Quiz\");\nSystem.out.println(builder.toString());</code></pre>"
   },
   {
     "id": 2015,
@@ -348,7 +348,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>StringBuffer</strong> is correct because StringBuffer is mutable and thread-safe due to synchronized methods.</p><p>Example: in a Java application, you would use <code>StringBuffer</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>StringBuffer</strong> is correct because <code>StringBuffer</code> is like <code>StringBuilder</code> but synchronized for thread-safe mutation. It is less common in modern code, but it is still the thread-safe mutable-string variant.</p><p>Example:</p><pre><code class=\"language-java\">StringBuffer buffer = new StringBuffer();\nbuffer.append(\"safe\");\nbuffer.append(\" text\");\nSystem.out.println(buffer.toString());</code></pre>"
   },
   {
     "id": 2016,
@@ -361,7 +361,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>+</strong> is correct because The + operator joins String values together.</p><p>Example: in a Java application, you would use <code>+</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>+</strong> is correct because The <code>+</code> operator concatenates strings by creating a new string containing both operands in sequence. It is convenient for simple text composition.</p><p>Example:</p><pre><code class=\"language-java\">String firstName = \"Ada\";\nString message = \"Hello, \" + firstName + \"!\";\nSystem.out.println(message);</code></pre>"
   },
   {
     "id": 2017,
@@ -374,7 +374,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>equals()</strong> is correct because equals() compares the characters inside strings rather than object references.</p><p>Example: in a Java application, you would use <code>equals()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>equals()</strong> is correct because <code>equals()</code> compares logical content rather than object identity. For strings and domain objects, it answers whether two values should be treated as meaningfully equal.</p><p>Example:</p><pre><code class=\"language-java\">String left = new String(\"java\");\nString right = new String(\"java\");\nSystem.out.println(left.equals(right)); // true</code></pre>"
   },
   {
     "id": 2018,
@@ -387,7 +387,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>==</strong> is correct because == compares object references when used with non-primitives.</p><p>Example: in a Java application, you would use <code>==</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>==</strong> is correct because <code>==</code> compares primitive values directly, but for objects it checks whether both references point to the exact same instance in memory. That is why it should not be used for logical string comparison.</p><p>Example:</p><pre><code class=\"language-java\">String a = new String(\"java\");\nString b = new String(\"java\");\nSystem.out.println(a == b);      // false\nSystem.out.println(a.equals(b)); // true</code></pre>"
   },
   {
     "id": 2019,
@@ -400,7 +400,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Supplier</strong> is correct because Supplier provides a result without taking an input.</p><p>Example: in a Java application, you would use <code>Supplier</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Supplier</strong> is correct because <code>Supplier&lt;T&gt;</code> represents a function that takes no input and returns a value. It is useful when a value should be produced lazily, repeatedly, or by passing behavior around.</p><p>Example:</p><pre><code class=\"language-java\">Supplier&lt;String&gt; tokenSupplier = () -&gt; \"token-\" + System.currentTimeMillis();\nSystem.out.println(tokenSupplier.get());</code></pre>"
   },
   {
     "id": 2020,
@@ -413,7 +413,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Consumer</strong> is correct because Consumer accepts a value and performs side effects without returning a result.</p><p>Example: in a Java application, you would use <code>Consumer</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Consumer</strong> is correct because <code>Consumer&lt;T&gt;</code> takes one input and returns no result. It is commonly used for callbacks, printing, logging, or applying side effects to each value.</p><p>Example:</p><pre><code class=\"language-java\">Consumer&lt;String&gt; printer = text -&gt; System.out.println(text.toUpperCase());\nprinter.accept(\"java\");</code></pre>"
   },
   {
     "id": 2021,
@@ -426,7 +426,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Predicate</strong> is correct because Predicate is used for true/false tests on input values.</p><p>Example: in a Java application, you would use <code>Predicate</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Predicate</strong> is correct because <code>Predicate&lt;T&gt;</code> represents a function that returns <code>true</code> or <code>false</code> for one input. It is heavily used in filtering and validation logic.</p><p>Example:</p><pre><code class=\"language-java\">Predicate&lt;Integer&gt; isEven = n -&gt; n % 2 == 0;\nSystem.out.println(isEven.test(4)); // true</code></pre>"
   },
   {
     "id": 2022,
@@ -439,7 +439,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Function</strong> is correct because Function transforms an input into an output.</p><p>Example: in a Java application, you would use <code>Function</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Function</strong> is correct because <code>Function&lt;T, R&gt;</code> transforms one value into another. It is common in stream mapping and other functional-style pipelines.</p><p>Example:</p><pre><code class=\"language-java\">Function&lt;String, Integer&gt; length = text -&gt; text.length();\nSystem.out.println(length.apply(\"java\")); // 4</code></pre>"
   },
   {
     "id": 2023,
@@ -452,7 +452,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Lambda expressions</strong> is correct because Lambda expressions let you implement functional interfaces inline.</p><p>Example: in a Java application, you would use <code>Lambda expressions</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Lambda expressions</strong> is correct because Lambda expressions let Java treat behavior like data by writing small inline implementations of functional interfaces. They reduce boilerplate compared with anonymous inner classes.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;String&gt; names = List.of(\"mia\", \"noah\");\nnames.forEach(name -&gt; System.out.println(name.toUpperCase()));</code></pre>"
   },
   {
     "id": 2024,
@@ -465,7 +465,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>map</strong> is correct because map applies a function to each element in a stream.</p><p>Example: in a Java application, you would use <code>map</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>map</strong> is correct because The stream operation <code>map</code> transforms each element into another value and returns a new stream. It is the right choice when the shape of each item changes.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;String&gt; names = List.of(\"Ada\", \"Linus\");\nList&lt;Integer&gt; lengths = names.stream()\n    .map(String::length)\n    .toList();</code></pre>"
   },
   {
     "id": 2025,
@@ -478,7 +478,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>filter</strong> is correct because filter retains elements that satisfy a predicate.</p><p>Example: in a Java application, you would use <code>filter</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>filter</strong> is correct because The stream operation <code>filter</code> keeps only elements that satisfy a condition. It is used when some items should be dropped from further processing.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;Integer&gt; values = List.of(1, 2, 3, 4);\nList&lt;Integer&gt; even = values.stream()\n    .filter(n -&gt; n % 2 == 0)\n    .toList();</code></pre>"
   },
   {
     "id": 2026,
@@ -491,7 +491,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>reduce</strong> is correct because reduce combines stream elements into one value.</p><p>Example: in a Java application, you would use <code>reduce</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>reduce</strong> is correct because The terminal operation <code>reduce</code> combines stream elements into one accumulated result. It is useful for sums, products, and other fold-style computations.</p><p>Example:</p><pre><code class=\"language-java\">int total = List.of(1, 2, 3, 4).stream()\n    .reduce(0, Integer::sum);\nSystem.out.println(total); // 10</code></pre>"
   },
   {
     "id": 2027,
@@ -504,7 +504,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Collectors.toList()</strong> is correct because Collectors.toList() collects stream values into a List.</p><p>Example: in a Java application, you would use <code>Collectors.toList()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Collectors.toList()</strong> is correct because <code>Collectors.toList()</code> is a collector used to gather stream results into a list. It is common when a stream pipeline should end as a materialized collection.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;String&gt; upper = List.of(\"a\", \"b\").stream()\n    .map(String::toUpperCase)\n    .collect(Collectors.toList());</code></pre>"
   },
   {
     "id": 2028,
@@ -517,7 +517,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>java.util</strong> is correct because The collections framework is primarily located in java.util.</p><p>Example: in a Java application, you would use <code>java.util</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>java.util</strong> is correct because <code>java.util</code> is the package that contains the core collection interfaces and many utility classes such as <code>List</code>, <code>Set</code>, <code>Map</code>, and <code>Scanner</code>.</p><p>Example:</p><pre><code class=\"language-java\">import java.util.ArrayList;\nimport java.util.List;\n\nList&lt;String&gt; languages = new ArrayList&lt;&gt;();</code></pre>"
   },
   {
     "id": 2029,
@@ -530,7 +530,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>NullPointerException</strong> is correct because NullPointerException extends RuntimeException and is unchecked.</p><p>Example: in a Java application, you would use <code>NullPointerException</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>NullPointerException</strong> is correct because <code>NullPointerException</code> is unchecked because it extends <code>RuntimeException</code>. The compiler does not force callers to catch or declare it, even though it may happen at runtime.</p><p>Example:</p><pre><code class=\"language-java\">String text = null;\n// Throws NullPointerException at runtime:\nSystem.out.println(text.length());</code></pre>"
   },
   {
     "id": 2030,
@@ -543,7 +543,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>throws</strong> is correct because throws appears in a method signature for checked exception propagation.</p><p>Example: in a Java application, you would use <code>throws</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>throws</strong> is correct because The <code>throws</code> keyword declares that a method may pass checked exceptions to its caller. It makes exception contracts explicit in the method signature.</p><p>Example:</p><pre><code class=\"language-java\">public String readFile(Path path) throws IOException {\n    return Files.readString(path);\n}</code></pre>"
   },
   {
     "id": 2031,
@@ -556,7 +556,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>throw</strong> is correct because throw creates or propagates an exception instance.</p><p>Example: in a Java application, you would use <code>throw</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>throw</strong> is correct because The <code>throw</code> statement explicitly raises an exception object. Use it when code detects an invalid state or input that should stop normal execution.</p><p>Example:</p><pre><code class=\"language-java\">if (amount &lt; 0) {\n    throw new IllegalArgumentException(\"Amount must be positive\");\n}</code></pre>"
   },
   {
     "id": 2032,
@@ -569,7 +569,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>finally</strong> is correct because finally is used for cleanup that should always execute.</p><p>Example: in a Java application, you would use <code>finally</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>finally</strong> is correct because A <code>finally</code> block runs whether or not an exception is thrown, making it useful for cleanup that must happen either way.</p><p>Example:</p><pre><code class=\"language-java\">try {\n    System.out.println(\"work\");\n} finally {\n    System.out.println(\"cleanup\");\n}</code></pre>"
   },
   {
     "id": 2033,
@@ -582,7 +582,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Throwable</strong> is correct because Throwable is the top-level base class for errors and exceptions.</p><p>Example: in a Java application, you would use <code>Throwable</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Throwable</strong> is correct because <code>Throwable</code> is the root of Java’s throwable hierarchy. Both <code>Exception</code> and <code>Error</code> ultimately derive from it.</p><p>Example:</p><pre><code class=\"language-java\">try {\n    throw new Exception(\"failure\");\n} catch (Throwable t) {\n    System.out.println(t.getMessage());\n}</code></pre>"
   },
   {
     "id": 2034,
@@ -595,7 +595,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>final</strong> is correct because A final class cannot be extended.</p><p>Example: in a Java application, you would use <code>final</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>final</strong> is correct because when applied to a class, <code>final</code> prevents inheritance. This is useful when the class design should stay closed to subclass behavior changes.</p><p>Example:</p><pre><code class=\"language-java\">final class Utility {\n}\n\n// class Child extends Utility {} // compile error</code></pre>"
   },
   {
     "id": 2035,
@@ -608,7 +608,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>static</strong> is correct because static members are shared across all instances of a class.</p><p>Example: in a Java application, you would use <code>static</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>static</strong> is correct because <code>static</code> means a member belongs to the class itself instead of one object instance. Static members are shared and can be accessed without creating an object.</p><p>Example:</p><pre><code class=\"language-java\">public class MathUtil {\n    public static int add(int a, int b) {\n        return a + b;\n    }\n}\n\nint result = MathUtil.add(2, 3);</code></pre>"
   },
   {
     "id": 2036,
@@ -621,7 +621,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>protected</strong> is correct because protected allows package access and subclass access.</p><p>Example: in a Java application, you would use <code>protected</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>protected</strong> is correct because <code>protected</code> makes a member visible to code in the same package and to subclasses, even when those subclasses are in a different package.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    protected String name;\n}\n\nclass AdminUser extends User {\n    void printName() {\n        System.out.println(name);\n    }\n}</code></pre>"
   },
   {
     "id": 2037,
@@ -634,7 +634,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>package-private</strong> is correct because No modifier means the member is accessible within its package.</p><p>Example: in a Java application, you would use <code>package-private</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>package-private</strong> is correct because Package-private access is what Java uses when no modifier is declared. The member is visible only inside the same package, which is useful for internal collaboration between classes.</p><p>Example:</p><pre><code class=\"language-java\">class PackageHelper {\n    void assist() {\n        System.out.println(\"Same-package access only\");\n    }\n}</code></pre>"
   },
   {
     "id": 2038,
@@ -647,7 +647,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Method overloading</strong> is correct because Overloading reuses the same method name with different parameters.</p><p>Example: in a Java application, you would use <code>Method overloading</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Method overloading</strong> is correct because Method overloading means the same method name is reused with different parameter lists. It improves readability when operations are conceptually the same but accept different inputs.</p><p>Example:</p><pre><code class=\"language-java\">class MathUtil {\n    int add(int a, int b) { return a + b; }\n    int add(int a, int b, int c) { return a + b + c; }\n}</code></pre>"
   },
   {
     "id": 2039,
@@ -660,7 +660,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Method overriding</strong> is correct because Overriding replaces inherited behavior with subclass-specific logic.</p><p>Example: in a Java application, you would use <code>Method overriding</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Method overriding</strong> is correct because Method overriding happens when a subclass provides its own implementation of a method declared in a parent class. This is how polymorphism customizes inherited behavior.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    String role() { return \"USER\"; }\n}\n\nclass AdminUser extends User {\n    @Override\n    String role() { return \"ADMIN\"; }\n}</code></pre>"
   },
   {
     "id": 2040,
@@ -673,7 +673,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Encapsulation</strong> is correct because Encapsulation protects object state behind methods and modifiers.</p><p>Example: in a Java application, you would use <code>Encapsulation</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Encapsulation</strong> is correct because Encapsulation means keeping fields and related methods together while restricting direct outside access to internal state. It protects invariants and makes code easier to evolve safely.</p><p>Example:</p><pre><code class=\"language-java\">class Account {\n    private double balance;\n\n    public void deposit(double amount) {\n        if (amount &gt; 0) {\n            balance += amount;\n        }\n    }\n}</code></pre>"
   },
   {
     "id": 2041,
@@ -686,7 +686,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Abstraction</strong> is correct because Abstraction lets clients work with concepts without needing internal details.</p><p>Example: in a Java application, you would use <code>Abstraction</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Abstraction</strong> is correct because Abstraction focuses on exposing what an object can do while hiding how it does it. Interfaces and abstract classes are common Java tools for this idea.</p><p>Example:</p><pre><code class=\"language-java\">interface PaymentService {\n    void pay(double amount);\n}\n\nclass CardPaymentService implements PaymentService {\n    public void pay(double amount) {\n        System.out.println(\"Paid \" + amount);\n    }\n}</code></pre>"
   },
   {
     "id": 2042,
@@ -699,7 +699,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>abstract</strong> is correct because abstract marks a class that cannot be instantiated directly.</p><p>Example: in a Java application, you would use <code>abstract</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>abstract</strong> is correct because The <code>abstract</code> keyword marks a class or method as incomplete and intended to be extended. An abstract class can provide shared code while requiring subclasses to implement specific behavior.</p><p>Example:</p><pre><code class=\"language-java\">abstract class Report {\n    abstract String type();\n}\n\nclass SalesReport extends Report {\n    String type() { return \"sales\"; }\n}</code></pre>"
   },
   {
     "id": 2043,
@@ -712,7 +712,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Interface</strong> is correct because Interfaces define contracts that classes implement.</p><p>Example: in a Java application, you would use <code>Interface</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Interface</strong> is correct because An interface defines a contract that classes can implement. It is useful when multiple classes should share the same API without sharing the same inheritance tree.</p><p>Example:</p><pre><code class=\"language-java\">interface Notifier {\n    void send(String message);\n}\n\nclass SmsNotifier implements Notifier {\n    public void send(String message) {\n        System.out.println(message);\n    }\n}</code></pre>"
   },
   {
     "id": 2044,
@@ -725,7 +725,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>enum</strong> is correct because enum defines a fixed set of constants.</p><p>Example: in a Java application, you would use <code>enum</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>enum</strong> is correct because The <code>enum</code> keyword defines a fixed set of named constants. Enums improve readability and type safety compared with raw strings or integers for well-known categories.</p><p>Example:</p><pre><code class=\"language-java\">enum Status {\n    NEW, IN_PROGRESS, DONE\n}\n\nStatus status = Status.NEW;</code></pre>"
   },
   {
     "id": 2045,
@@ -738,7 +738,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>record</strong> is correct because record is designed for concise immutable data classes.</p><p>Example: in a Java application, you would use <code>record</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>record</strong> is correct because A <code>record</code> is ideal for immutable data carriers because Java generates useful members like a constructor, accessors, <code>equals</code>, <code>hashCode</code>, and <code>toString</code> automatically.</p><p>Example:</p><pre><code class=\"language-java\">public record UserDto(Long id, String name) {\n}\n\nUserDto dto = new UserDto(1L, \"Mia\");</code></pre>"
   },
   {
     "id": 2046,
@@ -751,7 +751,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>toString()</strong> is correct because toString() returns a string representation of an object.</p><p>Example: in a Java application, you would use <code>toString()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>toString()</strong> is correct because <code>toString()</code> is inherited from <code>Object</code> and is commonly overridden to produce a readable string form of an object. This improves logging and debugging output.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    private final String name = \"Mia\";\n\n    @Override\n    public String toString() {\n        return \"User{name='\" + name + \"'}\";\n    }\n}</code></pre>"
   },
   {
     "id": 2047,
@@ -764,7 +764,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>equals()</strong> is correct because equals() is overridden to compare objects by state rather than reference.</p><p>Example: in a Java application, you would use <code>equals()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>equals()</strong> is correct because overriding <code>equals()</code> lets a class define when two objects should be considered logically equal instead of relying on reference identity. This is essential for domain objects, collections, and testing.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    private final String email;\n\n    User(String email) {\n        this.email = email;\n    }\n\n    @Override\n    public boolean equals(Object obj) {\n        return obj instanceof User other && email.equals(other.email);\n    }\n}</code></pre>"
   },
   {
     "id": 2048,
@@ -777,7 +777,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>hashCode()</strong> is correct because Equal objects should return the same hash code.</p><p>Example: in a Java application, you would use <code>hashCode()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>hashCode()</strong> is correct because <code>hashCode()</code> should be consistent with <code>equals()</code> so hash-based collections like <code>HashMap</code> and <code>HashSet</code> behave correctly.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    private final String email;\n\n    User(String email) {\n        this.email = email;\n    }\n\n    @Override\n    public boolean equals(Object o) {\n        return o instanceof User other && email.equals(other.email);\n    }\n\n    @Override\n    public int hashCode() {\n        return email.hashCode();\n    }\n}</code></pre>"
   },
   {
     "id": 2049,
@@ -790,7 +790,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>java.io</strong> is correct because Traditional file and stream I/O APIs live in java.io.</p><p>Example: in a Java application, you would use <code>java.io</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>java.io</strong> is correct because <code>java.io</code> contains classic input/output classes such as streams, readers, writers, and <code>File</code>. It is the traditional package for byte and character I/O.</p><p>Example:</p><pre><code class=\"language-java\">import java.io.BufferedReader;\nimport java.io.FileReader;\n\nBufferedReader reader = new BufferedReader(new FileReader(\"data.txt\"));</code></pre>"
   },
   {
     "id": 2050,
@@ -803,7 +803,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>java.nio.file</strong> is correct because Path and Files are part of java.nio.file.</p><p>Example: in a Java application, you would use <code>java.nio.file</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>java.nio.file</strong> is correct because <code>java.nio.file</code> contains the modern file APIs such as <code>Path</code> and <code>Files</code>. It is usually preferred for clearer and more powerful file operations.</p><p>Example:</p><pre><code class=\"language-java\">import java.nio.file.Files;\nimport java.nio.file.Path;\n\nString text = Files.readString(Path.of(\"notes.txt\"));</code></pre>"
   },
   {
     "id": 2051,
@@ -816,7 +816,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Path</strong> is correct because Path models filesystem locations in the NIO API.</p><p>Example: in a Java application, you would use <code>Path</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Path</strong> is correct because <code>Path</code> represents a filesystem path in the NIO API. It is more flexible and modern than using raw string paths everywhere.</p><p>Example:</p><pre><code class=\"language-java\">Path report = Path.of(\"reports\", \"today.txt\");\nSystem.out.println(report);</code></pre>"
   },
   {
     "id": 2052,
@@ -829,7 +829,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Files</strong> is correct because Files provides convenient static methods for file operations.</p><p>Example: in a Java application, you would use <code>Files</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Files</strong> is correct because <code>Files</code> is a utility class containing many static methods for reading, writing, copying, and inspecting files in the NIO API.</p><p>Example:</p><pre><code class=\"language-java\">Path file = Path.of(\"notes.txt\");\nFiles.writeString(file, \"Hello Java\");\nString content = Files.readString(file);</code></pre>"
   },
   {
     "id": 2053,
@@ -842,7 +842,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Scanner</strong> is correct because Scanner parses primitive types and strings from input.</p><p>Example: in a Java application, you would use <code>Scanner</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Scanner</strong> is correct because <code>Scanner</code> reads tokenized input conveniently from the console or another stream. It is often used for beginner-friendly parsing of numbers and words.</p><p>Example:</p><pre><code class=\"language-java\">Scanner scanner = new Scanner(System.in);\nint age = scanner.nextInt();\nSystem.out.println(age);</code></pre>"
   },
   {
     "id": 2054,
@@ -855,7 +855,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>BufferedReader</strong> is correct because BufferedReader efficiently reads character data line by line.</p><p>Example: in a Java application, you would use <code>BufferedReader</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>BufferedReader</strong> is correct because <code>BufferedReader</code> is commonly used for efficient character input, especially line-by-line reading from text sources.</p><p>Example:</p><pre><code class=\"language-java\">try (BufferedReader reader = Files.newBufferedReader(Path.of(\"data.txt\"))) {\n    String line = reader.readLine();\n}</code></pre>"
   },
   {
     "id": 2055,
@@ -868,7 +868,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>try-with-resources</strong> is correct because try-with-resources closes AutoCloseable resources automatically.</p><p>Example: in a Java application, you would use <code>try-with-resources</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>try-with-resources</strong> is correct because <code>try-with-resources</code> automatically closes resources at the end of the block, even when an exception occurs. It makes I/O code safer and less verbose.</p><p>Example:</p><pre><code class=\"language-java\">try (BufferedReader reader = Files.newBufferedReader(Path.of(\"data.txt\"))) {\n    System.out.println(reader.readLine());\n}</code></pre>"
   },
   {
     "id": 2056,
@@ -881,7 +881,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>AutoCloseable</strong> is correct because AutoCloseable resources can be closed automatically by the JVM construct.</p><p>Example: in a Java application, you would use <code>AutoCloseable</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>AutoCloseable</strong> is correct because A resource used in <code>try-with-resources</code> must implement <code>AutoCloseable</code> so Java knows it has a <code>close()</code> method to call automatically.</p><p>Example:</p><pre><code class=\"language-java\">class ReportWriter implements AutoCloseable {\n    public void close() {\n        System.out.println(\"closed\");\n    }\n}</code></pre>"
   },
   {
     "id": 2057,
@@ -894,7 +894,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>java.time</strong> is correct because The modern Java date/time API is in java.time.</p><p>Example: in a Java application, you would use <code>java.time</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>java.time</strong> is correct because <code>java.time</code> is the modern Java date-time API package. It is clearer, more immutable, and safer than older date APIs.</p><p>Example:</p><pre><code class=\"language-java\">import java.time.LocalDate;\nimport java.time.LocalDateTime;\n\nLocalDate today = LocalDate.now();</code></pre>"
   },
   {
     "id": 2058,
@@ -907,7 +907,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>LocalDate</strong> is correct because LocalDate models a date such as 2026-06-03 without time information.</p><p>Example: in a Java application, you would use <code>LocalDate</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>LocalDate</strong> is correct because <code>LocalDate</code> represents a calendar date without a time or time zone. Use it for birthdays, due dates, or business dates.</p><p>Example:</p><pre><code class=\"language-java\">LocalDate releaseDate = LocalDate.of(2026, 6, 3);\nSystem.out.println(releaseDate);</code></pre>"
   },
   {
     "id": 2059,
@@ -920,7 +920,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>LocalDateTime</strong> is correct because LocalDateTime combines date and time without zone offset info.</p><p>Example: in a Java application, you would use <code>LocalDateTime</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>LocalDateTime</strong> is correct because <code>LocalDateTime</code> stores both date and time but no time zone. It is useful for local scheduling values that are not tied to one exact instant worldwide.</p><p>Example:</p><pre><code class=\"language-java\">LocalDateTime meeting = LocalDateTime.of(2026, 6, 3, 14, 30);\nSystem.out.println(meeting);</code></pre>"
   },
   {
     "id": 2060,
@@ -933,7 +933,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Instant</strong> is correct because Instant represents a machine timestamp in UTC.</p><p>Example: in a Java application, you would use <code>Instant</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Instant</strong> is correct because <code>Instant</code> represents a precise moment on the UTC timeline. It is a strong choice for timestamps that must be globally comparable.</p><p>Example:</p><pre><code class=\"language-java\">Instant createdAt = Instant.now();\nSystem.out.println(createdAt);</code></pre>"
   },
   {
     "id": 2061,
@@ -946,7 +946,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>ZoneId</strong> is correct because ZoneId stores region-based time zone identifiers.</p><p>Example: in a Java application, you would use <code>ZoneId</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>ZoneId</strong> is correct because <code>ZoneId</code> represents a region-based time zone such as <code>America/New_York</code>. It is used when converting between local date-times and actual instants.</p><p>Example:</p><pre><code class=\"language-java\">ZoneId zone = ZoneId.of(\"America/New_York\");\nSystem.out.println(zone);</code></pre>"
   },
   {
     "id": 2062,
@@ -959,7 +959,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Thread</strong> is correct because Thread represents an independent path of execution.</p><p>Example: in a Java application, you would use <code>Thread</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Thread</strong> is correct because <code>Thread</code> is the core JDK class for creating and running a new thread directly. It is low-level compared with executors but still important to understand.</p><p>Example:</p><pre><code class=\"language-java\">Thread worker = new Thread(() -&gt; System.out.println(\"Working\"));\nworker.start();</code></pre>"
   },
   {
     "id": 2063,
@@ -972,7 +972,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Runnable</strong> is correct because Runnable defines a task with a run() method and no return value.</p><p>Example: in a Java application, you would use <code>Runnable</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Runnable</strong> is correct because <code>Runnable</code> represents a task with no return value. It is commonly passed to threads or executors when you only need work to run, not a result to come back.</p><p>Example:</p><pre><code class=\"language-java\">Runnable task = () -&gt; System.out.println(\"Task running\");\nnew Thread(task).start();</code></pre>"
   },
   {
     "id": 2064,
@@ -985,7 +985,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Callable</strong> is correct because Callable can return a result and throw exceptions.</p><p>Example: in a Java application, you would use <code>Callable</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Callable</strong> is correct because <code>Callable&lt;T&gt;</code> is like <code>Runnable</code> but it can return a value and throw checked exceptions. It is commonly used with executor services.</p><p>Example:</p><pre><code class=\"language-java\">Callable&lt;Integer&gt; task = () -&gt; 40 + 2;\nFuture&lt;Integer&gt; future = Executors.newSingleThreadExecutor().submit(task);</code></pre>"
   },
   {
     "id": 2065,
@@ -998,7 +998,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>ExecutorService</strong> is correct because ExecutorService abstracts thread pool management and task execution.</p><p>Example: in a Java application, you would use <code>ExecutorService</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>ExecutorService</strong> is correct because <code>ExecutorService</code> manages a pool of worker threads and is usually preferred over manually creating many <code>Thread</code> objects. It gives better lifecycle and concurrency control.</p><p>Example:</p><pre><code class=\"language-java\">ExecutorService executor = Executors.newFixedThreadPool(2);\nexecutor.submit(() -&gt; System.out.println(\"job\"));\nexecutor.shutdown();</code></pre>"
   },
   {
     "id": 2066,
@@ -1011,7 +1011,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>shutdown()</strong> is correct because shutdown() stops accepting new tasks and lets running tasks finish.</p><p>Example: in a Java application, you would use <code>shutdown()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>shutdown()</strong> is correct because <code>shutdown()</code> tells an <code>ExecutorService</code> to stop accepting new tasks while letting already submitted work finish normally.</p><p>Example:</p><pre><code class=\"language-java\">ExecutorService executor = Executors.newSingleThreadExecutor();\nexecutor.submit(() -&gt; System.out.println(\"done\"));\nexecutor.shutdown();</code></pre>"
   },
   {
     "id": 2067,
@@ -1024,7 +1024,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>AtomicInteger</strong> is correct because AtomicInteger provides atomic operations such as incrementAndGet().</p><p>Example: in a Java application, you would use <code>AtomicInteger</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>AtomicInteger</strong> is correct because <code>AtomicInteger</code> supports thread-safe atomic updates without explicit synchronization blocks. It is useful for counters shared across multiple threads.</p><p>Example:</p><pre><code class=\"language-java\">AtomicInteger counter = new AtomicInteger();\ncounter.incrementAndGet();\nSystem.out.println(counter.get());</code></pre>"
   },
   {
     "id": 2068,
@@ -1037,7 +1037,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>volatile</strong> is correct because volatile ensures reads and writes go directly to main memory visibility semantics.</p><p>Example: in a Java application, you would use <code>volatile</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>volatile</strong> is correct because <code>volatile</code> helps ensure that writes to a field by one thread are visible to other threads reading that field. It is about visibility, not full compound-operation safety.</p><p>Example:</p><pre><code class=\"language-java\">class FlagHolder {\n    private volatile boolean running = true;\n\n    void stop() {\n        running = false;\n    }\n}</code></pre>"
   },
   {
     "id": 2069,
@@ -1050,7 +1050,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>synchronized</strong> is correct because synchronized provides mutual exclusion and memory synchronization.</p><p>Example: in a Java application, you would use <code>synchronized</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>synchronized</strong> is correct because <code>synchronized</code> ensures that only one thread at a time executes a guarded method or block for the same monitor. It is commonly used to protect shared mutable state.</p><p>Example:</p><pre><code class=\"language-java\">class Counter {\n    private int value;\n\n    public synchronized void increment() {\n        value++;\n    }\n}</code></pre>"
   },
   {
     "id": 2070,
@@ -1063,7 +1063,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>InterruptedException</strong> is correct because Thread.sleep can throw InterruptedException if the thread is interrupted.</p><p>Example: in a Java application, you would use <code>InterruptedException</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>InterruptedException</strong> is correct because <code>InterruptedException</code> can be thrown when a sleeping, waiting, or blocking thread is interrupted. Good Java code usually handles it by restoring the interrupt or stopping work appropriately.</p><p>Example:</p><pre><code class=\"language-java\">try {\n    Thread.sleep(1000);\n} catch (InterruptedException ex) {\n    Thread.currentThread().interrupt();\n}</code></pre>"
   },
   {
     "id": 2071,
@@ -1076,7 +1076,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>ConcurrentHashMap</strong> is correct because ConcurrentHashMap supports concurrent access with good scalability.</p><p>Example: in a Java application, you would use <code>ConcurrentHashMap</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>ConcurrentHashMap</strong> is correct because <code>ConcurrentHashMap</code> is a thread-safe map implementation designed for concurrent access without one global lock around every operation.</p><p>Example:</p><pre><code class=\"language-java\">Map&lt;String, Integer&gt; counts = new ConcurrentHashMap&lt;&gt;();\ncounts.put(\"java\", 1);\ncounts.merge(\"java\", 1, Integer::sum);</code></pre>"
   },
   {
     "id": 2072,
@@ -1089,7 +1089,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>getResourceAsStream()</strong> is correct because getResourceAsStream reads packaged resources from the classpath.</p><p>Example: in a Java application, you would use <code>getResourceAsStream()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>getResourceAsStream()</strong> is correct because <code>getResourceAsStream()</code> is commonly used to read a classpath resource such as a file packaged inside <code>src/main/resources</code>. It returns an input stream for that resource.</p><p>Example:</p><pre><code class=\"language-java\">try (InputStream input = App.class.getResourceAsStream(\"/config.properties\")) {\n    Properties props = new Properties();\n    props.load(input);\n}</code></pre>"
   },
   {
     "id": 2073,
@@ -1102,7 +1102,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>instanceof</strong> is correct because instanceof tests whether an object is an instance of a type.</p><p>Example: in a Java application, you would use <code>instanceof</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>instanceof</strong> is correct because <code>instanceof</code> checks whether an object is of a given type before casting. It helps avoid invalid casts and makes type-dependent logic safer.</p><p>Example:</p><pre><code class=\"language-java\">Object value = \"java\";\nif (value instanceof String text) {\n    System.out.println(text.toUpperCase());\n}</code></pre>"
   },
   {
     "id": 2074,
@@ -1115,7 +1115,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Integer</strong> is correct because Integer is the object wrapper type for int.</p><p>Example: in a Java application, you would use <code>Integer</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Integer</strong> is correct because <code>Integer</code> is the wrapper class for the primitive type <code>int</code>. It is needed when Java requires an object instead of a primitive, such as in generics or collections.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;Integer&gt; scores = List.of(10, 20, 30);\nInteger first = scores.get(0);</code></pre>"
   },
   {
     "id": 2075,
@@ -1128,7 +1128,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Autoboxing</strong> is correct because Autoboxing wraps primitives into their corresponding wrapper objects automatically.</p><p>Example: in a Java application, you would use <code>Autoboxing</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Autoboxing</strong> is correct because Autoboxing is Java’s automatic conversion from a primitive like <code>int</code> to its wrapper type such as <code>Integer</code>. This is especially common in collections and generic APIs.</p><p>Example:</p><pre><code class=\"language-java\">Integer score = 10; // int -&gt; Integer\nList&lt;Integer&gt; values = new ArrayList&lt;&gt;();\nvalues.add(5);</code></pre>"
   },
   {
     "id": 2076,
@@ -1141,7 +1141,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Unboxing</strong> is correct because Unboxing extracts the primitive value from a wrapper object.</p><p>Example: in a Java application, you would use <code>Unboxing</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Unboxing</strong> is correct because Unboxing is Java’s automatic conversion from a wrapper like <code>Integer</code> back to a primitive such as <code>int</code>. It is convenient but can throw <code>NullPointerException</code> if the wrapper is null.</p><p>Example:</p><pre><code class=\"language-java\">Integer boxed = 42;\nint value = boxed; // Integer -&gt; int\nSystem.out.println(value);</code></pre>"
   },
   {
     "id": 2077,
@@ -1154,7 +1154,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Integer.parseInt()</strong> is correct because Integer.parseInt() parses a numeric string into an int.</p><p>Example: in a Java application, you would use <code>Integer.parseInt()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Integer.parseInt()</strong> is correct because <code>Integer.parseInt()</code> converts a numeric string into an <code>int</code>. It is the usual choice when reading whole-number input from text.</p><p>Example:</p><pre><code class=\"language-java\">String raw = \"123\";\nint value = Integer.parseInt(raw);\nSystem.out.println(value + 1); // 124</code></pre>"
   },
   {
     "id": 2078,
@@ -1167,7 +1167,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Comparator</strong> is correct because Comparator defines external comparison rules for sorting.</p><p>Example: in a Java application, you would use <code>Comparator</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Comparator</strong> is correct because A <code>Comparator</code> defines custom comparison logic outside the class being sorted. It is useful when the class itself does not own a single natural ordering or when multiple orderings are needed.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;String&gt; names = new ArrayList&lt;&gt;(List.of(\"Mia\", \"Alexander\", \"Noah\"));\nnames.sort(Comparator.comparingInt(String::length));</code></pre>"
   },
   {
     "id": 2079,
@@ -1180,7 +1180,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Comparable</strong> is correct because Comparable lets objects compare themselves using compareTo().</p><p>Example: in a Java application, you would use <code>Comparable</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Comparable</strong> is correct because <code>Comparable</code> lets a class define its natural ordering by implementing <code>compareTo()</code>. Collections can then sort those objects without an external comparator.</p><p>Example:</p><pre><code class=\"language-java\">class User implements Comparable&lt;User&gt; {\n    private final String name;\n\n    User(String name) { this.name = name; }\n\n    public int compareTo(User other) {\n        return this.name.compareTo(other.name);\n    }\n}</code></pre>"
   },
   {
     "id": 2080,
@@ -1193,7 +1193,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>compareTo()</strong> is correct because Comparable requires implementing compareTo().</p><p>Example: in a Java application, you would use <code>compareTo()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>compareTo()</strong> is correct because <code>compareTo()</code> is the method required by <code>Comparable</code> and defines how one object orders itself relative to another. Negative, zero, and positive results indicate before, equal, or after.</p><p>Example:</p><pre><code class=\"language-java\">public int compareTo(User other) {\n    return this.name.compareTo(other.name);\n}</code></pre>"
   },
   {
     "id": 2081,
@@ -1206,7 +1206,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Iterable</strong> is correct because Iterable exposes an iterator so objects can be used in enhanced for loops.</p><p>Example: in a Java application, you would use <code>Iterable</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Iterable</strong> is correct because <code>Iterable</code> allows an object to participate in the enhanced for-each loop. If a type can produce an iterator, Java can iterate over it naturally.</p><p>Example:</p><pre><code class=\"language-java\">class NameCollection implements Iterable&lt;String&gt; {\n    public Iterator&lt;String&gt; iterator() {\n        return List.of(\"A\", \"B\").iterator();\n    }\n}</code></pre>"
   },
   {
     "id": 2082,
@@ -1219,7 +1219,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>iterator()</strong> is correct because iterator() returns an Iterator for the object.</p><p>Example: in a Java application, you would use <code>iterator()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>iterator()</strong> is correct because <code>iterator()</code> is the method required by <code>Iterable</code>. It returns an <code>Iterator</code> that walks through the elements in sequence.</p><p>Example:</p><pre><code class=\"language-java\">Iterable&lt;String&gt; values = List.of(\"x\", \"y\");\nIterator&lt;String&gt; iterator = values.iterator();</code></pre>"
   },
   {
     "id": 2083,
@@ -1232,7 +1232,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>hasNext()</strong> is correct because hasNext() tells you whether another element is available.</p><p>Example: in a Java application, you would use <code>hasNext()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>hasNext()</strong> is correct because <code>hasNext()</code> checks whether an iterator still has another element available. It prevents calling <code>next()</code> past the end of the sequence.</p><p>Example:</p><pre><code class=\"language-java\">Iterator&lt;Integer&gt; iterator = List.of(1, 2).iterator();\nwhile (iterator.hasNext()) {\n    System.out.println(iterator.next());\n}</code></pre>"
   },
   {
     "id": 2084,
@@ -1245,7 +1245,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>next()</strong> is correct because next() retrieves the next element from the iterator.</p><p>Example: in a Java application, you would use <code>next()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>next()</strong> is correct because <code>next()</code> returns the next element from an iterator. It advances the iterator each time it is called.</p><p>Example:</p><pre><code class=\"language-java\">Iterator&lt;String&gt; iterator = List.of(\"A\", \"B\").iterator();\nString first = iterator.next();</code></pre>"
   },
   {
     "id": 2085,
@@ -1258,7 +1258,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Optional</strong> is correct because Optional represents a value that may or may not be present.</p><p>Example: in a Java application, you would use <code>Optional</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Optional</strong> is correct because <code>Optional&lt;T&gt;</code> represents a value that may or may not be present. It encourages callers to handle absence explicitly instead of assuming null is always safe.</p><p>Example:</p><pre><code class=\"language-java\">Optional&lt;String&gt; name = Optional.ofNullable(findName());\nname.ifPresent(System.out::println);</code></pre>"
   },
   {
     "id": 2086,
@@ -1271,7 +1271,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>isPresent()</strong> is correct because isPresent() checks whether the Optional contains a value.</p><p>Example: in a Java application, you would use <code>isPresent()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>isPresent()</strong> is correct because <code>isPresent()</code> returns <code>true</code> when an <code>Optional</code> contains a value. It can be useful, though methods like <code>ifPresent</code> or <code>orElse</code> are often more expressive.</p><p>Example:</p><pre><code class=\"language-java\">Optional&lt;String&gt; name = Optional.of(\"Java\");\nif (name.isPresent()) {\n    System.out.println(name.get());\n}</code></pre>"
   },
   {
     "id": 2087,
@@ -1284,7 +1284,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>orElse()</strong> is correct because orElse() returns the contained value or a default fallback.</p><p>Example: in a Java application, you would use <code>orElse()</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>orElse()</strong> is correct because <code>orElse()</code> returns the wrapped value when present or a fallback when absent. It is useful for defaulting without writing explicit null checks.</p><p>Example:</p><pre><code class=\"language-java\">Optional&lt;String&gt; nickname = Optional.empty();\nString result = nickname.orElse(\"Guest\");\nSystem.out.println(result);</code></pre>"
   },
   {
     "id": 2088,
@@ -1297,7 +1297,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>yield</strong> is correct because yield returns a value from a switch expression block arm.</p><p>Example: in a Java application, you would use <code>yield</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>yield</strong> is correct because In a switch expression, <code>yield</code> returns a value from a block-style case arm. It is used when the arm needs multiple statements before producing its final result.</p><p>Example:</p><pre><code class=\"language-java\">int day = 6;\nString type = switch (day) {\n    case 6, 7 -&gt; {\n        System.out.println(\"Weekend selected\");\n        yield \"WEEKEND\";\n    }\n    default -&gt; \"WEEKDAY\";\n};</code></pre>"
   },
   {
     "id": 2089,
@@ -1310,7 +1310,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Switch expressions</strong> is correct because Switch expressions can use concise arrow syntax and return values.</p><p>Example: in a Java application, you would use <code>Switch expressions</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Switch expressions</strong> is correct because Switch expressions reduce boilerplate by letting each arm produce a value directly with arrow syntax. They are often clearer and less error-prone than old fall-through switch statements.</p><p>Example:</p><pre><code class=\"language-java\">int score = 2;\nString label = switch (score) {\n    case 1 -&gt; \"LOW\";\n    case 2 -&gt; \"MEDIUM\";\n    default -&gt; \"HIGH\";\n};</code></pre>"
   },
   {
     "id": 2090,
@@ -1323,7 +1323,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>super</strong> is correct because super in a constructor calls the parent constructor.</p><p>Example: in a Java application, you would use <code>super</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>super</strong> is correct because <code>super</code> refers to the immediate parent class and is used to call parent constructors or parent method implementations. It is especially useful when a subclass extends existing behavior instead of replacing it entirely.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    User(String name) {\n        System.out.println(name);\n    }\n}\n\nclass AdminUser extends User {\n    AdminUser() {\n        super(\"Admin\");\n    }\n}</code></pre>"
   },
   {
     "id": 2091,
@@ -1336,7 +1336,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>java.lang</strong> is correct because java.lang is automatically available without an explicit import.</p><p>Example: in a Java application, you would use <code>java.lang</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>java.lang</strong> is correct because <code>java.lang</code> is imported automatically into every Java source file. That is why classes like <code>String</code>, <code>Object</code>, and <code>System</code> can be used without an explicit import.</p><p>Example:</p><pre><code class=\"language-java\">String text = \"Java\";\nSystem.out.println(text.length());</code></pre>"
   },
   {
     "id": 2092,
@@ -1349,7 +1349,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Object</strong> is correct because Every Java class ultimately extends Object.</p><p>Example: in a Java application, you would use <code>Object</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Object</strong> is correct because <code>Object</code> is the root parent of all Java classes. Every reference type inherits methods such as <code>toString()</code>, <code>equals()</code>, and <code>hashCode()</code> from it.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n}\n\nObject value = new User();\nSystem.out.println(value.toString());</code></pre>"
   },
   {
     "id": 2093,
@@ -1362,7 +1362,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>System</strong> is correct because System exposes streams like System.out and utility methods.</p><p>Example: in a Java application, you would use <code>System</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>System</strong> is correct because <code>System</code> provides access to core platform features such as standard output, standard error, time, properties, and environment integration.</p><p>Example:</p><pre><code class=\"language-java\">System.out.println(\"Hello\");\nSystem.err.println(\"Something went wrong\");</code></pre>"
   },
   {
     "id": 2094,
@@ -1375,7 +1375,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>System.out</strong> is correct because System.out is the standard output stream.</p><p>Example: in a Java application, you would use <code>System.out</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>System.out</strong> is correct because <code>System.out</code> is the standard output stream used for normal console printing. It is usually the first place beginners write messages in Java programs.</p><p>Example:</p><pre><code class=\"language-java\">System.out.println(\"Quiz started\");</code></pre>"
   },
   {
     "id": 2095,
@@ -1388,7 +1388,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>ProcessBuilder</strong> is correct because ProcessBuilder configures and starts external processes.</p><p>Example: in a Java application, you would use <code>ProcessBuilder</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>ProcessBuilder</strong> is correct because <code>ProcessBuilder</code> is commonly used to launch external operating-system commands from Java. It gives more control than the older <code>Runtime.exec()</code> style.</p><p>Example:</p><pre><code class=\"language-java\">ProcessBuilder builder = new ProcessBuilder(\"echo\", \"Hello from Java\");\nProcess process = builder.start();</code></pre>"
   },
   {
     "id": 2096,
@@ -1401,7 +1401,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>super</strong> is correct because super.methodName() invokes the parent implementation.</p><p>Example: in a Java application, you would use <code>super</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>super</strong> is correct because <code>super</code> refers to the immediate parent class and is used to call parent constructors or parent method implementations. It is especially useful when a subclass extends existing behavior instead of replacing it entirely.</p><p>Example:</p><pre><code class=\"language-java\">class User {\n    User(String name) {\n        System.out.println(name);\n    }\n}\n\nclass AdminUser extends User {\n    AdminUser() {\n        super(\"Admin\");\n    }\n}</code></pre>"
   },
   {
     "id": 2097,
@@ -1414,7 +1414,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>java.lang</strong> is correct because Common core annotations live in java.lang.</p><p>Example: in a Java application, you would use <code>java.lang</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>java.lang</strong> is correct because <code>java.lang</code> is imported automatically into every Java source file. That is why classes like <code>String</code>, <code>Object</code>, and <code>System</code> can be used without an explicit import.</p><p>Example:</p><pre><code class=\"language-java\">String text = \"Java\";\nSystem.out.println(text.length());</code></pre>"
   },
   {
     "id": 2098,
@@ -1427,7 +1427,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>@Deprecated</strong> is correct because @Deprecated warns that an API should no longer be used.</p><p>Example: in a Java application, you would use <code>@Deprecated</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>@Deprecated</strong> is correct because <code>@Deprecated</code> marks an API element as discouraged for new use. IDEs and compilers can then warn callers that a better replacement should be preferred.</p><p>Example:</p><pre><code class=\"language-java\">@Deprecated\npublic void oldMethod() {\n    System.out.println(\"Use newMethod instead\");\n}</code></pre>"
   },
   {
     "id": 2099,
@@ -1440,7 +1440,7 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>@FunctionalInterface</strong> is correct because @FunctionalInterface documents and enforces a functional interface contract.</p><p>Example: in a Java application, you would use <code>@FunctionalInterface</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>@FunctionalInterface</strong> is correct because <code>@FunctionalInterface</code> indicates that an interface is intended to have exactly one abstract method, making it suitable for lambdas and method references.</p><p>Example:</p><pre><code class=\"language-java\">@FunctionalInterface\ninterface Formatter {\n    String format(String text);\n}</code></pre>"
   },
   {
     "id": 2100,
@@ -1453,6 +1453,6 @@
     ],
     "correctIndex": 0,
     "topic": "Java",
-    "explanation": "<p><strong>Inheritance</strong> is correct because Inheritance allows classes to reuse and extend parent behavior.</p><p>Example: in a Java application, you would use <code>Inheritance</code> when implementing this concept.</p>"
+    "explanation": "<p><strong>Inheritance</strong> is correct because Inheritance lets a subclass reuse fields or methods from a common parent class and optionally specialize behavior. It is one of the core OOP mechanisms for sharing code.</p><p>Example:</p><pre><code class=\"language-java\">class Animal {\n    void speak() {\n        System.out.println(\"sound\");\n    }\n}\n\nclass Dog extends Animal {\n}</code></pre>"
   }
 ]
