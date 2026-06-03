@@ -154,5 +154,1305 @@
     "correctIndex": 0,
     "topic": "Nodejs",
     "explanation": "<p><strong>process</strong> is correct because Node.js exposes information about the current application process through the global <code>process</code> object.</p><p>Example: you can read <code>process.pid</code> for the process id or <code>process.argv</code> for command-line arguments.</p>"
+  },
+  {
+    "id": 3001,
+    "text": "Which built-in Node.js module helps work with file and directory paths?",
+    "choices": [
+      "path",
+      "http",
+      "cluster",
+      "stream"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>path</strong> is correct because The path module provides utilities for resolving and joining filesystem paths.</p><p>Example: in a Node.js application, you would use <code>path</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3002,
+    "text": "Which path module method joins path segments using the correct platform separator?",
+    "choices": [
+      "path.join()",
+      "path.resolveOnly()",
+      "fs.joinPath()",
+      "url.join()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>path.join()</strong> is correct because path.join() combines segments into one normalized path string.</p><p>Example: in a Node.js application, you would use <code>path.join()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3003,
+    "text": "Which built-in Node.js module provides utilities for working with operating system information?",
+    "choices": [
+      "os",
+      "dns",
+      "tls",
+      "zlib"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>os</strong> is correct because The os module exposes platform, CPU, memory, and user information.</p><p>Example: in a Node.js application, you would use <code>os</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3004,
+    "text": "Which built-in Node.js module is used for handling compressed data such as gzip?",
+    "choices": [
+      "zlib",
+      "http2",
+      "worker_threads",
+      "net"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>zlib</strong> is correct because zlib provides compression and decompression utilities.</p><p>Example: in a Node.js application, you would use <code>zlib</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3005,
+    "text": "Which built-in Node.js module is used to create cryptographic hashes and secure random bytes?",
+    "choices": [
+      "crypto",
+      "events",
+      "timers",
+      "module"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>crypto</strong> is correct because The crypto module supports hashing, encryption, and random value generation.</p><p>Example: in a Node.js application, you would use <code>crypto</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3006,
+    "text": "Which function schedules a callback to run after a delay in Node.js?",
+    "choices": [
+      "setTimeout()",
+      "setImmediateOnly()",
+      "process.next()",
+      "queueAfter()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>setTimeout()</strong> is correct because setTimeout() delays execution of a callback by a specified number of milliseconds.</p><p>Example: in a Node.js application, you would use <code>setTimeout()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3007,
+    "text": "Which function schedules a callback to run repeatedly at a fixed interval?",
+    "choices": [
+      "setInterval()",
+      "setImmediate()",
+      "setLoop()",
+      "repeatTimeout()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>setInterval()</strong> is correct because setInterval() runs a callback repeatedly based on the given delay.</p><p>Example: in a Node.js application, you would use <code>setInterval()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3008,
+    "text": "Which function queues a callback to run after the current poll phase, often before timers in the next cycle?",
+    "choices": [
+      "setImmediate()",
+      "setTimeout()",
+      "process.exit()",
+      "queueMicrotaskOnly()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>setImmediate()</strong> is correct because setImmediate() schedules execution during the check phase of the event loop.</p><p>Example: in a Node.js application, you would use <code>setImmediate()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3009,
+    "text": "Which process method immediately stops a Node.js application?",
+    "choices": [
+      "process.exit()",
+      "process.stop()",
+      "process.killApp()",
+      "node.exit()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>process.exit()</strong> is correct because process.exit() ends the process with an optional exit code.</p><p>Example: in a Node.js application, you would use <code>process.exit()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3010,
+    "text": "Which process property contains command-line arguments passed to a Node.js script?",
+    "choices": [
+      "process.argv",
+      "process.env",
+      "process.cwd()",
+      "process.flags"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>process.argv</strong> is correct because process.argv stores the executable path, script path, and user-provided arguments.</p><p>Example: in a Node.js application, you would use <code>process.argv</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3011,
+    "text": "Which process method returns the current working directory?",
+    "choices": [
+      "process.cwd()",
+      "process.dir()",
+      "process.workdir()",
+      "process.current()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>process.cwd()</strong> is correct because process.cwd() returns the directory from which the Node process was launched.</p><p>Example: in a Node.js application, you would use <code>process.cwd()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3012,
+    "text": "Which module system keyword is used to import a CommonJS dependency?",
+    "choices": [
+      "require()",
+      "import only",
+      "include()",
+      "use()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>require()</strong> is correct because require() loads CommonJS modules and returns their exports.</p><p>Example: in a Node.js application, you would use <code>require()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3013,
+    "text": "Which modern JavaScript syntax can also be used in Node.js ESM modules to import dependencies?",
+    "choices": [
+      "import",
+      "require only",
+      "include",
+      "load"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>import</strong> is correct because The import keyword is used in ECMAScript modules.</p><p>Example: in a Node.js application, you would use <code>import</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3014,
+    "text": "Which file extension is commonly used for ECMAScript modules in Node.js when not using package.json type settings?",
+    "choices": [
+      ".mjs",
+      ".njs",
+      ".cjs",
+      ".esm only"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>.mjs</strong> is correct because The .mjs extension explicitly marks a file as an ES module.</p><p>Example: in a Node.js application, you would use <code>.mjs</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3015,
+    "text": "Which package.json field can be set to enable ES module behavior for .js files?",
+    "choices": [
+      "type",
+      "moduleName",
+      "engine",
+      "target"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>type</strong> is correct because Setting type to module makes .js files use ES module semantics.</p><p>Example: in a Node.js application, you would use <code>type</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3016,
+    "text": "Which built-in Node.js class is often used to handle custom events?",
+    "choices": [
+      "EventEmitter",
+      "EventLoop",
+      "CallbackQueue",
+      "EmitterService"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>EventEmitter</strong> is correct because EventEmitter provides on() and emit() methods for event-driven code.</p><p>Example: in a Node.js application, you would use <code>EventEmitter</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3017,
+    "text": "Which EventEmitter method registers an event listener?",
+    "choices": [
+      "on()",
+      "emit()",
+      "fire()",
+      "handle()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>on()</strong> is correct because on() attaches a listener for a named event.</p><p>Example: in a Node.js application, you would use <code>on()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3018,
+    "text": "Which EventEmitter method triggers an event?",
+    "choices": [
+      "emit()",
+      "dispatch()",
+      "broadcast()",
+      "signal()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>emit()</strong> is correct because emit() invokes listeners registered for a given event name.</p><p>Example: in a Node.js application, you would use <code>emit()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3019,
+    "text": "Which HTTP method in Express is commonly used to update an existing resource partially?",
+    "choices": [
+      "PATCH",
+      "TRACE",
+      "HEAD",
+      "OPTIONS only"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>PATCH</strong> is correct because PATCH is typically used for partial updates to resources.</p><p>Example: in a Node.js application, you would use <code>PATCH</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3020,
+    "text": "Which Express method is commonly used to delete a resource?",
+    "choices": [
+      "app.delete()",
+      "app.remove()",
+      "app.destroy()",
+      "app.drop()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>app.delete()</strong> is correct because app.delete() handles DELETE requests in Express.</p><p>Example: in a Node.js application, you would use <code>app.delete()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3021,
+    "text": "Which Express middleware parses incoming JSON request bodies?",
+    "choices": [
+      "express.json()",
+      "express.static()",
+      "express.textOnly()",
+      "body.decode()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>express.json()</strong> is correct because express.json() reads and parses JSON payloads into req.body.</p><p>Example: in a Node.js application, you would use <code>express.json()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3022,
+    "text": "Which Express middleware serves static files from a directory?",
+    "choices": [
+      "express.static()",
+      "express.files()",
+      "express.public()",
+      "express.assets()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>express.static()</strong> is correct because express.static() exposes static files such as images and stylesheets.</p><p>Example: in a Node.js application, you would use <code>express.static()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3023,
+    "text": "Which object in an Express route handler represents the incoming HTTP request?",
+    "choices": [
+      "req",
+      "requestHandler",
+      "res",
+      "ctx"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>req</strong> is correct because req contains request headers, params, query values, and body data.</p><p>Example: in a Node.js application, you would use <code>req</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3024,
+    "text": "Which object in an Express route handler is used to send the HTTP response?",
+    "choices": [
+      "res",
+      "req",
+      "responseBuilder",
+      "out"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>res</strong> is correct because res sends status codes, JSON, text, and other response content.</p><p>Example: in a Node.js application, you would use <code>res</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3025,
+    "text": "Which Express response method commonly sends JSON output?",
+    "choices": [
+      "res.json()",
+      "res.sendFileOnly()",
+      "res.route()",
+      "res.emit()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>res.json()</strong> is correct because res.json() serializes a JavaScript value as JSON in the response.</p><p>Example: in a Node.js application, you would use <code>res.json()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3026,
+    "text": "Which Express response method sets an explicit HTTP status code?",
+    "choices": [
+      "res.status()",
+      "res.code()",
+      "res.http()",
+      "res.setStatusCode()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>res.status()</strong> is correct because res.status() sets the response status before sending data.</p><p>Example: in a Node.js application, you would use <code>res.status()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3027,
+    "text": "Which Node.js concept allows non-blocking behavior when waiting for I/O?",
+    "choices": [
+      "Asynchronous programming",
+      "Static typing",
+      "Ahead-of-time compilation",
+      "Manual threading only"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Asynchronous programming</strong> is correct because Node.js uses asynchronous APIs so the event loop can keep handling other work.</p><p>Example: in a Node.js application, you would use <code>Asynchronous programming</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3028,
+    "text": "Which Promise method is used to handle a successful result?",
+    "choices": [
+      "then()",
+      "catch()",
+      "finally()",
+      "done()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>then()</strong> is correct because then() registers a callback for fulfilled Promise values.</p><p>Example: in a Node.js application, you would use <code>then()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3029,
+    "text": "Which Promise method is used to handle an error?",
+    "choices": [
+      "catch()",
+      "then()",
+      "retry()",
+      "except()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>catch()</strong> is correct because catch() handles Promise rejections and thrown errors in async chains.</p><p>Example: in a Node.js application, you would use <code>catch()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3030,
+    "text": "Which Promise method runs regardless of success or failure?",
+    "choices": [
+      "finally()",
+      "always()",
+      "settle()",
+      "complete()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>finally()</strong> is correct because finally() is used for cleanup logic after Promise completion.</p><p>Example: in a Node.js application, you would use <code>finally()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3031,
+    "text": "Which Node.js class is used to create readable and writable data streams?",
+    "choices": [
+      "stream",
+      "buffer",
+      "timer",
+      "cluster"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>stream</strong> is correct because The stream module provides abstractions for processing data incrementally.</p><p>Example: in a Node.js application, you would use <code>stream</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3032,
+    "text": "Which type of stream is used to consume incoming data chunk by chunk?",
+    "choices": [
+      "Readable stream",
+      "Writable stream",
+      "Duplex stream",
+      "Transform stream only"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Readable stream</strong> is correct because Readable streams emit data that consumers can process progressively.</p><p>Example: in a Node.js application, you would use <code>Readable stream</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3033,
+    "text": "Which type of stream is used to send data to a destination?",
+    "choices": [
+      "Writable stream",
+      "Readable stream",
+      "Static stream",
+      "Forward stream"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Writable stream</strong> is correct because Writable streams accept data written to them.</p><p>Example: in a Node.js application, you would use <code>Writable stream</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3034,
+    "text": "Which type of stream can both read and write data?",
+    "choices": [
+      "Duplex stream",
+      "Readable stream",
+      "Collector stream",
+      "Fetch stream"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Duplex stream</strong> is correct because Duplex streams support both input and output.</p><p>Example: in a Node.js application, you would use <code>Duplex stream</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3035,
+    "text": "Which stream type can modify data as it passes through?",
+    "choices": [
+      "Transform stream",
+      "Writable stream",
+      "Raw stream",
+      "Passive stream"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Transform stream</strong> is correct because Transform streams read input, transform it, and emit new output.</p><p>Example: in a Node.js application, you would use <code>Transform stream</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3036,
+    "text": "Which built-in object stores raw binary data in Node.js?",
+    "choices": [
+      "Buffer",
+      "Blob only",
+      "ArrayData",
+      "MemoryBlock"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Buffer</strong> is correct because Buffer is used to work with binary data in Node.js.</p><p>Example: in a Node.js application, you would use <code>Buffer</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3037,
+    "text": "Which Buffer method converts binary data to a string?",
+    "choices": [
+      "toString()",
+      "asText()",
+      "decodeString()",
+      "stringify()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>toString()</strong> is correct because toString() decodes a Buffer using the chosen character encoding.</p><p>Example: in a Node.js application, you would use <code>toString()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3038,
+    "text": "Which Buffer factory method allocates a new buffer of a given size?",
+    "choices": [
+      "Buffer.alloc()",
+      "Buffer.create()",
+      "Buffer.new()",
+      "Buffer.size()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Buffer.alloc()</strong> is correct because Buffer.alloc() returns a zero-filled Buffer of the requested length.</p><p>Example: in a Node.js application, you would use <code>Buffer.alloc()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3039,
+    "text": "Which fs method reads a file asynchronously?",
+    "choices": [
+      "fs.readFile()",
+      "fs.readFileSync()",
+      "fs.stream()",
+      "fs.fileRead()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>fs.readFile()</strong> is correct because fs.readFile() reads a file without blocking the event loop.</p><p>Example: in a Node.js application, you would use <code>fs.readFile()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3040,
+    "text": "Which fs method reads a file synchronously?",
+    "choices": [
+      "fs.readFileSync()",
+      "fs.readSyncOnly()",
+      "fs.fetchFile()",
+      "fs.openRead()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>fs.readFileSync()</strong> is correct because fs.readFileSync() blocks until the file contents are read.</p><p>Example: in a Node.js application, you would use <code>fs.readFileSync()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3041,
+    "text": "Which fs method writes a file asynchronously?",
+    "choices": [
+      "fs.writeFile()",
+      "fs.writeFileSync()",
+      "fs.appendOnly()",
+      "fs.saveFile()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>fs.writeFile()</strong> is correct because fs.writeFile() writes file contents without blocking the event loop.</p><p>Example: in a Node.js application, you would use <code>fs.writeFile()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3042,
+    "text": "Which fs method checks metadata such as file size and timestamps?",
+    "choices": [
+      "fs.stat()",
+      "fs.info()",
+      "fs.meta()",
+      "fs.describe()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>fs.stat()</strong> is correct because fs.stat() retrieves filesystem metadata for a path.</p><p>Example: in a Node.js application, you would use <code>fs.stat()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3043,
+    "text": "Which path method converts relative segments into an absolute path?",
+    "choices": [
+      "path.resolve()",
+      "path.join()",
+      "path.dirname()",
+      "path.basename()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>path.resolve()</strong> is correct because path.resolve() builds an absolute path from one or more segments.</p><p>Example: in a Node.js application, you would use <code>path.resolve()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3044,
+    "text": "Which path method returns the final portion of a file path?",
+    "choices": [
+      "path.basename()",
+      "path.extname()",
+      "path.dirname()",
+      "path.root()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>path.basename()</strong> is correct because path.basename() extracts the last path segment, often a file name.</p><p>Example: in a Node.js application, you would use <code>path.basename()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3045,
+    "text": "Which path method returns the directory portion of a file path?",
+    "choices": [
+      "path.dirname()",
+      "path.basename()",
+      "path.parent()",
+      "path.folder()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>path.dirname()</strong> is correct because path.dirname() removes the last path segment and returns the directory path.</p><p>Example: in a Node.js application, you would use <code>path.dirname()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3046,
+    "text": "Which path method returns a file extension such as .js?",
+    "choices": [
+      "path.extname()",
+      "path.suffix()",
+      "path.extension()",
+      "path.basename()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>path.extname()</strong> is correct because path.extname() extracts the extension from a path string.</p><p>Example: in a Node.js application, you would use <code>path.extname()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3047,
+    "text": "Which Node.js built-in module allows low-level TCP server and client creation?",
+    "choices": [
+      "net",
+      "http",
+      "tls only",
+      "dgram"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>net</strong> is correct because The net module supports raw TCP networking.</p><p>Example: in a Node.js application, you would use <code>net</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3048,
+    "text": "Which Node.js built-in module is used for UDP sockets?",
+    "choices": [
+      "dgram",
+      "dns",
+      "udp",
+      "net"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>dgram</strong> is correct because The dgram module supports UDP datagram sockets.</p><p>Example: in a Node.js application, you would use <code>dgram</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3049,
+    "text": "Which Node.js built-in module is used to resolve DNS names programmatically?",
+    "choices": [
+      "dns",
+      "url",
+      "querystring",
+      "buffer"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>dns</strong> is correct because The dns module provides name resolution and lookup functions.</p><p>Example: in a Node.js application, you would use <code>dns</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3050,
+    "text": "Which Node.js built-in module provides HTTPS server support?",
+    "choices": [
+      "https",
+      "http2 only",
+      "tls only",
+      "secureweb"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>https</strong> is correct because The https module extends HTTP support with TLS encryption.</p><p>Example: in a Node.js application, you would use <code>https</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3051,
+    "text": "Which Node.js built-in module provides HTTP/2 support?",
+    "choices": [
+      "http2",
+      "https",
+      "stream only",
+      "tls"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>http2</strong> is correct because The http2 module supports the HTTP/2 protocol in Node.js.</p><p>Example: in a Node.js application, you would use <code>http2</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3052,
+    "text": "Which built-in Node.js module provides utilities for working with URLs?",
+    "choices": [
+      "url",
+      "uri",
+      "path",
+      "dns"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>url</strong> is correct because The url module parses and formats URL strings.</p><p>Example: in a Node.js application, you would use <code>url</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3053,
+    "text": "Which global class can be used to parse modern URLs in Node.js?",
+    "choices": [
+      "URL",
+      "Uri",
+      "Location",
+      "Link"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>URL</strong> is correct because The WHATWG URL class provides a structured interface for URLs.</p><p>Example: in a Node.js application, you would use <code>URL</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3054,
+    "text": "Which built-in module helps inspect and format objects for debugging?",
+    "choices": [
+      "util",
+      "assert",
+      "events",
+      "timers"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>util</strong> is correct because The util module provides helpers such as inspect() and promisify().</p><p>Example: in a Node.js application, you would use <code>util</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3055,
+    "text": "Which util method converts callback-based APIs into Promise-based ones?",
+    "choices": [
+      "util.promisify()",
+      "util.promise()",
+      "util.asyncify()",
+      "util.wrapPromise()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>util.promisify()</strong> is correct because promisify() adapts Node-style callbacks into Promise-returning functions.</p><p>Example: in a Node.js application, you would use <code>util.promisify()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3056,
+    "text": "Which Node.js global function schedules a microtask after the current synchronous code?",
+    "choices": [
+      "queueMicrotask()",
+      "setInterval()",
+      "setTimeout()",
+      "emitMicrotask()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>queueMicrotask()</strong> is correct because queueMicrotask() schedules a function in the microtask queue.</p><p>Example: in a Node.js application, you would use <code>queueMicrotask()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3057,
+    "text": "Which process method schedules a callback to run before the next event loop turn?",
+    "choices": [
+      "process.nextTick()",
+      "process.later()",
+      "process.queue()",
+      "process.immediate()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>process.nextTick()</strong> is correct because process.nextTick() runs callbacks before the event loop continues.</p><p>Example: in a Node.js application, you would use <code>process.nextTick()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3058,
+    "text": "Which package is commonly used to restart a Node.js app automatically during development when files change?",
+    "choices": [
+      "nodemon",
+      "nodewatch",
+      "pm2-runtime",
+      "forever-dev"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>nodemon</strong> is correct because nodemon watches files and restarts the app when code changes.</p><p>Example: in a Node.js application, you would use <code>nodemon</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3059,
+    "text": "Which tool is commonly used to run Node.js applications in production with process management and clustering features?",
+    "choices": [
+      "PM2",
+      "npm",
+      "jest",
+      "vite"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>PM2</strong> is correct because PM2 helps manage Node.js processes in production.</p><p>Example: in a Node.js application, you would use <code>PM2</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3060,
+    "text": "Which Node.js feature can spawn multiple worker processes to use multiple CPU cores?",
+    "choices": [
+      "cluster",
+      "stream",
+      "events",
+      "timers"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>cluster</strong> is correct because The cluster module allows multiple processes to share server ports and workload.</p><p>Example: in a Node.js application, you would use <code>cluster</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3061,
+    "text": "Which Node.js module enables running JavaScript in separate threads?",
+    "choices": [
+      "worker_threads",
+      "cluster only",
+      "child_process",
+      "async_hooks"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>worker_threads</strong> is correct because worker_threads provides true multithreading for CPU-intensive tasks.</p><p>Example: in a Node.js application, you would use <code>worker_threads</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3062,
+    "text": "Which module is commonly used to spawn child processes and execute shell commands?",
+    "choices": [
+      "child_process",
+      "cluster",
+      "worker_threads",
+      "vm"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>child_process</strong> is correct because child_process creates subprocesses and can run external commands.</p><p>Example: in a Node.js application, you would use <code>child_process</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3063,
+    "text": "Which child_process method buffers command output and invokes a callback when complete?",
+    "choices": [
+      "exec()",
+      "spawn()",
+      "fork()",
+      "attach()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>exec()</strong> is correct because exec() is convenient for short commands whose full output can be buffered.</p><p>Example: in a Node.js application, you would use <code>exec()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3064,
+    "text": "Which child_process method is preferred for streaming large process output?",
+    "choices": [
+      "spawn()",
+      "exec()",
+      "run()",
+      "pipeOnly()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>spawn()</strong> is correct because spawn() streams stdin, stdout, and stderr without buffering everything first.</p><p>Example: in a Node.js application, you would use <code>spawn()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3065,
+    "text": "Which child_process method starts a new Node.js process and sets up an IPC channel?",
+    "choices": [
+      "fork()",
+      "spawn()",
+      "exec()",
+      "clone()"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>fork()</strong> is correct because fork() is a specialized child process helper for Node.js scripts.</p><p>Example: in a Node.js application, you would use <code>fork()</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3066,
+    "text": "Which Node.js flag is commonly used to start the debugger?",
+    "choices": [
+      "--inspect",
+      "--debug-app",
+      "--trace-api",
+      "--watch-debug"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>--inspect</strong> is correct because The --inspect flag enables the V8 inspector for debugging.</p><p>Example: in a Node.js application, you would use <code>--inspect</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3067,
+    "text": "Which package is commonly used to load environment variables from a .env file?",
+    "choices": [
+      "dotenv",
+      "envfile",
+      "config-loader",
+      "vars"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>dotenv</strong> is correct because dotenv reads .env files into process.env during startup.</p><p>Example: in a Node.js application, you would use <code>dotenv</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3068,
+    "text": "Which command installs a package as a development dependency?",
+    "choices": [
+      "npm install --save-dev",
+      "npm init --dev",
+      "node add --dev",
+      "npm add runtime"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>npm install --save-dev</strong> is correct because --save-dev records the dependency under devDependencies.</p><p>Example: in a Node.js application, you would use <code>npm install --save-dev</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3069,
+    "text": "Which section of package.json stores packages needed only for development tasks such as testing or linting?",
+    "choices": [
+      "devDependencies",
+      "scripts",
+      "engines",
+      "optionalRuntime"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>devDependencies</strong> is correct because devDependencies contains packages used during development and build processes.</p><p>Example: in a Node.js application, you would use <code>devDependencies</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3070,
+    "text": "Which section of package.json defines executable command shortcuts such as start or test?",
+    "choices": [
+      "scripts",
+      "commands",
+      "tasks",
+      "hooks"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>scripts</strong> is correct because The scripts section defines named commands runnable with npm run.</p><p>Example: in a Node.js application, you would use <code>scripts</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3071,
+    "text": "Which npm command runs a script named test from package.json?",
+    "choices": [
+      "npm test",
+      "npm run build only",
+      "node test",
+      "npm execute test"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>npm test</strong> is correct because npm test runs the test script if defined.</p><p>Example: in a Node.js application, you would use <code>npm test</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3072,
+    "text": "Which npm command installs project dependencies from package-lock.json in a clean, reproducible way?",
+    "choices": [
+      "npm ci",
+      "npm sync",
+      "npm freeze",
+      "npm exact"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>npm ci</strong> is correct because npm ci is optimized for clean installs in CI or fresh environments.</p><p>Example: in a Node.js application, you would use <code>npm ci</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3073,
+    "text": "Which file locks exact installed package versions for npm projects?",
+    "choices": [
+      "package-lock.json",
+      "node_modules.json",
+      "npm.lock",
+      "versions.json"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>package-lock.json</strong> is correct because package-lock.json records precise dependency resolution details.</p><p>Example: in a Node.js application, you would use <code>package-lock.json</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3074,
+    "text": "Which Node.js framework is known for minimal routing and middleware support?",
+    "choices": [
+      "Express",
+      "Angular",
+      "Hibernate",
+      "Flask"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Express</strong> is correct because Express is a minimal and widely used framework for Node.js APIs.</p><p>Example: in a Node.js application, you would use <code>Express</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3075,
+    "text": "Which Express feature allows reusable request-processing functions to run before route handlers?",
+    "choices": [
+      "Middleware",
+      "Services",
+      "Decorators",
+      "Pipes"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Middleware</strong> is correct because Middleware functions can inspect, modify, or block requests before handlers run.</p><p>Example: in a Node.js application, you would use <code>Middleware</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3076,
+    "text": "Which Express middleware function parameter is used to pass control to the next middleware?",
+    "choices": [
+      "next",
+      "continue",
+      "forward",
+      "after"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>next</strong> is correct because Calling next() tells Express to continue through the middleware chain.</p><p>Example: in a Node.js application, you would use <code>next</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3077,
+    "text": "Which Express helper can capture route values like /users/:id?",
+    "choices": [
+      "req.params",
+      "req.query only",
+      "req.body only",
+      "res.locals"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>req.params</strong> is correct because req.params holds path parameters extracted from the route pattern.</p><p>Example: in a Node.js application, you would use <code>req.params</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3078,
+    "text": "Which Express property commonly holds URL query string values?",
+    "choices": [
+      "req.query",
+      "req.params",
+      "req.locals",
+      "req.payload"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>req.query</strong> is correct because req.query contains parsed query parameters from the URL.</p><p>Example: in a Node.js application, you would use <code>req.query</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3079,
+    "text": "Which Express property commonly holds parsed request body data?",
+    "choices": [
+      "req.body",
+      "req.data",
+      "req.content",
+      "req.buffer"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>req.body</strong> is correct because req.body contains data parsed by body-parsing middleware.</p><p>Example: in a Node.js application, you would use <code>req.body</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3080,
+    "text": "Which HTTP status code usually indicates success for a standard GET request?",
+    "choices": [
+      "200",
+      "201",
+      "404",
+      "500"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>200</strong> is correct because 200 means the request succeeded and the response contains the resource.</p><p>Example: in a Node.js application, you would use <code>200</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3081,
+    "text": "Which HTTP status code usually indicates a resource was created successfully?",
+    "choices": [
+      "201",
+      "200",
+      "204",
+      "400"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>201</strong> is correct because 201 is commonly returned after creating a new resource.</p><p>Example: in a Node.js application, you would use <code>201</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3082,
+    "text": "Which HTTP status code usually indicates no response body but successful processing?",
+    "choices": [
+      "204",
+      "201",
+      "301",
+      "500"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>204</strong> is correct because 204 means the request succeeded and there is no content to return.</p><p>Example: in a Node.js application, you would use <code>204</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3083,
+    "text": "Which HTTP status code usually indicates a client sent a bad request?",
+    "choices": [
+      "400",
+      "200",
+      "302",
+      "503"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>400</strong> is correct because 400 is returned when the request is malformed or invalid.</p><p>Example: in a Node.js application, you would use <code>400</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3084,
+    "text": "Which HTTP status code usually indicates authentication is required or missing?",
+    "choices": [
+      "401",
+      "403",
+      "404",
+      "429"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>401</strong> is correct because 401 is used when authentication has not been provided or is invalid.</p><p>Example: in a Node.js application, you would use <code>401</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3085,
+    "text": "Which HTTP status code usually indicates the client is authenticated but not allowed?",
+    "choices": [
+      "403",
+      "401",
+      "405",
+      "409"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>403</strong> is correct because 403 indicates forbidden access even if the client is authenticated.</p><p>Example: in a Node.js application, you would use <code>403</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3086,
+    "text": "Which HTTP status code usually indicates a route or resource was not found?",
+    "choices": [
+      "404",
+      "400",
+      "401",
+      "304"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>404</strong> is correct because 404 means the requested path or resource does not exist.</p><p>Example: in a Node.js application, you would use <code>404</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3087,
+    "text": "Which HTTP status code usually indicates an unexpected server error?",
+    "choices": [
+      "500",
+      "200",
+      "202",
+      "301"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>500</strong> is correct because 500 is returned for generic internal server failures.</p><p>Example: in a Node.js application, you would use <code>500</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3088,
+    "text": "Which middleware package is commonly used to allow or configure cross-origin requests in Express apps?",
+    "choices": [
+      "cors",
+      "helmet",
+      "morgan",
+      "dotenv"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>cors</strong> is correct because The cors package enables and configures CORS headers.</p><p>Example: in a Node.js application, you would use <code>cors</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3089,
+    "text": "Which middleware package is commonly used to set helpful HTTP security headers in Express?",
+    "choices": [
+      "helmet",
+      "cors",
+      "bcrypt",
+      "zod"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>helmet</strong> is correct because helmet hardens common HTTP response headers for Express apps.</p><p>Example: in a Node.js application, you would use <code>helmet</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3090,
+    "text": "Which package is commonly used to hash passwords in Node.js applications?",
+    "choices": [
+      "bcrypt",
+      "jsonwebtoken",
+      "cors",
+      "multer"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>bcrypt</strong> is correct because bcrypt is widely used for securely hashing passwords.</p><p>Example: in a Node.js application, you would use <code>bcrypt</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3091,
+    "text": "Which package is commonly used to issue and verify JSON Web Tokens in Node.js?",
+    "choices": [
+      "jsonwebtoken",
+      "bcrypt",
+      "cookie-parser",
+      "express-session"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>jsonwebtoken</strong> is correct because jsonwebtoken signs and verifies JWTs for stateless auth.</p><p>Example: in a Node.js application, you would use <code>jsonwebtoken</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3092,
+    "text": "Which concept describes splitting an application into small independent services communicating over the network?",
+    "choices": [
+      "Microservices",
+      "Template rendering",
+      "Monolithic CSS",
+      "Serverless only"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Microservices</strong> is correct because Microservices break functionality into smaller independently deployable services.</p><p>Example: in a Node.js application, you would use <code>Microservices</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3093,
+    "text": "Which Node.js deployment pattern places a reverse proxy such as Nginx in front of the app?",
+    "choices": [
+      "Reverse proxy architecture",
+      "Direct file mount",
+      "Embedded SQL routing",
+      "Single thread isolation"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Reverse proxy architecture</strong> is correct because A reverse proxy can handle TLS termination, routing, and buffering in front of Node.js.</p><p>Example: in a Node.js application, you would use <code>Reverse proxy architecture</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3094,
+    "text": "Which Node.js package is commonly used for multipart form uploads in Express?",
+    "choices": [
+      "multer",
+      "helmet",
+      "chalk",
+      "dotenv"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>multer</strong> is correct because multer parses multipart/form-data for file uploads.</p><p>Example: in a Node.js application, you would use <code>multer</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3095,
+    "text": "Which package is commonly used for terminal coloring and formatting in Node.js CLI apps?",
+    "choices": [
+      "chalk",
+      "express",
+      "morgan",
+      "axios"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>chalk</strong> is correct because chalk styles console output with colors and modifiers.</p><p>Example: in a Node.js application, you would use <code>chalk</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3096,
+    "text": "Which Node.js package is commonly used to make HTTP requests from the server side?",
+    "choices": [
+      "axios",
+      "dotenv",
+      "cors",
+      "helmet"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>axios</strong> is correct because axios is a popular Promise-based HTTP client for Node.js and browsers.</p><p>Example: in a Node.js application, you would use <code>axios</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3097,
+    "text": "Which built-in module exposes methods to measure high-resolution execution time?",
+    "choices": [
+      "perf_hooks",
+      "timers",
+      "events",
+      "process_time"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>perf_hooks</strong> is correct because perf_hooks provides performance measurements such as performance.now().</p><p>Example: in a Node.js application, you would use <code>perf_hooks</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3098,
+    "text": "Which Node.js concept describes code reuse by publishing packages to a shared registry?",
+    "choices": [
+      "npm packages",
+      "worker pools",
+      "event emitters",
+      "template partials"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>npm packages</strong> is correct because Node.js commonly shares reusable code through npm packages.</p><p>Example: in a Node.js application, you would use <code>npm packages</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3099,
+    "text": "Which Node.js feature allows package scripts like npm start and npm test to standardize project workflows?",
+    "choices": [
+      "package.json scripts",
+      "cluster workers",
+      "event loop phases",
+      "CJS exports"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>package.json scripts</strong> is correct because Scripts in package.json make common commands easy to run consistently.</p><p>Example: in a Node.js application, you would use <code>package.json scripts</code> when building or operating this part of the system.</p>"
+  },
+  {
+    "id": 3100,
+    "text": "Which Node.js environment variable is often set by hosting platforms to tell the app which port to listen on?",
+    "choices": [
+      "PORT",
+      "HOSTNAME only",
+      "NODE_PATH",
+      "MODULE_PORT"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>PORT</strong> is correct because PORT is commonly provided by deployment environments and read through process.env.</p><p>Example: in a Node.js application, you would use <code>PORT</code> when building or operating this part of the system.</p>"
   }
 ]

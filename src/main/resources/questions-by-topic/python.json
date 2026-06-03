@@ -154,5 +154,1305 @@
     "correctIndex": 0,
     "topic": "Python",
     "explanation": "<p><strong>try-except</strong> is correct because Python handles exceptions by wrapping risky code in a <code>try</code> block and responding in an <code>except</code> block.</p><p>Example:</p><pre><code>try:\n    value = int(\"abc\")\nexcept ValueError:\n    print(\"Invalid integer\")</code></pre>"
+  },
+  {
+    "id": 4001,
+    "text": "Which data type stores key-value pairs in Python?",
+    "choices": [
+      "dict",
+      "list",
+      "tuple",
+      "set"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>dict</strong> is correct because A dict stores values under named keys for fast lookup.</p><p>Example: in a Python program, you would use <code>dict</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4002,
+    "text": "Which data type is immutable and ordered in Python?",
+    "choices": [
+      "tuple",
+      "list",
+      "dict",
+      "set"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>tuple</strong> is correct because Tuples preserve order but cannot be changed after creation.</p><p>Example: in a Python program, you would use <code>tuple</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4003,
+    "text": "Which data type does not allow duplicate values and has no guaranteed positional indexing in normal use?",
+    "choices": [
+      "set",
+      "list",
+      "tuple",
+      "dict"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>set</strong> is correct because Sets store unique values and are often used for membership tests and deduplication.</p><p>Example: in a Python program, you would use <code>set</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4004,
+    "text": "Which keyword is used to define an anonymous function in Python?",
+    "choices": [
+      "lambda",
+      "def",
+      "func",
+      "inline"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>lambda</strong> is correct because lambda creates a small anonymous function expression.</p><p>Example: in a Python program, you would use <code>lambda</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4005,
+    "text": "Which built-in function is commonly used to iterate with both index and value?",
+    "choices": [
+      "enumerate()",
+      "range()",
+      "zip()",
+      "index()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>enumerate()</strong> is correct because enumerate() yields index-value pairs while iterating.</p><p>Example: in a Python program, you would use <code>enumerate()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4006,
+    "text": "Which built-in function combines items from multiple iterables position by position?",
+    "choices": [
+      "zip()",
+      "map()",
+      "filter()",
+      "merge()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>zip()</strong> is correct because zip() groups values from multiple iterables by matching positions.</p><p>Example: in a Python program, you would use <code>zip()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4007,
+    "text": "Which built-in function generates a sequence of integers commonly used in loops?",
+    "choices": [
+      "range()",
+      "sequence()",
+      "count()",
+      "iterate()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>range()</strong> is correct because range() is widely used for numeric iteration.</p><p>Example: in a Python program, you would use <code>range()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4008,
+    "text": "Which keyword is used to define a generator that yields values one at a time?",
+    "choices": [
+      "yield",
+      "return",
+      "emit",
+      "produce"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>yield</strong> is correct because yield turns a function into a generator that produces values lazily.</p><p>Example: in a Python program, you would use <code>yield</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4009,
+    "text": "Which Python feature allows concise creation of lists from expressions and loops?",
+    "choices": [
+      "List comprehension",
+      "Decorator",
+      "Generator expression only",
+      "Context manager"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>List comprehension</strong> is correct because List comprehensions build lists in a compact readable form.</p><p>Example: in a Python program, you would use <code>List comprehension</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4010,
+    "text": "Which expression creates a dictionary using comprehension syntax?",
+    "choices": [
+      "Dictionary comprehension",
+      "Map comprehension",
+      "Object comprehension",
+      "Record comprehension"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>Dictionary comprehension</strong> is correct because Dictionary comprehensions build dicts from iterable expressions.</p><p>Example: in a Python program, you would use <code>Dictionary comprehension</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4011,
+    "text": "Which built-in function returns the type of an object?",
+    "choices": [
+      "type()",
+      "kind()",
+      "classOf()",
+      "typeof()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>type()</strong> is correct because type() reveals the runtime type of a value.</p><p>Example: in a Python program, you would use <code>type()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4012,
+    "text": "Which keyword checks object identity rather than value equality in Python?",
+    "choices": [
+      "is",
+      "==",
+      "===",
+      "equals"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>is</strong> is correct because is compares whether two references point to the same object.</p><p>Example: in a Python program, you would use <code>is</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4013,
+    "text": "Which Python keyword starts a loop that continues while a condition is true?",
+    "choices": [
+      "while",
+      "loop",
+      "for",
+      "repeat"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>while</strong> is correct because while repeats code as long as its condition remains true.</p><p>Example: in a Python program, you would use <code>while</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4014,
+    "text": "Which statement immediately exits a loop in Python?",
+    "choices": [
+      "break",
+      "continue",
+      "pass",
+      "return only"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>break</strong> is correct because break stops the nearest enclosing loop right away.</p><p>Example: in a Python program, you would use <code>break</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4015,
+    "text": "Which statement skips the rest of the current loop iteration and moves to the next one?",
+    "choices": [
+      "continue",
+      "break",
+      "pass",
+      "skip"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>continue</strong> is correct because continue jumps to the next loop cycle.</p><p>Example: in a Python program, you would use <code>continue</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4016,
+    "text": "Which statement does nothing and is often used as a placeholder block?",
+    "choices": [
+      "pass",
+      "continue",
+      "empty",
+      "skip"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>pass</strong> is correct because pass is a no-op used where syntax requires a statement.</p><p>Example: in a Python program, you would use <code>pass</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4017,
+    "text": "Which built-in function returns the absolute value of a number?",
+    "choices": [
+      "abs()",
+      "round()",
+      "magnitude()",
+      "positive()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>abs()</strong> is correct because abs() returns the non-negative magnitude of a number.</p><p>Example: in a Python program, you would use <code>abs()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4018,
+    "text": "Which built-in function returns the largest item from an iterable?",
+    "choices": [
+      "max()",
+      "top()",
+      "largest()",
+      "peak()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>max()</strong> is correct because max() selects the maximum value from given inputs.</p><p>Example: in a Python program, you would use <code>max()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4019,
+    "text": "Which built-in function returns the smallest item from an iterable?",
+    "choices": [
+      "min()",
+      "bottom()",
+      "smallest()",
+      "low()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>min()</strong> is correct because min() selects the minimum value from given inputs.</p><p>Example: in a Python program, you would use <code>min()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4020,
+    "text": "Which built-in function sums numeric values from an iterable?",
+    "choices": [
+      "sum()",
+      "add()",
+      "total()",
+      "combine()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>sum()</strong> is correct because sum() totals numeric values from an iterable.</p><p>Example: in a Python program, you would use <code>sum()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4021,
+    "text": "Which string method removes whitespace from both ends of a string?",
+    "choices": [
+      "strip()",
+      "trim()",
+      "clean()",
+      "removeSpace()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>strip()</strong> is correct because strip() removes leading and trailing whitespace.</p><p>Example: in a Python program, you would use <code>strip()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4022,
+    "text": "Which string method splits a string into a list using a separator?",
+    "choices": [
+      "split()",
+      "slice()",
+      "tokenize()",
+      "breakup()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>split()</strong> is correct because split() divides a string into pieces and returns a list.</p><p>Example: in a Python program, you would use <code>split()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4023,
+    "text": "Which string method joins a list of strings into one string with a separator?",
+    "choices": [
+      "join()",
+      "concat()",
+      "merge()",
+      "append()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>join()</strong> is correct because join() combines string items using the separator string it is called on.</p><p>Example: in a Python program, you would use <code>join()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4024,
+    "text": "Which string method changes all letters to uppercase?",
+    "choices": [
+      "upper()",
+      "uppercase()",
+      "caps()",
+      "toUpper()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>upper()</strong> is correct because upper() returns a copy of the string in uppercase.</p><p>Example: in a Python program, you would use <code>upper()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4025,
+    "text": "Which string method changes all letters to lowercase?",
+    "choices": [
+      "lower()",
+      "lowercase()",
+      "small()",
+      "toLower()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>lower()</strong> is correct because lower() returns a lowercase copy of the string.</p><p>Example: in a Python program, you would use <code>lower()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4026,
+    "text": "Which built-in function opens a file in Python?",
+    "choices": [
+      "open()",
+      "file()",
+      "read()",
+      "load()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>open()</strong> is correct because open() returns a file object for reading or writing.</p><p>Example: in a Python program, you would use <code>open()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4027,
+    "text": "Which file mode is used to read a text file?",
+    "choices": [
+      "r",
+      "w",
+      "a",
+      "x"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>r</strong> is correct because The r mode opens a file for reading.</p><p>Example: in a Python program, you would use <code>r</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4028,
+    "text": "Which file mode truncates a file and opens it for writing?",
+    "choices": [
+      "w",
+      "r",
+      "a",
+      "rw"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>w</strong> is correct because The w mode overwrites the file contents when writing starts.</p><p>Example: in a Python program, you would use <code>w</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4029,
+    "text": "Which file mode appends new content to the end of a file?",
+    "choices": [
+      "a",
+      "w",
+      "r+",
+      "x"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>a</strong> is correct because The a mode preserves existing content and writes at the end.</p><p>Example: in a Python program, you would use <code>a</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4030,
+    "text": "Which Python statement is commonly used to ensure files are closed automatically?",
+    "choices": [
+      "with",
+      "using",
+      "auto",
+      "resource"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>with</strong> is correct because with manages resource setup and cleanup automatically.</p><p>Example: in a Python program, you would use <code>with</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4031,
+    "text": "Which class from the standard library is commonly used for filesystem paths in modern Python?",
+    "choices": [
+      "Path",
+      "File",
+      "FilePath",
+      "OsPath"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>Path</strong> is correct because pathlib.Path offers an object-oriented path API.</p><p>Example: in a Python program, you would use <code>Path</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4032,
+    "text": "Which standard library module is commonly used for operating-system related functionality such as environment variables?",
+    "choices": [
+      "os",
+      "sys",
+      "pathlib",
+      "typing"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>os</strong> is correct because The os module provides environment and filesystem-related utilities.</p><p>Example: in a Python program, you would use <code>os</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4033,
+    "text": "Which object stores environment variables in Python?",
+    "choices": [
+      "os.environ",
+      "sys.env",
+      "env.vars",
+      "os.envvars"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>os.environ</strong> is correct because os.environ behaves like a mapping of environment variables.</p><p>Example: in a Python program, you would use <code>os.environ</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4034,
+    "text": "Which standard library module gives access to command-line arguments through argv?",
+    "choices": [
+      "sys",
+      "os",
+      "argparse",
+      "subprocess"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>sys</strong> is correct because The sys module exposes argv and other interpreter information.</p><p>Example: in a Python program, you would use <code>sys</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4035,
+    "text": "Which object contains the list of command-line arguments?",
+    "choices": [
+      "sys.argv",
+      "os.argv",
+      "args.list",
+      "cli.argv"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>sys.argv</strong> is correct because sys.argv stores command-line arguments passed to the script.</p><p>Example: in a Python program, you would use <code>sys.argv</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4036,
+    "text": "Which standard library module is commonly used to parse command-line options formally?",
+    "choices": [
+      "argparse",
+      "getopt only",
+      "click",
+      "console"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>argparse</strong> is correct because argparse builds robust CLI argument parsers in the standard library.</p><p>Example: in a Python program, you would use <code>argparse</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4037,
+    "text": "Which Python module is commonly used to work with JSON data?",
+    "choices": [
+      "json",
+      "pickle",
+      "csv",
+      "marshal"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>json</strong> is correct because The json module parses and serializes JSON strings.</p><p>Example: in a Python program, you would use <code>json</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4038,
+    "text": "Which json function converts a Python object to a JSON string?",
+    "choices": [
+      "json.dumps()",
+      "json.loads()",
+      "json.write()",
+      "json.stringify()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>json.dumps()</strong> is correct because dumps serializes Python values to a JSON-formatted string.</p><p>Example: in a Python program, you would use <code>json.dumps()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4039,
+    "text": "Which json function parses a JSON string into Python objects?",
+    "choices": [
+      "json.loads()",
+      "json.dumps()",
+      "json.parseFile()",
+      "json.decodeOnly()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>json.loads()</strong> is correct because loads converts JSON text into Python data structures.</p><p>Example: in a Python program, you would use <code>json.loads()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4040,
+    "text": "Which Python module is commonly used for CSV reading and writing?",
+    "choices": [
+      "csv",
+      "table",
+      "pandas",
+      "json"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>csv</strong> is correct because The csv module handles comma-separated data formats.</p><p>Example: in a Python program, you would use <code>csv</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4041,
+    "text": "Which Python module is commonly used for regular expressions?",
+    "choices": [
+      "re",
+      "regex only",
+      "pattern",
+      "stringops"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>re</strong> is correct because The re module provides regex matching, searching, and substitution.</p><p>Example: in a Python program, you would use <code>re</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4042,
+    "text": "Which function from the re module searches for the first match of a pattern?",
+    "choices": [
+      "re.search()",
+      "re.matchall()",
+      "re.find()",
+      "re.lookup()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>re.search()</strong> is correct because re.search() scans a string for the first matching location.</p><p>Example: in a Python program, you would use <code>re.search()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4043,
+    "text": "Which function from the re module returns all matches of a pattern?",
+    "choices": [
+      "re.findall()",
+      "re.search()",
+      "re.capture()",
+      "re.collect()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>re.findall()</strong> is correct because findall() returns all non-overlapping pattern matches.</p><p>Example: in a Python program, you would use <code>re.findall()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4044,
+    "text": "Which keyword is used to import a specific name from a module?",
+    "choices": [
+      "from",
+      "select",
+      "using",
+      "take"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>from</strong> is correct because from module import name imports selected objects directly.</p><p>Example: in a Python program, you would use <code>from</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4045,
+    "text": "Which keyword creates a custom class constructor method in Python?",
+    "choices": [
+      "__init__",
+      "__new__ only",
+      "constructor",
+      "initclass"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>__init__</strong> is correct because __init__ initializes instance state after object creation.</p><p>Example: in a Python program, you would use <code>__init__</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4046,
+    "text": "Which conventional first parameter name refers to the current instance in an instance method?",
+    "choices": [
+      "self",
+      "this",
+      "current",
+      "me"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>self</strong> is correct because self is the conventional reference to the current object instance.</p><p>Example: in a Python program, you would use <code>self</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4047,
+    "text": "Which decorator is used to declare a method that belongs to the class rather than instances?",
+    "choices": [
+      "@classmethod",
+      "@staticmethod",
+      "@property",
+      "@dataclass"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>@classmethod</strong> is correct because @classmethod receives the class as its first argument.</p><p>Example: in a Python program, you would use <code>@classmethod</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4048,
+    "text": "Which decorator is used to declare a method that does not receive self or cls automatically?",
+    "choices": [
+      "@staticmethod",
+      "@classmethod",
+      "@property",
+      "@abstractmethod"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>@staticmethod</strong> is correct because @staticmethod defines a utility method tied to the class namespace.</p><p>Example: in a Python program, you would use <code>@staticmethod</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4049,
+    "text": "Which decorator lets a method be accessed like an attribute?",
+    "choices": [
+      "@property",
+      "@setter",
+      "@classmethod",
+      "@cached"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>@property</strong> is correct because @property creates managed attribute access from a method.</p><p>Example: in a Python program, you would use <code>@property</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4050,
+    "text": "Which decorator automatically generates methods like __init__ and __repr__ for data containers?",
+    "choices": [
+      "@dataclass",
+      "@record",
+      "@valueobject",
+      "@autoinit"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>@dataclass</strong> is correct because @dataclass reduces boilerplate for classes mainly used to hold data.</p><p>Example: in a Python program, you would use <code>@dataclass</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4051,
+    "text": "Which module provides the dataclass decorator?",
+    "choices": [
+      "dataclasses",
+      "typing",
+      "collections",
+      "functools"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>dataclasses</strong> is correct because The dataclasses module contains the dataclass decorator and helpers.</p><p>Example: in a Python program, you would use <code>dataclasses</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4052,
+    "text": "Which Python feature allows a function to be wrapped or modified by another function using @syntax?",
+    "choices": [
+      "Decorator",
+      "Generator",
+      "Context manager",
+      "Iterator"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>Decorator</strong> is correct because Decorators add reusable behavior around functions or classes.</p><p>Example: in a Python program, you would use <code>Decorator</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4053,
+    "text": "Which built-in function applies a function to each item of an iterable lazily?",
+    "choices": [
+      "map()",
+      "apply()",
+      "each()",
+      "loop()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>map()</strong> is correct because map() returns an iterator of transformed values.</p><p>Example: in a Python program, you would use <code>map()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4054,
+    "text": "Which built-in function keeps only items matching a condition?",
+    "choices": [
+      "filter()",
+      "where()",
+      "map()",
+      "sort()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>filter()</strong> is correct because filter() returns an iterator of items that pass a predicate.</p><p>Example: in a Python program, you would use <code>filter()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4055,
+    "text": "Which built-in function sorts items and returns a new list?",
+    "choices": [
+      "sorted()",
+      "sort()",
+      "arrange()",
+      "order()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>sorted()</strong> is correct because sorted() returns a sorted list without changing the original iterable.</p><p>Example: in a Python program, you would use <code>sorted()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4056,
+    "text": "Which list method sorts the list in place?",
+    "choices": [
+      "sort()",
+      "sorted()",
+      "arrange()",
+      "order()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>sort()</strong> is correct because sort() mutates the list directly.</p><p>Example: in a Python program, you would use <code>sort()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4057,
+    "text": "Which list method adds one item to the end of a list?",
+    "choices": [
+      "append()",
+      "add()",
+      "push()",
+      "extendone()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>append()</strong> is correct because append() adds a single element to the list.</p><p>Example: in a Python program, you would use <code>append()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4058,
+    "text": "Which list method adds all items from another iterable to a list?",
+    "choices": [
+      "extend()",
+      "append()",
+      "insert()",
+      "merge()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>extend()</strong> is correct because extend() adds multiple items from another iterable.</p><p>Example: in a Python program, you would use <code>extend()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4059,
+    "text": "Which list method inserts an item at a specific index?",
+    "choices": [
+      "insert()",
+      "append()",
+      "push()",
+      "index()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>insert()</strong> is correct because insert() places an item at a chosen position.</p><p>Example: in a Python program, you would use <code>insert()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4060,
+    "text": "Which list method removes and returns the last item by default?",
+    "choices": [
+      "pop()",
+      "remove()",
+      "delete()",
+      "cut()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>pop()</strong> is correct because pop() both removes and returns an element from the list.</p><p>Example: in a Python program, you would use <code>pop()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4061,
+    "text": "Which list method removes the first matching value?",
+    "choices": [
+      "remove()",
+      "pop()",
+      "delete()",
+      "discard()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>remove()</strong> is correct because remove() deletes the first occurrence of a value.</p><p>Example: in a Python program, you would use <code>remove()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4062,
+    "text": "Which dictionary method safely retrieves a value and allows a default when the key is missing?",
+    "choices": [
+      "get()",
+      "fetch()",
+      "lookup()",
+      "value()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>get()</strong> is correct because get() avoids KeyError by optionally returning a default value.</p><p>Example: in a Python program, you would use <code>get()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4063,
+    "text": "Which dictionary method returns key-value pairs for iteration?",
+    "choices": [
+      "items()",
+      "pairs()",
+      "entries()",
+      "values()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>items()</strong> is correct because items() returns an iterable of key-value tuples.</p><p>Example: in a Python program, you would use <code>items()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4064,
+    "text": "Which dictionary method returns only the keys?",
+    "choices": [
+      "keys()",
+      "items()",
+      "fields()",
+      "indexes()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>keys()</strong> is correct because keys() returns a view of dictionary keys.</p><p>Example: in a Python program, you would use <code>keys()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4065,
+    "text": "Which dictionary method returns only the values?",
+    "choices": [
+      "values()",
+      "items()",
+      "entries()",
+      "elements()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>values()</strong> is correct because values() returns a view of dictionary values.</p><p>Example: in a Python program, you would use <code>values()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4066,
+    "text": "Which set method adds a single new value to a set?",
+    "choices": [
+      "add()",
+      "append()",
+      "push()",
+      "insert()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>add()</strong> is correct because add() inserts a new element into a set.</p><p>Example: in a Python program, you would use <code>add()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4067,
+    "text": "Which set method combines items from another iterable into the set?",
+    "choices": [
+      "update()",
+      "append()",
+      "merge()",
+      "plus()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>update()</strong> is correct because update() adds multiple elements to the set.</p><p>Example: in a Python program, you would use <code>update()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4068,
+    "text": "Which exception occurs when trying to access a missing dictionary key directly?",
+    "choices": [
+      "KeyError",
+      "ValueError",
+      "IndexError",
+      "LookupOnlyError"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>KeyError</strong> is correct because KeyError is raised when a dictionary key does not exist.</p><p>Example: in a Python program, you would use <code>KeyError</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4069,
+    "text": "Which exception occurs when a list index is out of range?",
+    "choices": [
+      "IndexError",
+      "KeyError",
+      "TypeError",
+      "AccessError"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>IndexError</strong> is correct because IndexError is raised for invalid sequence indexes.</p><p>Example: in a Python program, you would use <code>IndexError</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4070,
+    "text": "Which exception occurs when an operation receives an object of an inappropriate type?",
+    "choices": [
+      "TypeError",
+      "ValueError",
+      "KeyError",
+      "ParseError"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>TypeError</strong> is correct because TypeError signals that a value of the wrong type was used.</p><p>Example: in a Python program, you would use <code>TypeError</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4071,
+    "text": "Which exception occurs when a function receives a correct type but invalid value?",
+    "choices": [
+      "ValueError",
+      "TypeError",
+      "KeyError",
+      "LogicError"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>ValueError</strong> is correct because ValueError means the type was right but the data was invalid.</p><p>Example: in a Python program, you would use <code>ValueError</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4072,
+    "text": "Which module provides date and time classes such as datetime and timedelta?",
+    "choices": [
+      "datetime",
+      "timeutil",
+      "calendar only",
+      "date"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>datetime</strong> is correct because The datetime module contains common date and time types.</p><p>Example: in a Python program, you would use <code>datetime</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4073,
+    "text": "Which class from the datetime module represents both date and time?",
+    "choices": [
+      "datetime.datetime",
+      "datetime.date",
+      "datetime.timezone",
+      "datetime.span"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>datetime.datetime</strong> is correct because datetime.datetime represents a full date-time value.</p><p>Example: in a Python program, you would use <code>datetime.datetime</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4074,
+    "text": "Which standard library module is commonly used to make HTTP requests in simple scripts?",
+    "choices": [
+      "urllib",
+      "requests",
+      "socket",
+      "json"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>urllib</strong> is correct because urllib is part of the standard library and supports URL operations.</p><p>Example: in a Python program, you would use <code>urllib</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4075,
+    "text": "Which third-party package is very commonly used for HTTP requests in Python applications?",
+    "choices": [
+      "requests",
+      "argparse",
+      "pytest",
+      "jinja2"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>requests</strong> is correct because requests is a popular third-party HTTP client library.</p><p>Example: in a Python program, you would use <code>requests</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4076,
+    "text": "Which package is commonly used for Python testing?",
+    "choices": [
+      "pytest",
+      "pip",
+      "venv",
+      "black"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>pytest</strong> is correct because pytest is widely used for writing and running tests.</p><p>Example: in a Python program, you would use <code>pytest</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4077,
+    "text": "Which command commonly creates an isolated Python virtual environment?",
+    "choices": [
+      "python -m venv venv",
+      "pip install venv",
+      "python create env",
+      "python -m pipenv"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>python -m venv venv</strong> is correct because venv creates an isolated environment for project dependencies.</p><p>Example: in a Python program, you would use <code>python -m venv venv</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4078,
+    "text": "Which tool is commonly used to install third-party Python packages?",
+    "choices": [
+      "pip",
+      "npm",
+      "apt only",
+      "venv"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>pip</strong> is correct because pip is Python’s standard package installer.</p><p>Example: in a Python program, you would use <code>pip</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4079,
+    "text": "Which file is commonly used to list Python project dependencies in simple projects?",
+    "choices": [
+      "requirements.txt",
+      "package.json",
+      "deps.yaml",
+      "pip.lock"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>requirements.txt</strong> is correct because requirements.txt often lists the packages needed for a project.</p><p>Example: in a Python program, you would use <code>requirements.txt</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4080,
+    "text": "Which symbol is used to define type annotations in function parameters and returns?",
+    "choices": [
+      "colon and ->",
+      "double colon",
+      ":= only",
+      "= type"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>colon and -></strong> is correct because Python uses : for parameter annotations and -> for return annotations.</p><p>Example: in a Python program, you would use <code>colon and -></code> when working with this concept.</p>"
+  },
+  {
+    "id": 4081,
+    "text": "Which module provides standard type hints like List and Dict in older Python typing patterns?",
+    "choices": [
+      "typing",
+      "types",
+      "annotations",
+      "mypy"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>typing</strong> is correct because The typing module contains standard type hint helpers.</p><p>Example: in a Python program, you would use <code>typing</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4082,
+    "text": "Which function returns an iterator over successive pairs of index and value when used with a list?",
+    "choices": [
+      "enumerate()",
+      "zip()",
+      "iter()",
+      "items()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>enumerate()</strong> is correct because enumerate() is the standard way to access both index and item in one loop.</p><p>Example: in a Python program, you would use <code>enumerate()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4083,
+    "text": "Which built-in function can be used to combine multiple conditions and return true only if all are true?",
+    "choices": [
+      "all()",
+      "any()",
+      "sum()",
+      "bool()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>all()</strong> is correct because all() returns true only when every item in the iterable is truthy.</p><p>Example: in a Python program, you would use <code>all()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4084,
+    "text": "Which built-in function returns true if at least one item in an iterable is truthy?",
+    "choices": [
+      "any()",
+      "all()",
+      "exists()",
+      "one()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>any()</strong> is correct because any() is useful when one matching condition is enough.</p><p>Example: in a Python program, you would use <code>any()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4085,
+    "text": "Which built-in function can call an object if it is callable and otherwise return false?",
+    "choices": [
+      "callable()",
+      "call()",
+      "invoke()",
+      "function()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>callable()</strong> is correct because callable() checks whether an object can be called like a function.</p><p>Example: in a Python program, you would use <code>callable()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4086,
+    "text": "Which statement is used in Python 3.10+ for structural pattern matching?",
+    "choices": [
+      "match",
+      "switch",
+      "case",
+      "select"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>match</strong> is correct because match introduces structural pattern matching in modern Python.</p><p>Example: in a Python program, you would use <code>match</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4087,
+    "text": "Which keyword defines an alternative branch inside a match statement?",
+    "choices": [
+      "case",
+      "when",
+      "ifcase",
+      "branch"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>case</strong> is correct because case defines one pattern branch inside a match block.</p><p>Example: in a Python program, you would use <code>case</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4088,
+    "text": "Which standard library module provides heap queue functionality?",
+    "choices": [
+      "heapq",
+      "queue",
+      "priority",
+      "collections"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>heapq</strong> is correct because heapq implements heap-based priority queue operations.</p><p>Example: in a Python program, you would use <code>heapq</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4089,
+    "text": "Which standard library class provides a double-ended queue with efficient appends and pops from both sides?",
+    "choices": [
+      "collections.deque",
+      "list",
+      "tuple",
+      "array"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>collections.deque</strong> is correct because deque is optimized for operations at both ends.</p><p>Example: in a Python program, you would use <code>collections.deque</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4090,
+    "text": "Which standard library helper counts hashable items efficiently?",
+    "choices": [
+      "collections.Counter",
+      "collections.CountMap",
+      "dict.count()",
+      "itertools.count()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>collections.Counter</strong> is correct because Counter tallies occurrences of elements in an iterable.</p><p>Example: in a Python program, you would use <code>collections.Counter</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4091,
+    "text": "Which standard library module contains iterator building blocks such as chain and product?",
+    "choices": [
+      "itertools",
+      "iterlib",
+      "functools",
+      "operator"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>itertools</strong> is correct because itertools provides efficient iterator composition tools.</p><p>Example: in a Python program, you would use <code>itertools</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4092,
+    "text": "Which itertools function combines iterables sequentially into one iterator?",
+    "choices": [
+      "itertools.chain()",
+      "itertools.merge()",
+      "zip()",
+      "map()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>itertools.chain()</strong> is correct because chain() traverses multiple iterables one after another.</p><p>Example: in a Python program, you would use <code>itertools.chain()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4093,
+    "text": "Which functools helper applies partial arguments to a function and returns a new callable?",
+    "choices": [
+      "functools.partial()",
+      "functools.wraps()",
+      "functools.reduce()",
+      "operator.partial()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>functools.partial()</strong> is correct because partial() pre-fills some function arguments.</p><p>Example: in a Python program, you would use <code>functools.partial()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4094,
+    "text": "Which functools decorator preserves wrapped function metadata in custom decorators?",
+    "choices": [
+      "functools.wraps()",
+      "functools.cache()",
+      "functools.partial()",
+      "functools.track()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>functools.wraps()</strong> is correct because wraps() keeps names and docstrings intact when decorating functions.</p><p>Example: in a Python program, you would use <code>functools.wraps()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4095,
+    "text": "Which module is commonly used to execute external system commands from Python?",
+    "choices": [
+      "subprocess",
+      "os only",
+      "threading",
+      "asyncio"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>subprocess</strong> is correct because subprocess runs and manages external commands and processes.</p><p>Example: in a Python program, you would use <code>subprocess</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4096,
+    "text": "Which subprocess helper is commonly used to run a command and wait for it to finish?",
+    "choices": [
+      "subprocess.run()",
+      "subprocess.exec()",
+      "subprocess.command()",
+      "subprocess.waitonly()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>subprocess.run()</strong> is correct because run() is the modern high-level API for executing commands.</p><p>Example: in a Python program, you would use <code>subprocess.run()</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4097,
+    "text": "Which Python framework is commonly used to build full-featured web applications quickly?",
+    "choices": [
+      "Django",
+      "JUnit",
+      "Express",
+      "Hibernate"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>Django</strong> is correct because Django is a batteries-included Python web framework.</p><p>Example: in a Python program, you would use <code>Django</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4098,
+    "text": "Which Python framework is commonly used to build lightweight APIs and web apps?",
+    "choices": [
+      "Flask",
+      "Spring Boot",
+      "Angular",
+      "PM2"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>Flask</strong> is correct because Flask is known for being minimal and flexible for web APIs.</p><p>Example: in a Python program, you would use <code>Flask</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4099,
+    "text": "Which modern Python API framework is known for type hints and automatic OpenAPI docs?",
+    "choices": [
+      "FastAPI",
+      "Flask",
+      "Pyramid",
+      "Bottle"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>FastAPI</strong> is correct because FastAPI uses type hints to generate validation and API documentation.</p><p>Example: in a Python program, you would use <code>FastAPI</code> when working with this concept.</p>"
+  },
+  {
+    "id": 4100,
+    "text": "Which Python feature allows asynchronous functions to be declared?",
+    "choices": [
+      "async def",
+      "lambda async",
+      "await function",
+      "thread def"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>async def</strong> is correct because async def declares a coroutine function.</p><p>Example: in a Python program, you would use <code>async def</code> when working with this concept.</p>"
   }
 ]

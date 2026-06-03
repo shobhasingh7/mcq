@@ -167,5 +167,1305 @@
     "correctIndex": 0,
     "topic": "SpringBoot",
     "explanation": "<p><strong>application.properties</strong> is correct because that file is the conventional place to keep Spring Boot configuration such as ports, profiles, logging, and datasource properties.</p><p>Example:<pre><code>server.port=8081\nspring.profiles.active=dev\nlogging.level.org.springframework.web=DEBUG</code></pre></p>"
+  },
+  {
+    "id": 6101,
+    "text": "Which annotation binds external configuration values to a POJO in Spring Boot?",
+    "choices": [
+      "@ConfigurationProperties",
+      "@ValueSource",
+      "@PropertyBinding",
+      "@ConfigBean"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@ConfigurationProperties</strong> is correct because Spring Boot uses <code>@ConfigurationProperties</code> when you want to map a whole group of related properties into a strongly typed class instead of reading individual keys one by one.</p><p>Example:<pre><code class=\"language-java\">@ConfigurationProperties(prefix = \"app.mail\")\npublic class MailProperties {\n    private String host;\n    private int port;\n}</code></pre></p>"
+  },
+  {
+    "id": 6102,
+    "text": "Which dependency is commonly added for validating request payloads in a Spring Boot REST API?",
+    "choices": [
+      "spring-boot-starter-validation",
+      "spring-boot-starter-cache",
+      "spring-boot-starter-aop",
+      "spring-boot-starter-mail"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-validation</strong> is correct because Validation in Boot is usually enabled through <code>spring-boot-starter-validation</code>, which brings in Jakarta Bean Validation and lets annotations like <code>@NotBlank</code> work on DTOs.</p><p>Example:<pre><code class=\"language-java\">public record UserRequest(@NotBlank String name, @Email String email) { }</code></pre></p>"
+  },
+  {
+    "id": 6103,
+    "text": "Which annotation triggers validation on a controller method parameter in Spring Boot?",
+    "choices": [
+      "@Valid",
+      "@ValidatedOnly",
+      "@Check",
+      "@Verify"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Valid</strong> is correct because Use <code>@Valid</code> on request bodies or nested objects so Spring validates the payload before your controller logic runs.</p><p>Example:<pre><code class=\"language-java\">@PostMapping\npublic User create(@Valid @RequestBody UserRequest request) {\n    return service.create(request);\n}</code></pre></p>"
+  },
+  {
+    "id": 6104,
+    "text": "Which file is loaded automatically for profile-specific configuration in the dev profile?",
+    "choices": [
+      "application-dev.properties",
+      "dev.properties",
+      "application.profile.dev",
+      "bootstrap-dev.yml"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>application-dev.properties</strong> is correct because Spring Boot automatically looks for profile-specific files like <code>application-dev.properties</code> when the <code>dev</code> profile is active.</p><p>Example:<pre><code>spring.profiles.active=dev</code></pre></p>"
+  },
+  {
+    "id": 6105,
+    "text": "Which annotation marks a method to run after the Spring Boot application context starts?",
+    "choices": [
+      "@EventListener(ApplicationReadyEvent.class)",
+      "@Startup",
+      "@PostRun",
+      "@OnBoot"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@EventListener(ApplicationReadyEvent.class)</strong> is correct because If logic must run only after the full application is ready, listening for <code>ApplicationReadyEvent</code> is safer than doing it too early.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class StartupTasks {\n    @EventListener(ApplicationReadyEvent.class)\n    public void warmUp() { }\n}</code></pre></p>"
+  },
+  {
+    "id": 6106,
+    "text": "What is the usual superclass for custom runtime errors returned by a Spring Boot API?",
+    "choices": [
+      "RuntimeException",
+      "ServletException",
+      "IOException",
+      "Error"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>RuntimeException</strong> is correct because Business exceptions in Spring Boot commonly extend <code>RuntimeException</code> so they can bubble up to a global exception handler.</p><p>Example:<pre><code class=\"language-java\">public class OrderNotFoundException extends RuntimeException {\n    public OrderNotFoundException(Long id) {\n        super(\"Order not found: \" + id);\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 6107,
+    "text": "Which annotation is typically used to centralize exception handling across controllers?",
+    "choices": [
+      "@RestControllerAdvice",
+      "@ControllerScan",
+      "@ErrorMapping",
+      "@HandleAll"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RestControllerAdvice</strong> is correct because A <code>@RestControllerAdvice</code> class can convert many exceptions into consistent JSON responses for the whole API.</p><p>Example:<pre><code class=\"language-java\">@RestControllerAdvice\npublic class ApiExceptionHandler {\n    @ExceptionHandler(OrderNotFoundException.class)\n    ResponseEntity&lt;String&gt; handle(OrderNotFoundException ex) {\n        return ResponseEntity.status(404).body(ex.getMessage());\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 6108,
+    "text": "Which embedded server is the default for spring-boot-starter-web?",
+    "choices": [
+      "Tomcat",
+      "Jetty",
+      "Undertow",
+      "Netty"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Tomcat</strong> is correct because The standard web starter brings embedded Tomcat by default, which means most Boot MVC apps run without installing a separate server.</p><p>Example:<p>Example: running the JAR starts Tomcat automatically on port <code>8080</code> unless you change it.</p></p>"
+  },
+  {
+    "id": 6109,
+    "text": "Which annotation enables asynchronous method execution in Spring Boot?",
+    "choices": [
+      "@EnableAsync",
+      "@AsyncSupport",
+      "@EnableThreads",
+      "@Background"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@EnableAsync</strong> is correct because Boot supports async methods when async processing is enabled, usually with <code>@EnableAsync</code> on a configuration class.</p><p>Example:<pre><code class=\"language-java\">@SpringBootApplication\n@EnableAsync\npublic class DemoApplication { }</code></pre></p>"
+  },
+  {
+    "id": 6110,
+    "text": "Which annotation marks a method for asynchronous execution?",
+    "choices": [
+      "@Async",
+      "@Future",
+      "@Concurrent",
+      "@Threaded"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Async</strong> is correct because A method annotated with <code>@Async</code> can run on a task executor so the caller does not block waiting for completion.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class EmailService {\n    @Async\n    public CompletableFuture&lt;Void&gt; sendWelcomeMail() {\n        return CompletableFuture.completedFuture(null);\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 6111,
+    "text": "Which annotation is used to cache the result of a method in Spring Boot?",
+    "choices": [
+      "@Cacheable",
+      "@Remember",
+      "@Memoized",
+      "@Stored"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Cacheable</strong> is correct because Use <code>@Cacheable</code> when repeated calls with the same inputs should reuse a cached result instead of recalculating it.</p><p>Example:<pre><code class=\"language-java\">@Cacheable(\"products\")\npublic Product findById(Long id) {\n    return repository.findById(id).orElseThrow();\n}</code></pre></p>"
+  },
+  {
+    "id": 6112,
+    "text": "Which annotation turns on Spring cache support?",
+    "choices": [
+      "@EnableCaching",
+      "@CacheOn",
+      "@EnableStore",
+      "@ActivateCache"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@EnableCaching</strong> is correct because Caching annotations do not take effect until cache support is enabled, typically with <code>@EnableCaching</code>.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@EnableCaching\nclass CacheConfig { }</code></pre></p>"
+  },
+  {
+    "id": 6113,
+    "text": "Which actuator endpoint is commonly used by load balancers to check application health?",
+    "choices": [
+      "/actuator/health",
+      "/actuator/info",
+      "/actuator/env",
+      "/actuator/beans"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>/actuator/health</strong> is correct because The health endpoint is designed for readiness and liveness style checks because it summarizes whether the app and its dependencies are healthy.</p><p>Example:<p>Example: Kubernetes or a load balancer can probe <code>/actuator/health</code>.</p></p>"
+  },
+  {
+    "id": 6114,
+    "text": "Which configuration property changes the HTTP port of a Spring Boot app?",
+    "choices": [
+      "server.port",
+      "http.port",
+      "spring.port",
+      "app.serverPort"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>server.port</strong> is correct because Boot exposes the listening port through the <code>server.port</code> property, so you can move the app off the default 8080 easily.</p><p>Example:<pre><code>server.port=9090</code></pre></p>"
+  },
+  {
+    "id": 6115,
+    "text": "Which configuration property sets the application context path in Spring Boot?",
+    "choices": [
+      "server.servlet.context-path",
+      "server.context",
+      "spring.path",
+      "web.base-path"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>server.servlet.context-path</strong> is correct because If all endpoints should sit under a prefix such as <code>/quiz</code>, Boot uses <code>server.servlet.context-path</code>.</p><p>Example:<pre><code>server.servlet.context-path=/quiz</code></pre></p>"
+  },
+  {
+    "id": 6116,
+    "text": "Which annotation injects a property value directly into a field or constructor parameter?",
+    "choices": [
+      "@Value",
+      "@Property",
+      "@InjectValue",
+      "@Bind"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Value</strong> is correct because Use <code>@Value</code> for simple one-off property injection when you do not need a full configuration properties class.</p><p>Example:<pre><code class=\"language-java\">@Value(\"${app.title}\")\nprivate String title;</code></pre></p>"
+  },
+  {
+    "id": 6117,
+    "text": "Which starter is commonly used when adding unit and integration testing support to Spring Boot?",
+    "choices": [
+      "spring-boot-starter-test",
+      "spring-boot-starter-junit",
+      "spring-boot-starter-verify",
+      "spring-boot-starter-mock"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-test</strong> is correct because The Boot test starter bundles common testing tools such as JUnit, AssertJ, Mockito, and Spring Test in one dependency.</p><p>Example:<pre><code class=\"language-xml\">&lt;dependency&gt;\n  &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;\n  &lt;scope&gt;test&lt;/scope&gt;\n&lt;/dependency&gt;</code></pre></p>"
+  },
+  {
+    "id": 6118,
+    "text": "Which annotation loads the full Spring Boot application context in a test?",
+    "choices": [
+      "@SpringBootTest",
+      "@BootTest",
+      "@FullContextTest",
+      "@IntegrationScan"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@SpringBootTest</strong> is correct because Use <code>@SpringBootTest</code> when the test should start the real Spring Boot context and wire beans as the application would.</p><p>Example:<pre><code class=\"language-java\">@SpringBootTest\nclass OrderServiceTest { }</code></pre></p>"
+  },
+  {
+    "id": 6119,
+    "text": "Which Spring test utility is commonly used to test MVC controllers without starting a real server?",
+    "choices": [
+      "MockMvc",
+      "WebProbe",
+      "HttpFake",
+      "MvcRunner"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>MockMvc</strong> is correct because With <code>MockMvc</code>, you can test controller routes, status codes, and JSON payloads at the MVC layer without deploying the app.</p><p>Example:<pre><code class=\"language-java\">mockMvc.perform(get(\"/api/books\"))\n       .andExpect(status().isOk());</code></pre></p>"
+  },
+  {
+    "id": 6120,
+    "text": "Which annotation narrows a Spring Boot test to MVC components only?",
+    "choices": [
+      "@WebMvcTest",
+      "@MvcOnlyTest",
+      "@ControllerSlice",
+      "@RestMvc"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@WebMvcTest</strong> is correct because A slice test with <code>@WebMvcTest</code> loads controllers and MVC infrastructure, which keeps controller tests fast and focused.</p><p>Example:<pre><code class=\"language-java\">@WebMvcTest(BookController.class)\nclass BookControllerTest { }</code></pre></p>"
+  },
+  {
+    "id": 6121,
+    "text": "Which annotation is commonly used for JPA repository tests with an embedded database?",
+    "choices": [
+      "@DataJpaTest",
+      "@JpaBootTest",
+      "@RepositoryTest",
+      "@EntitySlice"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@DataJpaTest</strong> is correct because The <code>@DataJpaTest</code> slice configures repositories, entities, and transaction rollback behavior for focused persistence testing.</p><p>Example:<pre><code class=\"language-java\">@DataJpaTest\nclass CustomerRepositoryTest { }</code></pre></p>"
+  },
+  {
+    "id": 6122,
+    "text": "Which property is often used to configure the JDBC URL in Spring Boot?",
+    "choices": [
+      "spring.datasource.url",
+      "datasource.jdbc.url",
+      "spring.jdbc.url",
+      "database.url"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring.datasource.url</strong> is correct because The datasource URL tells Spring Boot how to connect to the database, including host, port, and database name.</p><p>Example:<pre><code>spring.datasource.url=jdbc:postgresql://localhost:5432/appdb</code></pre></p>"
+  },
+  {
+    "id": 6123,
+    "text": "Which property defines the Hibernate DDL strategy in Spring Boot?",
+    "choices": [
+      "spring.jpa.hibernate.ddl-auto",
+      "spring.jpa.ddl",
+      "hibernate.ddl.mode",
+      "spring.schema.auto"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring.jpa.hibernate.ddl-auto</strong> is correct because This property controls whether Hibernate creates, updates, validates, or leaves the schema alone at startup.</p><p>Example:<pre><code>spring.jpa.hibernate.ddl-auto=update</code></pre></p>"
+  },
+  {
+    "id": 6124,
+    "text": "Which starter is commonly used to send emails from a Spring Boot application?",
+    "choices": [
+      "spring-boot-starter-mail",
+      "spring-boot-starter-smtp",
+      "spring-boot-starter-notify",
+      "spring-boot-starter-message"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-mail</strong> is correct because The mail starter adds the JavaMail support typically needed for password resets, notifications, and alerts.</p><p>Example:<pre><code>spring.mail.host=smtp.example.com</code></pre></p>"
+  },
+  {
+    "id": 6125,
+    "text": "Which actuator endpoint shows arbitrary application metadata like version and build info?",
+    "choices": [
+      "/actuator/info",
+      "/actuator/health",
+      "/actuator/metrics",
+      "/actuator/env"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>/actuator/info</strong> is correct because The info endpoint is intended for metadata such as app version, commit ID, or environment details that you want to expose safely.</p><p>Example:<p>Example: you can publish the build version so support teams know what is deployed.</p></p>"
+  },
+  {
+    "id": 6126,
+    "text": "Which property activates a profile directly from configuration?",
+    "choices": [
+      "spring.profiles.active",
+      "spring.active.profile",
+      "profile.current",
+      "app.profile.active"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring.profiles.active</strong> is correct because Boot selects profile-specific beans and properties based on <code>spring.profiles.active</code>.</p><p>Example:<pre><code>spring.profiles.active=prod</code></pre></p>"
+  },
+  {
+    "id": 6127,
+    "text": "Which annotation loads a bean only when a specific profile is active?",
+    "choices": [
+      "@Profile",
+      "@ConditionalProfile",
+      "@ActiveProfile",
+      "@UseWhen"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Profile</strong> is correct because Use <code>@Profile</code> when a bean should exist only in environments like <code>dev</code> or <code>prod</code>.</p><p>Example:<pre><code class=\"language-java\">@Bean\n@Profile(\"dev\")\nCommandLineRunner seedData() {\n    return args -&gt; { };\n}</code></pre></p>"
+  },
+  {
+    "id": 6128,
+    "text": "Which class is most commonly used to build a JAR from a Spring Boot application?",
+    "choices": [
+      "SpringApplication",
+      "BootLauncher",
+      "ApplicationFactory",
+      "JarBuilder"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>SpringApplication</strong> is correct because Although packaging is handled by the build tool, <code>SpringApplication</code> is the runtime entry point that boots the packaged application.</p><p>Example:<pre><code class=\"language-java\">SpringApplication.run(DemoApplication.class, args);</code></pre></p>"
+  },
+  {
+    "id": 6129,
+    "text": "Which Maven plugin is commonly used to package and run Spring Boot apps?",
+    "choices": [
+      "spring-boot-maven-plugin",
+      "maven-web-plugin",
+      "boot-jar-plugin",
+      "spring-runner-plugin"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-maven-plugin</strong> is correct because The Boot Maven plugin helps repackage the app as an executable JAR and supports commands like <code>spring-boot:run</code>.</p><p>Example:<pre><code class=\"language-xml\">&lt;plugin&gt;\n  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;\n  &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;\n&lt;/plugin&gt;</code></pre></p>"
+  },
+  {
+    "id": 6130,
+    "text": "Which Gradle plugin is typically applied in a Spring Boot project?",
+    "choices": [
+      "org.springframework.boot",
+      "spring.boot.gradle",
+      "boot-web",
+      "org.spring.app"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>org.springframework.boot</strong> is correct because In Gradle builds, the <code>org.springframework.boot</code> plugin adds Boot packaging and dependency management conveniences.</p><p>Example:<pre><code class=\"language-groovy\">plugins {\n    id \"org.springframework.boot\" version \"3.3.0\"\n}</code></pre></p>"
+  },
+  {
+    "id": 6131,
+    "text": "Which annotation exposes a Java method as a Spring bean inside a configuration class?",
+    "choices": [
+      "@Bean",
+      "@Provide",
+      "@FactoryMethod",
+      "@Object"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Bean</strong> is correct because When an object should be created with custom logic, a <code>@Bean</code> method lets Spring manage it in the application context.</p><p>Example:<pre><code class=\"language-java\">@Configuration\nclass AppConfig {\n    @Bean\n    Clock clock() {\n        return Clock.systemUTC();\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 6132,
+    "text": "Which annotation marks a class as a source of bean definitions?",
+    "choices": [
+      "@Configuration",
+      "@BeanSource",
+      "@Setup",
+      "@BootstrapConfig"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Configuration</strong> is correct because A class annotated with <code>@Configuration</code> is intended to declare bean methods and application wiring.</p><p>Example:<pre><code class=\"language-java\">@Configuration\nclass SecurityConfig { }</code></pre></p>"
+  },
+  {
+    "id": 6133,
+    "text": "Which annotation maps a JSON request body to a Java object in a controller method?",
+    "choices": [
+      "@RequestBody",
+      "@BodyParam",
+      "@JsonInput",
+      "@PayloadBody"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RequestBody</strong> is correct because In REST controllers, <code>@RequestBody</code> tells Spring to deserialize the incoming JSON into your DTO or entity object.</p><p>Example:<pre><code class=\"language-java\">@PostMapping\npublic Order create(@RequestBody OrderRequest request) {\n    return service.create(request);\n}</code></pre></p>"
+  },
+  {
+    "id": 6134,
+    "text": "Which annotation extracts a value from the URL path in a Spring Boot controller?",
+    "choices": [
+      "@PathVariable",
+      "@RouteParam",
+      "@UrlPart",
+      "@Segment"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@PathVariable</strong> is correct because Use <code>@PathVariable</code> when the route itself contains the value you need, such as an order ID.</p><p>Example:<pre><code class=\"language-java\">@GetMapping(\"/{id}\")\npublic Order find(@PathVariable Long id) {\n    return service.find(id);\n}</code></pre></p>"
+  },
+  {
+    "id": 6135,
+    "text": "Which annotation reads a query parameter in a Spring Boot controller?",
+    "choices": [
+      "@RequestParam",
+      "@QueryValue",
+      "@ParamValue",
+      "@QueryParamOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RequestParam</strong> is correct because Query-string values like <code>?page=2</code> are typically mapped with <code>@RequestParam</code>.</p><p>Example:<pre><code class=\"language-java\">@GetMapping\npublic List&lt;Order&gt; list(@RequestParam int page) {\n    return service.list(page);\n}</code></pre></p>"
+  },
+  {
+    "id": 6136,
+    "text": "Which annotation sets the base URL path for all handler methods in a controller?",
+    "choices": [
+      "@RequestMapping",
+      "@BasePath",
+      "@RouteGroup",
+      "@EndpointRoot"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RequestMapping</strong> is correct because Putting <code>@RequestMapping</code> on the class avoids repeating the same URL prefix on every endpoint method.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/orders\")\nclass OrderController { }</code></pre></p>"
+  },
+  {
+    "id": 6137,
+    "text": "Which Spring Boot feature automatically configures beans based on the classpath and properties?",
+    "choices": [
+      "Auto-configuration",
+      "Manual wiring",
+      "Bean scanning only",
+      "XML bootstrap"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Auto-configuration</strong> is correct because Auto-configuration is one of Boot’s biggest productivity features because it creates sensible defaults from the libraries you include.</p><p>Example:<p>Example: adding the web starter configures JSON converters and an embedded server automatically.</p></p>"
+  },
+  {
+    "id": 6138,
+    "text": "Which annotation excludes a specific auto-configuration class?",
+    "choices": [
+      "@SpringBootApplication(exclude = ...)",
+      "@DisableConfig",
+      "@IgnoreAutoConfig",
+      "@SkipBoot"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@SpringBootApplication(exclude = ...)</strong> is correct because If one Boot auto-configuration is not wanted, you can exclude it explicitly on the main application annotation.</p><p>Example:<pre><code class=\"language-java\">@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)\nclass DemoApplication { }</code></pre></p>"
+  },
+  {
+    "id": 6139,
+    "text": "Which starter is commonly used to build reactive APIs in Spring Boot?",
+    "choices": [
+      "spring-boot-starter-webflux",
+      "spring-boot-starter-reactive-mvc",
+      "spring-boot-starter-netty-only",
+      "spring-boot-starter-async-web"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-webflux</strong> is correct because Reactive HTTP applications in Boot usually start with <code>spring-boot-starter-webflux</code> rather than the MVC web starter.</p><p>Example:<pre><code class=\"language-java\">@GetMapping(\"/ticks\")\npublic Flux&lt;Long&gt; ticks() {\n    return Flux.interval(Duration.ofSeconds(1));\n}</code></pre></p>"
+  },
+  {
+    "id": 6140,
+    "text": "Which server is commonly used by default with Spring WebFlux applications?",
+    "choices": [
+      "Netty",
+      "Tomcat",
+      "Jetty",
+      "GlassFish"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Netty</strong> is correct because WebFlux applications often run on Reactor Netty by default, which fits the reactive, non-blocking programming model.</p><p>Example:<p>Example: a WebFlux starter app usually starts with embedded Netty unless reconfigured.</p></p>"
+  },
+  {
+    "id": 6141,
+    "text": "Which annotation marks a component as part of the service layer?",
+    "choices": [
+      "@Service",
+      "@Layer",
+      "@Business",
+      "@LogicComponent"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Service</strong> is correct because While technically a specialization of <code>@Component</code>, <code>@Service</code> communicates intent and is the usual stereotype for business logic.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class BillingService { }</code></pre></p>"
+  },
+  {
+    "id": 6142,
+    "text": "Which annotation marks a persistence component such as a repository implementation?",
+    "choices": [
+      "@Repository",
+      "@DaoBean",
+      "@PersistenceLayer",
+      "@DbComponent"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Repository</strong> is correct because Use <code>@Repository</code> for data-access components so Spring can detect them and translate persistence exceptions.</p><p>Example:<pre><code class=\"language-java\">@Repository\npublic class JdbcReportRepository { }</code></pre></p>"
+  },
+  {
+    "id": 6143,
+    "text": "Which annotation marks a general-purpose Spring-managed class?",
+    "choices": [
+      "@Component",
+      "@ManagedObject",
+      "@BeanClass",
+      "@SpringType"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Component</strong> is correct because When a class does not clearly fit service, controller, or repository roles, <code>@Component</code> is the generic stereotype.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class SlugGenerator { }</code></pre></p>"
+  },
+  {
+    "id": 6144,
+    "text": "Which property controls log verbosity for a specific package in Spring Boot?",
+    "choices": [
+      "logging.level.<package>",
+      "logger.package.level",
+      "spring.log.package",
+      "logging.package.name"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>logging.level.<package></strong> is correct because Per-package logging configuration lets you increase detail for one part of the app without flooding everything else.</p><p>Example:<pre><code>logging.level.com.example.quiz=DEBUG</code></pre></p>"
+  },
+  {
+    "id": 6145,
+    "text": "Which file format can Spring Boot use in addition to .properties for configuration?",
+    "choices": [
+      "application.yml",
+      "config.json",
+      "settings.ini",
+      "profile.xml"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>application.yml</strong> is correct because Boot supports YAML as a readable alternative to properties files, especially for nested configuration structures.</p><p>Example:<pre><code>server:\n  port: 8081</code></pre></p>"
+  },
+  {
+    "id": 6146,
+    "text": "Which annotation binds a controller method to HTTP POST requests?",
+    "choices": [
+      "@PostMapping",
+      "@SaveMapping",
+      "@CreateRoute",
+      "@RequestMapping(method=GET)"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@PostMapping</strong> is correct because Use <code>@PostMapping</code> for endpoints that create resources or accept submitted data via HTTP POST.</p><p>Example:<pre><code class=\"language-java\">@PostMapping\npublic ResponseEntity&lt;Order&gt; create(@RequestBody OrderRequest request) {\n    return ResponseEntity.ok(service.create(request));\n}</code></pre></p>"
+  },
+  {
+    "id": 6147,
+    "text": "Which annotation binds a controller method to HTTP PUT requests?",
+    "choices": [
+      "@PutMapping",
+      "@UpdateMapping",
+      "@EditRoute",
+      "@RequestMapping(method=GET)"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@PutMapping</strong> is correct because A full resource update is commonly modeled as an HTTP PUT endpoint, mapped with <code>@PutMapping</code>.</p><p>Example:<pre><code class=\"language-java\">@PutMapping(\"/{id}\")\npublic Order update(@PathVariable Long id, @RequestBody OrderRequest request) {\n    return service.update(id, request);\n}</code></pre></p>"
+  },
+  {
+    "id": 6148,
+    "text": "Which annotation binds a controller method to HTTP DELETE requests?",
+    "choices": [
+      "@DeleteMapping",
+      "@RemoveMapping",
+      "@EraseRoute",
+      "@RequestMapping(method=PATCH)"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@DeleteMapping</strong> is correct because Delete endpoints are conventionally implemented with <code>@DeleteMapping</code> so the route clearly matches the HTTP verb.</p><p>Example:<pre><code class=\"language-java\">@DeleteMapping(\"/{id}\")\npublic void delete(@PathVariable Long id) {\n    service.delete(id);\n}</code></pre></p>"
+  },
+  {
+    "id": 6149,
+    "text": "Which annotation binds a controller method to HTTP PATCH requests?",
+    "choices": [
+      "@PatchMapping",
+      "@ModifyMapping",
+      "@PartialUpdate",
+      "@DeltaRoute"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@PatchMapping</strong> is correct because A partial update is usually expressed with HTTP PATCH, which Spring maps neatly via <code>@PatchMapping</code>.</p><p>Example:<pre><code class=\"language-java\">@PatchMapping(\"/{id}/status\")\npublic Order updateStatus(@PathVariable Long id) {\n    return service.advance(id);\n}</code></pre></p>"
+  },
+  {
+    "id": 6150,
+    "text": "Which annotation is commonly used to enable scheduling in Spring Boot?",
+    "choices": [
+      "@EnableScheduling",
+      "@SchedulerOn",
+      "@ActivateCron",
+      "@ScheduleSupport"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@EnableScheduling</strong> is correct because Scheduled jobs are turned on with <code>@EnableScheduling</code>, after which methods can use <code>@Scheduled</code>.</p><p>Example:<pre><code class=\"language-java\">@SpringBootApplication\n@EnableScheduling\nclass DemoApplication { }</code></pre></p>"
+  },
+  {
+    "id": 6151,
+    "text": "Which annotation schedules a method to run at fixed intervals?",
+    "choices": [
+      "@Scheduled",
+      "@CronTask",
+      "@Timer",
+      "@Job"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Scheduled</strong> is correct because The <code>@Scheduled</code> annotation is the standard way to run recurring background jobs in a Spring Boot app.</p><p>Example:<pre><code class=\"language-java\">@Scheduled(fixedRate = 60000)\npublic void refreshCache() { }</code></pre></p>"
+  },
+  {
+    "id": 6152,
+    "text": "Which property is often used to expose all actuator endpoints for local development?",
+    "choices": [
+      "management.endpoints.web.exposure.include=*",
+      "management.actuator.all=true",
+      "management.web.public=true",
+      "actuator.expose=*"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>management.endpoints.web.exposure.include=*</strong> is correct because For local debugging, developers sometimes expose all actuator web endpoints through the management exposure property.</p><p>Example:<pre><code>management.endpoints.web.exposure.include=*</code></pre></p>"
+  },
+  {
+    "id": 6153,
+    "text": "Which starter is commonly used to secure a Spring Boot application?",
+    "choices": [
+      "spring-boot-starter-security",
+      "spring-boot-starter-auth",
+      "spring-boot-starter-oauth-basic",
+      "spring-boot-starter-login"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-security</strong> is correct because Security features such as authentication filters and authorization support usually begin with the security starter.</p><p>Example:<pre><code class=\"language-xml\">&lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</code></pre></p>"
+  },
+  {
+    "id": 6154,
+    "text": "Which bean type is commonly defined to customize HTTP security rules in modern Spring Boot?",
+    "choices": [
+      "SecurityFilterChain",
+      "WebSecurityConfigurer",
+      "HttpSecurityManager",
+      "RequestAuthorizer"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>SecurityFilterChain</strong> is correct because Modern Spring Security configuration in Boot usually exposes a <code>SecurityFilterChain</code> bean instead of extending the older adapter class.</p><p>Example:<pre><code class=\"language-java\">@Bean\nSecurityFilterChain security(HttpSecurity http) throws Exception {\n    return http.authorizeHttpRequests(auth -&gt; auth.anyRequest().authenticated()).build();\n}</code></pre></p>"
+  },
+  {
+    "id": 6155,
+    "text": "Which annotation enables method-level validation in a Spring service class?",
+    "choices": [
+      "@Validated",
+      "@ValidService",
+      "@MethodCheck",
+      "@ConstraintBean"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Validated</strong> is correct because When method parameters on a bean should be validated, <code>@Validated</code> is commonly placed on the class.</p><p>Example:<pre><code class=\"language-java\">@Service\n@Validated\npublic class CouponService {\n    public void apply(@NotBlank String code) { }\n}</code></pre></p>"
+  },
+  {
+    "id": 6156,
+    "text": "Which class is commonly returned to customize HTTP status and body in Spring Boot controllers?",
+    "choices": [
+      "ResponseEntity",
+      "HttpPayload",
+      "ApiResult",
+      "ResponseWrapper"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>ResponseEntity</strong> is correct because Use <code>ResponseEntity</code> when you need explicit control over the status code, headers, and response body.</p><p>Example:<pre><code class=\"language-java\">return ResponseEntity.status(201).body(order);</code></pre></p>"
+  },
+  {
+    "id": 6157,
+    "text": "Which annotation customizes the HTTP status returned by a controller method?",
+    "choices": [
+      "@ResponseStatus",
+      "@HttpStatus",
+      "@StatusCode",
+      "@ReturnStatus"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@ResponseStatus</strong> is correct because If an endpoint or exception should always map to a particular status, <code>@ResponseStatus</code> provides a clean declaration.</p><p>Example:<pre><code class=\"language-java\">@ResponseStatus(HttpStatus.CREATED)\n@PostMapping\npublic Order create(@RequestBody OrderRequest request) { ... }</code></pre></p>"
+  },
+  {
+    "id": 6158,
+    "text": "Which Spring Boot property enables SQL logging for JPA?",
+    "choices": [
+      "spring.jpa.show-sql",
+      "spring.sql.log",
+      "hibernate.show.query",
+      "datasource.show-sql"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring.jpa.show-sql</strong> is correct because Turning on SQL output is useful during development when you need to confirm what Hibernate is sending to the database.</p><p>Example:<pre><code>spring.jpa.show-sql=true</code></pre></p>"
+  },
+  {
+    "id": 6159,
+    "text": "Which annotation groups related REST endpoints in one class?",
+    "choices": [
+      "@RestController",
+      "@Service",
+      "@Configuration",
+      "@Entity"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RestController</strong> is correct because A REST controller is the normal place to organize endpoints that belong to one resource area such as users, orders, or products.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/products\")\nclass ProductController { }</code></pre></p>"
+  },
+  {
+    "id": 6160,
+    "text": "Which annotation injects a repository or service through the constructor without field injection?",
+    "choices": [
+      "@Autowired",
+      "@ComponentScan",
+      "@Qualifier",
+      "@Import"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Autowired</strong> is correct because Constructor injection is preferred for required dependencies, and Spring can wire them using <code>@Autowired</code> or implicitly with a single constructor.</p><p>Example:<pre><code class=\"language-java\">public OrderController(OrderService orderService) {\n    this.orderService = orderService;\n}</code></pre></p>"
+  },
+  {
+    "id": 6161,
+    "text": "Which annotation resolves ambiguity when multiple beans of the same type exist?",
+    "choices": [
+      "@Qualifier",
+      "@PrimaryKey",
+      "@Prefer",
+      "@NamedBean"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Qualifier</strong> is correct because When Spring finds several beans of the same type, <code>@Qualifier</code> lets you choose the intended one explicitly.</p><p>Example:<pre><code class=\"language-java\">public ReportService(@Qualifier(\"pdfExporter\") Exporter exporter) {\n    this.exporter = exporter;\n}</code></pre></p>"
+  },
+  {
+    "id": 6162,
+    "text": "Which annotation marks one bean as the default choice when multiple candidates exist?",
+    "choices": [
+      "@Primary",
+      "@DefaultBean",
+      "@Main",
+      "@Preferred"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Primary</strong> is correct because Use <code>@Primary</code> when one bean should win by default during autowiring unless a qualifier says otherwise.</p><p>Example:<pre><code class=\"language-java\">@Bean\n@Primary\nClock utcClock() {\n    return Clock.systemUTC();\n}</code></pre></p>"
+  },
+  {
+    "id": 6163,
+    "text": "Which Spring Boot feature allows externalized configuration through environment variables, files, and command-line args?",
+    "choices": [
+      "Externalized configuration",
+      "Runtime scanning",
+      "Auto packaging",
+      "Live templating"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Externalized configuration</strong> is correct because Externalized configuration is central to Boot because the same code can run in dev, test, and production with different settings.</p><p>Example:<p>Example: <code>SERVER_PORT=9090</code> can override the configured port without changing code.</p></p>"
+  },
+  {
+    "id": 6164,
+    "text": "Which annotation is commonly used on the main class to scan components from its package and subpackages?",
+    "choices": [
+      "@SpringBootApplication",
+      "@EnableScan",
+      "@Bootstrap",
+      "@ApplicationRoot"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@SpringBootApplication</strong> is correct because Because <code>@SpringBootApplication</code> includes component scanning, placing the main class in a root package helps discover controllers and services automatically.</p><p>Example:<p>Example: if the main class is in <code>com.example.app</code>, Boot scans subpackages below it.</p></p>"
+  },
+  {
+    "id": 6165,
+    "text": "Which interface is often implemented for startup logic that needs command-line arguments?",
+    "choices": [
+      "CommandLineRunner",
+      "StartupRunner",
+      "ApplicationTask",
+      "BootSequence"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>CommandLineRunner</strong> is correct because A <code>CommandLineRunner</code> bean runs after the context is ready and receives any command-line arguments passed to the app.</p><p>Example:<pre><code class=\"language-java\">@Bean\nCommandLineRunner init() {\n    return args -&gt; System.out.println(Arrays.toString(args));\n}</code></pre></p>"
+  },
+  {
+    "id": 6166,
+    "text": "Which interface is similar to CommandLineRunner but receives arguments as ApplicationArguments?",
+    "choices": [
+      "ApplicationRunner",
+      "RunnerAdapter",
+      "ArgsRunner",
+      "StartupHook"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>ApplicationRunner</strong> is correct because Use <code>ApplicationRunner</code> when you want a more structured view of startup arguments instead of a raw string array.</p><p>Example:<pre><code class=\"language-java\">@Bean\nApplicationRunner run() {\n    return args -&gt; System.out.println(args.getOptionNames());\n}</code></pre></p>"
+  },
+  {
+    "id": 6167,
+    "text": "Which annotation is used to enable configuration properties scanning in Spring Boot?",
+    "choices": [
+      "@ConfigurationPropertiesScan",
+      "@PropertyScan",
+      "@ScanConfig",
+      "@EnablePropertiesBinding"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@ConfigurationPropertiesScan</strong> is correct because When configuration properties classes are not registered another way, Boot can discover them through <code>@ConfigurationPropertiesScan</code>.</p><p>Example:<pre><code class=\"language-java\">@SpringBootApplication\n@ConfigurationPropertiesScan\nclass DemoApplication { }</code></pre></p>"
+  },
+  {
+    "id": 6168,
+    "text": "Which property controls multipart file upload size in Spring Boot?",
+    "choices": [
+      "spring.servlet.multipart.max-file-size",
+      "spring.upload.max-size",
+      "multipart.file.limit",
+      "server.multipart.max"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring.servlet.multipart.max-file-size</strong> is correct because File upload limits are configured through Boot’s multipart properties so uploads can be constrained without code changes.</p><p>Example:<pre><code>spring.servlet.multipart.max-file-size=10MB</code></pre></p>"
+  },
+  {
+    "id": 6169,
+    "text": "Which annotation enables cross-origin requests on a Spring Boot controller or method?",
+    "choices": [
+      "@CrossOrigin",
+      "@AllowOrigin",
+      "@Cors",
+      "@EnableCorsRoute"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@CrossOrigin</strong> is correct because Use <code>@CrossOrigin</code> when a browser-based frontend on another origin must call your Boot API.</p><p>Example:<pre><code class=\"language-java\">@CrossOrigin(origins = \"http://localhost:4200\")\n@RestController\nclass QuizController { }</code></pre></p>"
+  },
+  {
+    "id": 6170,
+    "text": "Which Spring Boot starter is typically used for WebSocket support?",
+    "choices": [
+      "spring-boot-starter-websocket",
+      "spring-boot-starter-socket",
+      "spring-boot-starter-ws-live",
+      "spring-boot-starter-channel"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-websocket</strong> is correct because WebSocket applications in Spring Boot usually begin with the dedicated websocket starter.</p><p>Example:<pre><code class=\"language-java\">@EnableWebSocketMessageBroker\n@Configuration\nclass WebSocketConfig { }</code></pre></p>"
+  },
+  {
+    "id": 6171,
+    "text": "Which starter is commonly used for building SOAP web services in Spring Boot?",
+    "choices": [
+      "spring-boot-starter-web-services",
+      "spring-boot-starter-soap",
+      "spring-boot-starter-xml-api",
+      "spring-boot-starter-wsdl"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-web-services</strong> is correct because SOAP-based integrations in Boot typically use the web services starter rather than the REST web starter alone.</p><p>Example:<p>Example: this starter is useful when integrating with legacy enterprise SOAP systems.</p></p>"
+  },
+  {
+    "id": 6172,
+    "text": "Which annotation maps HTTP headers to a controller method parameter?",
+    "choices": [
+      "@RequestHeader",
+      "@HeaderParam",
+      "@HttpHeader",
+      "@HeaderValue"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RequestHeader</strong> is correct because When an endpoint needs values like authorization metadata or tenant IDs from headers, <code>@RequestHeader</code> is the usual choice.</p><p>Example:<pre><code class=\"language-java\">@GetMapping\npublic String who(@RequestHeader(\"X-Tenant\") String tenant) {\n    return tenant;\n}</code></pre></p>"
+  },
+  {
+    "id": 6173,
+    "text": "Which annotation maps a cookie value to a controller method parameter?",
+    "choices": [
+      "@CookieValue",
+      "@CookieParam",
+      "@RequestCookie",
+      "@HttpCookie"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@CookieValue</strong> is correct because Use <code>@CookieValue</code> when the controller should read a cookie such as a session preference or tracking token.</p><p>Example:<pre><code class=\"language-java\">public String theme(@CookieValue(\"theme\") String theme) {\n    return theme;\n}</code></pre></p>"
+  },
+  {
+    "id": 6174,
+    "text": "Which annotation is commonly used to serialize all return values in a controller as JSON?",
+    "choices": [
+      "@RestController",
+      "@Controller",
+      "@JsonController",
+      "@ResponseController"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RestController</strong> is correct because A <code>@RestController</code> returns data directly rather than resolving server-side views, which is why it is standard for APIs.</p><p>Example:<p>Example: returning a POJO from a <code>@RestController</code> method is automatically converted to JSON.</p></p>"
+  },
+  {
+    "id": 6175,
+    "text": "Which Spring Boot feature automatically serves static files from folders like /static or /public?",
+    "choices": [
+      "Static resource auto-configuration",
+      "View resolver inheritance",
+      "Template scanning",
+      "Servlet forwarding only"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Static resource auto-configuration</strong> is correct because Boot can serve CSS, JavaScript, and images automatically from conventional resource folders without extra controller code.</p><p>Example:<p>Example: a file in <code>src/main/resources/static/app.js</code> is served directly by the app.</p></p>"
+  },
+  {
+    "id": 6176,
+    "text": "Which annotation is commonly used to document APIs with springdoc OpenAPI controllers?",
+    "choices": [
+      "@Operation",
+      "@ApiDoc",
+      "@SchemaRoute",
+      "@OpenApiMethod"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Operation</strong> is correct because When using springdoc, <code>@Operation</code> adds summary and description metadata for generated OpenAPI docs.</p><p>Example:<pre><code class=\"language-java\">@Operation(summary = \"Find user by id\")\n@GetMapping(\"/{id}\")\npublic User find(@PathVariable Long id) { ... }</code></pre></p>"
+  },
+  {
+    "id": 6177,
+    "text": "Which health group concept in Spring Boot actuator lets you separate readiness from liveness checks?",
+    "choices": [
+      "Probes",
+      "Profiles",
+      "Monitors",
+      "Health channels"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Probes</strong> is correct because Actuator can expose liveness and readiness probes separately so orchestrators can make better traffic decisions.</p><p>Example:<p>Example: <code>/actuator/health/liveness</code> and <code>/actuator/health/readiness</code>.</p></p>"
+  },
+  {
+    "id": 6178,
+    "text": "Which annotation enables retry support when using Spring Retry with Spring Boot?",
+    "choices": [
+      "@EnableRetry",
+      "@RetryOn",
+      "@Resilient",
+      "@ActivateRetry"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@EnableRetry</strong> is correct because If you add Spring Retry, methods can use retry semantics once retry support is enabled with <code>@EnableRetry</code>.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@EnableRetry\nclass RetryConfig { }</code></pre></p>"
+  },
+  {
+    "id": 6179,
+    "text": "Which annotation retries a method call when certain failures occur?",
+    "choices": [
+      "@Retryable",
+      "@RepeatOnError",
+      "@TryAgain",
+      "@Recoverable"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Retryable</strong> is correct because A <code>@Retryable</code> method is useful for transient failures such as temporary network or database connection problems.</p><p>Example:<pre><code class=\"language-java\">@Retryable\npublic String fetchRemoteData() {\n    return client.call();\n}</code></pre></p>"
+  },
+  {
+    "id": 6180,
+    "text": "Which annotation defines a fallback method for exhausted retries in Spring Retry?",
+    "choices": [
+      "@Recover",
+      "@Fallback",
+      "@OnRetryFailure",
+      "@HandleRetry"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Recover</strong> is correct because A recovery method gives your application a controlled fallback path after retry attempts have failed.</p><p>Example:<pre><code class=\"language-java\">@Recover\npublic String recover(Exception ex) {\n    return \"fallback\";\n}</code></pre></p>"
+  },
+  {
+    "id": 6181,
+    "text": "Which Spring Boot starter is often used to work with Redis caching or messaging?",
+    "choices": [
+      "spring-boot-starter-data-redis",
+      "spring-boot-starter-cache-redis",
+      "spring-boot-starter-nosql",
+      "spring-boot-starter-memory-store"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-data-redis</strong> is correct because Redis integration in Boot usually starts with the Redis data starter for repositories, caching, or pub/sub scenarios.</p><p>Example:<pre><code>spring.data.redis.host=localhost</code></pre></p>"
+  },
+  {
+    "id": 6182,
+    "text": "Which starter is typically used for MongoDB integration in Spring Boot?",
+    "choices": [
+      "spring-boot-starter-data-mongodb",
+      "spring-boot-starter-mongo-client",
+      "spring-boot-starter-documentdb",
+      "spring-boot-starter-nosql-mongo"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-data-mongodb</strong> is correct because MongoDB support in Boot is usually added through the MongoDB starter, which wires templates and repository support.</p><p>Example:<pre><code>spring.data.mongodb.uri=mongodb://localhost:27017/appdb</code></pre></p>"
+  },
+  {
+    "id": 6183,
+    "text": "Which starter is commonly used to connect Spring Boot with Apache Kafka?",
+    "choices": [
+      "spring-kafka",
+      "spring-boot-starter-kafka-core",
+      "spring-boot-starter-stream-kafka",
+      "spring-kafka-boot-web"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-kafka</strong> is correct because Kafka integration in the Spring ecosystem is commonly provided by the <code>spring-kafka</code> dependency.</p><p>Example:<pre><code class=\"language-java\">@KafkaListener(topics = \"orders\")\npublic void consume(String message) { }</code></pre></p>"
+  },
+  {
+    "id": 6184,
+    "text": "Which annotation listens for Kafka messages in a Spring Boot app?",
+    "choices": [
+      "@KafkaListener",
+      "@MessageListener",
+      "@ConsumeTopic",
+      "@QueueHandler"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@KafkaListener</strong> is correct because Use <code>@KafkaListener</code> on a method that should consume messages from a Kafka topic.</p><p>Example:<pre><code class=\"language-java\">@KafkaListener(topics = \"payments\")\npublic void handle(String payload) { }</code></pre></p>"
+  },
+  {
+    "id": 6185,
+    "text": "Which starter is commonly used for AMQP and RabbitMQ integration in Spring Boot?",
+    "choices": [
+      "spring-boot-starter-amqp",
+      "spring-boot-starter-rabbitmq",
+      "spring-boot-starter-queue",
+      "spring-boot-starter-broker"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-amqp</strong> is correct because Boot’s AMQP starter is the typical entry point for RabbitMQ producers, listeners, and messaging templates.</p><p>Example:<pre><code class=\"language-java\">@RabbitListener(queues = \"email.queue\")\npublic void onMessage(String msg) { }</code></pre></p>"
+  },
+  {
+    "id": 6186,
+    "text": "Which annotation is used to listen to RabbitMQ messages in Spring Boot?",
+    "choices": [
+      "@RabbitListener",
+      "@QueueListener",
+      "@AmqpListenerOnly",
+      "@ConsumerBinding"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RabbitListener</strong> is correct because A <code>@RabbitListener</code> method receives messages from a configured queue through Spring AMQP.</p><p>Example:<pre><code class=\"language-java\">@RabbitListener(queues = \"orders.created\")\npublic void receive(String body) { }</code></pre></p>"
+  },
+  {
+    "id": 6187,
+    "text": "Which annotation marks a method as transactional in Spring Boot?",
+    "choices": [
+      "@Transactional",
+      "@Commit",
+      "@DatabaseScope",
+      "@UnitOfWork"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Transactional</strong> is correct because When several database changes must succeed or fail together, <code>@Transactional</code> creates that transaction boundary.</p><p>Example:<pre><code class=\"language-java\">@Transactional\npublic void placeOrder(OrderRequest request) {\n    orderRepository.save(...);\n    paymentRepository.save(...);\n}</code></pre></p>"
+  },
+  {
+    "id": 6188,
+    "text": "Which Spring Boot test annotation can inject a TestRestTemplate for real HTTP integration tests?",
+    "choices": [
+      "@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)",
+      "@WebMvcTest",
+      "@TestTemplate",
+      "@HttpSliceTest"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)</strong> is correct because Running the app on a random port inside a <code>@SpringBootTest</code> lets you exercise endpoints through real HTTP calls.</p><p>Example:<pre><code class=\"language-java\">@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)\nclass ApiTest {\n    @Autowired TestRestTemplate restTemplate;\n}</code></pre></p>"
+  },
+  {
+    "id": 6189,
+    "text": "Which helper client is commonly used in Spring Boot MVC integration tests to call endpoints over HTTP-like semantics?",
+    "choices": [
+      "TestRestTemplate",
+      "MockClient",
+      "MvcTemplate",
+      "BootCaller"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>TestRestTemplate</strong> is correct because The <code>TestRestTemplate</code> is convenient in Boot integration tests when the app is running on an embedded server.</p><p>Example:<pre><code class=\"language-java\">ResponseEntity&lt;String&gt; response = restTemplate.getForEntity(\"/actuator/health\", String.class);</code></pre></p>"
+  },
+  {
+    "id": 6190,
+    "text": "Which annotation imports additional configuration classes into a Spring Boot test or application context?",
+    "choices": [
+      "@Import",
+      "@IncludeConfig",
+      "@LoadConfig",
+      "@UseBeans"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Import</strong> is correct because Use <code>@Import</code> when a test or configuration class needs extra beans from another configuration class.</p><p>Example:<pre><code class=\"language-java\">@Import(TestClockConfig.class)\nclass BillingServiceTest { }</code></pre></p>"
+  },
+  {
+    "id": 6191,
+    "text": "Which annotation can override a bean with a Mockito mock in a Spring Boot test?",
+    "choices": [
+      "@MockBean",
+      "@FakeBean",
+      "@ReplaceBean",
+      "@SpyService"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@MockBean</strong> is correct because A <code>@MockBean</code> replaces a real bean in the application context, which is very useful when isolating tests.</p><p>Example:<pre><code class=\"language-java\">@MockBean\nprivate PaymentGateway gateway;</code></pre></p>"
+  },
+  {
+    "id": 6192,
+    "text": "Which annotation can wrap a real Spring bean with a Mockito spy in a Spring Boot test?",
+    "choices": [
+      "@SpyBean",
+      "@ObserveBean",
+      "@SpyService",
+      "@ProbeBean"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@SpyBean</strong> is correct because A <code>@SpyBean</code> keeps real behavior by default while still allowing interaction verification or selective stubbing.</p><p>Example:<pre><code class=\"language-java\">@SpyBean\nprivate EmailService emailService;</code></pre></p>"
+  },
+  {
+    "id": 6193,
+    "text": "Which annotation loads SQL scripts before or after tests in Spring Boot integration testing?",
+    "choices": [
+      "@Sql",
+      "@LoadSql",
+      "@DatabaseScript",
+      "@JdbcSetup"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Sql</strong> is correct because The <code>@Sql</code> annotation is useful for preparing repeatable database state around test execution.</p><p>Example:<pre><code class=\"language-java\">@Sql(\"/test-data.sql\")\nclass CustomerRepositoryTest { }</code></pre></p>"
+  },
+  {
+    "id": 6194,
+    "text": "Which property is commonly used to set the application name in Spring Boot?",
+    "choices": [
+      "spring.application.name",
+      "app.name",
+      "boot.application.id",
+      "server.appName"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring.application.name</strong> is correct because The application name is often used in logs, tracing, service discovery, and monitoring output.</p><p>Example:<pre><code>spring.application.name=quiz-service</code></pre></p>"
+  },
+  {
+    "id": 6195,
+    "text": "Which starter is typically added to generate metadata for configuration properties in IDEs?",
+    "choices": [
+      "spring-boot-configuration-processor",
+      "spring-boot-properties-helper",
+      "spring-boot-metadata-starter",
+      "spring-config-compiler"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-configuration-processor</strong> is correct because The configuration processor helps IDEs understand custom configuration properties and improves autocomplete support.</p><p>Example:<pre><code class=\"language-xml\">&lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;</code></pre></p>"
+  },
+  {
+    "id": 6196,
+    "text": "Which Spring Boot feature helps avoid writing many explicit version numbers for Spring dependencies?",
+    "choices": [
+      "Dependency management",
+      "Auto-import scanning",
+      "Plugin inheritance only",
+      "Classpath guessing"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Dependency management</strong> is correct because Boot’s curated dependency management keeps versions compatible so you usually omit versions for Spring modules in the build file.</p><p>Example:<p>Example: many starter dependencies do not require a manually specified Spring version.</p></p>"
+  },
+  {
+    "id": 6197,
+    "text": "Which annotation is commonly used to declare a bean conditionally when one is missing?",
+    "choices": [
+      "@ConditionalOnMissingBean",
+      "@CreateIfAbsent",
+      "@BeanFallback",
+      "@OptionalBean"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@ConditionalOnMissingBean</strong> is correct because Auto-configuration often uses <code>@ConditionalOnMissingBean</code> so user-defined beans can override Boot defaults cleanly.</p><p>Example:<pre><code class=\"language-java\">@Bean\n@ConditionalOnMissingBean\nClock clock() {\n    return Clock.systemUTC();\n}</code></pre></p>"
+  },
+  {
+    "id": 6198,
+    "text": "Which annotation is commonly used to create a bean only when a property has a specific value?",
+    "choices": [
+      "@ConditionalOnProperty",
+      "@PropertyCondition",
+      "@IfProperty",
+      "@MatchProperty"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@ConditionalOnProperty</strong> is correct because This condition is useful for feature flags because it enables or disables beans from configuration alone.</p><p>Example:<pre><code class=\"language-java\">@Bean\n@ConditionalOnProperty(name = \"feature.audit\", havingValue = \"true\")\nAuditService auditService() { ... }</code></pre></p>"
+  },
+  {
+    "id": 6199,
+    "text": "Which annotation limits bean creation to web applications only in auto-configuration?",
+    "choices": [
+      "@ConditionalOnWebApplication",
+      "@WebOnly",
+      "@IfServlet",
+      "@ForHttpApps"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@ConditionalOnWebApplication</strong> is correct because Boot auto-configuration can adapt to application type, and this condition prevents web-only beans from loading elsewhere.</p><p>Example:<p>Example: a servlet filter bean should not load in a non-web batch application.</p></p>"
+  },
+  {
+    "id": 6200,
+    "text": "Which annotation creates a bean only when a class is present on the classpath?",
+    "choices": [
+      "@ConditionalOnClass",
+      "@IfClasspath",
+      "@RequireClass",
+      "@ClassAvailable"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@ConditionalOnClass</strong> is correct because Auto-configuration uses <code>@ConditionalOnClass</code> heavily so optional integrations activate only when their libraries exist.</p><p>Example:<pre><code class=\"language-java\">@ConditionalOnClass(DataSource.class)</code></pre></p>"
   }
 ]

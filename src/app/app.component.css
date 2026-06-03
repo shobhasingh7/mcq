@@ -25,6 +25,18 @@ h1 {
   line-height: 1.6;
 }
 
+.disclaimer-banner {
+  max-width: 62ch;
+  margin: 1rem 0 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(180, 83, 9, 0.18);
+  border-radius: 16px;
+  background: rgba(255, 247, 237, 0.9);
+  color: #9a3412;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .visit-counter {
   margin: 0.9rem 0 0;
   color: #0f766e;
@@ -258,6 +270,15 @@ h1 {
   padding: 1rem 1.1rem 1.1rem;
   border-radius: 0;
   background: transparent;
+}
+
+.page-disclaimer {
+  margin: 2rem 0 0;
+  padding: 0.95rem 1rem 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .question-explanation code {

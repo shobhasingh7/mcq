@@ -5,6 +5,9 @@
     <p class="hero-copy">
       Pick one topic, answer only questions from that topic, and review explanations for the ones you get right.
     </p>
+    <p class="disclaimer-banner">
+      Disclaimer: These questions and explanations were prepared with AI assistance and may contain hallucinations or inaccuracies, so they should not be treated as 100% correct.
+    </p>
     <p *ngIf="visitCount !== null" class="visit-counter">
       Total app visits recorded: {{ visitCount }}
     </p>
@@ -131,4 +134,8 @@
       </div>
     </section>
   </ng-container>
+
+  <footer class="page-disclaimer">
+    AI-generated quiz content may be imperfect. Please verify important answers independently.
+  </footer>
 </div>

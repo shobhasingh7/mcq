@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 7001,
+    "text": "What is the main idea behind a microservices architecture?",
+    "choices": [
+      "Building an application as a set of small independent services",
+      "Putting all features into one deployable unit",
+      "Using only client-side rendering",
+      "Replacing APIs with database sharing"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Building an application as a set of small independent services</strong> is correct because microservices split a large system into smaller services that can be developed, deployed, and scaled independently.</p><p>Example: one service handles orders, another handles payments, and another manages inventory.</p>"
+  },
+  {
+    "id": 7002,
+    "text": "Which communication style is most common between microservices?",
+    "choices": [
+      "HTTP/REST or messaging",
+      "Direct table sharing",
+      "FTP polling only",
+      "Manual file copying"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>HTTP/REST or messaging</strong> is correct because services usually communicate through network APIs or asynchronous messages instead of sharing implementation details directly.</p><p>Example: an order service may call a payment API over HTTP or publish an event to a queue.</p>"
+  },
+  {
+    "id": 7003,
+    "text": "What is a key benefit of microservices?",
+    "choices": [
+      "Independent deployment of services",
+      "Single process debugging only",
+      "One shared database schema for all changes",
+      "No need for monitoring"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Independent deployment of services</strong> is correct because independent deployment allows teams to release one service without redeploying the entire system.</p><p>Example: the notification service can be updated without touching the billing service.</p>"
+  },
+  {
+    "id": 7004,
+    "text": "What is a common challenge in microservices compared with a monolith?",
+    "choices": [
+      "Distributed system complexity",
+      "No network communication",
+      "No data persistence",
+      "Guaranteed zero latency"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Distributed system complexity</strong> is correct because microservices introduce networking, partial failures, and operational overhead that do not exist in the same way inside one process.</p><p>Example: a downstream timeout must be handled gracefully instead of assuming every call always succeeds.</p>"
+  },
+  {
+    "id": 7005,
+    "text": "Which pattern is commonly used as the entry point for client requests in microservices?",
+    "choices": [
+      "API Gateway",
+      "Singleton bean",
+      "Cron scheduler",
+      "ORM mapper"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>API Gateway</strong> is correct because an API gateway centralizes routing, authentication, and cross-cutting concerns for external clients.</p><p>Example: mobile apps call the gateway, which forwards traffic to user, catalog, or order services.</p>"
+  },
+  {
+    "id": 7006,
+    "text": "Why do teams often avoid sharing one database across all microservices?",
+    "choices": [
+      "It tightly couples services",
+      "It improves isolation too much",
+      "It removes all consistency issues",
+      "It prevents backups"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>It tightly couples services</strong> is correct because a shared database makes schema changes and ownership harder because one service can accidentally depend on another service’s tables.</p><p>Example: if inventory directly reads order tables, both services become harder to evolve independently.</p>"
+  },
+  {
+    "id": 7007,
+    "text": "Which principle says each microservice should own its own data?",
+    "choices": [
+      "Database per service",
+      "Shared schema first",
+      "Single repository lockstep",
+      "Global transaction coupling"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Database per service</strong> is correct because database-per-service supports service autonomy and clear ownership boundaries.</p><p>Example: the customer service manages customer records while the shipping service owns shipment tracking data.</p>"
+  },
+  {
+    "id": 7008,
+    "text": "What is service discovery in microservices?",
+    "choices": [
+      "A way for services to find each other dynamically",
+      "A UI library for dashboards",
+      "A database migration tool",
+      "A CSS optimization technique"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A way for services to find each other dynamically</strong> is correct because service discovery helps instances locate other services without hardcoding hostnames for every environment.</p><p>Example: an order service asks the registry for the current payment service instances.</p>"
+  },
+  {
+    "id": 7009,
+    "text": "Which tool is commonly associated with service discovery in cloud-native systems?",
+    "choices": [
+      "Eureka or Consul",
+      "Webpack",
+      "Hibernate",
+      "JUnit"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Eureka or Consul</strong> is correct because registries like Eureka and Consul keep track of available service instances and their network locations.</p><p>Example: a new service instance registers itself so other services can route traffic to it.</p>"
+  },
+  {
+    "id": 7010,
+    "text": "What problem does client-side load balancing solve?",
+    "choices": [
+      "Choosing among multiple service instances",
+      "Encrypting source code",
+      "Replacing structured logging",
+      "Eliminating serialization"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Choosing among multiple service instances</strong> is correct because when several instances of the same service are running, the client can spread requests among them.</p><p>Example: a gateway sends traffic across three catalog service instances instead of only one.</p>"
+  },
+  {
+    "id": 7011,
+    "text": "Which pattern prevents repeated calls to an unhealthy dependency?",
+    "choices": [
+      "Circuit breaker",
+      "Object pool",
+      "Template method",
+      "Factory bean"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Circuit breaker</strong> is correct because a circuit breaker stops hammering a failing service and gives it time to recover.</p><p>Example: if the payment service keeps timing out, the order service can open the circuit and return a fallback response.</p>"
+  },
+  {
+    "id": 7012,
+    "text": "What is a fallback in resilience design?",
+    "choices": [
+      "An alternative response when a dependency fails",
+      "A database join strategy",
+      "A deployment region",
+      "A CSS reset"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>An alternative response when a dependency fails</strong> is correct because fallbacks let the system degrade gracefully instead of failing completely when one dependency is unavailable.</p><p>Example: a product page may show cached recommendations if the recommendation service is down.</p>"
+  },
+  {
+    "id": 7013,
+    "text": "Why is observability important in microservices?",
+    "choices": [
+      "Because behavior spans multiple services and instances",
+      "Because logs are unnecessary",
+      "Because services never fail independently",
+      "Because one metric is always enough"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Because behavior spans multiple services and instances</strong> is correct because with many services, you need logs, metrics, and traces to understand request flow and diagnose issues.</p><p>Example: a slow checkout may require tracing calls across gateway, order, payment, and inventory services.</p>"
+  },
+  {
+    "id": 7014,
+    "text": "Which three pillars are commonly associated with observability?",
+    "choices": [
+      "Logs, metrics, and traces",
+      "Tables, forms, and CSS",
+      "Threads, files, and ports",
+      "Beans, entities, and DTOs"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Logs, metrics, and traces</strong> is correct because these signals provide complementary visibility into application behavior across distributed systems.</p><p>Example: metrics show latency spikes, logs explain errors, and traces reveal where time was spent.</p>"
+  },
+  {
+    "id": 7015,
+    "text": "What is distributed tracing?",
+    "choices": [
+      "Tracking a request across multiple services",
+      "Encrypting all HTTP headers",
+      "Compiling services together",
+      "Caching every database row"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Tracking a request across multiple services</strong> is correct because distributed tracing correlates spans so one user request can be followed through multiple network hops.</p><p>Example: a trace might show gateway -> order service -> payment service -> notification service.</p>"
+  },
+  {
+    "id": 7016,
+    "text": "Which header is often used for trace correlation in modern systems?",
+    "choices": [
+      "traceparent",
+      "content-length",
+      "accept-language",
+      "if-modified-since"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>traceparent</strong> is correct because trace headers carry trace context between services so spans remain connected.</p><p>Example: a gateway forwards the incoming trace context to downstream services.</p>"
+  },
+  {
+    "id": 7017,
+    "text": "What is an event-driven microservices architecture?",
+    "choices": [
+      "Services reacting to published events asynchronously",
+      "A system with no persistence",
+      "A frontend-only application",
+      "A synchronous-only design"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Services reacting to published events asynchronously</strong> is correct because event-driven systems use messages or events so services can react without direct synchronous coupling.</p><p>Example: after an order is placed, an OrderCreated event can trigger payment, inventory, and email workflows.</p>"
+  },
+  {
+    "id": 7018,
+    "text": "Which technology is commonly used for event streaming in microservices?",
+    "choices": [
+      "Apache Kafka",
+      "Bootstrap CSS",
+      "Liquibase",
+      "JUnit Jupiter"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Apache Kafka</strong> is correct because Kafka is widely used for durable event streams and asynchronous communication between services.</p><p>Example: the billing service publishes payment events to a Kafka topic consumed by analytics.</p>"
+  },
+  {
+    "id": 7019,
+    "text": "What is eventual consistency?",
+    "choices": [
+      "Data may become consistent after some delay",
+      "All services commit in one shared lock instantly",
+      "No consistency is needed",
+      "Only read operations are allowed"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Data may become consistent after some delay</strong> is correct because in distributed systems, updates across services often propagate asynchronously rather than in one atomic step.</p><p>Example: an order might appear as pending for a short time before inventory and shipping catch up.</p>"
+  },
+  {
+    "id": 7020,
+    "text": "Which pattern is commonly used to coordinate distributed business workflows without a global transaction?",
+    "choices": [
+      "Saga pattern",
+      "Visitor pattern",
+      "Decorator pattern",
+      "Singleton pattern"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Saga pattern</strong> is correct because a saga breaks a business process into local transactions with compensation steps instead of relying on a single distributed transaction.</p><p>Example: if payment succeeds but shipping fails, the saga can trigger a refund compensation.</p>"
+  },
+  {
+    "id": 7021,
+    "text": "What is a compensating transaction in a saga?",
+    "choices": [
+      "An action that undoes or offsets a previous step",
+      "A schema migration",
+      "A caching rule",
+      "A thread pool configuration"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>An action that undoes or offsets a previous step</strong> is correct because compensation handles failure by logically reversing earlier completed steps when the whole workflow cannot finish.</p><p>Example: release reserved inventory if later payment authorization fails.</p>"
+  },
+  {
+    "id": 7022,
+    "text": "What is choreography in saga design?",
+    "choices": [
+      "Services reacting to events without a central coordinator",
+      "One service directly editing all databases",
+      "A UI layout strategy",
+      "A fixed retry delay"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Services reacting to events without a central coordinator</strong> is correct because in choreography, services listen and react to domain events rather than being controlled by a single orchestrator.</p><p>Example: order creation emits an event, payment listens, then inventory listens to payment success.</p>"
+  },
+  {
+    "id": 7023,
+    "text": "What is orchestration in saga design?",
+    "choices": [
+      "A central component directing workflow steps",
+      "A CSS animation library",
+      "A shared database schema",
+      "Direct user polling"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A central component directing workflow steps</strong> is correct because an orchestrator explicitly tells each participant what to do and how to handle failure paths.</p><p>Example: an order workflow service calls payment, inventory, and shipping in sequence.</p>"
+  },
+  {
+    "id": 7024,
+    "text": "What is the purpose of an API gateway rate limiter?",
+    "choices": [
+      "Protecting backend services from excessive traffic",
+      "Generating entity classes",
+      "Replacing TLS",
+      "Editing JSON files"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Protecting backend services from excessive traffic</strong> is correct because rate limiting keeps abusive or accidental high-volume traffic from overwhelming downstream services.</p><p>Example: the gateway may allow only 100 requests per minute per client token.</p>"
+  },
+  {
+    "id": 7025,
+    "text": "Why is idempotency important for microservice APIs?",
+    "choices": [
+      "So repeated requests do not create unintended duplicate effects",
+      "So services can skip authentication",
+      "So every call must be asynchronous",
+      "So databases can be removed"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>So repeated requests do not create unintended duplicate effects</strong> is correct because network retries are common, so APIs should safely handle duplicate submissions when possible.</p><p>Example: retrying a payment request with the same idempotency key should not charge the customer twice.</p>"
+  },
+  {
+    "id": 7026,
+    "text": "What is an idempotency key?",
+    "choices": [
+      "A client-supplied identifier used to detect duplicate requests",
+      "A database primary key strategy",
+      "A trace sampling rule",
+      "A CSS class"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A client-supplied identifier used to detect duplicate requests</strong> is correct because idempotency keys let a service recognize that a retried request is logically the same operation.</p><p>Example: a checkout client sends the same key on retries after a network timeout.</p>"
+  },
+  {
+    "id": 7027,
+    "text": "Which pattern is useful when one query needs data from multiple services?",
+    "choices": [
+      "API composition",
+      "Thread sleeping",
+      "Shared file locking",
+      "Bean inheritance"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>API composition</strong> is correct because API composition gathers results from several services into one response for the caller.</p><p>Example: a customer profile page may combine user details, recent orders, and loyalty points from different services.</p>"
+  },
+  {
+    "id": 7028,
+    "text": "What is CQRS?",
+    "choices": [
+      "Separating read models from write models",
+      "Combining all services into one process",
+      "A type of SQL index only",
+      "A browser rendering strategy"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Separating read models from write models</strong> is correct because Command Query Responsibility Segregation can optimize read and write paths differently when they have different needs.</p><p>Example: writes go to the order service model while reads use a prebuilt reporting view.</p>"
+  },
+  {
+    "id": 7029,
+    "text": "Why are bounded contexts relevant to microservices?",
+    "choices": [
+      "They help define clear business and service boundaries",
+      "They replace all integration testing",
+      "They force one database",
+      "They remove the need for APIs"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>They help define clear business and service boundaries</strong> is correct because bounded contexts from domain-driven design help teams decide what belongs together and what should be separate.</p><p>Example: billing and catalog often have different language, rules, and ownership, so they may become separate services.</p>"
+  },
+  {
+    "id": 7030,
+    "text": "What is loose coupling in microservices?",
+    "choices": [
+      "Services depend on contracts rather than internal implementation details",
+      "All services use one source file",
+      "Every service shares every table",
+      "Each service edits another service’s code"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Services depend on contracts rather than internal implementation details</strong> is correct because loose coupling makes services easier to change independently as long as external contracts remain stable.</p><p>Example: consumers rely on a payment API contract instead of querying payment service internals.</p>"
+  },
+  {
+    "id": 7031,
+    "text": "Why is high cohesion desirable inside a microservice?",
+    "choices": [
+      "Related responsibilities stay together",
+      "It maximizes cross-service dependencies",
+      "It removes deployment automation",
+      "It forces one giant service"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Related responsibilities stay together</strong> is correct because high cohesion means one service owns a focused domain area rather than a random collection of unrelated logic.</p><p>Example: invoice generation and invoice retrieval belong together, but user authentication may not.</p>"
+  },
+  {
+    "id": 7032,
+    "text": "What is a contract test in microservices?",
+    "choices": [
+      "A test that verifies service interactions match agreed interfaces",
+      "A test for database size",
+      "A test for CSS themes",
+      "A test that compiles every repo together"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A test that verifies service interactions match agreed interfaces</strong> is correct because contract testing helps prevent integration breakage by checking that providers and consumers agree on request and response formats.</p><p>Example: a consumer expects <code>customerId</code> and the provider test confirms that field still exists.</p>"
+  },
+  {
+    "id": 7033,
+    "text": "Which testing type checks a service with its real external dependencies or close substitutes?",
+    "choices": [
+      "Integration testing",
+      "Syntax highlighting",
+      "Minification",
+      "Refactoring only"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Integration testing</strong> is correct because integration tests validate behavior across boundaries such as databases, queues, or HTTP interfaces.</p><p>Example: a shipping service test writes to a test database and publishes to a test message broker.</p>"
+  },
+  {
+    "id": 7034,
+    "text": "What is a consumer-driven contract?",
+    "choices": [
+      "A contract defined from the consumer’s needs",
+      "A contract written only by infrastructure teams",
+      "A UI routing table",
+      "A JVM garbage collector setting"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A contract defined from the consumer’s needs</strong> is correct because consumer-driven contracts focus on the fields and behaviors clients actually require, reducing accidental breaking changes.</p><p>Example: the mobile app team specifies the response fields it needs from the profile service.</p>"
+  },
+  {
+    "id": 7035,
+    "text": "Why are timeouts essential in service-to-service calls?",
+    "choices": [
+      "To avoid waiting indefinitely on slow or failed dependencies",
+      "To make logs shorter only",
+      "To disable retries",
+      "To remove monitoring"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>To avoid waiting indefinitely on slow or failed dependencies</strong> is correct because timeouts bound how long one service is blocked by another and prevent thread exhaustion.</p><p>Example: the gateway may wait 2 seconds for recommendations before returning a partial response.</p>"
+  },
+  {
+    "id": 7036,
+    "text": "Why are retries risky if used carelessly in microservices?",
+    "choices": [
+      "They can amplify load and make outages worse",
+      "They guarantee perfect consistency",
+      "They remove the need for circuit breakers",
+      "They only affect frontend CSS"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>They can amplify load and make outages worse</strong> is correct because blind retries can cause retry storms when many services keep hammering an already struggling dependency.</p><p>Example: a failing database-backed service can collapse faster if every caller retries aggressively.</p>"
+  },
+  {
+    "id": 7037,
+    "text": "What is bulkheading in resilience engineering?",
+    "choices": [
+      "Isolating resources so one failure does not consume everything",
+      "Running all services in one process",
+      "Using one queue for all events",
+      "Storing passwords in plain text"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Isolating resources so one failure does not consume everything</strong> is correct because bulkheads keep failures contained by separating thread pools, connections, or workloads.</p><p>Example: slow reporting jobs should not exhaust the thread pool used for checkout traffic.</p>"
+  },
+  {
+    "id": 7038,
+    "text": "What is backpressure in reactive microservices?",
+    "choices": [
+      "A way to signal producers to slow down consumers’ input rate",
+      "A method for database sharding only",
+      "A fixed HTTP header",
+      "A UI loading spinner"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A way to signal producers to slow down consumers’ input rate</strong> is correct because backpressure protects consumers from being overwhelmed when upstream producers emit data faster than it can be processed.</p><p>Example: a stream processor asks for more records only when it is ready to handle them.</p>"
+  },
+  {
+    "id": 7039,
+    "text": "Which deployment approach updates a small subset of traffic before full rollout?",
+    "choices": [
+      "Canary deployment",
+      "Big bang release only",
+      "Schema freeze",
+      "Manual log rotation"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Canary deployment</strong> is correct because canary deployments reduce risk by exposing a new version to limited traffic first.</p><p>Example: 5% of requests go to version 2 before increasing to all users.</p>"
+  },
+  {
+    "id": 7040,
+    "text": "Which deployment approach keeps two production environments and switches traffic between them?",
+    "choices": [
+      "Blue-green deployment",
+      "Round-robin SQL",
+      "Monolithic packaging",
+      "Static linking"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Blue-green deployment</strong> is correct because blue-green deployment makes rollback simpler because the previous environment remains available during the switch.</p><p>Example: traffic moves from blue to green after smoke tests pass.</p>"
+  },
+  {
+    "id": 7041,
+    "text": "Why are health checks important for microservices?",
+    "choices": [
+      "They help platforms know whether instances are ready and alive",
+      "They replace authentication",
+      "They remove the need for logs",
+      "They prevent all business bugs"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>They help platforms know whether instances are ready and alive</strong> is correct because orchestrators and load balancers use health checks to decide whether an instance should receive traffic.</p><p>Example: Kubernetes avoids routing requests to a pod that has failed its readiness probe.</p>"
+  },
+  {
+    "id": 7042,
+    "text": "What is the difference between liveness and readiness probes?",
+    "choices": [
+      "Liveness checks if the app should be restarted; readiness checks if it can receive traffic",
+      "Both mean exactly the same thing",
+      "Readiness only applies to CSS",
+      "Liveness only checks disk size"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Liveness checks if the app should be restarted; readiness checks if it can receive traffic</strong> is correct because these probes answer different operational questions and are both useful in orchestration platforms.</p><p>Example: a service can be alive but not ready while warming caches or waiting for a dependency.</p>"
+  },
+  {
+    "id": 7043,
+    "text": "Which platform is commonly used to orchestrate containerized microservices?",
+    "choices": [
+      "Kubernetes",
+      "Excel",
+      "Sass",
+      "JUnit"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Kubernetes</strong> is correct because Kubernetes manages deployment, scaling, service discovery, and health of containerized applications.</p><p>Example: each microservice may run as a Deployment with multiple Pods and a Service.</p>"
+  },
+  {
+    "id": 7044,
+    "text": "What is containerization in the context of microservices?",
+    "choices": [
+      "Packaging an application with its runtime dependencies",
+      "Writing only shell scripts",
+      "Storing source code in a queue",
+      "Sharing one OS user for all apps"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Packaging an application with its runtime dependencies</strong> is correct because containers improve consistency between environments and make service deployment easier to automate.</p><p>Example: the payment service runs in a Docker image containing the app and JRE.</p>"
+  },
+  {
+    "id": 7045,
+    "text": "Which file is commonly used to define a Docker image build?",
+    "choices": [
+      "Dockerfile",
+      "pom.xml",
+      "README.md",
+      "settings.json"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Dockerfile</strong> is correct because a Dockerfile describes how to assemble the image layers and what command starts the container.</p><p>Example: it can copy the JAR and define <code>ENTRYPOINT</code> for the service.</p>"
+  },
+  {
+    "id": 7046,
+    "text": "What is horizontal scaling?",
+    "choices": [
+      "Adding more instances of a service",
+      "Making one instance use one giant method",
+      "Reducing the number of environments",
+      "Turning off monitoring"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Adding more instances of a service</strong> is correct because microservices are often designed to scale out by running multiple replicas behind a load balancer.</p><p>Example: increase the catalog service from 2 pods to 6 during peak traffic.</p>"
+  },
+  {
+    "id": 7047,
+    "text": "What is vertical scaling?",
+    "choices": [
+      "Giving a single instance more CPU or memory",
+      "Adding more service endpoints",
+      "Increasing log retention only",
+      "Duplicating DTO classes"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Giving a single instance more CPU or memory</strong> is correct because vertical scaling increases resources on one node or process rather than adding more replicas.</p><p>Example: move a memory-heavy analytics service from 1 GB RAM to 4 GB RAM.</p>"
+  },
+  {
+    "id": 7048,
+    "text": "Why can microservices improve team autonomy?",
+    "choices": [
+      "Different teams can own different services independently",
+      "Everyone must coordinate every deployment",
+      "Only one developer can release changes",
+      "All code must remain in one module"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Different teams can own different services independently</strong> is correct because clear service ownership helps teams move faster with less coordination when boundaries are well chosen.</p><p>Example: the search team deploys search changes without waiting for the account team.</p>"
+  },
+  {
+    "id": 7049,
+    "text": "What is schema evolution in event-driven systems?",
+    "choices": [
+      "Changing event structure carefully over time",
+      "Dropping every old event immediately",
+      "Avoiding versioning forever",
+      "Replacing brokers with databases"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Changing event structure carefully over time</strong> is correct because producers and consumers may not upgrade together, so events need backward-compatible evolution strategies.</p><p>Example: adding an optional field is often safer than renaming a required one.</p>"
+  },
+  {
+    "id": 7050,
+    "text": "What is backward compatibility in an API?",
+    "choices": [
+      "New versions still work for existing clients",
+      "Every client must upgrade instantly",
+      "Old services can ignore all validation",
+      "Responses can change randomly"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>New versions still work for existing clients</strong> is correct because backward compatibility reduces breaking changes and allows consumers to upgrade on their own schedule.</p><p>Example: adding a new response field is usually safer than removing an existing one.</p>"
+  },
+  {
+    "id": 7051,
+    "text": "Why is versioning used in microservice APIs?",
+    "choices": [
+      "To manage change without breaking consumers abruptly",
+      "To avoid documentation",
+      "To remove authentication",
+      "To prevent deployment automation"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>To manage change without breaking consumers abruptly</strong> is correct because versioning gives teams a controlled way to evolve public contracts when compatibility cannot be preserved.</p><p>Example: a gateway may expose <code>/v1/customers</code> and later <code>/v2/customers</code>.</p>"
+  },
+  {
+    "id": 7052,
+    "text": "What is a sidecar pattern?",
+    "choices": [
+      "Running a helper process alongside a service instance",
+      "Deploying only one global container",
+      "Sharing one database with all apps",
+      "A Java inheritance rule"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Running a helper process alongside a service instance</strong> is correct because sidecars provide supporting capabilities such as logging, proxying, or secret injection without changing app code.</p><p>Example: a service mesh proxy can run as a sidecar next to the application container.</p>"
+  },
+  {
+    "id": 7053,
+    "text": "What is a service mesh?",
+    "choices": [
+      "Infrastructure for managing service-to-service communication",
+      "A frontend grid system",
+      "A SQL migration engine",
+      "A unit testing plugin"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Infrastructure for managing service-to-service communication</strong> is correct because a service mesh can handle traffic routing, mTLS, observability, and policy enforcement at the network layer.</p><p>Example: Istio or Linkerd can manage retries and telemetry between services.</p>"
+  },
+  {
+    "id": 7054,
+    "text": "What does mTLS provide in microservices communication?",
+    "choices": [
+      "Mutual authentication and encrypted transport",
+      "Faster JSON parsing",
+      "Database sharding",
+      "Static asset bundling"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Mutual authentication and encrypted transport</strong> is correct because mutual TLS ensures both client and server verify each other while encrypting traffic in transit.</p><p>Example: the order service trusts only authenticated service identities when calling payment.</p>"
+  },
+  {
+    "id": 7055,
+    "text": "What is centralized logging?",
+    "choices": [
+      "Collecting logs from many services into one searchable system",
+      "Printing logs only to local consoles forever",
+      "Writing logs into CSS files",
+      "Disabling timestamps"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Collecting logs from many services into one searchable system</strong> is correct because centralized logging is important because troubleshooting across many distributed services is difficult with local files alone.</p><p>Example: logs from gateway, inventory, and payment are all searchable in one dashboard.</p>"
+  },
+  {
+    "id": 7056,
+    "text": "Which tool category is used to aggregate logs in microservices?",
+    "choices": [
+      "Log management platforms such as ELK or OpenSearch",
+      "Spreadsheet macros",
+      "Browser extensions only",
+      "CSS preprocessors"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Log management platforms such as ELK or OpenSearch</strong> is correct because log platforms index and search logs from many services and instances in one place.</p><p>Example: teams can filter all error logs for a given trace ID.</p>"
+  },
+  {
+    "id": 7057,
+    "text": "Why are correlation IDs useful?",
+    "choices": [
+      "They connect related logs across service boundaries",
+      "They replace database primary keys",
+      "They compress HTTP responses",
+      "They create Docker images"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>They connect related logs across service boundaries</strong> is correct because correlation IDs make it easier to follow one business request through many logs even without full tracing.</p><p>Example: the same request ID appears in gateway, order, and payment logs.</p>"
+  },
+  {
+    "id": 7058,
+    "text": "What is the outbox pattern?",
+    "choices": [
+      "Writing events to the database in the same transaction as business data, then publishing them reliably",
+      "Sending emails directly from the UI",
+      "Storing all events only in memory",
+      "Polling HTML files"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Writing events to the database in the same transaction as business data, then publishing them reliably</strong> is correct because the outbox pattern reduces the risk that data is saved but the corresponding event is never published, or vice versa.</p><p>Example: an order row and an outbox event row are committed together, then a publisher sends the event later.</p>"
+  },
+  {
+    "id": 7059,
+    "text": "Why is the outbox pattern valuable?",
+    "choices": [
+      "It improves reliability between database changes and message publishing",
+      "It guarantees zero latency",
+      "It replaces API gateways",
+      "It removes the need for retries"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>It improves reliability between database changes and message publishing</strong> is correct because it addresses dual-write problems where business state and event publication must stay aligned.</p><p>Example: an OrderCreated event is not lost after the order record is committed.</p>"
+  },
+  {
+    "id": 7060,
+    "text": "What is the strangler pattern?",
+    "choices": [
+      "Incrementally replacing parts of a legacy system with new services",
+      "Deleting the old system all at once",
+      "Running only one shared database forever",
+      "Avoiding integration APIs"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Incrementally replacing parts of a legacy system with new services</strong> is correct because the strangler pattern reduces migration risk by routing selected functionality to new services over time.</p><p>Example: authentication moves out of the monolith first, then orders, then invoicing.</p>"
+  },
+  {
+    "id": 7061,
+    "text": "Why might a monolith still be a better choice than microservices?",
+    "choices": [
+      "When the system and team are small and complexity would outweigh benefits",
+      "Because scaling is impossible otherwise",
+      "Because microservices never use APIs",
+      "Because monitoring cannot work in a monolith"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>When the system and team are small and complexity would outweigh benefits</strong> is correct because microservices are not automatically better; they make sense when their operational and organizational tradeoffs are justified.</p><p>Example: a small startup with one team may move faster with a modular monolith at first.</p>"
+  },
+  {
+    "id": 7062,
+    "text": "What is a modular monolith?",
+    "choices": [
+      "A single deployable application with strong internal boundaries",
+      "A cluster of 100 services",
+      "A frontend with no backend",
+      "A database-only architecture"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A single deployable application with strong internal boundaries</strong> is correct because a modular monolith can provide many design benefits of separation without distributed-system overhead.</p><p>Example: billing, catalog, and users are separate modules but still shipped as one app.</p>"
+  },
+  {
+    "id": 7063,
+    "text": "What does statelessness mean for a microservice instance?",
+    "choices": [
+      "Requests can be handled without relying on local session state",
+      "The service has no persistence at all",
+      "The service cannot authenticate users",
+      "The service has no logs"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Requests can be handled without relying on local session state</strong> is correct because stateless services are easier to scale horizontally because any instance can handle the next request.</p><p>Example: session data lives in a token or shared store instead of one server’s memory.</p>"
+  },
+  {
+    "id": 7064,
+    "text": "Why is shared-nothing design attractive in microservices?",
+    "choices": [
+      "It reduces contention and increases independence",
+      "It forces every service into one database",
+      "It means no communication exists",
+      "It disables caching"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>It reduces contention and increases independence</strong> is correct because owning separate state and resources helps services scale and evolve with fewer hidden couplings.</p><p>Example: each service owns its own datastore instead of coordinating writes to one giant schema.</p>"
+  },
+  {
+    "id": 7065,
+    "text": "What is request fan-out?",
+    "choices": [
+      "One request causing calls to multiple downstream services",
+      "A type of SQL index",
+      "A browser rendering problem only",
+      "A style guide rule"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>One request causing calls to multiple downstream services</strong> is correct because fan-out can increase latency and failure risk if too many downstream calls are required for one response.</p><p>Example: a dashboard request might call profile, order, recommendation, and loyalty services.</p>"
+  },
+  {
+    "id": 7066,
+    "text": "Why can request fan-out be dangerous?",
+    "choices": [
+      "It increases latency and the chance of partial failure",
+      "It always improves consistency",
+      "It removes the need for tracing",
+      "It prevents caching"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>It increases latency and the chance of partial failure</strong> is correct because more downstream dependencies mean more opportunities for slow responses or errors to affect the whole request.</p><p>Example: if 1 of 5 services times out, the aggregated page may be incomplete or fail.</p>"
+  },
+  {
+    "id": 7067,
+    "text": "What is a dead-letter queue?",
+    "choices": [
+      "A place for messages that could not be processed successfully",
+      "A cache for static assets",
+      "A command-line parser",
+      "A CSS fallback sheet"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A place for messages that could not be processed successfully</strong> is correct because dead-letter queues help operators inspect and reprocess problematic messages without blocking the main flow forever.</p><p>Example: malformed order events are moved aside after repeated processing failures.</p>"
+  },
+  {
+    "id": 7068,
+    "text": "Why are dead-letter queues useful?",
+    "choices": [
+      "They isolate poison messages from normal processing",
+      "They remove the need for brokers",
+      "They guarantee global transactions",
+      "They disable retries automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>They isolate poison messages from normal processing</strong> is correct because moving failed messages aside keeps healthy traffic flowing while preserving failed payloads for investigation.</p><p>Example: one corrupted event does not keep an entire queue stuck.</p>"
+  },
+  {
+    "id": 7069,
+    "text": "What is a poison message?",
+    "choices": [
+      "A message that repeatedly fails processing",
+      "A message with very low priority",
+      "A compressed trace span",
+      "A duplicated CSS asset"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A message that repeatedly fails processing</strong> is correct because poison messages need special handling because repeated retries will not fix malformed or incompatible content.</p><p>Example: a consumer crashes every time it reads an event missing a required field.</p>"
+  },
+  {
+    "id": 7070,
+    "text": "What is at-least-once delivery?",
+    "choices": [
+      "A message may be delivered more than once but will not be silently lost in normal conditions",
+      "A message is delivered exactly once with no duplicates possible",
+      "A message is delivered only if two databases agree",
+      "A message never retries"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A message may be delivered more than once but will not be silently lost in normal conditions</strong> is correct because many messaging systems favor reliability over uniqueness, so consumers must often handle duplicates safely.</p><p>Example: an event handler may process the same payment event twice unless deduplication is in place.</p>"
+  },
+  {
+    "id": 7071,
+    "text": "What is exactly-once processing best understood as in practice?",
+    "choices": [
+      "A difficult guarantee that usually requires careful system design and is often approximated",
+      "Something every HTTP call gets automatically",
+      "A property of CSS caching",
+      "A built-in feature of any queue with no caveats"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A difficult guarantee that usually requires careful system design and is often approximated</strong> is correct because teams should treat exactly-once claims carefully because distributed systems often still need idempotency and deduplication at application level.</p><p>Example: a consumer may still use unique event IDs to protect business operations.</p>"
+  },
+  {
+    "id": 7072,
+    "text": "Why should microservice logs usually be structured?",
+    "choices": [
+      "So machines can search, parse, and correlate them easily",
+      "So humans cannot read them",
+      "So they use fewer ports",
+      "So retries become unnecessary"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>So machines can search, parse, and correlate them easily</strong> is correct because structured logs improve filtering and analysis across services compared with free-form text only.</p><p>Example: log fields like <code>service</code>, <code>traceId</code>, and <code>orderId</code> can be queried directly.</p>"
+  },
+  {
+    "id": 7073,
+    "text": "What is a common format for structured logs?",
+    "choices": [
+      "JSON",
+      "BMP",
+      "CSS",
+      "Markdown table"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>JSON</strong> is correct because JSON is widely used because it preserves named fields cleanly for log aggregation systems.</p><p>Example: a log event can include level, timestamp, message, and correlationId as JSON fields.</p>"
+  },
+  {
+    "id": 7074,
+    "text": "Why do microservices often need feature flags?",
+    "choices": [
+      "To enable or disable behavior safely without redeploying everything",
+      "To replace authentication tokens",
+      "To remove testing",
+      "To prevent containerization"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>To enable or disable behavior safely without redeploying everything</strong> is correct because feature flags reduce rollout risk and allow gradual exposure of new behavior.</p><p>Example: only internal users see a new recommendation algorithm at first.</p>"
+  },
+  {
+    "id": 7075,
+    "text": "What is dark launching?",
+    "choices": [
+      "Deploying code but hiding the feature from most users",
+      "Deleting old code immediately",
+      "Running all requests twice by default",
+      "A blackout testing pattern only"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Deploying code but hiding the feature from most users</strong> is correct because dark launches let teams observe system behavior in production before full exposure.</p><p>Example: the new pricing engine runs behind a flag for selected traffic.</p>"
+  },
+  {
+    "id": 7076,
+    "text": "What is shadow traffic?",
+    "choices": [
+      "Copying production traffic to another version for observation",
+      "Blocking traffic during deployment",
+      "Sending only failed requests",
+      "A form of schema migration"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Copying production traffic to another version for observation</strong> is correct because shadow traffic helps validate a new service version without letting it affect real users.</p><p>Example: production requests are mirrored to a new search service while responses from the old one are still used.</p>"
+  },
+  {
+    "id": 7077,
+    "text": "What is a BFF in distributed frontend-backend architectures?",
+    "choices": [
+      "Backend for Frontend",
+      "Binary File Format",
+      "Base Fault Filter",
+      "Bounded Flow Framework"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Backend for Frontend</strong> is correct because a BFF tailors backend APIs to the needs of a specific frontend experience.</p><p>Example: a mobile app may use a different backend aggregation layer than a desktop web app.</p>"
+  },
+  {
+    "id": 7078,
+    "text": "Why might a BFF be used with microservices?",
+    "choices": [
+      "To simplify frontend access to many backend services",
+      "To replace databases",
+      "To avoid all authentication",
+      "To remove observability"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>To simplify frontend access to many backend services</strong> is correct because frontends often should not coordinate many backend calls directly, especially when composition logic is needed.</p><p>Example: the BFF combines cart, promotions, and shipping estimates into one mobile-friendly response.</p>"
+  },
+  {
+    "id": 7079,
+    "text": "What is service decomposition?",
+    "choices": [
+      "Breaking a system into service boundaries",
+      "Scaling one VM vertically",
+      "Converting JSON to XML",
+      "Removing all data models"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Breaking a system into service boundaries</strong> is correct because decomposition is the design process of deciding how business capabilities map to individual services.</p><p>Example: split a retail platform into catalog, cart, checkout, and fulfillment domains.</p>"
+  },
+  {
+    "id": 7080,
+    "text": "What is a bad smell of over-decomposition?",
+    "choices": [
+      "Too many tiny services with excessive chatter",
+      "One clear domain boundary",
+      "Independent deployment",
+      "Good monitoring"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Too many tiny services with excessive chatter</strong> is correct because very fine-grained services can create unnecessary latency, coupling, and operational overhead.</p><p>Example: needing 12 network hops just to render one simple page is often a warning sign.</p>"
+  },
+  {
+    "id": 7081,
+    "text": "What is a common bad smell of under-decomposition?",
+    "choices": [
+      "One service owning too many unrelated business capabilities",
+      "Clear ownership boundaries",
+      "Simple request flow",
+      "Low operational overhead"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>One service owning too many unrelated business capabilities</strong> is correct because if a service becomes a mini-monolith, teams may lose autonomy and changes become riskier.</p><p>Example: one service handling users, billing, shipping, and recommendations may be too broad.</p>"
+  },
+  {
+    "id": 7082,
+    "text": "What is the primary role of a message broker in microservices?",
+    "choices": [
+      "Transporting asynchronous messages between producers and consumers",
+      "Compiling Java code",
+      "Serving CSS files",
+      "Generating database schemas"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Transporting asynchronous messages between producers and consumers</strong> is correct because brokers decouple senders from receivers in time and often in scale as well.</p><p>Example: the order service publishes an event even if the email service is temporarily offline.</p>"
+  },
+  {
+    "id": 7083,
+    "text": "Why are asynchronous calls useful in microservices?",
+    "choices": [
+      "They reduce temporal coupling between services",
+      "They guarantee immediate consistency everywhere",
+      "They remove all need for monitoring",
+      "They eliminate network failures"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>They reduce temporal coupling between services</strong> is correct because asynchronous workflows allow one service to continue without waiting for every downstream action to complete immediately.</p><p>Example: checkout can complete and then send an event for email confirmation later.</p>"
+  },
+  {
+    "id": 7084,
+    "text": "What is temporal coupling?",
+    "choices": [
+      "A dependency on another service being available right now",
+      "A CSS animation duration",
+      "A build plugin mismatch",
+      "A schema naming rule"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A dependency on another service being available right now</strong> is correct because synchronous calls often create temporal coupling because both services must be up and responsive at the same time.</p><p>Example: if checkout must call email synchronously, checkout fails when email is down.</p>"
+  },
+  {
+    "id": 7085,
+    "text": "Why are synchronous calls still useful in microservices?",
+    "choices": [
+      "They are appropriate when an immediate response is required",
+      "They always scale better than messaging",
+      "They replace domain events completely",
+      "They remove latency"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>They are appropriate when an immediate response is required</strong> is correct because not every interaction should be asynchronous; sometimes the caller truly needs the result before proceeding.</p><p>Example: a gateway may need to verify credentials immediately before returning a login response.</p>"
+  },
+  {
+    "id": 7086,
+    "text": "What is a request timeout budget?",
+    "choices": [
+      "The maximum allowed time a request path can spend across components",
+      "A database storage limit",
+      "A thread naming convention",
+      "A CSS file size threshold"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>The maximum allowed time a request path can spend across components</strong> is correct because latency budgets help teams reason about how much time each hop can consume before the overall request becomes too slow.</p><p>Example: a 2-second page budget may allocate 200 ms to profile and 300 ms to recommendations.</p>"
+  },
+  {
+    "id": 7087,
+    "text": "Why do teams use SLIs and SLOs in microservices?",
+    "choices": [
+      "To define and measure reliability targets",
+      "To replace code reviews",
+      "To eliminate alerts",
+      "To manage CSS versions"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>To define and measure reliability targets</strong> is correct because service level indicators and objectives help teams track user-facing health rather than relying on vague assumptions.</p><p>Example: an API may target 99.9% successful requests under 500 ms.</p>"
+  },
+  {
+    "id": 7088,
+    "text": "What is an SLI?",
+    "choices": [
+      "A measured indicator of service behavior",
+      "A deployment artifact only",
+      "A type of DNS record",
+      "A schema generator"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A measured indicator of service behavior</strong> is correct because SLIs quantify aspects like latency, error rate, or availability that matter to the service experience.</p><p>Example: percentage of successful checkout requests is an SLI.</p>"
+  },
+  {
+    "id": 7089,
+    "text": "What is an SLO?",
+    "choices": [
+      "A target value for one or more service level indicators",
+      "A log file rotation rule",
+      "A Kubernetes namespace",
+      "A database replication mode"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>A target value for one or more service level indicators</strong> is correct because SLOs set reliability goals that teams can monitor and use for operational decisions.</p><p>Example: 99.95% monthly availability for the payment API is an SLO.</p>"
+  },
+  {
+    "id": 7090,
+    "text": "What is an error budget?",
+    "choices": [
+      "The acceptable amount of unreliability allowed by an SLO",
+      "A fixed cost for cloud networking",
+      "A type of retry header",
+      "A JAR packaging format"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>The acceptable amount of unreliability allowed by an SLO</strong> is correct because error budgets help balance feature delivery with reliability work by making service risk visible.</p><p>Example: if too much downtime has already occurred this month, risky releases may be paused.</p>"
+  },
+  {
+    "id": 7091,
+    "text": "Why is automated deployment especially valuable for microservices?",
+    "choices": [
+      "Many services mean frequent releases and operational repetition",
+      "Because microservices never need testing",
+      "Because developers should edit production manually",
+      "Because containers cannot be versioned"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Many services mean frequent releases and operational repetition</strong> is correct because automation reduces human error and makes repeated deployments manageable across many independently released services.</p><p>Example: each service can build, test, and deploy through its own CI/CD pipeline.</p>"
+  },
+  {
+    "id": 7092,
+    "text": "What is CI/CD in a microservices context?",
+    "choices": [
+      "Automated build, test, and delivery pipelines for services",
+      "A database normalization strategy",
+      "A log retention format",
+      "A browser API"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Automated build, test, and delivery pipelines for services</strong> is correct because continuous integration and delivery help teams ship service changes safely and often.</p><p>Example: pushing code triggers unit tests, image build, and deployment to staging automatically.</p>"
+  },
+  {
+    "id": 7093,
+    "text": "What is infrastructure as code?",
+    "choices": [
+      "Managing infrastructure through versioned definitions",
+      "Manually clicking cloud consoles forever",
+      "Writing SQL inside CSS",
+      "Storing logs in HTML"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Managing infrastructure through versioned definitions</strong> is correct because IaC makes environments repeatable, reviewable, and automatable, which is very helpful for distributed systems.</p><p>Example: Kubernetes manifests or Terraform files define environments in source control.</p>"
+  },
+  {
+    "id": 7094,
+    "text": "Which tool is widely used for infrastructure as code in cloud environments?",
+    "choices": [
+      "Terraform",
+      "Postman",
+      "Jest",
+      "Lombok"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Terraform</strong> is correct because Terraform is commonly used to define and provision cloud resources in a repeatable way.</p><p>Example: queues, databases, and load balancers can all be declared as code.</p>"
+  },
+  {
+    "id": 7095,
+    "text": "What is secret management in microservices?",
+    "choices": [
+      "Secure storage and controlled access to sensitive configuration",
+      "Hardcoding passwords into repositories",
+      "Keeping tokens in browser local storage only",
+      "Publishing keys in logs"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Secure storage and controlled access to sensitive configuration</strong> is correct because microservices often need credentials, and secret management reduces the risk of leaking them.</p><p>Example: a service reads database credentials from Vault or a cloud secret manager.</p>"
+  },
+  {
+    "id": 7096,
+    "text": "Why should secrets not be hardcoded in microservices?",
+    "choices": [
+      "Because code repositories and images can expose them widely",
+      "Because it improves performance too much",
+      "Because secrets cannot work in production",
+      "Because services never need credentials"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Because code repositories and images can expose them widely</strong> is correct because hardcoded secrets are difficult to rotate and easy to leak through source control, logs, or image reuse.</p><p>Example: rotating a database password is easier when it comes from managed configuration.</p>"
+  },
+  {
+    "id": 7097,
+    "text": "What is zero-downtime deployment?",
+    "choices": [
+      "Releasing a new version without interrupting users",
+      "Deleting all old instances before starting new ones",
+      "Pausing all traffic during build",
+      "A type of database trigger"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Releasing a new version without interrupting users</strong> is correct because techniques like rolling, blue-green, and canary deployments aim to avoid visible outages during releases.</p><p>Example: new pods start and pass readiness checks before old pods are drained.</p>"
+  },
+  {
+    "id": 7098,
+    "text": "What is a rolling deployment?",
+    "choices": [
+      "Gradually replacing instances of the old version with the new version",
+      "Switching all traffic at once only",
+      "Running two databases forever",
+      "A local logging format"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Gradually replacing instances of the old version with the new version</strong> is correct because rolling deployment minimizes disruption by updating instances step by step.</p><p>Example: one pod is replaced at a time while the rest still serve traffic.</p>"
+  },
+  {
+    "id": 7099,
+    "text": "What is autoscaling?",
+    "choices": [
+      "Adjusting the number of running instances based on load or metrics",
+      "Compressing logs automatically",
+      "Changing database columns dynamically",
+      "Turning all sync calls into async calls"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>Adjusting the number of running instances based on load or metrics</strong> is correct because autoscaling helps services respond to changing demand efficiently.</p><p>Example: scale the checkout service from 3 to 10 replicas when CPU or request rate increases.</p>"
+  },
+  {
+    "id": 7100,
+    "text": "Which metric is commonly used to trigger autoscaling?",
+    "choices": [
+      "CPU utilization or request rate",
+      "Font size",
+      "Git branch count",
+      "Number of comments in code"
+    ],
+    "correctIndex": 0,
+    "topic": "Microservices",
+    "explanation": "<p><strong>CPU utilization or request rate</strong> is correct because scaling decisions are usually tied to metrics that reflect resource pressure or user demand.</p><p>Example: if average CPU stays above 70%, add more service replicas.</p>"
+  }
+]

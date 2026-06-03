@@ -128,5 +128,1305 @@
     "correctIndex": 0,
     "topic": "React",
     "explanation": "<p><strong>CSS Modules</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>CSS Modules</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 5001,
+    "text": "Which hook is commonly used to hold a mutable value that does not trigger a re-render when updated?",
+    "choices": [
+      "useRef",
+      "useState",
+      "useMemo",
+      "useEffect"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useRef</strong> is correct because useRef stores a mutable value across renders without causing a re-render when it changes.</p><p>Example: in a React application, you would use <code>useRef</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5002,
+    "text": "Which hook is commonly used for complex state logic or multiple related state transitions?",
+    "choices": [
+      "useReducer",
+      "useEffect",
+      "useRef",
+      "useId"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useReducer</strong> is correct because useReducer centralizes state transitions when simple useState calls become hard to manage.</p><p>Example: in a React application, you would use <code>useReducer</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5003,
+    "text": "Which React hook is used to memoize a callback function?",
+    "choices": [
+      "useCallback",
+      "useMemo",
+      "useRef",
+      "useEffect"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useCallback</strong> is correct because useCallback memoizes a function reference between renders.</p><p>Example: in a React application, you would use <code>useCallback</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5004,
+    "text": "Which React hook is used to read context values provided by a parent provider?",
+    "choices": [
+      "useContext",
+      "useReducer",
+      "useDeferredValue",
+      "useEffect"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useContext</strong> is correct because useContext reads the nearest matching context value from the component tree.</p><p>Example: in a React application, you would use <code>useContext</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5005,
+    "text": "Which React hook is used to generate stable unique IDs for accessibility-related markup?",
+    "choices": [
+      "useId",
+      "useRef",
+      "useMemo",
+      "useState"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useId</strong> is correct because useId generates stable IDs useful for labels and form controls.</p><p>Example: in a React application, you would use <code>useId</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5006,
+    "text": "Which hook can defer a non-urgent value update for smoother rendering?",
+    "choices": [
+      "useDeferredValue",
+      "useSyncExternalStore",
+      "useContext",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useDeferredValue</strong> is correct because useDeferredValue lets React prioritize more urgent updates first.</p><p>Example: in a React application, you would use <code>useDeferredValue</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5007,
+    "text": "Which React API is used to mark a state update as non-urgent?",
+    "choices": [
+      "startTransition",
+      "flushSync",
+      "render",
+      "hydrateRoot"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>startTransition</strong> is correct because startTransition tells React an update can be interrupted to keep the UI responsive.</p><p>Example: in a React application, you would use <code>startTransition</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5008,
+    "text": "Which React API is used to create a context object?",
+    "choices": [
+      "createContext",
+      "createStore",
+      "createSignal",
+      "createPortal"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>createContext</strong> is correct because createContext defines a context that can be provided and consumed.</p><p>Example: in a React application, you would use <code>createContext</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5009,
+    "text": "Which component is used to supply a context value to descendant components?",
+    "choices": [
+      "Context.Provider",
+      "Context.Consumer only",
+      "ProviderRoot",
+      "Context.Value"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Context.Provider</strong> is correct because The Provider component passes a context value down the tree.</p><p>Example: in a React application, you would use <code>Context.Provider</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5010,
+    "text": "Which special React prop should not be read directly inside a child component?",
+    "choices": [
+      "key",
+      "children",
+      "className",
+      "style"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>key</strong> is correct because key helps React identify elements during reconciliation but is not passed as a normal prop.</p><p>Example: in a React application, you would use <code>key</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5011,
+    "text": "Which prop contains nested JSX passed between a component’s opening and closing tags?",
+    "choices": [
+      "children",
+      "content",
+      "slots",
+      "body"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>children</strong> is correct because children contains the nested elements or text passed to a component.</p><p>Example: in a React application, you would use <code>children</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5012,
+    "text": "Which React API renders React elements into a DOM node in modern React applications?",
+    "choices": [
+      "createRoot()",
+      "ReactDOM.render() only",
+      "mountApp()",
+      "hydrateApp()"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>createRoot()</strong> is correct because createRoot() is the modern client-side root API introduced for concurrent features.</p><p>Example: in a React application, you would use <code>createRoot()</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5013,
+    "text": "Which React API is commonly used to hydrate server-rendered HTML on the client?",
+    "choices": [
+      "hydrateRoot()",
+      "createRoot()",
+      "renderToDOM()",
+      "resumeRoot()"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>hydrateRoot()</strong> is correct because hydrateRoot() attaches React behavior to existing server-rendered markup.</p><p>Example: in a React application, you would use <code>hydrateRoot()</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5014,
+    "text": "Which React utility is used to render part of the UI outside the current DOM hierarchy, such as modals?",
+    "choices": [
+      "createPortal",
+      "renderOutside()",
+      "teleport()",
+      "mountPortalOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>createPortal</strong> is correct because createPortal renders children into a different DOM container.</p><p>Example: in a React application, you would use <code>createPortal</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5015,
+    "text": "Which React component optimization wrapper memoizes a functional component based on props?",
+    "choices": [
+      "React.memo",
+      "React.cache",
+      "React.freeze",
+      "React.wrap"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>React.memo</strong> is correct because React.memo skips re-rendering when props have not changed.</p><p>Example: in a React application, you would use <code>React.memo</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5016,
+    "text": "Which hook is used to synchronize an external store with React safely?",
+    "choices": [
+      "useSyncExternalStore",
+      "useStore",
+      "useContext",
+      "useMutableSource"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useSyncExternalStore</strong> is correct because useSyncExternalStore is the supported hook for external state subscriptions.</p><p>Example: in a React application, you would use <code>useSyncExternalStore</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5017,
+    "text": "Which lifecycle phase in class components was replaced by useEffect in many functional component cases?",
+    "choices": [
+      "Side effects after render",
+      "Constructor state setup only",
+      "Static default props",
+      "Error boundaries"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Side effects after render</strong> is correct because useEffect is often used where class components previously used lifecycle methods for side effects.</p><p>Example: in a React application, you would use <code>Side effects after render</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5018,
+    "text": "Which class lifecycle method was commonly used to clean up subscriptions before unmounting?",
+    "choices": [
+      "componentWillUnmount",
+      "componentDidCatch",
+      "shouldComponentUpdate",
+      "render"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>componentWillUnmount</strong> is correct because componentWillUnmount ran right before a class component was removed.</p><p>Example: in a React application, you would use <code>componentWillUnmount</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5019,
+    "text": "Which class lifecycle method was commonly used to control whether a class component should re-render?",
+    "choices": [
+      "shouldComponentUpdate",
+      "componentDidMount",
+      "componentWillUnmount",
+      "getDerivedStateFromProps"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>shouldComponentUpdate</strong> is correct because shouldComponentUpdate can skip unnecessary renders by returning false.</p><p>Example: in a React application, you would use <code>shouldComponentUpdate</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5020,
+    "text": "Which class component lifecycle method catches rendering errors in descendants?",
+    "choices": [
+      "componentDidCatch",
+      "componentDidMount",
+      "componentWillReceiveProps",
+      "renderError"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>componentDidCatch</strong> is correct because componentDidCatch is part of React’s error boundary pattern.</p><p>Example: in a React application, you would use <code>componentDidCatch</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5021,
+    "text": "Which React pattern lets you reuse stateful logic across components without inheritance?",
+    "choices": [
+      "Custom hooks",
+      "Mixins",
+      "Portals",
+      "Static context"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Custom hooks</strong> is correct because Custom hooks package reusable stateful logic into regular functions.</p><p>Example: in a React application, you would use <code>Custom hooks</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5022,
+    "text": "Which naming convention should custom hooks follow?",
+    "choices": [
+      "They should start with use",
+      "They should end with Hook",
+      "They should be uppercase",
+      "They should start with React"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>They should start with use</strong> is correct because Custom hooks should start with use so the rules of hooks can be enforced.</p><p>Example: in a React application, you would use <code>They should start with use</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5023,
+    "text": "Which React rule says hooks must be called at the top level of a function component or custom hook?",
+    "choices": [
+      "Rules of Hooks",
+      "Render rule",
+      "Prop drilling rule",
+      "Strict mode rule"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Rules of Hooks</strong> is correct because Hooks should not be called conditionally or inside loops.</p><p>Example: in a React application, you would use <code>Rules of Hooks</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5024,
+    "text": "Which React feature helps reveal unsafe side effects in development by intentionally re-running some logic?",
+    "choices": [
+      "StrictMode",
+      "Profiler",
+      "Portal mode",
+      "Hydration mode"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>StrictMode</strong> is correct because StrictMode helps surface potential problems during development.</p><p>Example: in a React application, you would use <code>StrictMode</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5025,
+    "text": "Which React component can measure rendering performance of part of the tree?",
+    "choices": [
+      "Profiler",
+      "StrictMode",
+      "Suspense",
+      "Fragment"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Profiler</strong> is correct because Profiler reports render timing information for optimization analysis.</p><p>Example: in a React application, you would use <code>Profiler</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5026,
+    "text": "Which React component can show a fallback while some child content is waiting for data or code?",
+    "choices": [
+      "Suspense",
+      "Profiler",
+      "Fragment",
+      "Portal"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Suspense</strong> is correct because Suspense renders a fallback while content is pending.</p><p>Example: in a React application, you would use <code>Suspense</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5027,
+    "text": "Which React helper is commonly used for code splitting a component by loading it dynamically?",
+    "choices": [
+      "React.lazy",
+      "React.split",
+      "useMemo",
+      "createRoot"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>React.lazy</strong> is correct because React.lazy loads a component lazily when it is first rendered.</p><p>Example: in a React application, you would use <code>React.lazy</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5028,
+    "text": "Which React feature is commonly paired with React.lazy for loading fallback UI?",
+    "choices": [
+      "Suspense",
+      "Profiler",
+      "Context API",
+      "Error boundary"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Suspense</strong> is correct because Suspense provides the loading fallback for lazy components.</p><p>Example: in a React application, you would use <code>Suspense</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5029,
+    "text": "Which event handling syntax is commonly used in JSX?",
+    "choices": [
+      "onClick={handleClick}",
+      "click=\"handleClick()\"",
+      "on-click=\"handleClick\"",
+      "(click)=\"handleClick()\""
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>onClick={handleClick}</strong> is correct because JSX uses camelCase event props and JavaScript expressions in braces.</p><p>Example: in a React application, you would use <code>onClick={handleClick}</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5030,
+    "text": "Which naming convention is used for DOM event props in JSX?",
+    "choices": [
+      "camelCase",
+      "snake_case",
+      "kebab-case",
+      "UPPER_CASE"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>camelCase</strong> is correct because React event prop names such as onClick and onChange use camelCase.</p><p>Example: in a React application, you would use <code>camelCase</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5031,
+    "text": "Which prop is commonly used to apply inline styles in React?",
+    "choices": [
+      "style",
+      "styles",
+      "css",
+      "class"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>style</strong> is correct because The style prop accepts a JavaScript object of CSS properties.</p><p>Example: in a React application, you would use <code>style</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5032,
+    "text": "How are CSS property names usually written in the React style prop?",
+    "choices": [
+      "camelCase",
+      "kebab-case",
+      "snake_case",
+      "uppercase"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>camelCase</strong> is correct because Inline style object keys usually use camelCase such as backgroundColor.</p><p>Example: in a React application, you would use <code>camelCase</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5033,
+    "text": "Which prop is commonly used to apply CSS classes in React?",
+    "choices": [
+      "className",
+      "class",
+      "styleName",
+      "cssClass"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>className</strong> is correct because React uses className instead of class in JSX.</p><p>Example: in a React application, you would use <code>className</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5034,
+    "text": "Which JavaScript feature is commonly used to conditionally render JSX?",
+    "choices": [
+      "Ternary or logical operators",
+      "SQL conditions",
+      "switch statements only",
+      "decorators"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Ternary or logical operators</strong> is correct because Conditional rendering is often done with ternaries or && in JSX.</p><p>Example: in a React application, you would use <code>Ternary or logical operators</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5035,
+    "text": "Which JSX syntax fragment lets you group elements without adding an extra DOM node?",
+    "choices": [
+      "<>...</>",
+      "<group>...</group>",
+      "<template>...</template>",
+      "<container>...</container>"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong><>...</></strong> is correct because Fragments group multiple children without rendering an extra wrapper element.</p><p>Example: in a React application, you would use <code><>...</></code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5036,
+    "text": "Which named React component can also be used for fragment grouping?",
+    "choices": [
+      "React.Fragment",
+      "React.Group",
+      "React.Children",
+      "React.Container"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>React.Fragment</strong> is correct because React.Fragment is the explicit fragment wrapper equivalent.</p><p>Example: in a React application, you would use <code>React.Fragment</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5037,
+    "text": "Which React helper can transform children into a predictable array for iteration?",
+    "choices": [
+      "React.Children.toArray",
+      "children.toList()",
+      "Array.fromChildren()",
+      "React.mapChildrenOnly()"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>React.Children.toArray</strong> is correct because React.Children.toArray normalizes children into an array.</p><p>Example: in a React application, you would use <code>React.Children.toArray</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5038,
+    "text": "Which React helper validates and creates elements from JSX under the hood?",
+    "choices": [
+      "createElement",
+      "renderElement",
+      "composeJSX",
+      "buildNode"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>createElement</strong> is correct because JSX compiles to React.createElement calls.</p><p>Example: in a React application, you would use <code>createElement</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5039,
+    "text": "Which file extension is commonly used for React components that contain JSX?",
+    "choices": [
+      ".jsx or .tsx",
+      ".java",
+      ".vue",
+      ".ng"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>.jsx or .tsx</strong> is correct because React component files often use JSX or TSX extensions when they contain JSX syntax.</p><p>Example: in a React application, you would use <code>.jsx or .tsx</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5040,
+    "text": "Which React pattern passes a function as a child or prop to determine rendering behavior?",
+    "choices": [
+      "Render props",
+      "Portals",
+      "Error boundaries",
+      "Hydration"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Render props</strong> is correct because Render props use functions to share behavior or rendering decisions.</p><p>Example: in a React application, you would use <code>Render props</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5041,
+    "text": "Which React pattern wraps components to enhance behavior by returning a new component?",
+    "choices": [
+      "Higher-order component",
+      "Portal component",
+      "Reducer component",
+      "Fragment component"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Higher-order component</strong> is correct because A higher-order component takes a component and returns an enhanced component.</p><p>Example: in a React application, you would use <code>Higher-order component</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5042,
+    "text": "Which React anti-pattern often makes components harder to maintain when overused?",
+    "choices": [
+      "Prop drilling",
+      "Using hooks",
+      "Rendering lists",
+      "Memoization"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Prop drilling</strong> is correct because Prop drilling refers to passing props through many layers unnecessarily.</p><p>Example: in a React application, you would use <code>Prop drilling</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5043,
+    "text": "Which feature is commonly used instead of prop drilling for widely shared values?",
+    "choices": [
+      "Context API",
+      "Key prop",
+      "Inline styles",
+      "Error boundaries"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Context API</strong> is correct because Context lets many descendants access shared values directly.</p><p>Example: in a React application, you would use <code>Context API</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5044,
+    "text": "Which React form pattern keeps input values inside React state?",
+    "choices": [
+      "Controlled components",
+      "Uncontrolled components",
+      "Server-only inputs",
+      "Stateless DOM inputs"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Controlled components</strong> is correct because Controlled components bind form values to state and update through events.</p><p>Example: in a React application, you would use <code>Controlled components</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5045,
+    "text": "Which React form pattern reads values directly from the DOM, often through refs?",
+    "choices": [
+      "Uncontrolled components",
+      "Controlled components",
+      "Strict components",
+      "Portal forms"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Uncontrolled components</strong> is correct because Uncontrolled components let the DOM maintain form state.</p><p>Example: in a React application, you would use <code>Uncontrolled components</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5046,
+    "text": "Which event is commonly used to update a text input in a controlled React component?",
+    "choices": [
+      "onChange",
+      "onLoad",
+      "onInputEnd",
+      "onReady"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>onChange</strong> is correct because onChange is commonly used to sync text input state.</p><p>Example: in a React application, you would use <code>onChange</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5047,
+    "text": "Which ref hook is commonly used to access an input DOM node directly?",
+    "choices": [
+      "useRef",
+      "useState",
+      "useMemo",
+      "useContext"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useRef</strong> is correct because useRef can hold a reference to a DOM element.</p><p>Example: in a React application, you would use <code>useRef</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5048,
+    "text": "Which method on a DOM input element might be called through a ref to focus it?",
+    "choices": [
+      "focus()",
+      "activate()",
+      "highlight()",
+      "selectOnly()"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>focus()</strong> is correct because focus() places keyboard focus on the input element.</p><p>Example: in a React application, you would use <code>focus()</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5049,
+    "text": "Which React hook commonly replaces componentDidMount plus componentWillUnmount for subscriptions?",
+    "choices": [
+      "useEffect",
+      "useMemo",
+      "useId",
+      "useDebugValue"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useEffect</strong> is correct because useEffect can both set up and clean up subscriptions.</p><p>Example: in a React application, you would use <code>useEffect</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5050,
+    "text": "Which part of a useEffect callback is used for cleanup?",
+    "choices": [
+      "The returned function",
+      "The dependency array",
+      "The first argument",
+      "A separate hook"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>The returned function</strong> is correct because Returning a function from useEffect registers cleanup logic.</p><p>Example: in a React application, you would use <code>The returned function</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5051,
+    "text": "What does an empty dependency array mean in useEffect?",
+    "choices": [
+      "Run once after the initial render",
+      "Run on every render",
+      "Never run",
+      "Run before render only"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Run once after the initial render</strong> is correct because An empty dependency array makes the effect run once after mount.</p><p>Example: in a React application, you would use <code>Run once after the initial render</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5052,
+    "text": "What happens if no dependency array is provided to useEffect?",
+    "choices": [
+      "It runs after every render",
+      "It runs only once",
+      "It becomes a layout effect",
+      "It throws an error"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>It runs after every render</strong> is correct because Without dependencies, the effect runs after each render.</p><p>Example: in a React application, you would use <code>It runs after every render</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5053,
+    "text": "Which hook runs synchronously after DOM mutations but before the browser paints?",
+    "choices": [
+      "useLayoutEffect",
+      "useEffect",
+      "useDeferredValue",
+      "useId"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useLayoutEffect</strong> is correct because useLayoutEffect is for layout reads/writes that must happen before paint.</p><p>Example: in a React application, you would use <code>useLayoutEffect</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5054,
+    "text": "Which React hook is mainly useful for exposing debugging labels in custom hooks?",
+    "choices": [
+      "useDebugValue",
+      "useRef",
+      "useMemo",
+      "useTransition"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useDebugValue</strong> is correct because useDebugValue helps label custom hook values in React DevTools.</p><p>Example: in a React application, you would use <code>useDebugValue</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5055,
+    "text": "Which hook returns a state value and a setter function?",
+    "choices": [
+      "useState",
+      "useReducer",
+      "useContext",
+      "useCallback"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useState</strong> is correct because useState provides local component state and a corresponding setter.</p><p>Example: in a React application, you would use <code>useState</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5056,
+    "text": "What usually causes a functional component to re-render?",
+    "choices": [
+      "State, props, or context changes",
+      "Calling a utility function only",
+      "Using a constant",
+      "Reading a local variable"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>State, props, or context changes</strong> is correct because React re-renders when relevant reactive inputs change.</p><p>Example: in a React application, you would use <code>State, props, or context changes</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5057,
+    "text": "Which React list rendering requirement helps prevent unstable UI updates?",
+    "choices": [
+      "Provide a stable key for each item",
+      "Use inline styles on each item",
+      "Always use array index",
+      "Wrap all items in portals"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Provide a stable key for each item</strong> is correct because Stable keys help React track item identity between renders.</p><p>Example: in a React application, you would use <code>Provide a stable key for each item</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5058,
+    "text": "Why is using array index as key often discouraged for dynamic lists?",
+    "choices": [
+      "It can break item identity when order changes",
+      "It makes JSX invalid",
+      "It stops useEffect from running",
+      "It prevents state from updating"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>It can break item identity when order changes</strong> is correct because Index keys can cause incorrect reuse when list items are inserted or reordered.</p><p>Example: in a React application, you would use <code>It can break item identity when order changes</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5059,
+    "text": "Which React API is commonly used to update state based on the previous state value safely?",
+    "choices": [
+      "Functional state updater",
+      "Direct mutation",
+      "Context replacement",
+      "Portal setter"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Functional state updater</strong> is correct because Passing a function to the setter uses the latest previous state safely.</p><p>Example: in a React application, you would use <code>Functional state updater</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5060,
+    "text": "Which React state update is recommended for arrays and objects?",
+    "choices": [
+      "Create a new value instead of mutating",
+      "Mutate in place always",
+      "Use delete on state objects directly",
+      "Use DOM methods"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Create a new value instead of mutating</strong> is correct because React state should be treated immutably so changes are detectable.</p><p>Example: in a React application, you would use <code>Create a new value instead of mutating</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5061,
+    "text": "Which array method is commonly used to create a new array with one changed item immutably?",
+    "choices": [
+      "map()",
+      "splice()",
+      "sort()",
+      "reverse()"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>map()</strong> is correct because map() returns a new array and is often used to update items immutably.</p><p>Example: in a React application, you would use <code>map()</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5062,
+    "text": "Which array operation is often avoided directly on state because it mutates the original array?",
+    "choices": [
+      "push()",
+      "concat()",
+      "map()",
+      "filter()"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>push()</strong> is correct because push mutates the existing array instead of returning a new one.</p><p>Example: in a React application, you would use <code>push()</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5063,
+    "text": "Which React pattern keeps components easier to test and maintain by splitting UI into smaller reusable pieces?",
+    "choices": [
+      "Component composition",
+      "Monolithic component design",
+      "Inline DOM creation",
+      "Global mutation"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Component composition</strong> is correct because Composition encourages reusable, focused components.</p><p>Example: in a React application, you would use <code>Component composition</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5064,
+    "text": "Which React concept describes passing JSX into a component to define part of its UI?",
+    "choices": [
+      "Composition via children",
+      "Hydration",
+      "Suspense boundary",
+      "Strict mode"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Composition via children</strong> is correct because Components often accept children to compose layouts and wrappers.</p><p>Example: in a React application, you would use <code>Composition via children</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5065,
+    "text": "Which React pattern is used when a component accepts another component as a prop to customize rendering?",
+    "choices": [
+      "Component-as-prop pattern",
+      "Portal-only pattern",
+      "Reducer composition",
+      "Hook wrapping"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Component-as-prop pattern</strong> is correct because Passing components as props supports flexible reusable UIs.</p><p>Example: in a React application, you would use <code>Component-as-prop pattern</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5066,
+    "text": "Which React hook is often preferred over useState when multiple fields must be updated together based on action types?",
+    "choices": [
+      "useReducer",
+      "useId",
+      "useRef",
+      "useContext"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useReducer</strong> is correct because useReducer groups state transitions into a single reducer function.</p><p>Example: in a React application, you would use <code>useReducer</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5067,
+    "text": "Which reducer argument describes what happened and is used to choose the next state?",
+    "choices": [
+      "action",
+      "event only",
+      "memo",
+      "key"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>action</strong> is correct because Reducers use actions to decide how state should change.</p><p>Example: in a React application, you would use <code>action</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5068,
+    "text": "Which React developer tool helps inspect component props, state, and hooks in the browser?",
+    "choices": [
+      "React DevTools",
+      "Redux CLI",
+      "Webpack Analyzer",
+      "Node Inspector"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>React DevTools</strong> is correct because React DevTools provides component inspection and profiling support.</p><p>Example: in a React application, you would use <code>React DevTools</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5069,
+    "text": "Which React feature lets server-rendered content become interactive on the client?",
+    "choices": [
+      "Hydration",
+      "Bundling",
+      "Memoization",
+      "Portaling"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Hydration</strong> is correct because Hydration attaches event listeners and React behavior to server-rendered HTML.</p><p>Example: in a React application, you would use <code>Hydration</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5070,
+    "text": "Which React DOM API was historically used before createRoot in older versions?",
+    "choices": [
+      "ReactDOM.render()",
+      "ReactDOM.mount()",
+      "hydrateRoot() only",
+      "renderApp()"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>ReactDOM.render()</strong> is correct because ReactDOM.render() was the legacy mounting API before createRoot.</p><p>Example: in a React application, you would use <code>ReactDOM.render()</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5071,
+    "text": "Which React hook is useful when a child component is expensive and depends on a derived object value?",
+    "choices": [
+      "useMemo",
+      "useRef",
+      "useEffect",
+      "useId"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useMemo</strong> is correct because useMemo can memoize derived objects to avoid unnecessary recalculation or prop identity changes.</p><p>Example: in a React application, you would use <code>useMemo</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5072,
+    "text": "Which React performance issue happens when a component re-renders because it receives a new function prop each time?",
+    "choices": [
+      "Referential instability",
+      "Hydration mismatch",
+      "Portal drift",
+      "Strict render"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Referential instability</strong> is correct because New function references can trigger avoidable child updates when memoization is involved.</p><p>Example: in a React application, you would use <code>Referential instability</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5073,
+    "text": "Which React hook is often used to stabilize a callback passed to memoized children?",
+    "choices": [
+      "useCallback",
+      "useEffect",
+      "useContext",
+      "useId"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useCallback</strong> is correct because useCallback preserves the function reference until dependencies change.</p><p>Example: in a React application, you would use <code>useCallback</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5074,
+    "text": "Which React API is commonly used to batch non-urgent UI updates for responsiveness in modern React?",
+    "choices": [
+      "startTransition",
+      "setTimeout",
+      "createPortal",
+      "flushSync"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>startTransition</strong> is correct because startTransition lets React prioritize urgent interactions over non-urgent updates.</p><p>Example: in a React application, you would use <code>startTransition</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5075,
+    "text": "Which React API forces React to flush updates synchronously immediately?",
+    "choices": [
+      "flushSync",
+      "useSync",
+      "startTransition",
+      "renderNow"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>flushSync</strong> is correct because flushSync forces immediate DOM updates and should be used sparingly.</p><p>Example: in a React application, you would use <code>flushSync</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5076,
+    "text": "Which React library capability is typically used for client-side navigation in many React apps?",
+    "choices": [
+      "React Router",
+      "React DevTools",
+      "React DOM only",
+      "Redux"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>React Router</strong> is correct because React Router manages routing for client-side React applications.</p><p>Example: in a React application, you would use <code>React Router</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5077,
+    "text": "Which React Router component is commonly used to declare routes?",
+    "choices": [
+      "Routes",
+      "RouterOutlet",
+      "Switchboard",
+      "PathTree"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Routes</strong> is correct because Routes contains route matching definitions in modern React Router.</p><p>Example: in a React application, you would use <code>Routes</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5078,
+    "text": "Which React Router component typically maps a path to an element?",
+    "choices": [
+      "Route",
+      "Link",
+      "Navigate",
+      "Outlet"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Route</strong> is correct because Route defines which UI element should render for a given path.</p><p>Example: in a React application, you would use <code>Route</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5079,
+    "text": "Which React Router component is commonly used to navigate without a full page reload?",
+    "choices": [
+      "Link",
+      "a only",
+      "AnchorRouter",
+      "PortalLink"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Link</strong> is correct because Link updates the client-side route without a full document refresh.</p><p>Example: in a React application, you would use <code>Link</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5080,
+    "text": "Which React Router hook is commonly used for imperative navigation?",
+    "choices": [
+      "useNavigate",
+      "useRoute",
+      "usePath",
+      "useLocationOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useNavigate</strong> is correct because useNavigate returns a function to change routes programmatically.</p><p>Example: in a React application, you would use <code>useNavigate</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5081,
+    "text": "Which React Router hook is commonly used to read route parameters?",
+    "choices": [
+      "useParams",
+      "useContext",
+      "useReducer",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useParams</strong> is correct because useParams exposes dynamic path segment values from the current route.</p><p>Example: in a React application, you would use <code>useParams</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5082,
+    "text": "Which React Router hook is commonly used to read the current location object?",
+    "choices": [
+      "useLocation",
+      "useCurrentRoute",
+      "useUrl",
+      "useHistory only"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useLocation</strong> is correct because useLocation provides pathname, search, hash, and state information.</p><p>Example: in a React application, you would use <code>useLocation</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5083,
+    "text": "Which React error handling pattern is used to catch rendering errors in a portion of the tree?",
+    "choices": [
+      "Error boundary",
+      "Suspense fallback",
+      "Memo boundary",
+      "Portal boundary"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Error boundary</strong> is correct because Error boundaries catch render-time errors in descendant components.</p><p>Example: in a React application, you would use <code>Error boundary</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5084,
+    "text": "Which type of component can currently implement an error boundary directly in standard React?",
+    "choices": [
+      "Class component",
+      "Function component with useError",
+      "Context provider only",
+      "Portal component"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Class component</strong> is correct because Error boundaries are implemented with class lifecycle methods like componentDidCatch.</p><p>Example: in a React application, you would use <code>Class component</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5085,
+    "text": "Which React practice improves accessibility for form fields?",
+    "choices": [
+      "Link labels and inputs with matching ids",
+      "Use divs instead of labels",
+      "Avoid aria attributes entirely",
+      "Hide all labels"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Link labels and inputs with matching ids</strong> is correct because Associating labels and form controls improves usability and screen-reader support.</p><p>Example: in a React application, you would use <code>Link labels and inputs with matching ids</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5086,
+    "text": "Which React practice helps avoid unnecessary anonymous functions inside large lists when performance matters?",
+    "choices": [
+      "Extract or memoize handlers",
+      "Use more nested loops",
+      "Mutate props in place",
+      "Remove keys"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Extract or memoize handlers</strong> is correct because Stable handlers can reduce needless child re-renders in some cases.</p><p>Example: in a React application, you would use <code>Extract or memoize handlers</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5087,
+    "text": "Which React Suspense usage pattern is common with dynamic imports?",
+    "choices": [
+      "Wrap React.lazy components in Suspense",
+      "Use useEffect instead",
+      "Replace keys",
+      "Disable hydration"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Wrap React.lazy components in Suspense</strong> is correct because Suspense shows fallback UI while lazy-loaded code is being fetched.</p><p>Example: in a React application, you would use <code>Wrap React.lazy components in Suspense</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5088,
+    "text": "Which React concept describes the process of comparing a new virtual tree to the previous one to update the DOM efficiently?",
+    "choices": [
+      "Reconciliation",
+      "Serialization",
+      "Compilation",
+      "Hydration"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Reconciliation</strong> is correct because Reconciliation is how React determines the minimal DOM updates needed.</p><p>Example: in a React application, you would use <code>Reconciliation</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5089,
+    "text": "Which React internal representation is commonly described as a virtual description of the UI tree?",
+    "choices": [
+      "Virtual DOM",
+      "Shadow DOM",
+      "Real DOM clone",
+      "Portal map"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Virtual DOM</strong> is correct because React elements form a virtual representation of the UI before DOM updates.</p><p>Example: in a React application, you would use <code>Virtual DOM</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5090,
+    "text": "Which React best practice helps keep components simpler by moving repeated logic out to reusable hooks or helpers?",
+    "choices": [
+      "Extract shared logic",
+      "Increase prop drilling",
+      "Duplicate state",
+      "Inline all business logic"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Extract shared logic</strong> is correct because Extracting shared logic improves readability and reuse.</p><p>Example: in a React application, you would use <code>Extract shared logic</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5091,
+    "text": "Which React pattern often improves testability by separating data-fetching logic from presentational markup?",
+    "choices": [
+      "Container and presentational separation",
+      "Portal rendering",
+      "Hydration splitting",
+      "Event bubbling only"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Container and presentational separation</strong> is correct because Separating data logic from presentational UI can make components easier to reason about and test.</p><p>Example: in a React application, you would use <code>Container and presentational separation</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5092,
+    "text": "Which React technique is often used to preserve expensive child renders when parent state changes unrelated to the child?",
+    "choices": [
+      "Memoize the child component",
+      "Force remount with key",
+      "Move everything into one component",
+      "Use only inline objects"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Memoize the child component</strong> is correct because Memoization can prevent needless child re-renders when inputs have not changed.</p><p>Example: in a React application, you would use <code>Memoize the child component</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5093,
+    "text": "Which React prop can force a component subtree to remount when its value changes?",
+    "choices": [
+      "key",
+      "ref",
+      "children",
+      "style"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>key</strong> is correct because Changing a key tells React to treat the element as a new instance.</p><p>Example: in a React application, you would use <code>key</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5094,
+    "text": "Which React pattern is commonly used to show different UI for loading, error, and success states?",
+    "choices": [
+      "Conditional rendering by state",
+      "Portal switching",
+      "Strict mode branching",
+      "Context hydration"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Conditional rendering by state</strong> is correct because Components often branch on loading and error state to choose what to display.</p><p>Example: in a React application, you would use <code>Conditional rendering by state</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5095,
+    "text": "Which React hook is commonly used to subscribe to browser events such as resize and clean them up later?",
+    "choices": [
+      "useEffect",
+      "useMemo",
+      "useId",
+      "useContext"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useEffect</strong> is correct because useEffect is commonly used for registering and cleaning up event listeners.</p><p>Example: in a React application, you would use <code>useEffect</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5096,
+    "text": "Which React best practice helps avoid stale state when the next state depends on the previous one?",
+    "choices": [
+      "Use the functional updater form",
+      "Mutate the previous state object",
+      "Store everything in refs",
+      "Use setTimeout around updates"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Use the functional updater form</strong> is correct because The functional updater ensures the latest previous state value is used.</p><p>Example: in a React application, you would use <code>Use the functional updater form</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5097,
+    "text": "Which React rendering issue can occur if server-rendered HTML differs from the client-rendered output?",
+    "choices": [
+      "Hydration mismatch",
+      "Context overflow",
+      "Portal collision",
+      "Memo leak"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Hydration mismatch</strong> is correct because Hydration mismatches happen when the initial client render does not match server output.</p><p>Example: in a React application, you would use <code>Hydration mismatch</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5098,
+    "text": "Which React Router component renders matched nested route content inside a parent route element?",
+    "choices": [
+      "Outlet",
+      "RouteSlot",
+      "ChildrenRouter",
+      "PortalOutlet"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Outlet</strong> is correct because Outlet is the placeholder for nested route elements.</p><p>Example: in a React application, you would use <code>Outlet</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5099,
+    "text": "Which React hook is commonly used to store an uncontrolled input element reference?",
+    "choices": [
+      "useRef",
+      "useReducer",
+      "useMemo",
+      "useTransition"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useRef</strong> is correct because useRef can hold a reference to a DOM node such as an input.</p><p>Example: in a React application, you would use <code>useRef</code> when implementing this pattern or API.</p>"
+  },
+  {
+    "id": 5100,
+    "text": "Which React guideline usually improves maintainability for shared UI pieces?",
+    "choices": [
+      "Create small reusable components",
+      "Use one giant component",
+      "Put all logic in App",
+      "Avoid props entirely"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Create small reusable components</strong> is correct because Small reusable components improve clarity, reuse, and focused testing.</p><p>Example: in a React application, you would use <code>Create small reusable components</code> when implementing this pattern or API.</p>"
   }
 ]
