@@ -38,6 +38,9 @@ function normalizeTopic(topic) {
 }
 
 function formatTopicLabel(topic) {
+  if (topic === 'aws') {
+    return 'AWS';
+  }
   if (topic === 'springboot') {
     return 'Spring Boot';
   }

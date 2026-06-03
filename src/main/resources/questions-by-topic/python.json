@@ -1,0 +1,158 @@
+[
+  {
+    "id": 401,
+    "text": "Which keyword is used to define a function in Python?",
+    "choices": [
+      "def",
+      "function",
+      "func",
+      "lambda"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>def</strong> is correct because Python defines named functions with the <code>def</code> keyword.</p><p>Example:</p><pre><code>def greet(name):\n    return f\"Hello, {name}\"</code></pre>"
+  },
+  {
+    "id": 402,
+    "text": "Which data type is commonly used to store an ordered, mutable collection in Python?",
+    "choices": [
+      "list",
+      "tuple",
+      "set",
+      "dict"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>list</strong> is correct because Python lists preserve order and allow items to be added, removed, or updated.</p><p>Example:</p><pre><code>numbers = [1, 2, 3]\nnumbers.append(4)</code></pre>"
+  },
+  {
+    "id": 403,
+    "text": "Which keyword is used to create a class in Python?",
+    "choices": [
+      "class",
+      "object",
+      "struct",
+      "define"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>class</strong> is correct because Python uses the <code>class</code> keyword to define classes.</p><p>Example:</p><pre><code>class User:\n    def __init__(self, name):\n        self.name = name</code></pre>"
+  },
+  {
+    "id": 404,
+    "text": "Which built-in function prints output to the console in Python?",
+    "choices": [
+      "print()",
+      "echo()",
+      "console.log()",
+      "write()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>print()</strong> is correct because Python uses the built-in <code>print()</code> function for console output.</p><p>Example:</p><pre><code>print(\"Hello, Python\")</code></pre>"
+  },
+  {
+    "id": 405,
+    "text": "Which keyword is used for conditional logic in Python?",
+    "choices": [
+      "if",
+      "when",
+      "case",
+      "cond"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>if</strong> is correct because Python uses <code>if</code> to evaluate conditions and control program flow.</p><p>Example:</p><pre><code>if age &gt;= 18:\n    print(\"Adult\")</code></pre>"
+  },
+  {
+    "id": 406,
+    "text": "Which symbol is used to access a value by key in a Python dictionary?",
+    "choices": [
+      "square brackets []",
+      "parentheses ()",
+      "angle brackets <>",
+      "double colon ::"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>square brackets []</strong> is correct because dictionary values are typically accessed using keys inside square brackets.</p><p>Example:</p><pre><code>user = {\"name\": \"Ava\"}\nprint(user[\"name\"])</code></pre>"
+  },
+  {
+    "id": 407,
+    "text": "Which keyword is commonly used to import a module in Python?",
+    "choices": [
+      "import",
+      "include",
+      "require",
+      "using"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>import</strong> is correct because Python loads modules with the <code>import</code> statement.</p><p>Example:</p><pre><code>import math\nprint(math.sqrt(16))</code></pre>"
+  },
+  {
+    "id": 408,
+    "text": "Which loop is commonly used to iterate over items in a list in Python?",
+    "choices": [
+      "for",
+      "repeat",
+      "foreach only",
+      "loop"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>for</strong> is correct because Python commonly uses <code>for</code> loops to iterate through lists, strings, and other iterables.</p><p>Example:</p><pre><code>for name in [\"Ava\", \"Leo\"]:\n    print(name)</code></pre>"
+  },
+  {
+    "id": 409,
+    "text": "Which value represents the absence of a value in Python?",
+    "choices": [
+      "None",
+      "null",
+      "undefined",
+      "void"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>None</strong> is correct because Python uses <code>None</code> to represent the absence of a value or a null-like result.</p><p>Example:</p><pre><code>result = None\nif result is None:\n    print(\"No value yet\")</code></pre>"
+  },
+  {
+    "id": 410,
+    "text": "Which operator is used for equality comparison in Python?",
+    "choices": [
+      "==",
+      "=",
+      "===",
+      "!="
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>==</strong> is correct because Python uses <code>==</code> to compare whether two values are equal, while <code>=</code> is used for assignment.</p><p>Example:</p><pre><code>if status == \"done\":\n    print(\"Finished\")</code></pre>"
+  },
+  {
+    "id": 411,
+    "text": "Which function returns the number of items in a Python list?",
+    "choices": [
+      "len()",
+      "count()",
+      "size()",
+      "length()"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>len()</strong> is correct because Python uses the built-in <code>len()</code> function to get the length of strings, lists, tuples, and more.</p><p>Example:</p><pre><code>items = [\"a\", \"b\", \"c\"]\nprint(len(items))</code></pre>"
+  },
+  {
+    "id": 412,
+    "text": "Which statement is used to handle exceptions in Python?",
+    "choices": [
+      "try-except",
+      "catch-finally",
+      "if-else",
+      "switch-except"
+    ],
+    "correctIndex": 0,
+    "topic": "Python",
+    "explanation": "<p><strong>try-except</strong> is correct because Python handles exceptions by wrapping risky code in a <code>try</code> block and responding in an <code>except</code> block.</p><p>Example:</p><pre><code>try:\n    value = int(\"abc\")\nexcept ValueError:\n    print(\"Invalid integer\")</code></pre>"
+  }
+]

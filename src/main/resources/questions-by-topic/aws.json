@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 501,
+    "text": "Which AWS service is primarily used to run virtual servers in the cloud?",
+    "choices": [
+      "Amazon EC2",
+      "Amazon S3",
+      "Amazon RDS",
+      "AWS Lambda"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon EC2</strong> is correct because Amazon EC2 provides resizable compute capacity through virtual machine instances.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon EC2</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 502,
+    "text": "Which AWS service is best suited for storing static website assets such as images and HTML files?",
+    "choices": [
+      "Amazon S3",
+      "Amazon ECS",
+      "Amazon Aurora",
+      "Amazon Redshift"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon S3</strong> is correct because Amazon S3 is highly durable object storage and is commonly used for static content.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon S3</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 503,
+    "text": "Which AWS service distributes content globally with low latency?",
+    "choices": [
+      "Amazon CloudFront",
+      "Amazon Route 53",
+      "Amazon VPC",
+      "AWS IAM"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon CloudFront</strong> is correct because CloudFront is AWS's CDN for caching content at edge locations.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon CloudFront</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 504,
+    "text": "Which AWS database service is fully managed and commonly used for relational databases?",
+    "choices": [
+      "Amazon RDS",
+      "Amazon DynamoDB",
+      "Amazon ElastiCache",
+      "Amazon Neptune"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon RDS</strong> is correct because Amazon RDS manages relational engines such as MySQL and PostgreSQL.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon RDS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 505,
+    "text": "Which AWS service is serverless and runs code in response to events?",
+    "choices": [
+      "AWS Lambda",
+      "Amazon EC2",
+      "AWS Batch",
+      "Amazon EMR"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Lambda</strong> is correct because Lambda runs code without server management and is triggered by events.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Lambda</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 506,
+    "text": "Which AWS service provides fine-grained access control for users, roles, and permissions?",
+    "choices": [
+      "AWS IAM",
+      "AWS KMS",
+      "AWS Shield",
+      "Amazon Inspector"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS IAM</strong> is correct because IAM controls authentication and authorization across AWS resources.</p><p>Example: in a Solution Architect design, you would choose <code>AWS IAM</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 507,
+    "text": "Which AWS service is a NoSQL key-value and document database with single-digit millisecond latency?",
+    "choices": [
+      "Amazon DynamoDB",
+      "Amazon RDS",
+      "Amazon Redshift",
+      "Amazon Aurora"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon DynamoDB</strong> is correct because DynamoDB is AWS's managed NoSQL database for high scale and low latency.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon DynamoDB</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 508,
+    "text": "Which AWS feature helps improve availability by automatically replacing failed EC2 instances and scaling capacity?",
+    "choices": [
+      "Auto Scaling",
+      "Trusted Advisor",
+      "AWS Config",
+      "AWS Organizations"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Auto Scaling</strong> is correct because Auto Scaling maintains desired capacity and scales based on demand.</p><p>Example: in a Solution Architect design, you would choose <code>Auto Scaling</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 509,
+    "text": "Which load balancer should be used for HTTP and HTTPS traffic at Layer 7?",
+    "choices": [
+      "Application Load Balancer",
+      "Network Load Balancer",
+      "Gateway Load Balancer",
+      "Classic Load Balancer only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Application Load Balancer</strong> is correct because ALB supports Layer 7 routing such as host-based and path-based rules.</p><p>Example: in a Solution Architect design, you would choose <code>Application Load Balancer</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 510,
+    "text": "Which AWS service is commonly used to create isolated networking environments?",
+    "choices": [
+      "Amazon VPC",
+      "Amazon Route 53",
+      "AWS WAF",
+      "Amazon CloudWatch"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon VPC</strong> is correct because A VPC defines subnets, route tables, gateways, and network boundaries.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon VPC</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 511,
+    "text": "Which AWS service is used to manage DNS records and domain routing?",
+    "choices": [
+      "Amazon Route 53",
+      "Amazon CloudFront",
+      "AWS Direct Connect",
+      "AWS Systems Manager"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Route 53</strong> is correct because Route 53 is AWS's managed DNS and routing service.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Route 53</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 512,
+    "text": "Which AWS storage class is best for long-term archival with infrequent retrieval?",
+    "choices": [
+      "S3 Glacier",
+      "S3 Standard",
+      "EFS Standard",
+      "EBS gp3"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>S3 Glacier</strong> is correct because S3 Glacier is optimized for low-cost archival storage.</p><p>Example: in a Solution Architect design, you would choose <code>S3 Glacier</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 513,
+    "text": "Which AWS architectural principle focuses on designing systems that continue operating even when components fail?",
+    "choices": [
+      "Fault tolerance",
+      "Vertical scaling",
+      "Lift and shift only",
+      "Static capacity planning"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Fault tolerance</strong> is correct because Fault tolerance means designing for failure with redundancy and recovery.</p><p>Example: in a Solution Architect design, you would choose <code>Fault tolerance</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 514,
+    "text": "Which AWS service provides centralized monitoring for metrics, logs, and alarms?",
+    "choices": [
+      "Amazon CloudWatch",
+      "AWS CloudTrail",
+      "AWS Artifact",
+      "AWS Glue"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon CloudWatch</strong> is correct because CloudWatch collects metrics, logs, and alarms for AWS workloads.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon CloudWatch</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 515,
+    "text": "Which AWS service records API activity for governance, compliance, and auditing?",
+    "choices": [
+      "AWS CloudTrail",
+      "Amazon CloudWatch",
+      "AWS X-Ray",
+      "Amazon Inspector"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS CloudTrail</strong> is correct because CloudTrail records account activity and API calls for auditing.</p><p>Example: in a Solution Architect design, you would choose <code>AWS CloudTrail</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 516,
+    "text": "Which AWS service is best for an in-memory cache that reduces database load?",
+    "choices": [
+      "Amazon ElastiCache",
+      "Amazon Athena",
+      "Amazon SQS",
+      "AWS Backup"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon ElastiCache</strong> is correct because ElastiCache provides managed Redis or Memcached for low-latency caching.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon ElastiCache</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 517,
+    "text": "Which Amazon RDS feature improves availability by synchronously replicating data to a standby instance in another Availability Zone?",
+    "choices": [
+      "Multi-AZ deployment",
+      "Read Replica",
+      "Cross-Region backup",
+      "IAM authentication"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Multi-AZ deployment</strong> is correct because Multi-AZ improves high availability and failover for relational databases.</p><p>Example: in a Solution Architect design, you would choose <code>Multi-AZ deployment</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 518,
+    "text": "Which AWS database service is MySQL and PostgreSQL compatible and designed for high performance?",
+    "choices": [
+      "Amazon Aurora",
+      "Amazon Neptune",
+      "Amazon DocumentDB",
+      "Amazon Timestream"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Aurora</strong> is correct because Aurora is a managed relational engine built for performance and availability.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Aurora</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 519,
+    "text": "Which AWS service is designed for petabyte-scale data warehousing?",
+    "choices": [
+      "Amazon Redshift",
+      "Amazon DynamoDB",
+      "Amazon ElastiCache",
+      "Amazon MQ"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Redshift</strong> is correct because Redshift is optimized for analytics and large-scale SQL-based warehousing.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Redshift</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 520,
+    "text": "Which AWS service allows decoupling components through a message queue?",
+    "choices": [
+      "Amazon SQS",
+      "Amazon SNS",
+      "Amazon Route 53",
+      "AWS Step Functions"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon SQS</strong> is correct because SQS buffers messages between producers and consumers for decoupled architectures.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon SQS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 521,
+    "text": "Which AWS service publishes messages to multiple subscribers through topics?",
+    "choices": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon ECR",
+      "AWS Glue"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon SNS</strong> is correct because SNS fans out notifications to endpoints such as SQS, Lambda, email, or HTTP.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon SNS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 522,
+    "text": "Which AWS service is used for event bus style routing between AWS services and SaaS applications?",
+    "choices": [
+      "Amazon EventBridge",
+      "Amazon SES",
+      "AWS DMS",
+      "Amazon WorkSpaces"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon EventBridge</strong> is correct because EventBridge routes events between services using rules on an event bus.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon EventBridge</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 523,
+    "text": "Which AWS service orchestrates serverless workflows with state transitions?",
+    "choices": [
+      "AWS Step Functions",
+      "AWS Batch",
+      "AWS Config",
+      "Amazon QuickSight"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Step Functions</strong> is correct because Step Functions coordinates multi-step workflows across services like Lambda.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Step Functions</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 524,
+    "text": "Which AWS service provides a managed container orchestration platform using ECS tasks and services?",
+    "choices": [
+      "Amazon ECS",
+      "Amazon EFS",
+      "AWS Fargate only",
+      "Amazon S3"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon ECS</strong> is correct because ECS is AWS's managed container orchestration service.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon ECS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 525,
+    "text": "Which AWS compute option lets you run containers without managing the underlying servers?",
+    "choices": [
+      "AWS Fargate",
+      "Amazon EC2 Dedicated Hosts",
+      "Amazon Lightsail",
+      "AWS Outposts"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Fargate</strong> is correct because Fargate runs containers serverlessly for ECS or EKS.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Fargate</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 526,
+    "text": "Which AWS service provides managed Kubernetes control planes?",
+    "choices": [
+      "Amazon EKS",
+      "Amazon EMR",
+      "AWS AppSync",
+      "Amazon MQ"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon EKS</strong> is correct because EKS is AWS's managed Kubernetes service.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon EKS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 527,
+    "text": "Which AWS service is commonly used to expose REST or HTTP APIs with throttling and authorizers?",
+    "choices": [
+      "Amazon API Gateway",
+      "Amazon Athena",
+      "Amazon SWF",
+      "AWS Glue"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon API Gateway</strong> is correct because API Gateway is used to publish APIs with routing, throttling, and auth features.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon API Gateway</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 528,
+    "text": "Which AWS service lets you provision infrastructure as code using templates?",
+    "choices": [
+      "AWS CloudFormation",
+      "AWS CloudTrail",
+      "AWS CodeArtifact",
+      "Amazon CloudSearch"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS CloudFormation</strong> is correct because CloudFormation provisions AWS resources declaratively using templates.</p><p>Example: in a Solution Architect design, you would choose <code>AWS CloudFormation</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 529,
+    "text": "Which AWS service is used to assess environment cost, security, fault tolerance, performance, and service limit recommendations?",
+    "choices": [
+      "AWS Trusted Advisor",
+      "AWS X-Ray",
+      "Amazon Macie",
+      "AWS App Runner"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Trusted Advisor</strong> is correct because Trusted Advisor provides best practice recommendations across AWS accounts.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Trusted Advisor</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 530,
+    "text": "Which AWS service continuously evaluates AWS resource configurations against desired rules?",
+    "choices": [
+      "AWS Config",
+      "Amazon Inspector",
+      "AWS Backup",
+      "AWS Shield"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Config</strong> is correct because AWS Config records configurations and checks them against compliance rules.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Config</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 531,
+    "text": "Which AWS service helps centrally manage multiple AWS accounts with consolidated billing?",
+    "choices": [
+      "AWS Organizations",
+      "Amazon Route 53",
+      "AWS Cloud9",
+      "Amazon Detective"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Organizations</strong> is correct because Organizations is used for account structure, policy management, and consolidated billing.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Organizations</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 532,
+    "text": "Which AWS service helps establish a dedicated private network connection from on-premises to AWS?",
+    "choices": [
+      "AWS Direct Connect",
+      "AWS Snowball",
+      "AWS WAF",
+      "Amazon Route 53 Resolver"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Direct Connect</strong> is correct because Direct Connect provides private connectivity from on-premises networks to AWS.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Direct Connect</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 533,
+    "text": "Which AWS service creates encrypted site-to-site tunnels over the internet between on-premises and AWS?",
+    "choices": [
+      "AWS Site-to-Site VPN",
+      "AWS Global Accelerator",
+      "Amazon Connect",
+      "Amazon FSx"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Site-to-Site VPN</strong> is correct because Site-to-Site VPN connects on-premises networks to AWS over IPsec tunnels.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Site-to-Site VPN</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 534,
+    "text": "Which AWS networking service is used to connect multiple VPCs and on-premises networks through a central hub?",
+    "choices": [
+      "AWS Transit Gateway",
+      "NAT Gateway",
+      "Internet Gateway",
+      "VPC Peering only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Transit Gateway</strong> is correct because Transit Gateway simplifies connectivity across many VPCs and on-premises links.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Transit Gateway</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 535,
+    "text": "Which AWS gateway allows private instances to access the internet for outbound traffic while blocking inbound internet connections?",
+    "choices": [
+      "NAT Gateway",
+      "Internet Gateway",
+      "Transit Gateway",
+      "Route 53 Resolver"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>NAT Gateway</strong> is correct because A NAT Gateway enables outbound internet access from private subnets.</p><p>Example: in a Solution Architect design, you would choose <code>NAT Gateway</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 536,
+    "text": "Which VPC component allows resources in a public subnet to communicate directly with the internet?",
+    "choices": [
+      "Internet Gateway",
+      "NAT Gateway",
+      "Security Group",
+      "Transit Gateway"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Internet Gateway</strong> is correct because An Internet Gateway provides internet connectivity for public subnets.</p><p>Example: in a Solution Architect design, you would choose <code>Internet Gateway</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 537,
+    "text": "Which AWS service is best for a shared file system that can be mounted concurrently on multiple Linux EC2 instances?",
+    "choices": [
+      "Amazon EFS",
+      "Amazon EBS",
+      "Amazon S3 Glacier",
+      "AWS Backup"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon EFS</strong> is correct because EFS is a managed NFS file system designed for shared access.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon EFS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 538,
+    "text": "Which AWS storage option provides block storage for a single EC2 instance at a time in most cases?",
+    "choices": [
+      "Amazon EBS",
+      "Amazon EFS",
+      "Amazon S3",
+      "AWS Storage Gateway"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon EBS</strong> is correct because EBS provides persistent block storage typically attached to one EC2 instance.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon EBS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 539,
+    "text": "Which Amazon EBS volume type is a general purpose SSD option commonly used for balanced performance and cost?",
+    "choices": [
+      "gp3",
+      "sc1",
+      "st1",
+      "magnetic only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>gp3</strong> is correct because gp3 is the recommended general purpose SSD volume type for many workloads.</p><p>Example: in a Solution Architect design, you would choose <code>gp3</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 540,
+    "text": "Which AWS service protects web applications from common exploits such as SQL injection and cross-site scripting?",
+    "choices": [
+      "AWS WAF",
+      "AWS Shield Advanced only",
+      "AWS Config",
+      "Amazon GuardDuty"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS WAF</strong> is correct because AWS WAF filters malicious HTTP requests using rules.</p><p>Example: in a Solution Architect design, you would choose <code>AWS WAF</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 541,
+    "text": "Which AWS service provides managed DDoS protection at the edge for AWS resources?",
+    "choices": [
+      "AWS Shield",
+      "AWS Macie",
+      "Amazon Cognito",
+      "AWS Backup"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Shield</strong> is correct because AWS Shield helps protect against distributed denial-of-service attacks.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Shield</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 542,
+    "text": "Which AWS security service detects threats such as anomalous API behavior and malicious IP communication?",
+    "choices": [
+      "Amazon GuardDuty",
+      "AWS Artifact",
+      "Amazon Polly",
+      "AWS RAM"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon GuardDuty</strong> is correct because GuardDuty analyzes logs and telemetry to detect suspicious behavior.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon GuardDuty</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 543,
+    "text": "Which AWS service is used to discover and protect sensitive data in S3 using machine learning?",
+    "choices": [
+      "Amazon Macie",
+      "AWS KMS",
+      "Amazon Inspector",
+      "CloudFront"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Macie</strong> is correct because Macie helps identify sensitive data such as PII in S3 buckets.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Macie</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 544,
+    "text": "Which AWS service manages encryption keys used by AWS services and applications?",
+    "choices": [
+      "AWS KMS",
+      "AWS Secrets Manager",
+      "AWS IAM Identity Center",
+      "Amazon Detective"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS KMS</strong> is correct because KMS manages encryption keys and integrates with many AWS services.</p><p>Example: in a Solution Architect design, you would choose <code>AWS KMS</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 545,
+    "text": "Which AWS service is best for securely storing and rotating database credentials?",
+    "choices": [
+      "AWS Secrets Manager",
+      "Amazon SQS",
+      "AWS Config",
+      "Amazon Lex"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Secrets Manager</strong> is correct because Secrets Manager stores, retrieves, and rotates secrets such as passwords and tokens.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Secrets Manager</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 546,
+    "text": "Which AWS service is used to store configuration values and secrets hierarchically for applications?",
+    "choices": [
+      "AWS Systems Manager Parameter Store",
+      "Amazon S3 Intelligent-Tiering",
+      "AWS Batch",
+      "Amazon EventBridge Scheduler"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Systems Manager Parameter Store</strong> is correct because Parameter Store stores configuration data and secrets in a structured way.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Systems Manager Parameter Store</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 547,
+    "text": "Which AWS service provides a managed bastionless shell and command execution experience for EC2 instances?",
+    "choices": [
+      "AWS Systems Manager Session Manager",
+      "Amazon QuickSight",
+      "AWS Glue DataBrew",
+      "AWS Budgets"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Systems Manager Session Manager</strong> is correct because Session Manager enables secure shell-like access without opening inbound SSH ports.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Systems Manager Session Manager</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 548,
+    "text": "Which AWS service can automatically patch and inventory EC2 instances?",
+    "choices": [
+      "AWS Systems Manager",
+      "Amazon Cognito",
+      "AWS CloudHSM",
+      "AWS Elemental MediaConvert"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Systems Manager</strong> is correct because Systems Manager supports patching, inventory, automation, and operational control.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Systems Manager</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 549,
+    "text": "Which AWS service is designed for tracing requests across distributed applications?",
+    "choices": [
+      "AWS X-Ray",
+      "AWS CloudFormation",
+      "AWS IAM",
+      "AWS Backup"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS X-Ray</strong> is correct because X-Ray traces requests through distributed systems to identify latency and errors.</p><p>Example: in a Solution Architect design, you would choose <code>AWS X-Ray</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 550,
+    "text": "Which AWS service lets you migrate data between heterogeneous databases with minimal downtime?",
+    "choices": [
+      "AWS Database Migration Service",
+      "AWS Snowmobile",
+      "AWS AppSync",
+      "Amazon Detective"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Database Migration Service</strong> is correct because DMS migrates and replicates data between supported source and target databases.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Database Migration Service</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 551,
+    "text": "Which AWS service is commonly used for hybrid file, tape, and volume storage integration with on-premises environments?",
+    "choices": [
+      "AWS Storage Gateway",
+      "Amazon FSx for Lustre",
+      "AWS Global Accelerator",
+      "Amazon MQ"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Storage Gateway</strong> is correct because Storage Gateway connects on-premises environments to AWS storage services.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Storage Gateway</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 552,
+    "text": "Which AWS service helps move large amounts of data physically into AWS using edge devices?",
+    "choices": [
+      "AWS Snowball",
+      "AWS Direct Connect",
+      "Amazon Inspector",
+      "AWS IAM Access Analyzer"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Snowball</strong> is correct because Snowball devices are used for large-scale offline data transfer into or out of AWS.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Snowball</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 553,
+    "text": "Which AWS service provides continuously updated documentation and reports related to AWS compliance programs?",
+    "choices": [
+      "AWS Artifact",
+      "AWS Config",
+      "AWS Shield",
+      "Amazon Athena"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Artifact</strong> is correct because Artifact gives access to compliance documents and agreements.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Artifact</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 554,
+    "text": "Which AWS tool helps estimate monthly costs before deploying infrastructure?",
+    "choices": [
+      "AWS Pricing Calculator",
+      "AWS Glue",
+      "Amazon Rekognition",
+      "AWS Lake Formation"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Pricing Calculator</strong> is correct because The Pricing Calculator estimates service costs for planned architectures.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Pricing Calculator</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 555,
+    "text": "Which AWS billing feature helps enforce spending thresholds with alerts?",
+    "choices": [
+      "AWS Budgets",
+      "AWS App Mesh",
+      "CloudFront Functions",
+      "Amazon Chime"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Budgets</strong> is correct because AWS Budgets sends alerts when usage or costs exceed thresholds.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Budgets</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 556,
+    "text": "Which Amazon S3 feature automatically transitions objects between storage classes based on access patterns?",
+    "choices": [
+      "S3 Intelligent-Tiering",
+      "S3 Glacier Deep Archive only",
+      "EBS snapshot manager",
+      "Route 53 health checks"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>S3 Intelligent-Tiering</strong> is correct because Intelligent-Tiering optimizes storage cost by moving objects based on usage.</p><p>Example: in a Solution Architect design, you would choose <code>S3 Intelligent-Tiering</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 557,
+    "text": "Which S3 feature is commonly used to recover accidentally deleted or overwritten objects?",
+    "choices": [
+      "Versioning",
+      "Requester Pays",
+      "Transfer Acceleration",
+      "Bucket owner enforced ACLs"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Versioning</strong> is correct because Versioning preserves prior object versions for recovery.</p><p>Example: in a Solution Architect design, you would choose <code>Versioning</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 558,
+    "text": "Which S3 feature can replicate objects automatically to another AWS Region?",
+    "choices": [
+      "Cross-Region Replication",
+      "Multipart Upload",
+      "S3 Select",
+      "S3 Object Lambda"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Cross-Region Replication</strong> is correct because Cross-Region Replication copies objects between buckets in different regions.</p><p>Example: in a Solution Architect design, you would choose <code>Cross-Region Replication</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 559,
+    "text": "Which AWS service lets you query data directly in S3 using standard SQL without provisioning servers?",
+    "choices": [
+      "Amazon Athena",
+      "Amazon RDS Proxy",
+      "AWS App Runner",
+      "Amazon Lightsail"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Athena</strong> is correct because Athena is a serverless query service for data stored in S3.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Athena</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 560,
+    "text": "Which AWS service is best suited for a data lake governance layer with central permissions over S3 data?",
+    "choices": [
+      "AWS Lake Formation",
+      "Amazon Inspector",
+      "AWS Shield",
+      "Amazon MQ"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Lake Formation</strong> is correct because Lake Formation helps build and secure data lakes with centralized permissions.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Lake Formation</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 561,
+    "text": "Which AWS service is used for extract, transform, and load jobs at scale?",
+    "choices": [
+      "AWS Glue",
+      "AWS CloudTrail",
+      "Amazon VPC Lattice",
+      "Amazon Lex"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Glue</strong> is correct because Glue is a managed ETL and data integration service.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Glue</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 562,
+    "text": "Which DynamoDB feature helps automatically expire items after a certain time?",
+    "choices": [
+      "Time to Live",
+      "DAX",
+      "Global Tables only",
+      "Streams only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Time to Live</strong> is correct because TTL automatically deletes expired items after a configured timestamp.</p><p>Example: in a Solution Architect design, you would choose <code>Time to Live</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 563,
+    "text": "Which DynamoDB capability provides active-active multi-Region replication?",
+    "choices": [
+      "Global Tables",
+      "Provisioned Throughput",
+      "Streams",
+      "PartiQL only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Global Tables</strong> is correct because Global Tables replicate tables across regions for low-latency multi-Region access.</p><p>Example: in a Solution Architect design, you would choose <code>Global Tables</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 564,
+    "text": "Which DynamoDB feature captures item-level changes for downstream processing?",
+    "choices": [
+      "DynamoDB Streams",
+      "Point-in-time recovery",
+      "Scan operations",
+      "Sparse indexes"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>DynamoDB Streams</strong> is correct because Streams records changes to table items for event-driven processing.</p><p>Example: in a Solution Architect design, you would choose <code>DynamoDB Streams</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 565,
+    "text": "Which AWS service provides a fully managed graph database optimized for highly connected data?",
+    "choices": [
+      "Amazon Neptune",
+      "Amazon Aurora",
+      "Amazon Timestream",
+      "Amazon ElastiCache"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Neptune</strong> is correct because Neptune is built for graph use cases such as social graphs and recommendations.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Neptune</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 566,
+    "text": "Which AWS service is best for time-series data such as IoT telemetry and operational metrics?",
+    "choices": [
+      "Amazon Timestream",
+      "Amazon Quantum Ledger Database",
+      "AWS Backup",
+      "Amazon Translate"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Timestream</strong> is correct because Timestream is purpose-built for time-series workloads.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Timestream</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 567,
+    "text": "Which AWS service is a managed ledger database with an immutable transaction log?",
+    "choices": [
+      "Amazon QLDB",
+      "Amazon RDS",
+      "AWS Fargate",
+      "Amazon Kinesis Data Firehose"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon QLDB</strong> is correct because QLDB is designed for systems that require a cryptographically verifiable transaction history.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon QLDB</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 568,
+    "text": "Which AWS service is used for real-time data ingestion and analytics from streaming sources?",
+    "choices": [
+      "Amazon Kinesis",
+      "Amazon Route 53",
+      "AWS Artifact",
+      "Amazon SES"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Kinesis</strong> is correct because Kinesis supports real-time streaming ingestion and processing.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Kinesis</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 569,
+    "text": "Which Kinesis service is commonly used to deliver streaming data into S3, Redshift, or OpenSearch?",
+    "choices": [
+      "Kinesis Data Firehose",
+      "Kinesis Video Streams",
+      "Amazon MQ",
+      "CloudHSM"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Kinesis Data Firehose</strong> is correct because Data Firehose delivers streaming data to storage and analytics destinations.</p><p>Example: in a Solution Architect design, you would choose <code>Kinesis Data Firehose</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 570,
+    "text": "Which AWS service can route users to the closest healthy endpoint using anycast IPs to improve performance?",
+    "choices": [
+      "AWS Global Accelerator",
+      "AWS Config",
+      "Amazon Inspector",
+      "AWS Batch"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Global Accelerator</strong> is correct because Global Accelerator improves global application availability and performance.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Global Accelerator</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 571,
+    "text": "Which AWS service can manage DNS failover using health checks?",
+    "choices": [
+      "Amazon Route 53",
+      "AWS IAM",
+      "Amazon SQS",
+      "AWS Fargate"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Route 53</strong> is correct because Route 53 health checks and failover routing can direct traffic away from unhealthy endpoints.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Route 53</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 572,
+    "text": "Which AWS architecture pattern improves resilience by deploying resources across multiple Availability Zones?",
+    "choices": [
+      "Multi-AZ design",
+      "Single instance design",
+      "One subnet design",
+      "Dedicated host only design"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Multi-AZ design</strong> is correct because Multi-AZ design reduces single-AZ failure risk by spreading resources.</p><p>Example: in a Solution Architect design, you would choose <code>Multi-AZ design</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 573,
+    "text": "Which EC2 purchasing option is best for fault-tolerant workloads that can handle interruption and want major cost savings?",
+    "choices": [
+      "Spot Instances",
+      "On-Demand Instances only",
+      "Dedicated Hosts",
+      "Reserved Capacity Blocks"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Spot Instances</strong> is correct because Spot Instances provide significant savings in exchange for possible interruption.</p><p>Example: in a Solution Architect design, you would choose <code>Spot Instances</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 574,
+    "text": "Which EC2 purchasing option is best when you need long-term predictable usage discounts?",
+    "choices": [
+      "Reserved Instances",
+      "Spot Instances",
+      "Scheduled Instances only",
+      "Savings suspended mode"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Reserved Instances</strong> is correct because Reserved pricing options reduce cost for steady long-term workloads.</p><p>Example: in a Solution Architect design, you would choose <code>Reserved Instances</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 575,
+    "text": "Which AWS pricing model is most flexible when capacity needs are unpredictable and no long-term commitment is desired?",
+    "choices": [
+      "On-Demand pricing",
+      "Reserved Instances only",
+      "Savings Plans only",
+      "Spot Fleets only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>On-Demand pricing</strong> is correct because On-Demand pricing is pay-as-you-go with no upfront commitment.</p><p>Example: in a Solution Architect design, you would choose <code>On-Demand pricing</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 576,
+    "text": "Which EC2 feature allows you to define reusable launch settings such as AMI, instance type, and security groups for Auto Scaling?",
+    "choices": [
+      "Launch Template",
+      "Placement Group",
+      "Security Hub",
+      "Storage Lens"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Launch Template</strong> is correct because Launch Templates centralize EC2 configuration for launches and Auto Scaling.</p><p>Example: in a Solution Architect design, you would choose <code>Launch Template</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 577,
+    "text": "Which EC2 placement option is designed to keep instances physically close together for low-latency workloads?",
+    "choices": [
+      "Cluster Placement Group",
+      "Spread Placement Group",
+      "Partition Placement Group",
+      "Elastic Fabric Adapter only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Cluster Placement Group</strong> is correct because Cluster placement groups place instances near each other for high throughput and low latency.</p><p>Example: in a Solution Architect design, you would choose <code>Cluster Placement Group</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 578,
+    "text": "Which AWS service provides centralized findings for security posture across multiple AWS security services?",
+    "choices": [
+      "AWS Security Hub",
+      "Amazon S3",
+      "Amazon EventBridge Pipes",
+      "Route 53 ARC"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Security Hub</strong> is correct because Security Hub aggregates and prioritizes security findings across AWS services.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Security Hub</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 579,
+    "text": "Which AWS service can analyze IAM policies and resource policies to identify unintended public or cross-account access?",
+    "choices": [
+      "AWS IAM Access Analyzer",
+      "AWS Glue Studio",
+      "Amazon MQ",
+      "AWS DataSync"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS IAM Access Analyzer</strong> is correct because IAM Access Analyzer helps detect overly broad access exposure.</p><p>Example: in a Solution Architect design, you would choose <code>AWS IAM Access Analyzer</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 580,
+    "text": "Which AWS service helps assess software vulnerabilities and unintended network exposure on workloads?",
+    "choices": [
+      "Amazon Inspector",
+      "Amazon Chime SDK",
+      "AWS Budgets",
+      "CloudFront"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Inspector</strong> is correct because Inspector scans workloads for vulnerabilities and security issues.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Inspector</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 581,
+    "text": "Which AWS managed service is designed for centralized log analytics and search using OpenSearch APIs?",
+    "choices": [
+      "Amazon OpenSearch Service",
+      "Amazon Lex",
+      "AWS Step Functions",
+      "AWS Snowcone"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon OpenSearch Service</strong> is correct because OpenSearch Service is used for log analytics, search, and observability workloads.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon OpenSearch Service</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 582,
+    "text": "Which AWS service provides a managed Apache Kafka offering?",
+    "choices": [
+      "Amazon MSK",
+      "Amazon MQ only",
+      "Kinesis Data Streams",
+      "AWS App Mesh"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon MSK</strong> is correct because MSK is a managed service for running Apache Kafka clusters.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon MSK</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 583,
+    "text": "Which AWS service is best for sharing a private REST API with services inside a VPC using private connectivity?",
+    "choices": [
+      "Private API Gateway endpoint",
+      "Public S3 website endpoint",
+      "CloudTrail trail",
+      "Internet Gateway route"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Private API Gateway endpoint</strong> is correct because Private API Gateway endpoints expose APIs privately through VPC endpoints.</p><p>Example: in a Solution Architect design, you would choose <code>Private API Gateway endpoint</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 584,
+    "text": "Which AWS feature allows private connectivity from a VPC to supported AWS services without traversing the public internet?",
+    "choices": [
+      "VPC Endpoint",
+      "Elastic IP",
+      "NACL",
+      "Route table propagation only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>VPC Endpoint</strong> is correct because VPC endpoints connect privately to AWS services from within a VPC.</p><p>Example: in a Solution Architect design, you would choose <code>VPC Endpoint</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 585,
+    "text": "Which type of VPC endpoint is used for services such as S3 and DynamoDB?",
+    "choices": [
+      "Gateway endpoint",
+      "Interface endpoint only",
+      "Internet endpoint",
+      "Transit endpoint"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Gateway endpoint</strong> is correct because Gateway endpoints are the endpoint type used for S3 and DynamoDB.</p><p>Example: in a Solution Architect design, you would choose <code>Gateway endpoint</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 586,
+    "text": "Which VPC security feature acts as a stateful virtual firewall at the instance level?",
+    "choices": [
+      "Security Group",
+      "Network ACL only",
+      "Route Table",
+      "Transit Gateway"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Security Group</strong> is correct because Security groups are stateful and filter traffic for ENIs and instances.</p><p>Example: in a Solution Architect design, you would choose <code>Security Group</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 587,
+    "text": "Which VPC security feature acts as a stateless filter at the subnet boundary?",
+    "choices": [
+      "Network ACL",
+      "Security Group",
+      "Internet Gateway",
+      "Direct Connect gateway"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Network ACL</strong> is correct because Network ACLs are stateless and control traffic in and out of subnets.</p><p>Example: in a Solution Architect design, you would choose <code>Network ACL</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 588,
+    "text": "Which AWS service is best for managing user sign-up, sign-in, and federated identity for web or mobile apps?",
+    "choices": [
+      "Amazon Cognito",
+      "AWS Artifact",
+      "Amazon Aurora",
+      "AWS Backup"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon Cognito</strong> is correct because Cognito handles user identity, authentication, and federation flows.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon Cognito</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 589,
+    "text": "Which AWS service helps build a disaster recovery strategy by replicating servers to AWS and orchestrating failover?",
+    "choices": [
+      "AWS Elastic Disaster Recovery",
+      "AWS Config",
+      "Amazon Pinpoint",
+      "AWS Outposts"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Elastic Disaster Recovery</strong> is correct because Elastic Disaster Recovery replicates workloads to AWS for fast recovery.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Elastic Disaster Recovery</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 590,
+    "text": "Which AWS service is used to centrally back up data across AWS services?",
+    "choices": [
+      "AWS Backup",
+      "Amazon EventBridge",
+      "AWS IQ",
+      "CloudFront Functions"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Backup</strong> is correct because AWS Backup manages backup policies and recovery across multiple services.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Backup</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 591,
+    "text": "Which AWS Well-Architected pillar focuses on minimizing environmental impacts while maximizing resource efficiency?",
+    "choices": [
+      "Sustainability",
+      "Elasticity only",
+      "Monolithic design",
+      "Single tenant isolation only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Sustainability</strong> is correct because Sustainability is a Well-Architected pillar focused on efficient resource usage.</p><p>Example: in a Solution Architect design, you would choose <code>Sustainability</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 592,
+    "text": "Which AWS Well-Architected pillar focuses on protecting information, systems, and assets?",
+    "choices": [
+      "Security",
+      "Performance Efficiency only",
+      "Sustainability only",
+      "Server consolidation only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Security</strong> is correct because The Security pillar addresses identity, detection, infrastructure protection, and data protection.</p><p>Example: in a Solution Architect design, you would choose <code>Security</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 593,
+    "text": "Which AWS Well-Architected pillar focuses on recovering quickly from failures and meeting demand?",
+    "choices": [
+      "Reliability",
+      "Marketing",
+      "Documentation",
+      "Migration"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Reliability</strong> is correct because The Reliability pillar covers recovery, change management, and fault tolerance.</p><p>Example: in a Solution Architect design, you would choose <code>Reliability</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 594,
+    "text": "Which AWS Well-Architected pillar emphasizes using computing resources efficiently as demand changes?",
+    "choices": [
+      "Performance Efficiency",
+      "Business Agility",
+      "Compliance Auditing",
+      "Cost Recovery"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Performance Efficiency</strong> is correct because Performance Efficiency focuses on selecting and using resources efficiently.</p><p>Example: in a Solution Architect design, you would choose <code>Performance Efficiency</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 595,
+    "text": "Which AWS Well-Architected pillar focuses on avoiding unnecessary cost?",
+    "choices": [
+      "Cost Optimization",
+      "Legacy retention",
+      "Static overprovisioning",
+      "Manual scaling only"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Cost Optimization</strong> is correct because Cost Optimization is about spending only what is needed for business value.</p><p>Example: in a Solution Architect design, you would choose <code>Cost Optimization</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 596,
+    "text": "Which AWS service helps architects review workloads against best practices using lenses and improvement plans?",
+    "choices": [
+      "AWS Well-Architected Tool",
+      "Amazon Route 53 ARC",
+      "AWS Control Tower",
+      "AWS Snowmobile"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Well-Architected Tool</strong> is correct because The Well-Architected Tool supports structured architecture reviews and remediation planning.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Well-Architected Tool</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 597,
+    "text": "Which AWS service is used to create and manage multi-account landing zones with guardrails?",
+    "choices": [
+      "AWS Control Tower",
+      "AWS Certificate Manager",
+      "Amazon Polly",
+      "AWS Data Exchange"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Control Tower</strong> is correct because Control Tower sets up governed multi-account environments with guardrails.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Control Tower</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 598,
+    "text": "Which AWS service is used to issue and manage public or private TLS certificates?",
+    "choices": [
+      "AWS Certificate Manager",
+      "Amazon Macie",
+      "AWS AppSync",
+      "Amazon RDS Proxy"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>AWS Certificate Manager</strong> is correct because ACM provisions and manages SSL/TLS certificates for supported AWS services.</p><p>Example: in a Solution Architect design, you would choose <code>AWS Certificate Manager</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 599,
+    "text": "Which AWS service can improve relational database scalability by pooling and managing connections?",
+    "choices": [
+      "Amazon RDS Proxy",
+      "AWS DMS",
+      "Amazon EFS",
+      "Amazon Athena"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>Amazon RDS Proxy</strong> is correct because RDS Proxy improves scalability and resilience by pooling database connections.</p><p>Example: in a Solution Architect design, you would choose <code>Amazon RDS Proxy</code> when that requirement matches the scenario.</p>"
+  },
+  {
+    "id": 600,
+    "text": "Which AWS service lets you run code close to users at CloudFront edge locations for lightweight customization?",
+    "choices": [
+      "CloudFront Functions",
+      "AWS Glue",
+      "Amazon MQ",
+      "AWS Batch"
+    ],
+    "correctIndex": 0,
+    "topic": "Aws",
+    "explanation": "<p><strong>CloudFront Functions</strong> is correct because CloudFront Functions runs lightweight JavaScript at edge locations for request and response manipulation.</p><p>Example: in a Solution Architect design, you would choose <code>CloudFront Functions</code> when that requirement matches the scenario.</p>"
+  }
+]
