@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 7401,
+    "text": "What does AMQ most commonly refer to in enterprise messaging contexts?",
+    "choices": [
+      "A messaging platform built around asynchronous message brokers",
+      "A SQL query optimizer",
+      "A frontend CSS library",
+      "A Java bytecode tool"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A messaging platform built around asynchronous message brokers</strong> is correct because AMQ commonly refers to messaging products and patterns used for asynchronous communication between systems.</p><p>Example: services may exchange order events through an AMQ broker instead of direct synchronous calls.</p>"
+  },
+  {
+    "id": 7402,
+    "text": "What is the main purpose of a message broker in an AMQ-based system?",
+    "choices": [
+      "To route and deliver messages between producers and consumers",
+      "To compile application source code",
+      "To replace all databases",
+      "To render HTML templates"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>To route and deliver messages between producers and consumers</strong> is correct because a broker decouples senders from receivers and manages message delivery, routing, and buffering.</p><p>Example: an order service can publish a message even if the email service is temporarily offline.</p>"
+  },
+  {
+    "id": 7403,
+    "text": "What is a producer in messaging?",
+    "choices": [
+      "A component that sends messages to a broker",
+      "A component that only reads messages",
+      "A database table used for logs",
+      "A container orchestration node"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A component that sends messages to a broker</strong> is correct because producers create messages and publish them to destinations such as queues or topics.</p><p>Example: a checkout service produces an <code>OrderCreated</code> message.</p>"
+  },
+  {
+    "id": 7404,
+    "text": "What is a consumer in messaging?",
+    "choices": [
+      "A component that receives and processes messages",
+      "A process that only creates topics",
+      "A type of load balancer",
+      "A Docker volume driver"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A component that receives and processes messages</strong> is correct because consumers subscribe to or poll for messages and then handle the business logic for each message.</p><p>Example: an email service consumes account-registration events to send welcome emails.</p>"
+  },
+  {
+    "id": 7405,
+    "text": "What is a queue in messaging?",
+    "choices": [
+      "A destination where messages are typically processed by one consumer from a competing group",
+      "A schema migration history table",
+      "A REST endpoint that only supports GET",
+      "A special Docker image layer"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A destination where messages are typically processed by one consumer from a competing group</strong> is correct because queues are commonly used for point-to-point messaging where each message is handled once by one receiving worker.</p><p>Example: payment jobs can be placed on a queue for background processing.</p>"
+  },
+  {
+    "id": 7406,
+    "text": "What is a topic in messaging?",
+    "choices": [
+      "A destination used for publish-subscribe style distribution",
+      "A table index in a relational database",
+      "A JVM heap tuning option",
+      "A file mounted into a container"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A destination used for publish-subscribe style distribution</strong> is correct because topics let multiple subscribers receive the same event stream rather than one worker taking exclusive ownership.</p><p>Example: inventory, analytics, and notifications can all subscribe to the same <code>OrderPlaced</code> topic.</p>"
+  },
+  {
+    "id": 7407,
+    "text": "What is point-to-point messaging?",
+    "choices": [
+      "A pattern where one message is typically handled by one consumer",
+      "A pattern where every subscriber gets every message",
+      "A way to bypass brokers completely",
+      "A type of SQL replication"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A pattern where one message is typically handled by one consumer</strong> is correct because point-to-point delivery is useful for work queues and task distribution.</p><p>Example: a queue of PDF generation jobs can be split across multiple workers.</p>"
+  },
+  {
+    "id": 7408,
+    "text": "What is publish-subscribe messaging?",
+    "choices": [
+      "A pattern where one published message can be delivered to multiple subscribers",
+      "A pattern where only one consumer is allowed ever",
+      "A way to write directly into a database",
+      "A style of frontend state management"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A pattern where one published message can be delivered to multiple subscribers</strong> is correct because pub-sub is used when the same event should fan out to several downstream systems.</p><p>Example: a user-registration event can trigger email, CRM sync, and analytics independently.</p>"
+  },
+  {
+    "id": 7409,
+    "text": "Why is asynchronous messaging useful?",
+    "choices": [
+      "It reduces temporal coupling between systems",
+      "It guarantees zero failures",
+      "It removes the need for monitoring",
+      "It replaces every API call"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>It reduces temporal coupling between systems</strong> is correct because asynchronous messaging lets producers continue without waiting for every consumer to finish immediately.</p><p>Example: checkout can complete and later trigger shipment preparation through a message.</p>"
+  },
+  {
+    "id": 7410,
+    "text": "What is temporal coupling in distributed systems?",
+    "choices": [
+      "A dependency on another system being available at the same moment",
+      "A rule about message TTL only",
+      "A method for sorting logs by timestamp",
+      "A type of CSS animation"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A dependency on another system being available at the same moment</strong> is correct because synchronous designs often fail when one component is unavailable because both sides must be online simultaneously.</p><p>Example: if service A must call service B directly, A fails when B is down.</p>"
+  },
+  {
+    "id": 7411,
+    "text": "What is a durable queue?",
+    "choices": [
+      "A queue configured so messages survive broker restarts when combined with persistent delivery",
+      "A queue that only stores messages in RAM",
+      "A queue that deletes messages immediately",
+      "A queue that can only have one producer"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A queue configured so messages survive broker restarts when combined with persistent delivery</strong> is correct because durability is important when messages represent business events that should not be lost during outages or restarts.</p><p>Example: an order event should still be available after a broker restart if it was persisted durably.</p>"
+  },
+  {
+    "id": 7412,
+    "text": "What is a persistent message?",
+    "choices": [
+      "A message stored so it can survive broker failure or restart according to broker capabilities",
+      "A message that can never expire",
+      "A message visible only to admins",
+      "A message sent over HTTPS only"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A message stored so it can survive broker failure or restart according to broker capabilities</strong> is correct because persistent delivery is commonly used for important business messages where reliability matters more than raw speed.</p><p>Example: payment instructions are often marked persistent.</p>"
+  },
+  {
+    "id": 7413,
+    "text": "What is a transient or non-persistent message?",
+    "choices": [
+      "A message that may be kept only in memory for faster but less durable delivery",
+      "A message that is automatically encrypted",
+      "A message duplicated to all queues",
+      "A dead-letter message"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A message that may be kept only in memory for faster but less durable delivery</strong> is correct because non-persistent delivery can be acceptable for less critical data such as metrics or temporary notifications.</p><p>Example: a live dashboard update may not need to survive broker restarts.</p>"
+  },
+  {
+    "id": 7414,
+    "text": "What is a message acknowledgment?",
+    "choices": [
+      "A signal from consumer to broker that a message was handled successfully",
+      "A way to create a queue",
+      "A replacement for retry logic",
+      "A TLS certificate exchange"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A signal from consumer to broker that a message was handled successfully</strong> is correct because acknowledgments help brokers know whether messages can be removed or should remain pending.</p><p>Example: a worker acknowledges a message only after saving the processed result.</p>"
+  },
+  {
+    "id": 7415,
+    "text": "Why are acknowledgments important?",
+    "choices": [
+      "They help prevent message loss when consumers fail mid-processing",
+      "They eliminate the need for queues",
+      "They guarantee exactly-once processing automatically",
+      "They only affect logging verbosity"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>They help prevent message loss when consumers fail mid-processing</strong> is correct because without acknowledgments, a broker may assume delivery succeeded even when the consumer crashed before finishing work.</p><p>Example: if a worker dies before acking, the broker may redeliver the message.</p>"
+  },
+  {
+    "id": 7416,
+    "text": "What happens if a consumer fails before acknowledging a message in many broker systems?",
+    "choices": [
+      "The message can be redelivered",
+      "The message is always deleted permanently",
+      "The queue is automatically destroyed",
+      "All producers are blocked indefinitely"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>The message can be redelivered</strong> is correct because redelivery is a core reliability behavior that lets another consumer attempt processing later.</p><p>Example: a failed invoice worker leaves the message available for another worker instance.</p>"
+  },
+  {
+    "id": 7417,
+    "text": "What is message redelivery?",
+    "choices": [
+      "Sending a previously delivered but unacknowledged message again",
+      "Rewriting the message body into a new format automatically",
+      "Deleting all duplicate messages",
+      "Sending a message only to backup queues"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Sending a previously delivered but unacknowledged message again</strong> is correct because redelivery is common when a consumer crashes or explicitly rejects a message without successful processing.</p><p>Example: a job can be retried after a temporary database outage.</p>"
+  },
+  {
+    "id": 7418,
+    "text": "What is idempotency in message consumers?",
+    "choices": [
+      "Processing the same message more than once without causing incorrect duplicate side effects",
+      "Ensuring every message is encrypted twice",
+      "Sending the same message to two brokers",
+      "A method for reducing queue depth"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Processing the same message more than once without causing incorrect duplicate side effects</strong> is correct because idempotent consumers are important because many brokers provide at-least-once delivery rather than exactly-once semantics.</p><p>Example: if the same payment event is seen twice, the billing system should not charge the customer twice.</p>"
+  },
+  {
+    "id": 7419,
+    "text": "Why do AMQ consumers often need idempotency?",
+    "choices": [
+      "Because duplicate delivery can happen in real systems",
+      "Because queues always reorder messages intentionally",
+      "Because topics never persist messages",
+      "Because acknowledgments are optional in production"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Because duplicate delivery can happen in real systems</strong> is correct because retries, crashes, and network issues can cause the same logical message to be delivered more than once.</p><p>Example: a consumer may write a processed-message ID to avoid repeating the same action.</p>"
+  },
+  {
+    "id": 7420,
+    "text": "What is a dead-letter queue?",
+    "choices": [
+      "A special queue for messages that could not be processed successfully",
+      "A queue that only accepts admin messages",
+      "A queue for metrics and tracing only",
+      "A queue that bypasses acknowledgments"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A special queue for messages that could not be processed successfully</strong> is correct because dead-letter queues isolate problematic messages so they do not block normal processing indefinitely.</p><p>Example: malformed order events can be routed to a DLQ for inspection.</p>"
+  },
+  {
+    "id": 7421,
+    "text": "Why are dead-letter queues useful?",
+    "choices": [
+      "They separate poison messages from the normal flow",
+      "They remove the need for brokers",
+      "They guarantee zero duplicates",
+      "They eliminate consumer code"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>They separate poison messages from the normal flow</strong> is correct because problematic messages can be investigated or replayed later without stopping healthy traffic.</p><p>Example: one invalid payload should not keep a business queue stuck forever.</p>"
+  },
+  {
+    "id": 7422,
+    "text": "What is a poison message?",
+    "choices": [
+      "A message that repeatedly fails processing",
+      "A message with a large payload only",
+      "A message sent over HTTP instead of TCP",
+      "A monitoring heartbeat"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A message that repeatedly fails processing</strong> is correct because poison messages often need special handling because retries alone will not fix malformed or incompatible content.</p><p>Example: a missing required field may cause every consumer attempt to fail the same way.</p>"
+  },
+  {
+    "id": 7423,
+    "text": "What is message ordering?",
+    "choices": [
+      "The sequence in which messages are delivered and processed",
+      "The number of queues in a cluster",
+      "A type of SSL certificate",
+      "A command to list topics"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>The sequence in which messages are delivered and processed</strong> is correct because some systems preserve order within a queue or partition, while others trade ordering for throughput and scale.</p><p>Example: account events may need ordering so debit and credit actions are applied correctly.</p>"
+  },
+  {
+    "id": 7424,
+    "text": "Why can strict ordering be difficult in distributed messaging?",
+    "choices": [
+      "Parallel consumers and retries can change processing order",
+      "Because brokers cannot store timestamps",
+      "Because durable queues disable ordering",
+      "Because topics only support one producer"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Parallel consumers and retries can change processing order</strong> is correct because once multiple workers and failure scenarios are introduced, maintaining total order becomes more complex.</p><p>Example: one slow message can cause later messages to complete first in another consumer path.</p>"
+  },
+  {
+    "id": 7425,
+    "text": "What is competing consumers pattern?",
+    "choices": [
+      "Multiple consumers processing messages from the same queue for scalability",
+      "Multiple producers writing to different databases",
+      "A queue where only one message may exist",
+      "A brokerless polling approach"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Multiple consumers processing messages from the same queue for scalability</strong> is correct because competing consumers help distribute workload and increase throughput for queue-based processing.</p><p>Example: five worker instances can share invoice-generation tasks from one queue.</p>"
+  },
+  {
+    "id": 7426,
+    "text": "What is load balancing in queue consumption?",
+    "choices": [
+      "Distributing messages across multiple consumers",
+      "Sending all messages to every subscriber",
+      "Removing duplicates before enqueueing",
+      "Encrypting routing keys"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Distributing messages across multiple consumers</strong> is correct because message brokers often spread queue work across consumers in the same group or queue subscription.</p><p>Example: one worker may handle message 1 while another handles message 2.</p>"
+  },
+  {
+    "id": 7427,
+    "text": "What is a message selector or filter concept generally used for?",
+    "choices": [
+      "Receiving only messages that match certain criteria",
+      "Compressing messages with a chosen algorithm",
+      "Creating only durable topics",
+      "Changing broker passwords at runtime"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Receiving only messages that match certain criteria</strong> is correct because selectors let consumers focus on relevant messages without processing every message on a destination.</p><p>Example: a consumer may receive only events where <code>region = EU</code>.</p>"
+  },
+  {
+    "id": 7428,
+    "text": "What is a routing key in topic-based messaging systems?",
+    "choices": [
+      "A value used by the broker to decide how to route a message",
+      "A TLS private key for encryption",
+      "A queue name backup file",
+      "A database primary key"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A value used by the broker to decide how to route a message</strong> is correct because routing keys enable flexible delivery patterns based on message classification or topic structure.</p><p>Example: a message with routing key <code>order.created</code> may go to different bound queues than <code>order.cancelled</code>.</p>"
+  },
+  {
+    "id": 7429,
+    "text": "What is a binding in broker terminology?",
+    "choices": [
+      "A rule connecting an exchange or topic-like router to a queue",
+      "A JVM memory region",
+      "A schema migration step",
+      "A Docker network alias"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A rule connecting an exchange or topic-like router to a queue</strong> is correct because bindings define which messages should flow from a routing component into a particular queue.</p><p>Example: a queue can be bound to receive only payment-related events.</p>"
+  },
+  {
+    "id": 7430,
+    "text": "What is an exchange in brokers like RabbitMQ?",
+    "choices": [
+      "A routing component that receives messages and forwards them according to rules",
+      "A queue that stores only failed messages",
+      "A local file used for snapshots",
+      "A consumer-side cache"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A routing component that receives messages and forwards them according to rules</strong> is correct because producers often publish to exchanges, and exchanges then decide which queues should get each message.</p><p>Example: a topic exchange can fan out one business event to multiple queues based on bindings.</p>"
+  },
+  {
+    "id": 7431,
+    "text": "What is a fanout exchange pattern?",
+    "choices": [
+      "Routing a message to all bound queues",
+      "Routing only to the first available queue",
+      "Discarding all unmatched messages",
+      "Persisting only to one node"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Routing a message to all bound queues</strong> is correct because fanout behavior is useful when every interested subscriber should receive the message regardless of key.</p><p>Example: a system-wide maintenance notice may go to several service-specific queues.</p>"
+  },
+  {
+    "id": 7432,
+    "text": "What is a direct exchange pattern?",
+    "choices": [
+      "Routing messages based on an exact routing key match",
+      "Routing all messages to every queue",
+      "Routing messages randomly",
+      "Storing messages only in memory"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Routing messages based on an exact routing key match</strong> is correct because direct routing is useful when consumers subscribe to clearly named event categories.</p><p>Example: a queue bound to <code>invoice.created</code> receives only that exact event key.</p>"
+  },
+  {
+    "id": 7433,
+    "text": "What is a topic exchange pattern?",
+    "choices": [
+      "Routing based on pattern matching in routing keys",
+      "Routing only durable messages",
+      "Routing only one message per second",
+      "Routing by TCP port number"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Routing based on pattern matching in routing keys</strong> is correct because topic exchanges allow wildcard-based subscriptions for flexible event categorization.</p><p>Example: a queue can subscribe to <code>order.*</code> and receive several order event types.</p>"
+  },
+  {
+    "id": 7434,
+    "text": "What is message TTL?",
+    "choices": [
+      "The time a message is allowed to live before expiring",
+      "The total topic limit",
+      "A transport-level TLS ticket",
+      "The number of consumers allowed"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>The time a message is allowed to live before expiring</strong> is correct because TTL prevents stale messages from being processed too late when they are no longer useful.</p><p>Example: a one-time verification code event may expire after a few minutes.</p>"
+  },
+  {
+    "id": 7435,
+    "text": "What happens to expired messages in many broker setups?",
+    "choices": [
+      "They may be dropped or moved to a dead-letter destination",
+      "They are always retried forever",
+      "They automatically become persistent",
+      "They are rerouted to all topics"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>They may be dropped or moved to a dead-letter destination</strong> is correct because expired messages are usually not delivered normally because their business value has passed.</p><p>Example: an outdated shipping quote request can be discarded after its TTL.</p>"
+  },
+  {
+    "id": 7436,
+    "text": "What is a delayed message?",
+    "choices": [
+      "A message scheduled to become available after some delay",
+      "A message that was accidentally lost",
+      "A message larger than the queue limit",
+      "A message that cannot be acknowledged"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A message scheduled to become available after some delay</strong> is correct because delayed delivery is useful for reminders, retries, and future-triggered workflows.</p><p>Example: send a payment reminder 24 hours after an invoice remains unpaid.</p>"
+  },
+  {
+    "id": 7437,
+    "text": "What is a retry queue pattern?",
+    "choices": [
+      "Requeueing failed messages into a controlled retry flow, often with delay",
+      "A queue that accepts only successful messages",
+      "A way to delete all failed messages immediately",
+      "A method of encrypting payloads"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Requeueing failed messages into a controlled retry flow, often with delay</strong> is correct because retry queues help avoid instant redelivery storms and can apply backoff before another attempt.</p><p>Example: a failed webhook event waits 5 minutes before retrying.</p>"
+  },
+  {
+    "id": 7438,
+    "text": "Why is exponential backoff useful with messaging retries?",
+    "choices": [
+      "It reduces pressure on failing downstream systems",
+      "It guarantees ordered delivery",
+      "It makes every retry immediate",
+      "It removes the need for dead-letter queues"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>It reduces pressure on failing downstream systems</strong> is correct because backoff gives dependencies time to recover instead of being hit continuously by retry storms.</p><p>Example: retries may wait 1 second, then 2, then 4, then 8 seconds.</p>"
+  },
+  {
+    "id": 7439,
+    "text": "What is throughput in a messaging system?",
+    "choices": [
+      "The amount of message traffic processed over time",
+      "The delay before a single message is sent",
+      "The number of topics per broker only",
+      "The broker memory limit"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>The amount of message traffic processed over time</strong> is correct because throughput measures overall capacity and is important for systems handling large event volumes.</p><p>Example: a broker may process thousands of messages per second at peak load.</p>"
+  },
+  {
+    "id": 7440,
+    "text": "What is latency in messaging?",
+    "choices": [
+      "The time it takes for a message to move from producer to consumer processing",
+      "The total size of a queue on disk",
+      "The number of consumers in a cluster",
+      "The cost of broker licensing"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>The time it takes for a message to move from producer to consumer processing</strong> is correct because latency matters when events drive near-real-time business actions.</p><p>Example: fraud alerts often need low latency so they are acted on quickly.</p>"
+  },
+  {
+    "id": 7441,
+    "text": "What is backpressure in messaging systems?",
+    "choices": [
+      "A mechanism or effect that slows producers or consumers when downstream capacity is limited",
+      "A way to permanently delete a queue",
+      "A TLS renegotiation process",
+      "A UI pattern for dashboards"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A mechanism or effect that slows producers or consumers when downstream capacity is limited</strong> is correct because backpressure helps prevent overload by acknowledging that consumers or brokers cannot absorb unlimited traffic instantly.</p><p>Example: a slow analytics consumer may require rate control to avoid memory buildup.</p>"
+  },
+  {
+    "id": 7442,
+    "text": "What is queue depth?",
+    "choices": [
+      "The number of messages waiting in a queue",
+      "The number of brokers in a cluster",
+      "The size of one message header",
+      "The count of producer threads only"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>The number of messages waiting in a queue</strong> is correct because queue depth is a basic operational metric that shows whether consumers are keeping up with incoming work.</p><p>Example: a growing queue depth can indicate a backlog or an unhealthy consumer group.</p>"
+  },
+  {
+    "id": 7443,
+    "text": "Why is queue depth an important metric?",
+    "choices": [
+      "It reveals backlog buildup and processing imbalance",
+      "It shows only CPU temperature",
+      "It replaces error monitoring",
+      "It guarantees ordering"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>It reveals backlog buildup and processing imbalance</strong> is correct because monitoring queue depth helps operators detect slow consumers, traffic spikes, or downstream failures early.</p><p>Example: if depth rises steadily, scaling consumers may be necessary.</p>"
+  },
+  {
+    "id": 7444,
+    "text": "What is consumer lag in streaming or partitioned systems?",
+    "choices": [
+      "How far a consumer is behind the latest available messages",
+      "The time a producer waits before publishing",
+      "A type of SSL trust store",
+      "A setting that disables acknowledgments"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>How far a consumer is behind the latest available messages</strong> is correct because lag shows whether consumers are keeping pace with the stream or falling behind.</p><p>Example: analytics workers may lag during a large burst of user activity.</p>"
+  },
+  {
+    "id": 7445,
+    "text": "What is prefetch or consumer prefetch count?",
+    "choices": [
+      "A limit on how many unacknowledged messages a broker sends to a consumer at once",
+      "A count of how many queues can exist on a broker",
+      "A setting for message encryption strength",
+      "A number of TCP ports reserved per topic"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A limit on how many unacknowledged messages a broker sends to a consumer at once</strong> is correct because prefetch helps balance throughput with fairness and memory usage across consumers.</p><p>Example: setting a smaller prefetch can prevent one worker from hoarding too many long-running jobs.</p>"
+  },
+  {
+    "id": 7446,
+    "text": "Why can a very high prefetch count be risky?",
+    "choices": [
+      "One consumer may hold many messages and cause imbalance or memory pressure",
+      "It disables persistence automatically",
+      "It makes queues durable by default",
+      "It prevents retries from happening"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>One consumer may hold many messages and cause imbalance or memory pressure</strong> is correct because an oversized prefetch can starve other consumers and increase the cost of failures before acknowledgments.</p><p>Example: a slow consumer with 500 prefetched jobs delays many other workers from receiving them.</p>"
+  },
+  {
+    "id": 7447,
+    "text": "What is exactly-once delivery usually considered in messaging practice?",
+    "choices": [
+      "A difficult guarantee that often still requires application-level safeguards",
+      "A property every broker provides automatically",
+      "A queue deletion mode",
+      "A synonym for non-durable delivery"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A difficult guarantee that often still requires application-level safeguards</strong> is correct because most real-world systems still rely on deduplication and idempotent handlers even when stronger semantics are advertised.</p><p>Example: consumers may store processed event IDs to prevent repeated side effects.</p>"
+  },
+  {
+    "id": 7448,
+    "text": "What is at-least-once delivery?",
+    "choices": [
+      "A message may be delivered more than once but should not be silently lost under normal conditions",
+      "A message is guaranteed to be processed only once",
+      "A message is delivered only if two brokers agree",
+      "A message is never retried"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A message may be delivered more than once but should not be silently lost under normal conditions</strong> is correct because at-least-once is common because it favors reliability, leaving duplicate handling to consumers.</p><p>Example: after a consumer crash, the broker may redeliver the same event later.</p>"
+  },
+  {
+    "id": 7449,
+    "text": "What is at-most-once delivery?",
+    "choices": [
+      "A message is delivered zero or one time, with loss possible in failure scenarios",
+      "A message is always duplicated",
+      "A message is stored in every queue",
+      "A message can only be processed after manual approval"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A message is delivered zero or one time, with loss possible in failure scenarios</strong> is correct because at-most-once semantics favor avoiding duplicates but accept the risk of loss if failures occur before handling completes.</p><p>Example: telemetry data might tolerate occasional loss better than billing events.</p>"
+  },
+  {
+    "id": 7450,
+    "text": "Why do business-critical systems often prefer at-least-once over at-most-once?",
+    "choices": [
+      "Because losing important messages is usually worse than handling duplicates",
+      "Because duplicates are impossible",
+      "Because acknowledgments do not exist",
+      "Because queues cannot persist data"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Because losing important messages is usually worse than handling duplicates</strong> is correct because critical workflows usually need strong delivery reliability even if consumers must be coded defensively.</p><p>Example: it is safer to potentially retry an invoice event than to lose it entirely.</p>"
+  },
+  {
+    "id": 7451,
+    "text": "What is message serialization?",
+    "choices": [
+      "Converting message data into a transferable format",
+      "Deleting old queue contents",
+      "Creating a TLS session",
+      "Assigning CPU cores to consumers"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Converting message data into a transferable format</strong> is correct because messages are often serialized as JSON, Avro, Protobuf, or another portable format before they are sent.</p><p>Example: an order object can be serialized to JSON before publishing.</p>"
+  },
+  {
+    "id": 7452,
+    "text": "Why is schema evolution important in AMQ systems?",
+    "choices": [
+      "Producers and consumers may be upgraded at different times",
+      "Because queues cannot persist schema-free data",
+      "Because brokers compile schemas at startup",
+      "Because it only affects Docker images"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Producers and consumers may be upgraded at different times</strong> is correct because message contracts live longer than one deployment, so changes must be designed to avoid breaking older consumers.</p><p>Example: adding an optional field is often safer than renaming a required field.</p>"
+  },
+  {
+    "id": 7453,
+    "text": "What is backward compatibility in a message schema?",
+    "choices": [
+      "New messages can still be read by older consumers",
+      "Old messages are always deleted on arrival",
+      "Consumers must be restarted for every field change",
+      "Only binary formats can support it"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>New messages can still be read by older consumers</strong> is correct because backward compatibility helps rolling upgrades succeed without forcing every component to update simultaneously.</p><p>Example: a new optional field should not break consumers that ignore it.</p>"
+  },
+  {
+    "id": 7454,
+    "text": "Why is versioning sometimes used in message contracts?",
+    "choices": [
+      "To manage incompatible changes explicitly",
+      "To guarantee encryption",
+      "To remove queue ordering constraints",
+      "To avoid monitoring brokers"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>To manage incompatible changes explicitly</strong> is correct because versioning can help when compatibility cannot be preserved cleanly in one shared schema.</p><p>Example: a <code>CustomerCreatedV2</code> payload may coexist during a migration period.</p>"
+  },
+  {
+    "id": 7455,
+    "text": "What is correlation ID in messaging?",
+    "choices": [
+      "An identifier used to connect related messages or tie requests to responses",
+      "The queue disk size",
+      "The broker password hash",
+      "The exchange type"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>An identifier used to connect related messages or tie requests to responses</strong> is correct because correlation IDs make tracing workflows much easier across asynchronous boundaries.</p><p>Example: a request message and its response can share the same correlation ID.</p>"
+  },
+  {
+    "id": 7456,
+    "text": "Why are correlation IDs useful?",
+    "choices": [
+      "They make it easier to trace one business flow across many messages and services",
+      "They replace acknowledgments",
+      "They enforce FIFO ordering",
+      "They reduce payload size automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>They make it easier to trace one business flow across many messages and services</strong> is correct because without correlation IDs, debugging multi-step asynchronous workflows can be much harder.</p><p>Example: support teams can trace one order across validation, billing, shipping, and notification messages.</p>"
+  },
+  {
+    "id": 7457,
+    "text": "What is request-reply messaging?",
+    "choices": [
+      "A pattern where a sender expects a response message to a request message",
+      "A queue that deletes every reply",
+      "A pattern where no consumer ever responds",
+      "A broker mode that disables topics"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A pattern where a sender expects a response message to a request message</strong> is correct because request-reply can simulate service calls asynchronously when a direct HTTP request is not ideal.</p><p>Example: a service sends a price-quote request and later receives a quote response message.</p>"
+  },
+  {
+    "id": 7458,
+    "text": "What is a reply-to destination?",
+    "choices": [
+      "A destination specified for responses to be sent back to the requester",
+      "A queue that stores dead letters only",
+      "A producer-side cache",
+      "A TLS certificate field"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A destination specified for responses to be sent back to the requester</strong> is correct because reply-to helps consumers know where they should send the resulting response message.</p><p>Example: the requester provides a temporary queue name for the response.</p>"
+  },
+  {
+    "id": 7459,
+    "text": "What is a temporary queue?",
+    "choices": [
+      "A short-lived queue often created for reply handling or session-specific use",
+      "A queue that never persists messages",
+      "A queue usable only by admins",
+      "A queue with no consumers allowed"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A short-lived queue often created for reply handling or session-specific use</strong> is correct because temporary queues are useful when one client needs a private place to receive responses for a limited time.</p><p>Example: a request-reply interaction can create a temporary response queue for one workflow.</p>"
+  },
+  {
+    "id": 7460,
+    "text": "Why is decoupling a major advantage of AMQ systems?",
+    "choices": [
+      "Producers and consumers can evolve and scale more independently",
+      "All services must share one database",
+      "Every component must deploy together",
+      "It eliminates the need for contracts"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Producers and consumers can evolve and scale more independently</strong> is correct because messaging creates a buffer and contract boundary that reduces direct operational dependencies between systems.</p><p>Example: the producer can continue sending events while a consumer is briefly offline.</p>"
+  },
+  {
+    "id": 7461,
+    "text": "What is fan-out in messaging?",
+    "choices": [
+      "One event triggering delivery to multiple downstream consumers",
+      "One queue being deleted from multiple brokers",
+      "One producer writing to one database table",
+      "One consumer processing only one message per day"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>One event triggering delivery to multiple downstream consumers</strong> is correct because fan-out is a common reason teams choose pub-sub messaging instead of synchronous callbacks.</p><p>Example: a single shipment event can update tracking, analytics, and customer notifications.</p>"
+  },
+  {
+    "id": 7462,
+    "text": "What is replay in messaging systems?",
+    "choices": [
+      "Reading or reprocessing past messages again",
+      "Deleting expired messages automatically",
+      "Sending only the newest message to each consumer",
+      "A type of TLS handshake"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Reading or reprocessing past messages again</strong> is correct because replay is useful for rebuilding views, recovering from bugs, or onboarding new consumers when the system retains event history.</p><p>Example: analytics can replay past order events to rebuild a dashboard.</p>"
+  },
+  {
+    "id": 7463,
+    "text": "What is a retention policy in a messaging system?",
+    "choices": [
+      "A rule for how long messages are kept",
+      "A way to choose a producer thread count",
+      "A consumer authentication method",
+      "A setting that forces exact ordering"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A rule for how long messages are kept</strong> is correct because retention affects storage usage, replay capability, and how long consumers can fall behind.</p><p>Example: an event stream might retain messages for 7 days.</p>"
+  },
+  {
+    "id": 7464,
+    "text": "Why might a system keep messages after consumers read them in some streaming platforms?",
+    "choices": [
+      "So other consumers can read later or historical replay remains possible",
+      "Because acknowledgments are forbidden",
+      "Because queues cannot delete messages",
+      "Because persistence always means permanent storage"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>So other consumers can read later or historical replay remains possible</strong> is correct because streaming systems often treat messages more like an append-only log than a one-time task queue.</p><p>Example: a new analytics service can read historical user events after it is deployed.</p>"
+  },
+  {
+    "id": 7465,
+    "text": "What is broker clustering?",
+    "choices": [
+      "Running multiple broker nodes together for scale or availability",
+      "Storing all messages in a single local file",
+      "A queue cleanup algorithm",
+      "A form of frontend component grouping"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Running multiple broker nodes together for scale or availability</strong> is correct because clustering can improve resilience and distribute load, depending on broker technology and configuration.</p><p>Example: one node failure may not take down the whole messaging platform.</p>"
+  },
+  {
+    "id": 7466,
+    "text": "Why is high availability important for AMQ brokers?",
+    "choices": [
+      "Many applications may depend on the broker as shared infrastructure",
+      "It is needed only for frontend logs",
+      "Because queues cannot persist data otherwise",
+      "Because topics always run in one process"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Many applications may depend on the broker as shared infrastructure</strong> is correct because if the broker is unavailable, producers and consumers may be blocked or degraded across multiple systems.</p><p>Example: order processing may slow dramatically if the central broker is offline.</p>"
+  },
+  {
+    "id": 7467,
+    "text": "What is a failover mechanism in messaging?",
+    "choices": [
+      "A way for clients or brokers to switch to healthy nodes when one fails",
+      "A command that deletes all queues",
+      "A format for binary payloads",
+      "A queue permission model"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A way for clients or brokers to switch to healthy nodes when one fails</strong> is correct because failover improves resilience by helping messaging clients reconnect or reroute when an outage happens.</p><p>Example: a producer reconnects to another broker node after its primary node goes down.</p>"
+  },
+  {
+    "id": 7468,
+    "text": "What is flow control in brokers?",
+    "choices": [
+      "Mechanisms that prevent producers or consumers from overwhelming broker resources",
+      "A UI pattern for admin dashboards",
+      "A command to list all exchanges",
+      "A way to disable durable queues"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Mechanisms that prevent producers or consumers from overwhelming broker resources</strong> is correct because flow control helps protect the broker when memory, disk, or network pressure becomes too high.</p><p>Example: producers may be slowed if queues are backing up faster than they are drained.</p>"
+  },
+  {
+    "id": 7469,
+    "text": "Why is monitoring AMQ infrastructure important?",
+    "choices": [
+      "Messaging problems can silently affect many dependent services",
+      "Brokers never need capacity planning",
+      "Only databases require alerts",
+      "Queue metrics are irrelevant in production"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Messaging problems can silently affect many dependent services</strong> is correct because observability is crucial because delays, backlogs, and dead letters can disrupt business flows even when applications still appear “up.”</p><p>Example: rising queue depth may signal a downstream processing outage before users complain.</p>"
+  },
+  {
+    "id": 7470,
+    "text": "Which metrics are especially useful for AMQ monitoring?",
+    "choices": [
+      "Queue depth, consumer lag, throughput, error counts, and dead-letter rates",
+      "Only CPU model name and screen resolution",
+      "Only total number of topics ever created",
+      "Only image tag versions"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Queue depth, consumer lag, throughput, error counts, and dead-letter rates</strong> is correct because these metrics reveal whether messages are moving, getting stuck, failing, or overwhelming consumers.</p><p>Example: a spike in DLQ rate may indicate a schema incompatibility deployment.</p>"
+  },
+  {
+    "id": 7471,
+    "text": "What is a message broker client library?",
+    "choices": [
+      "A library that applications use to connect to and interact with the broker",
+      "A broker-side storage driver only",
+      "A container image registry",
+      "A queue backup policy"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A library that applications use to connect to and interact with the broker</strong> is correct because client libraries handle connections, sessions, publishing, consuming, and protocol details for the application.</p><p>Example: a Spring application may use a client library to publish events to RabbitMQ.</p>"
+  },
+  {
+    "id": 7472,
+    "text": "What is a connection in AMQ clients?",
+    "choices": [
+      "A network link between the application and the broker",
+      "A single message waiting in a queue",
+      "A copy of the queue on disk",
+      "A dead-letter binding"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A network link between the application and the broker</strong> is correct because connections are foundational resources used to establish communication with the broker service.</p><p>Example: a service often keeps a broker connection open instead of reconnecting for every message.</p>"
+  },
+  {
+    "id": 7473,
+    "text": "What is a channel or session in many messaging protocols?",
+    "choices": [
+      "A lightweight communication context multiplexed over a connection",
+      "A physical network cable",
+      "A schema registry topic",
+      "A backup queue partition"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A lightweight communication context multiplexed over a connection</strong> is correct because channels let one connection carry multiple independent streams of broker operations efficiently.</p><p>Example: a service may use separate channels for publishing and consuming.</p>"
+  },
+  {
+    "id": 7474,
+    "text": "Why is connection reuse usually preferred over reconnecting for every message?",
+    "choices": [
+      "Creating connections repeatedly is expensive and inefficient",
+      "Because connections can never fail",
+      "Because queues only allow one connection globally",
+      "Because acknowledgments require a new TCP socket every time"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Creating connections repeatedly is expensive and inefficient</strong> is correct because reusing connections and channels improves throughput and reduces unnecessary broker overhead.</p><p>Example: a long-running service typically pools or reuses messaging connections.</p>"
+  },
+  {
+    "id": 7475,
+    "text": "What is message batching?",
+    "choices": [
+      "Sending or processing multiple messages together for efficiency",
+      "Combining several queues into one permanent queue",
+      "Deleting messages in groups only",
+      "Encrypting messages with multiple keys"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Sending or processing multiple messages together for efficiency</strong> is correct because batching can improve throughput by reducing protocol overhead per message.</p><p>Example: analytics events may be published in batches rather than one by one.</p>"
+  },
+  {
+    "id": 7476,
+    "text": "What is a transactional messaging session in general terms?",
+    "choices": [
+      "A context where message operations can be committed or rolled back together",
+      "A queue that can only store one message",
+      "A broker mode with no acknowledgments",
+      "A network-only encryption feature"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A context where message operations can be committed or rolled back together</strong> is correct because transactions can provide stronger guarantees in some scenarios but often reduce throughput and add complexity.</p><p>Example: a batch of outgoing messages may be published only if the transaction commits.</p>"
+  },
+  {
+    "id": 7477,
+    "text": "Why can full distributed transactions across databases and brokers be avoided in many modern systems?",
+    "choices": [
+      "They are complex, slow, and often replaced with patterns like outbox or saga",
+      "Because messaging cannot be durable",
+      "Because brokers do not support acknowledgments",
+      "Because queues only work with SQL databases"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>They are complex, slow, and often replaced with patterns like outbox or saga</strong> is correct because modern architectures often prefer eventual consistency and compensating logic over heavyweight global transactions.</p><p>Example: save business data and an outbox record together, then publish later from the outbox.</p>"
+  },
+  {
+    "id": 7478,
+    "text": "What is the outbox pattern in messaging architecture?",
+    "choices": [
+      "Persisting an event record with business data and publishing it reliably afterward",
+      "Writing every message directly into a dead-letter queue",
+      "Sending HTTP responses from a broker topic",
+      "A compression format for payloads"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Persisting an event record with business data and publishing it reliably afterward</strong> is correct because the outbox pattern reduces dual-write problems where database updates and event publication could drift apart.</p><p>Example: an order row and an outbox event are stored in one database transaction.</p>"
+  },
+  {
+    "id": 7479,
+    "text": "Why is the outbox pattern valuable?",
+    "choices": [
+      "It helps keep business state changes and message publication aligned",
+      "It guarantees zero duplicates automatically",
+      "It removes the need for consumers",
+      "It disables persistence for performance"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>It helps keep business state changes and message publication aligned</strong> is correct because it improves reliability when one workflow needs both local database change and later event emission.</p><p>Example: an OrderCreated event is not forgotten after the order record is saved.</p>"
+  },
+  {
+    "id": 7480,
+    "text": "What is a saga in event-driven architecture?",
+    "choices": [
+      "A sequence of local transactions coordinated through messages or events",
+      "A queue cleanup utility",
+      "A schema registry user role",
+      "A type of SSL offload"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A sequence of local transactions coordinated through messages or events</strong> is correct because sagas help model long-running distributed business processes without one global ACID transaction.</p><p>Example: payment, inventory, and shipping steps can form one order-fulfillment saga.</p>"
+  },
+  {
+    "id": 7481,
+    "text": "What is a compensating action in a saga?",
+    "choices": [
+      "An action that undoes or offsets an earlier successful step",
+      "A special acknowledgment mode",
+      "A dead-letter retention policy",
+      "A producer load-balancing algorithm"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>An action that undoes or offsets an earlier successful step</strong> is correct because compensating steps help recover from partial success when a later stage of the workflow fails.</p><p>Example: refund a payment if shipment reservation cannot be completed.</p>"
+  },
+  {
+    "id": 7482,
+    "text": "What is message contract testing?",
+    "choices": [
+      "Testing that producers and consumers agree on payload structure and semantics",
+      "Testing the disk speed of a broker",
+      "Testing only queue depth thresholds",
+      "Testing container startup time"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Testing that producers and consumers agree on payload structure and semantics</strong> is correct because contract tests reduce integration surprises when teams evolve schemas independently.</p><p>Example: a provider test confirms required event fields still exist for a consumer.</p>"
+  },
+  {
+    "id": 7483,
+    "text": "Why is contract testing helpful in AMQ systems?",
+    "choices": [
+      "Because producer and consumer teams may release independently",
+      "Because broker clustering removes schema problems",
+      "Because JSON never changes",
+      "Because DLQs replace all testing"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Because producer and consumer teams may release independently</strong> is correct because asynchronous integrations can break silently if contracts drift, so proactive verification is valuable.</p><p>Example: a renamed field could otherwise fail consumers only after deployment.</p>"
+  },
+  {
+    "id": 7484,
+    "text": "What is schema registry conceptually?",
+    "choices": [
+      "A system that stores and validates message schemas",
+      "A queue type used only for retries",
+      "A service mesh proxy",
+      "A tool that assigns Docker tags"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A system that stores and validates message schemas</strong> is correct because schema registries help teams manage message versions and compatibility rules across services.</p><p>Example: producers can register Avro schemas and consumers can validate compatibility.</p>"
+  },
+  {
+    "id": 7485,
+    "text": "Why can binary formats like Avro or Protobuf be used in AMQ systems?",
+    "choices": [
+      "They offer structured schemas and efficient serialization",
+      "They are required by every broker",
+      "They eliminate the need for versioning",
+      "They only work with one consumer"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>They offer structured schemas and efficient serialization</strong> is correct because structured binary formats can reduce payload size and make schema evolution more explicit.</p><p>Example: high-throughput event streams often use Protobuf or Avro rather than plain JSON.</p>"
+  },
+  {
+    "id": 7486,
+    "text": "What is message compression?",
+    "choices": [
+      "Reducing payload size before transport or storage",
+      "Duplicating messages to improve safety",
+      "Encrypting a message end to end",
+      "Binding one queue to another"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Reducing payload size before transport or storage</strong> is correct because compression can improve throughput and storage efficiency when payloads are large or repetitive.</p><p>Example: batches of analytics events may be compressed before being sent.</p>"
+  },
+  {
+    "id": 7487,
+    "text": "What is request throttling for producers?",
+    "choices": [
+      "Limiting how fast producers publish messages",
+      "Deleting excess queues automatically",
+      "Changing a topic into a queue",
+      "A rule that blocks acknowledgments"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Limiting how fast producers publish messages</strong> is correct because throttling can protect brokers and downstream consumers during spikes or partial outages.</p><p>Example: a producer may slow down if a queue backlog exceeds a threshold.</p>"
+  },
+  {
+    "id": 7488,
+    "text": "Why is security important in AMQ systems?",
+    "choices": [
+      "Messages often carry business-critical or sensitive data",
+      "Because brokers cannot authenticate users",
+      "Because queues are always public by default",
+      "Because encryption is irrelevant inside networks"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Messages often carry business-critical or sensitive data</strong> is correct because messaging infrastructure is shared and can expose valuable data or control paths if left unsecured.</p><p>Example: payment events may contain identifiers that require controlled access.</p>"
+  },
+  {
+    "id": 7489,
+    "text": "What is authentication in broker security?",
+    "choices": [
+      "Verifying the identity of clients connecting to the broker",
+      "Choosing which queue gets a message",
+      "Deleting idle consumers",
+      "Compressing payloads"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Verifying the identity of clients connecting to the broker</strong> is correct because authentication ensures only approved applications or users can connect and interact with broker resources.</p><p>Example: a client may authenticate with username/password or certificates.</p>"
+  },
+  {
+    "id": 7490,
+    "text": "What is authorization in broker security?",
+    "choices": [
+      "Controlling what authenticated clients are allowed to do",
+      "Confirming network latency",
+      "Choosing message TTL automatically",
+      "Scheduling delayed delivery"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Controlling what authenticated clients are allowed to do</strong> is correct because authorization determines whether a client can publish, consume, create queues, or access management APIs.</p><p>Example: a service may be allowed to publish to one topic but not administer broker settings.</p>"
+  },
+  {
+    "id": 7491,
+    "text": "Why is TLS useful for messaging connections?",
+    "choices": [
+      "It encrypts data in transit and helps protect credentials and payloads",
+      "It replaces acknowledgments",
+      "It guarantees ordering",
+      "It stores messages durably on disk"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>It encrypts data in transit and helps protect credentials and payloads</strong> is correct because TLS reduces the risk of interception or tampering while clients and brokers communicate over networks.</p><p>Example: a producer can publish events securely across an internal network segment.</p>"
+  },
+  {
+    "id": 7492,
+    "text": "What is message encryption at the application level?",
+    "choices": [
+      "Encrypting the message payload itself in addition to transport security",
+      "Changing the routing key to a secret value",
+      "A broker-side compression method",
+      "Deleting messages after reading"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Encrypting the message payload itself in addition to transport security</strong> is correct because payload encryption may be used when sensitive data must remain unreadable even to some infrastructure components.</p><p>Example: personally identifiable data may be encrypted before publishing.</p>"
+  },
+  {
+    "id": 7493,
+    "text": "Why might teams encrypt payloads even when TLS is enabled?",
+    "choices": [
+      "TLS protects transport, while payload encryption can protect data beyond the network hop",
+      "Because TLS cannot authenticate clients",
+      "Because queues only accept encrypted JSON",
+      "Because encryption removes duplicate deliveries"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>TLS protects transport, while payload encryption can protect data beyond the network hop</strong> is correct because transport encryption and payload encryption solve different security concerns and can complement each other.</p><p>Example: encrypted payloads may remain protected in logs, storage, or intermediate systems.</p>"
+  },
+  {
+    "id": 7494,
+    "text": "What is broker authentication with certificates often called?",
+    "choices": [
+      "Mutual TLS or certificate-based authentication",
+      "Queue pinning",
+      "Ack chaining",
+      "Prefetch signing"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Mutual TLS or certificate-based authentication</strong> is correct because certificate-based authentication lets brokers verify client identity without relying only on passwords.</p><p>Example: production services may connect using client certificates issued by the organization.</p>"
+  },
+  {
+    "id": 7495,
+    "text": "What is a virtual host or namespace concept in some brokers?",
+    "choices": [
+      "A logical partition for isolating messaging resources",
+      "A hardware partition in the CPU",
+      "A type of local disk volume",
+      "A shell profile for admins"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>A logical partition for isolating messaging resources</strong> is correct because logical isolation helps separate teams, environments, or applications within one broker platform.</p><p>Example: dev and prod can use different broker namespaces with separate permissions.</p>"
+  },
+  {
+    "id": 7496,
+    "text": "Why is environment isolation important in AMQ platforms?",
+    "choices": [
+      "It reduces the risk of test traffic affecting production workloads",
+      "Because brokers cannot host multiple apps",
+      "Because topics must be globally unique forever",
+      "Because queues do not support permissions"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>It reduces the risk of test traffic affecting production workloads</strong> is correct because keeping non-production messaging separated avoids accidental data leakage or disruptive test traffic.</p><p>Example: staging consumers should never process live customer events from production.</p>"
+  },
+  {
+    "id": 7497,
+    "text": "What is a broker management UI commonly used for?",
+    "choices": [
+      "Inspecting queues, topics, consumers, and operational health",
+      "Compiling message schemas into bytecode",
+      "Serving business API traffic",
+      "Running Docker builds"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Inspecting queues, topics, consumers, and operational health</strong> is correct because management tools help administrators and developers troubleshoot backlog, connections, and configuration problems.</p><p>Example: an admin can inspect a queue backlog and DLQ contents through the UI.</p>"
+  },
+  {
+    "id": 7498,
+    "text": "Why should production access to broker management tools be controlled carefully?",
+    "choices": [
+      "They may expose sensitive data and powerful administrative actions",
+      "Because they cannot show metrics",
+      "Because they automatically delete old queues",
+      "Because only producers can use them"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>They may expose sensitive data and powerful administrative actions</strong> is correct because management interfaces are operationally powerful and should not be broadly accessible without need.</p><p>Example: an admin panel may allow purging queues or viewing confidential message samples.</p>"
+  },
+  {
+    "id": 7499,
+    "text": "What does purging a queue usually do?",
+    "choices": [
+      "Deletes all currently queued messages from that queue",
+      "Moves all messages to the DLQ",
+      "Creates a backup copy of the queue",
+      "Forces acknowledgments on all consumers"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>Deletes all currently queued messages from that queue</strong> is correct because purging is a destructive operation often used only when messages are known to be invalid or obsolete.</p><p>Example: a test queue full of stale data can be purged before the next test run.</p>"
+  },
+  {
+    "id": 7500,
+    "text": "Why should queue purging be done cautiously?",
+    "choices": [
+      "It can permanently discard important messages",
+      "It disables broker TLS",
+      "It changes all routing keys",
+      "It breaks message serialization"
+    ],
+    "correctIndex": 0,
+    "topic": "AMQ",
+    "explanation": "<p><strong>It can permanently discard important messages</strong> is correct because queues often contain business events or work items, so deletion can have serious consequences.</p><p>Example: purging an order queue could erase work that customers are expecting to be completed.</p>"
+  }
+]

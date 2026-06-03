@@ -41,6 +41,9 @@ function formatTopicLabel(topic) {
   if (topic === 'aws') {
     return 'AWS';
   }
+  if (topic === 'amq') {
+    return 'AMQ';
+  }
   if (topic === 'springboot') {
     return 'Spring Boot';
   }
