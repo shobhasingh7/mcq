@@ -86,6 +86,14 @@ export class AppComponent {
       && this.allQuestions.every((question) => this.answers[question.id] !== undefined);
   }
 
+  get selectedTopicLabel(): string {
+    if (!this.selectedTopic) {
+      return 'Topic';
+    }
+
+    return this.topics.find((topic) => topic.id === this.selectedTopic)?.label ?? this.selectedTopic;
+  }
+
   loadTopics(): void {
     this.loading = true;
     this.errorMessage = '';
