@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 7201,
+    "text": "What is Docker primarily used for?",
+    "choices": [
+      "Packaging and running applications in containers",
+      "Compiling Java bytecode only",
+      "Replacing all databases",
+      "Managing CSS themes"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Packaging and running applications in containers</strong> is correct because Docker packages an application with its dependencies so it can run consistently across environments.</p><p>Example: a Node.js API and its runtime can be shipped together in one container image.</p>"
+  },
+  {
+    "id": 7202,
+    "text": "What is a Docker image?",
+    "choices": [
+      "A read-only template used to create containers",
+      "A running process with mutable state",
+      "A host operating system kernel",
+      "A network load balancer"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A read-only template used to create containers</strong> is correct because an image contains the filesystem, runtime, and metadata needed to start containers.</p><p>Example: an image can include an app JAR, a JRE, and an entrypoint command.</p>"
+  },
+  {
+    "id": 7203,
+    "text": "What is a Docker container?",
+    "choices": [
+      "A running instance of a Docker image",
+      "A build script for images",
+      "A source code repository",
+      "A Linux user account"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A running instance of a Docker image</strong> is correct because containers are started from images and run as isolated processes on the host.</p><p>Example: starting two containers from the same image creates two separate running instances.</p>"
+  },
+  {
+    "id": 7204,
+    "text": "Which file is commonly used to define how a Docker image is built?",
+    "choices": [
+      "Dockerfile",
+      "docker-compose.yml",
+      "pom.xml",
+      "README.md"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Dockerfile</strong> is correct because a Dockerfile describes the steps and instructions Docker uses to assemble an image.</p><p>Example: it can copy application files and declare the command used at startup.</p>"
+  },
+  {
+    "id": 7205,
+    "text": "Which command is commonly used to build an image from a Dockerfile?",
+    "choices": [
+      "docker build",
+      "docker run",
+      "docker logs",
+      "docker cp"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker build</strong> is correct because the build command reads the Dockerfile and creates an image layer by layer.</p><p>Example: <code>docker build -t quiz-app .</code></p>"
+  },
+  {
+    "id": 7206,
+    "text": "Which command starts a new container from an image?",
+    "choices": [
+      "docker run",
+      "docker exec",
+      "docker inspect",
+      "docker tag"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker run</strong> is correct because the run command creates and starts a container from a selected image.</p><p>Example: <code>docker run -p 8080:8080 quiz-app</code></p>"
+  },
+  {
+    "id": 7207,
+    "text": "What does a Dockerfile FROM instruction do?",
+    "choices": [
+      "Specifies the base image",
+      "Copies files into the image",
+      "Publishes ports to the host",
+      "Creates a named volume"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Specifies the base image</strong> is correct because FROM sets the starting point for the image by choosing an existing base image.</p><p>Example: <code>FROM eclipse-temurin:21-jre</code></p>"
+  },
+  {
+    "id": 7208,
+    "text": "What does the COPY instruction do in a Dockerfile?",
+    "choices": [
+      "Copies files from the build context into the image",
+      "Downloads packages from a registry",
+      "Creates a runtime-only secret",
+      "Restarts the container"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Copies files from the build context into the image</strong> is correct because COPY is used to place application files, configs, or artifacts into the image filesystem.</p><p>Example: <code>COPY target/app.jar /app/app.jar</code></p>"
+  },
+  {
+    "id": 7209,
+    "text": "What does the RUN instruction do in a Dockerfile?",
+    "choices": [
+      "Executes a command during image build",
+      "Runs only when the container starts",
+      "Exposes a network port",
+      "Deletes the base image"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Executes a command during image build</strong> is correct because RUN is used for build-time steps like installing packages or preparing files.</p><p>Example: <code>RUN apt-get update && apt-get install -y curl</code></p>"
+  },
+  {
+    "id": 7210,
+    "text": "What does the CMD instruction usually define?",
+    "choices": [
+      "The default command for the container at startup",
+      "The base image name",
+      "The Docker host IP",
+      "The build context folder"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>The default command for the container at startup</strong> is correct because CMD provides the default runtime command if none is overridden when the container starts.</p><p>Example: <code>CMD [\"node\", \"server.js\"]</code></p>"
+  },
+  {
+    "id": 7211,
+    "text": "What is the difference between CMD and RUN?",
+    "choices": [
+      "RUN executes at build time while CMD provides the default runtime command",
+      "CMD creates images while RUN creates networks",
+      "RUN is only for Windows containers",
+      "There is no difference"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>RUN executes at build time while CMD provides the default runtime command</strong> is correct because they serve different phases: image creation versus container startup behavior.</p><p>Example: install dependencies with RUN, then start the app with CMD.</p>"
+  },
+  {
+    "id": 7212,
+    "text": "What does ENTRYPOINT usually define?",
+    "choices": [
+      "The main executable for the container",
+      "The exposed host port only",
+      "The image tag policy",
+      "The Docker registry password"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>The main executable for the container</strong> is correct because ENTRYPOINT fixes the executable so the container behaves like a dedicated command.</p><p>Example: <code>ENTRYPOINT [\"java\", \"-jar\", \"/app/app.jar\"]</code></p>"
+  },
+  {
+    "id": 7213,
+    "text": "Which instruction documents a port the container listens on?",
+    "choices": [
+      "EXPOSE",
+      "PUBLISH",
+      "BIND",
+      "OPEN"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>EXPOSE</strong> is correct because EXPOSE records the intended container port for documentation and tooling purposes.</p><p>Example: <code>EXPOSE 8080</code></p>"
+  },
+  {
+    "id": 7214,
+    "text": "Does EXPOSE publish a port to the host by itself?",
+    "choices": [
+      "No, it only documents the container port",
+      "Yes, it automatically opens the firewall",
+      "Yes, but only on Linux",
+      "Only when combined with COPY"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>No, it only documents the container port</strong> is correct because port publishing happens at runtime with options like <code>-p</code>, not from EXPOSE alone.</p><p>Example: you still need <code>docker run -p 8080:8080 ...</code>.</p>"
+  },
+  {
+    "id": 7215,
+    "text": "Which flag publishes a container port to the host?",
+    "choices": [
+      "-p",
+      "-v",
+      "-e",
+      "--rm"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>-p</strong> is correct because the <code>-p</code> flag maps a host port to a container port so external clients can reach the service.</p><p>Example: <code>-p 4200:80</code> maps host port 4200 to container port 80.</p>"
+  },
+  {
+    "id": 7216,
+    "text": "What does the -d flag do with docker run?",
+    "choices": [
+      "Runs the container in detached mode",
+      "Deletes the image after startup",
+      "Disables networking",
+      "Downloads missing source code"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Runs the container in detached mode</strong> is correct because detached mode starts the container in the background instead of attaching to the terminal.</p><p>Example: <code>docker run -d nginx</code></p>"
+  },
+  {
+    "id": 7217,
+    "text": "Which command shows running containers?",
+    "choices": [
+      "docker ps",
+      "docker ls",
+      "docker images",
+      "docker status"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker ps</strong> is correct because docker ps lists the containers currently running on the host.</p><p>Example: it shows container IDs, image names, and published ports.</p>"
+  },
+  {
+    "id": 7218,
+    "text": "Which command shows all containers including stopped ones?",
+    "choices": [
+      "docker ps -a",
+      "docker all",
+      "docker status --all",
+      "docker images -a"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker ps -a</strong> is correct because adding <code>-a</code> includes exited containers as well as running ones.</p><p>Example: useful when checking why a container exited unexpectedly.</p>"
+  },
+  {
+    "id": 7219,
+    "text": "Which command lists locally available images?",
+    "choices": [
+      "docker images",
+      "docker ps",
+      "docker events",
+      "docker top"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker images</strong> is correct because docker images shows repositories, tags, and image sizes stored on the machine.</p><p>Example: it helps confirm whether <code>quiz-app:latest</code> exists locally.</p>"
+  },
+  {
+    "id": 7220,
+    "text": "Which command removes a stopped container?",
+    "choices": [
+      "docker rm",
+      "docker delete-image",
+      "docker prune build",
+      "docker stop"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker rm</strong> is correct because docker rm deletes container metadata after the container has stopped.</p><p>Example: remove a test container after it exits to keep the host tidy.</p>"
+  },
+  {
+    "id": 7221,
+    "text": "Which command stops a running container gracefully?",
+    "choices": [
+      "docker stop",
+      "docker pause",
+      "docker remove",
+      "docker build"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker stop</strong> is correct because docker stop sends a termination signal and then forces shutdown only if needed after a timeout.</p><p>Example: stop a web server container before replacing it with a new version.</p>"
+  },
+  {
+    "id": 7222,
+    "text": "Which command forcibly terminates a running container immediately?",
+    "choices": [
+      "docker kill",
+      "docker stop --soft",
+      "docker break",
+      "docker end"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker kill</strong> is correct because docker kill sends a stronger signal immediately and is usually less graceful than docker stop.</p><p>Example: use it when a container ignores normal shutdown.</p>"
+  },
+  {
+    "id": 7223,
+    "text": "Which command displays logs from a container?",
+    "choices": [
+      "docker logs",
+      "docker cat",
+      "docker info",
+      "docker port"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker logs</strong> is correct because docker logs shows stdout and stderr output produced by the container process.</p><p>Example: checking logs can reveal startup errors or stack traces.</p>"
+  },
+  {
+    "id": 7224,
+    "text": "Which command allows you to execute a command inside a running container?",
+    "choices": [
+      "docker exec",
+      "docker enter-image",
+      "docker attach-build",
+      "docker shell"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker exec</strong> is correct because docker exec runs an additional command inside an already running container.</p><p>Example: <code>docker exec -it app sh</code></p>"
+  },
+  {
+    "id": 7225,
+    "text": "What does the -it combination commonly mean with docker exec or docker run?",
+    "choices": [
+      "Interactive terminal mode",
+      "Image tagging mode",
+      "Insecure transport mode",
+      "Incremental transfer mode"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Interactive terminal mode</strong> is correct because the combination allocates a pseudo-terminal and keeps stdin open for interactive use.</p><p>Example: it is commonly used to open a shell inside a container.</p>"
+  },
+  {
+    "id": 7226,
+    "text": "Which command shows detailed low-level information about a container or image?",
+    "choices": [
+      "docker inspect",
+      "docker history",
+      "docker env",
+      "docker envfile"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker inspect</strong> is correct because docker inspect returns structured metadata such as network settings, mounts, and configuration.</p><p>Example: it can show the container IP address or entrypoint configuration.</p>"
+  },
+  {
+    "id": 7227,
+    "text": "Which command shows the processes running inside a container?",
+    "choices": [
+      "docker top",
+      "docker ps inside",
+      "docker stat",
+      "docker proc"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker top</strong> is correct because docker top displays the process list for a given container.</p><p>Example: useful when confirming which command is actually running as PID 1.</p>"
+  },
+  {
+    "id": 7228,
+    "text": "Which command shows resource usage of running containers?",
+    "choices": [
+      "docker stats",
+      "docker usage",
+      "docker monitor",
+      "docker perf"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker stats</strong> is correct because docker stats streams CPU, memory, and network metrics for active containers.</p><p>Example: it helps identify a container using unusually high memory.</p>"
+  },
+  {
+    "id": 7229,
+    "text": "What is a Docker volume primarily used for?",
+    "choices": [
+      "Persisting data outside a container writable layer",
+      "Compiling Dockerfiles faster",
+      "Publishing ports to the host",
+      "Choosing an image tag"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Persisting data outside a container writable layer</strong> is correct because volumes let data survive container replacement and are the usual storage mechanism for persistent container data.</p><p>Example: a database container stores data in a volume so records remain after restart.</p>"
+  },
+  {
+    "id": 7230,
+    "text": "Which flag mounts a volume or bind mount into a container?",
+    "choices": [
+      "-v",
+      "-p",
+      "-d",
+      "--name-only"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>-v</strong> is correct because the <code>-v</code> flag attaches storage from the host or a named volume into the container filesystem.</p><p>Example: <code>-v pgdata:/var/lib/postgresql/data</code></p>"
+  },
+  {
+    "id": 7231,
+    "text": "What is a bind mount?",
+    "choices": [
+      "A direct mount of a host path into the container",
+      "A volume stored only in the registry",
+      "A special network alias",
+      "A read-only Dockerfile layer"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A direct mount of a host path into the container</strong> is correct because bind mounts use an existing host directory or file instead of a Docker-managed volume.</p><p>Example: mount local source code into a container during development.</p>"
+  },
+  {
+    "id": 7232,
+    "text": "When is a bind mount commonly useful?",
+    "choices": [
+      "During local development when container code should reflect host file changes",
+      "Only for production databases",
+      "Only for image pushes",
+      "Only for deleting images"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>During local development when container code should reflect host file changes</strong> is correct because bind mounts are handy when developers want live file edits from the host to be visible in the container.</p><p>Example: a frontend dev server container reads source files from the local project folder.</p>"
+  },
+  {
+    "id": 7233,
+    "text": "What is a named volume?",
+    "choices": [
+      "A Docker-managed persistent storage volume with a reusable name",
+      "A special image label",
+      "A read-only snapshot of a container",
+      "A network bridge alias"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A Docker-managed persistent storage volume with a reusable name</strong> is correct because named volumes are managed by Docker and can be attached to multiple containers when needed.</p><p>Example: a MySQL container can use a named volume called <code>mysql-data</code>.</p>"
+  },
+  {
+    "id": 7234,
+    "text": "Which command lists Docker volumes?",
+    "choices": [
+      "docker volume ls",
+      "docker volumes",
+      "docker storage ls",
+      "docker mount ls"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker volume ls</strong> is correct because the volume subcommand helps inspect storage objects managed by Docker.</p><p>Example: use it to confirm whether a named volume exists before attaching it.</p>"
+  },
+  {
+    "id": 7235,
+    "text": "Which command removes unused volumes?",
+    "choices": [
+      "docker volume prune",
+      "docker rm volumes",
+      "docker prune --storage-only",
+      "docker clean volume"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker volume prune</strong> is correct because pruning helps reclaim disk space by deleting dangling volumes that are no longer in use.</p><p>Example: useful after many test runs create abandoned volumes.</p>"
+  },
+  {
+    "id": 7236,
+    "text": "What is a Docker network?",
+    "choices": [
+      "A virtual network that connects containers and optionally the host",
+      "An image layer optimization",
+      "A Java package manager",
+      "A shell alias collection"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A virtual network that connects containers and optionally the host</strong> is correct because Docker networks allow containers to communicate using isolated or shared network configurations.</p><p>Example: a web container and a database container can talk over the same user-defined bridge network.</p>"
+  },
+  {
+    "id": 7237,
+    "text": "Which default network type do standalone containers often use if none is specified?",
+    "choices": [
+      "bridge",
+      "overlay",
+      "host",
+      "none-only"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>bridge</strong> is correct because the bridge network is the common default for local single-host Docker usage.</p><p>Example: a container started with no custom network joins the default bridge network.</p>"
+  },
+  {
+    "id": 7238,
+    "text": "What does the host network mode generally do?",
+    "choices": [
+      "Shares the host network stack with the container",
+      "Creates an isolated overlay network",
+      "Disables all network access",
+      "Adds automatic TLS"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Shares the host network stack with the container</strong> is correct because host networking removes network namespace isolation so the container uses host ports directly.</p><p>Example: this can reduce overhead but sacrifices normal port mapping isolation.</p>"
+  },
+  {
+    "id": 7239,
+    "text": "What does the none network mode do?",
+    "choices": [
+      "Disables container networking",
+      "Routes traffic through the host by default",
+      "Creates two bridge networks",
+      "Adds external DNS only"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Disables container networking</strong> is correct because none mode starts the container without network interfaces other than loopback.</p><p>Example: useful for tightly controlled offline batch workloads.</p>"
+  },
+  {
+    "id": 7240,
+    "text": "Which command creates a user-defined network?",
+    "choices": [
+      "docker network create",
+      "docker network new bridge",
+      "docker create network file",
+      "docker init network"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker network create</strong> is correct because user-defined networks make service-to-service communication easier and often provide built-in DNS resolution.</p><p>Example: create one network for an app container and its database.</p>"
+  },
+  {
+    "id": 7241,
+    "text": "Why are user-defined bridge networks often preferred over the default bridge?",
+    "choices": [
+      "They provide better isolation and built-in name resolution between containers",
+      "They remove the need for images",
+      "They always use host networking",
+      "They disable port publishing"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>They provide better isolation and built-in name resolution between containers</strong> is correct because custom bridge networks are easier to manage for multi-container apps and support container-name DNS.</p><p>Example: the API container can reach the database at <code>db</code> instead of using an IP address.</p>"
+  },
+  {
+    "id": 7242,
+    "text": "What is Docker Compose commonly used for?",
+    "choices": [
+      "Defining and running multi-container applications",
+      "Building kernels from source",
+      "Replacing all orchestration platforms",
+      "Managing only Docker Desktop themes"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Defining and running multi-container applications</strong> is correct because Compose lets developers declare services, networks, volumes, and environment variables in one file.</p><p>Example: a web app, API, and database can be started together from one configuration.</p>"
+  },
+  {
+    "id": 7243,
+    "text": "Which file name is commonly associated with Docker Compose?",
+    "choices": [
+      "docker-compose.yml or compose.yml",
+      "Dockerfile.compose",
+      "docker.yaml",
+      "compose.json only"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker-compose.yml or compose.yml</strong> is correct because Compose reads service definitions from a YAML file with one of the standard compose file names.</p><p>Example: a project root may contain <code>compose.yml</code> listing app and database services.</p>"
+  },
+  {
+    "id": 7244,
+    "text": "Which command starts services defined in a Compose file?",
+    "choices": [
+      "docker compose up",
+      "docker compose startfile",
+      "docker run compose",
+      "docker stack run"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker compose up</strong> is correct because the up command creates and starts the services declared in the Compose configuration.</p><p>Example: <code>docker compose up -d</code> starts the full app in detached mode.</p>"
+  },
+  {
+    "id": 7245,
+    "text": "Which command stops and removes services started by Docker Compose?",
+    "choices": [
+      "docker compose down",
+      "docker compose rm all",
+      "docker compose stop --delete",
+      "docker down compose"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker compose down</strong> is correct because the down command tears down containers, networks, and optionally related resources from a Compose app.</p><p>Example: use it after local testing is finished.</p>"
+  },
+  {
+    "id": 7246,
+    "text": "Where are environment variables commonly declared for a Compose service?",
+    "choices": [
+      "Under the environment section or in an env file",
+      "Only inside Docker Desktop settings",
+      "Only in image labels",
+      "Inside EXPOSE instructions"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Under the environment section or in an env file</strong> is correct because Compose supports service-specific environment variables directly in YAML or indirectly through env files.</p><p>Example: a database password can come from a <code>.env</code> file during local development.</p>"
+  },
+  {
+    "id": 7247,
+    "text": "What does docker compose logs show?",
+    "choices": [
+      "Logs from one or more Compose-managed services",
+      "Only image build history",
+      "Network routing tables",
+      "Volume mount permissions only"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Logs from one or more Compose-managed services</strong> is correct because Compose logs helps inspect output across a multi-service application defined in the compose file.</p><p>Example: see both API and database logs while troubleshooting startup issues.</p>"
+  },
+  {
+    "id": 7248,
+    "text": "What is a multi-stage Docker build?",
+    "choices": [
+      "A build that uses multiple FROM stages to reduce final image size and separate build tools from runtime",
+      "A build that can only run on multiple hosts",
+      "A network mode for Compose",
+      "A way to merge two registries"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A build that uses multiple FROM stages to reduce final image size and separate build tools from runtime</strong> is correct because multi-stage builds keep the final image lean by copying only needed artifacts from earlier build stages.</p><p>Example: compile a Java app in one stage and copy only the JAR into a minimal runtime stage.</p>"
+  },
+  {
+    "id": 7249,
+    "text": "Why are multi-stage builds useful?",
+    "choices": [
+      "They reduce final image size and attack surface",
+      "They require no Dockerfile",
+      "They automatically publish ports",
+      "They remove the need for tagging"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>They reduce final image size and attack surface</strong> is correct because smaller runtime images are often faster to pull and include fewer unnecessary tools or dependencies.</p><p>Example: the final image does not need Maven if Maven was only used in the build stage.</p>"
+  },
+  {
+    "id": 7250,
+    "text": "What is an image tag?",
+    "choices": [
+      "A label that identifies a specific image version",
+      "A runtime environment variable only",
+      "A host network interface",
+      "A container health check"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A label that identifies a specific image version</strong> is correct because tags help distinguish image variants such as versions, environments, or release candidates.</p><p>Example: <code>my-app:1.4.0</code> and <code>my-app:latest</code> are different tags.</p>"
+  },
+  {
+    "id": 7251,
+    "text": "Which command adds another tag to an existing image?",
+    "choices": [
+      "docker tag",
+      "docker label",
+      "docker alias image",
+      "docker rename image"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker tag</strong> is correct because docker tag creates another name reference pointing to the same local image ID.</p><p>Example: tag a locally built image before pushing it to a registry namespace.</p>"
+  },
+  {
+    "id": 7252,
+    "text": "What is Docker Hub?",
+    "choices": [
+      "A public container image registry",
+      "A container runtime inside Linux kernels",
+      "A type of volume driver",
+      "A local-only log viewer"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A public container image registry</strong> is correct because Docker Hub stores and distributes container images that can be pulled by name and tag.</p><p>Example: many official base images like <code>nginx</code> or <code>python</code> are hosted there.</p>"
+  },
+  {
+    "id": 7253,
+    "text": "Which command downloads an image from a registry?",
+    "choices": [
+      "docker pull",
+      "docker fetch-image",
+      "docker clone",
+      "docker checkout"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker pull</strong> is correct because pull retrieves an image and its layers from a configured registry.</p><p>Example: <code>docker pull postgres:16</code></p>"
+  },
+  {
+    "id": 7254,
+    "text": "Which command uploads an image to a registry?",
+    "choices": [
+      "docker push",
+      "docker upload-image",
+      "docker publish run",
+      "docker ship"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker push</strong> is correct because push sends a tagged local image to a remote registry so other hosts can pull it.</p><p>Example: push a CI-built image to Docker Hub or a private registry.</p>"
+  },
+  {
+    "id": 7255,
+    "text": "What is a container registry?",
+    "choices": [
+      "A service that stores and distributes container images",
+      "A runtime-only scheduler",
+      "A host kernel extension",
+      "A secret manager only"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A service that stores and distributes container images</strong> is correct because registries are the main distribution mechanism for container images across environments.</p><p>Example: Docker Hub, Amazon ECR, and GitHub Container Registry are all registries.</p>"
+  },
+  {
+    "id": 7256,
+    "text": "Why should container images usually be versioned with explicit tags in production?",
+    "choices": [
+      "To make deployments reproducible and avoid ambiguity",
+      "Because latest is always safest",
+      "Because images cannot be rebuilt",
+      "Because containers cannot be rolled back"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>To make deployments reproducible and avoid ambiguity</strong> is correct because explicit version tags help teams know exactly what was deployed and make rollback easier.</p><p>Example: deploy <code>api:2.3.1</code> instead of relying only on <code>latest</code>.</p>"
+  },
+  {
+    "id": 7257,
+    "text": "Why is relying only on the latest tag risky?",
+    "choices": [
+      "Its meaning can change over time and make deployments unpredictable",
+      "It prevents image pulling entirely",
+      "It disables caching",
+      "It forces root execution"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Its meaning can change over time and make deployments unpredictable</strong> is correct because latest is just another mutable tag, so it may point to different image content at different times.</p><p>Example: two environments may both use <code>latest</code> but actually run different builds.</p>"
+  },
+  {
+    "id": 7258,
+    "text": "What does docker history show?",
+    "choices": [
+      "The layer history of an image",
+      "Only running processes in a container",
+      "Compose service dependencies",
+      "Registry login tokens"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>The layer history of an image</strong> is correct because history reveals how an image was built and can highlight unexpectedly large layers.</p><p>Example: it helps diagnose why an image size increased after a Dockerfile change.</p>"
+  },
+  {
+    "id": 7259,
+    "text": "What does .dockerignore do?",
+    "choices": [
+      "Excludes files from the build context sent to Docker",
+      "Blocks network access from containers",
+      "Ignores image tags in a registry",
+      "Disables host volumes"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Excludes files from the build context sent to Docker</strong> is correct because .dockerignore reduces build context size and avoids copying unnecessary or sensitive files into builds.</p><p>Example: exclude <code>node_modules</code>, <code>target</code>, or local secrets.</p>"
+  },
+  {
+    "id": 7260,
+    "text": "Why is .dockerignore important?",
+    "choices": [
+      "It makes builds faster and avoids sending unnecessary files",
+      "It replaces volume mounts",
+      "It automatically secures every container",
+      "It publishes ports at build time"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>It makes builds faster and avoids sending unnecessary files</strong> is correct because smaller build contexts improve performance and reduce accidental leakage of local artifacts into the image build.</p><p>Example: do not send a huge <code>.git</code> folder to every build unless needed.</p>"
+  },
+  {
+    "id": 7261,
+    "text": "What is the Docker build context?",
+    "choices": [
+      "The set of files sent to the Docker daemon for a build",
+      "Only the final image layers",
+      "A running container filesystem",
+      "The Compose network definition"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>The set of files sent to the Docker daemon for a build</strong> is correct because Docker builds operate on the provided context, usually the current directory, rather than arbitrary host paths.</p><p>Example: <code>docker build .</code> uses the current folder as the context.</p>"
+  },
+  {
+    "id": 7262,
+    "text": "Why is keeping images small generally beneficial?",
+    "choices": [
+      "Smaller images are faster to transfer and often have fewer unnecessary components",
+      "They cannot run out of memory",
+      "They guarantee no vulnerabilities",
+      "They remove the need for logs"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Smaller images are faster to transfer and often have fewer unnecessary components</strong> is correct because lean images improve pull times and can reduce attack surface by containing fewer packages.</p><p>Example: using a slim runtime image usually deploys faster than a full build environment image.</p>"
+  },
+  {
+    "id": 7263,
+    "text": "What is a common reason to avoid running containers as root?",
+    "choices": [
+      "It reduces security risk if the container is compromised",
+      "It makes builds slower only",
+      "It disables volume mounts",
+      "It prevents logging"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>It reduces security risk if the container is compromised</strong> is correct because least-privilege practices help limit what an attacker can do if they escape or exploit the application.</p><p>Example: create a non-root user in the image before starting the app process.</p>"
+  },
+  {
+    "id": 7264,
+    "text": "Which Dockerfile instruction changes the active user for subsequent instructions and runtime?",
+    "choices": [
+      "USER",
+      "WHOAMI",
+      "ACCOUNT",
+      "RUNAS"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>USER</strong> is correct because USER sets which Linux user the following instructions and default container process should run as.</p><p>Example: <code>USER appuser</code></p>"
+  },
+  {
+    "id": 7265,
+    "text": "What does the WORKDIR instruction do?",
+    "choices": [
+      "Sets the working directory for subsequent Dockerfile instructions",
+      "Publishes the current folder as a volume",
+      "Changes the image tag",
+      "Creates a registry namespace"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Sets the working directory for subsequent Dockerfile instructions</strong> is correct because WORKDIR avoids repeating long paths and affects where commands run and files are copied relative to.</p><p>Example: <code>WORKDIR /app</code></p>"
+  },
+  {
+    "id": 7266,
+    "text": "Which Dockerfile instruction sets environment variables in the image?",
+    "choices": [
+      "ENV",
+      "SET",
+      "ARG",
+      "EXPORT"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>ENV</strong> is correct because ENV defines environment variables available during later build steps and at runtime unless overridden.</p><p>Example: <code>ENV NODE_ENV=production</code></p>"
+  },
+  {
+    "id": 7267,
+    "text": "What is the difference between ARG and ENV?",
+    "choices": [
+      "ARG is for build-time variables while ENV persists into the image runtime environment",
+      "ENV only works on Windows",
+      "ARG is always secret-safe",
+      "There is no practical difference"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>ARG is for build-time variables while ENV persists into the image runtime environment</strong> is correct because ARG is typically used during build, while ENV remains in the image and affects container runtime behavior.</p><p>Example: use ARG for a build version and ENV for application configuration defaults.</p>"
+  },
+  {
+    "id": 7268,
+    "text": "Should secrets usually be stored directly in a Dockerfile with ENV?",
+    "choices": [
+      "No, secrets should generally be provided through safer runtime or build mechanisms",
+      "Yes, that is the preferred secure method",
+      "Only for public images",
+      "Only when using Compose"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>No, secrets should generally be provided through safer runtime or build mechanisms</strong> is correct because baking secrets into images can leak them through image history, registries, or shared environments.</p><p>Example: database passwords should come from secret managers or runtime environment injection.</p>"
+  },
+  {
+    "id": 7269,
+    "text": "What is container immutability in practice?",
+    "choices": [
+      "Treating containers as disposable and replacing them instead of modifying them in place",
+      "Never restarting containers",
+      "Preventing any writes inside a process",
+      "Using only read-only base images"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Treating containers as disposable and replacing them instead of modifying them in place</strong> is correct because immutable infrastructure practices make deployments more predictable because changes come from rebuilt images, not manual edits.</p><p>Example: rebuild and redeploy a fixed image instead of patching files inside a live container.</p>"
+  },
+  {
+    "id": 7270,
+    "text": "Why is docker exec into production containers usually discouraged for routine changes?",
+    "choices": [
+      "Manual in-container changes are hard to track and are lost when containers are replaced",
+      "It is technically impossible",
+      "It always breaks networking",
+      "It removes image layers"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Manual in-container changes are hard to track and are lost when containers are replaced</strong> is correct because operational changes should generally come from source-controlled image builds and deployments.</p><p>Example: update app config via a new deployment rather than editing files interactively in a running container.</p>"
+  },
+  {
+    "id": 7271,
+    "text": "What is the purpose of a health check in Docker?",
+    "choices": [
+      "To let Docker determine whether a container is functioning properly",
+      "To compress container logs",
+      "To choose a registry tag",
+      "To increase CPU limits"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>To let Docker determine whether a container is functioning properly</strong> is correct because health checks provide a way to monitor application readiness beyond simply seeing that the process is running.</p><p>Example: an HTTP endpoint can be checked periodically to verify the app still responds.</p>"
+  },
+  {
+    "id": 7272,
+    "text": "Which Dockerfile instruction defines a container health check?",
+    "choices": [
+      "HEALTHCHECK",
+      "CHECK",
+      "PROBE",
+      "VERIFY"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>HEALTHCHECK</strong> is correct because HEALTHCHECK declares the command Docker should run to test whether the container is healthy.</p><p>Example: <code>HEALTHCHECK CMD curl -f http://localhost:8080/health || exit 1</code></p>"
+  },
+  {
+    "id": 7273,
+    "text": "What is the purpose of docker system prune?",
+    "choices": [
+      "To remove unused Docker data such as stopped containers and dangling images",
+      "To build all Compose services",
+      "To upgrade the Docker daemon",
+      "To publish every exposed port"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>To remove unused Docker data such as stopped containers and dangling images</strong> is correct because pruning helps reclaim disk space after lots of builds and test containers accumulate.</p><p>Example: it can delete old stopped containers and unused networks.</p>"
+  },
+  {
+    "id": 7274,
+    "text": "What is a dangling image?",
+    "choices": [
+      "An untagged image layer reference no longer associated with a meaningful tag",
+      "Any image larger than 1 GB",
+      "An image stored in Docker Hub",
+      "A stopped container filesystem"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>An untagged image layer reference no longer associated with a meaningful tag</strong> is correct because dangling images often result from rebuilds and can be cleaned up if no longer needed.</p><p>Example: intermediate build results may remain without a proper repository tag.</p>"
+  },
+  {
+    "id": 7275,
+    "text": "Why can container startup be fast compared with virtual machines?",
+    "choices": [
+      "Containers share the host kernel instead of booting a full guest OS",
+      "They never need file systems",
+      "They do not isolate processes",
+      "They always skip application startup"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Containers share the host kernel instead of booting a full guest OS</strong> is correct because sharing the host kernel avoids the overhead of booting separate operating systems for each workload.</p><p>Example: starting a web container is often much quicker than booting a new VM image.</p>"
+  },
+  {
+    "id": 7276,
+    "text": "What does isolation in containers typically refer to?",
+    "choices": [
+      "Separating processes, filesystems, and networking from the host and other containers",
+      "Running each app in a separate Git branch",
+      "Using only one image tag per host",
+      "Disabling CPU scheduling"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Separating processes, filesystems, and networking from the host and other containers</strong> is correct because container isolation helps applications coexist on one machine with less interference.</p><p>Example: one container cannot normally see another container’s filesystem directly.</p>"
+  },
+  {
+    "id": 7277,
+    "text": "What is the writable layer of a container?",
+    "choices": [
+      "The temporary read-write layer added on top of the image layers at runtime",
+      "The Docker Hub registry cache",
+      "A special external volume only",
+      "The Dockerfile itself"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>The temporary read-write layer added on top of the image layers at runtime</strong> is correct because container writes go into a writable layer unless a volume or bind mount is used.</p><p>Example: files created during runtime disappear when the container is removed unless stored in a volume.</p>"
+  },
+  {
+    "id": 7278,
+    "text": "Why should databases in containers usually use volumes?",
+    "choices": [
+      "Because container writable layers are ephemeral and not ideal for persistent data",
+      "Because volumes reduce CPU usage to zero",
+      "Because databases cannot use file systems otherwise",
+      "Because Dockerfiles require volumes"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Because container writable layers are ephemeral and not ideal for persistent data</strong> is correct because persistent storage should survive container recreation, which volumes support better than the temporary writable layer.</p><p>Example: a Postgres container should keep data in a named volume.</p>"
+  },
+  {
+    "id": 7279,
+    "text": "What is the purpose of docker cp?",
+    "choices": [
+      "Copying files between the host and a container",
+      "Publishing ports to the host",
+      "Creating a new image from a container",
+      "Listing environment variables"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Copying files between the host and a container</strong> is correct because docker cp is useful for extracting logs, reports, or diagnostics without opening a shell.</p><p>Example: copy a generated report out of a batch job container.</p>"
+  },
+  {
+    "id": 7280,
+    "text": "What does docker commit do?",
+    "choices": [
+      "Creates a new image from a container’s current filesystem state",
+      "Pushes an image to a registry",
+      "Edits the Dockerfile automatically",
+      "Rolls back a Compose stack"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Creates a new image from a container’s current filesystem state</strong> is correct because docker commit can snapshot a container, though reproducible Dockerfiles are usually preferred for real workflows.</p><p>Example: it may be used during ad hoc experimentation, but source-controlled builds are better long term.</p>"
+  },
+  {
+    "id": 7281,
+    "text": "Why is docker commit usually less preferred than editing a Dockerfile?",
+    "choices": [
+      "Dockerfiles are reproducible and auditable while manual container snapshots are not",
+      "docker commit does not create images",
+      "Dockerfiles cannot use base images",
+      "docker commit only works on Windows"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Dockerfiles are reproducible and auditable while manual container snapshots are not</strong> is correct because infrastructure should generally be defined as code rather than remembered from interactive changes.</p><p>Example: a teammate can rebuild a Dockerfile-based image, but may not know how a committed container was modified.</p>"
+  },
+  {
+    "id": 7282,
+    "text": "What does docker save produce?",
+    "choices": [
+      "A tar archive containing one or more images",
+      "A live backup of running container memory",
+      "A YAML Compose file",
+      "A new registry tag"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A tar archive containing one or more images</strong> is correct because docker save exports image data for transfer or backup outside a registry workflow.</p><p>Example: save an image to a tar file for an offline environment.</p>"
+  },
+  {
+    "id": 7283,
+    "text": "What does docker load do?",
+    "choices": [
+      "Imports images from a tar archive created by docker save",
+      "Starts all containers from an image",
+      "Pulls images from Docker Hub",
+      "Prunes old build cache"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Imports images from a tar archive created by docker save</strong> is correct because load restores images into the local Docker image store from an exported archive.</p><p>Example: move an image into an air-gapped machine using a tar file.</p>"
+  },
+  {
+    "id": 7284,
+    "text": "What does docker export produce?",
+    "choices": [
+      "A tar archive of a container filesystem",
+      "A full image with layer history and metadata",
+      "A Compose file backup",
+      "A running container snapshot with processes"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A tar archive of a container filesystem</strong> is correct because export flattens a container filesystem and is different from saving an image with its metadata.</p><p>Example: useful when you only need the current filesystem contents, not the image history.</p>"
+  },
+  {
+    "id": 7285,
+    "text": "What is the difference between docker save and docker export?",
+    "choices": [
+      "save exports images with metadata and layers, while export dumps a container filesystem",
+      "export includes registry credentials and save does not",
+      "save only works for stopped containers",
+      "There is no difference"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>save exports images with metadata and layers, while export dumps a container filesystem</strong> is correct because they target different use cases: image transport versus filesystem extraction.</p><p>Example: use save/load for moving images and export/import for raw container filesystems.</p>"
+  },
+  {
+    "id": 7286,
+    "text": "What does docker import create?",
+    "choices": [
+      "An image from a tar archive or URL",
+      "A running container from Docker Hub",
+      "A volume from the host path",
+      "A network namespace"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>An image from a tar archive or URL</strong> is correct because import creates a new image, often from a filesystem tarball rather than an existing layered image.</p><p>Example: import a basic root filesystem archive as a new local image.</p>"
+  },
+  {
+    "id": 7287,
+    "text": "What is an official image on Docker Hub?",
+    "choices": [
+      "An image maintained and reviewed through Docker’s official image program",
+      "Any image with more than 100 pulls",
+      "A local image with no tag",
+      "An image built only on Windows"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>An image maintained and reviewed through Docker’s official image program</strong> is correct because official images are curated and commonly used as trusted starting points for application containers.</p><p>Example: <code>nginx</code> and <code>postgres</code> official images are widely used.</p>"
+  },
+  {
+    "id": 7288,
+    "text": "Why should base images be chosen carefully?",
+    "choices": [
+      "They affect security, size, compatibility, and update practices",
+      "They only control the container name",
+      "They cannot impact vulnerabilities",
+      "They determine host CPU speed"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>They affect security, size, compatibility, and update practices</strong> is correct because a poor base image choice can make the final image larger, less secure, or harder to maintain.</p><p>Example: a slim runtime image may be preferable to a full development distribution in production.</p>"
+  },
+  {
+    "id": 7289,
+    "text": "What is image layering?",
+    "choices": [
+      "Images are composed of stacked filesystem layers",
+      "Every container must use exactly one layer",
+      "Layers exist only in Compose",
+      "A way to publish ports"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Images are composed of stacked filesystem layers</strong> is correct because each Dockerfile instruction can contribute a cached layer, which influences rebuild speed and image structure.</p><p>Example: changing app code may invalidate only later layers while base dependency layers remain cached.</p>"
+  },
+  {
+    "id": 7290,
+    "text": "Why does Docker cache layers during builds?",
+    "choices": [
+      "To speed up rebuilds when earlier instructions have not changed",
+      "To store container logs permanently",
+      "To replace registries",
+      "To encrypt source files"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>To speed up rebuilds when earlier instructions have not changed</strong> is correct because build caching avoids repeating unchanged work and is one reason Dockerfile instruction order matters.</p><p>Example: install dependencies before copying frequently changing source files when appropriate.</p>"
+  },
+  {
+    "id": 7291,
+    "text": "Why can Dockerfile instruction order matter for performance?",
+    "choices": [
+      "Because changing an earlier step can invalidate cache for later layers",
+      "Because Docker executes instructions randomly",
+      "Because EXPOSE must always come first",
+      "Because image tags depend on alphabetical order"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Because changing an earlier step can invalidate cache for later layers</strong> is correct because good ordering helps maximize cache reuse and reduce rebuild times.</p><p>Example: copying dependency manifests before source code can keep dependency install layers cached.</p>"
+  },
+  {
+    "id": 7292,
+    "text": "What is a common best practice when building application images?",
+    "choices": [
+      "Use a small, explicit base image and copy only what is needed",
+      "Install every debugging tool in production by default",
+      "Run everything as root",
+      "Store secrets in layers"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Use a small, explicit base image and copy only what is needed</strong> is correct because minimal production images are easier to maintain and often safer to run.</p><p>Example: copy the built JAR into a JRE image instead of shipping the full build toolchain.</p>"
+  },
+  {
+    "id": 7293,
+    "text": "Why should a container usually have one main process responsibility?",
+    "choices": [
+      "It keeps the container simple and aligns with Docker’s process model",
+      "Docker cannot technically run more than one process",
+      "It makes networking impossible otherwise",
+      "It removes the need for logs"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>It keeps the container simple and aligns with Docker’s process model</strong> is correct because single-responsibility containers are easier to observe, restart, and scale independently.</p><p>Example: run the web API in one container and the database in another.</p>"
+  },
+  {
+    "id": 7294,
+    "text": "Is it technically possible for a container to run multiple processes?",
+    "choices": [
+      "Yes, but it is usually better to avoid unless there is a good reason",
+      "No, Docker blocks it at the kernel level",
+      "Only on Mac hosts",
+      "Only in rootless mode"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Yes, but it is usually better to avoid unless there is a good reason</strong> is correct because containers can run multiple processes, but operational simplicity usually favors one main responsibility.</p><p>Example: use a separate sidecar or service rather than bundling unrelated daemons together.</p>"
+  },
+  {
+    "id": 7295,
+    "text": "What is rootless Docker?",
+    "choices": [
+      "Running Docker with reduced reliance on root privileges",
+      "A mode that disables images",
+      "A type of image registry",
+      "A way to remove all users from a container"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Running Docker with reduced reliance on root privileges</strong> is correct because rootless mode can improve security by reducing the privileges used by the Docker daemon and containers.</p><p>Example: it helps environments that want stronger isolation from root-level host access.</p>"
+  },
+  {
+    "id": 7296,
+    "text": "What is a common reason to use Alpine or slim base images?",
+    "choices": [
+      "To reduce image size when compatible with the application needs",
+      "To automatically enable orchestration",
+      "To disable package managers forever",
+      "To avoid all CVEs automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>To reduce image size when compatible with the application needs</strong> is correct because smaller base images can improve pull speed and reduce unnecessary packages, though compatibility should still be checked.</p><p>Example: a lightweight runtime image can be suitable for a simple API service.</p>"
+  },
+  {
+    "id": 7297,
+    "text": "What is Docker Desktop?",
+    "choices": [
+      "A desktop application that provides Docker tools and local container support",
+      "A remote-only registry service",
+      "A Kubernetes replacement for enterprises only",
+      "A Dockerfile linter standard"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>A desktop application that provides Docker tools and local container support</strong> is correct because Docker Desktop packages Docker tooling, local runtime features, and optional integrations for developer machines.</p><p>Example: many macOS and Windows developers use Docker Desktop for local containers.</p>"
+  },
+  {
+    "id": 7298,
+    "text": "What is a common use case for Docker in development?",
+    "choices": [
+      "Creating consistent local environments across team members",
+      "Avoiding all dependencies forever",
+      "Replacing source control",
+      "Publishing production DNS records"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Creating consistent local environments across team members</strong> is correct because Docker helps teams avoid “works on my machine” issues by standardizing runtimes and supporting services.</p><p>Example: every developer can run the same database version through a container.</p>"
+  },
+  {
+    "id": 7299,
+    "text": "What does docker compose up --build do?",
+    "choices": [
+      "Builds images before starting Compose services",
+      "Deletes all previous images first",
+      "Runs services without logs",
+      "Creates a Kubernetes deployment"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>Builds images before starting Compose services</strong> is correct because the <code>--build</code> flag ensures images are rebuilt if the source or Dockerfile changed before startup.</p><p>Example: useful after modifying application code and the image build definition.</p>"
+  },
+  {
+    "id": 7300,
+    "text": "Which command shows Docker system-wide information such as storage driver and counts?",
+    "choices": [
+      "docker info",
+      "docker version --host-only",
+      "docker inspect daemon",
+      "docker env"
+    ],
+    "correctIndex": 0,
+    "topic": "Docker",
+    "explanation": "<p><strong>docker info</strong> is correct because docker info summarizes daemon configuration, storage, networking, and resource usage details.</p><p>Example: it can show how many containers and images exist locally.</p>"
+  }
+]
