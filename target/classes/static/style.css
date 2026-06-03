@@ -41,6 +41,18 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.question-topic {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 .choice-label {
   display: block;
   margin-bottom: 0.75rem;
@@ -105,6 +117,30 @@ input[type='radio'] {
   display: block;
   background: #fff1f2;
   color: var(--danger);
+}
+
+.question-feedback {
+  font-weight: 700;
+}
+
+.question-explanation {
+  margin-top: 0.35rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.question-explanation pre {
+  margin: 0.75rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #e5eefc;
+  overflow-x: auto;
+}
+
+.question-explanation code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.92rem;
 }
 
 #pagination-section {
@@ -209,4 +245,3 @@ input[type='radio'] {
   font-size: 1rem;
   font-weight: 600;
 }
-

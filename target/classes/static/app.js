@@ -46,6 +46,7 @@ function renderQuestion(question) {
   section.className = 'question-card';
   section.setAttribute('data-question-id', question.id);
   section.innerHTML = `
+    <div class="question-topic">${question.topic}</div>
     <div class="question-text">${question.text}</div>
     <div class="choices"></div>
     <div class="button-group">
@@ -127,8 +128,13 @@ function submitSingleAnswer(questionId, section) {
     .then(response => response.json())
     .then(data => {
       if (qres) {
-        qres.textContent = data.feedback;
         qres.className = data.correct ? 'question-result success' : 'question-result error';
+        qres.innerHTML = data.correct && data.explanation
+          ? `
+            <div class="question-feedback">${data.feedback}</div>
+            <div class="question-explanation">${data.explanation}</div>
+          `
+          : data.feedback;
       }
       answers[questionId] = Number(selected.value);
     })

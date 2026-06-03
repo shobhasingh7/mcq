@@ -1,0 +1,1968 @@
+[
+  {
+    "id": 1,
+    "text": "What is the Spring Boot annotation to mark the main application class?",
+    "choices": [
+      "@SpringBootApplication",
+      "@EnableAutoConfiguration",
+      "@Configuration",
+      "@Component"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@SpringBootApplication</strong> is correct because it combines <code>@Configuration</code>, <code>@EnableAutoConfiguration</code>, and <code>@ComponentScan</code>, so it is the standard annotation on the main Spring Boot class.</p><p>Example: a typical entry point looks like this:<pre><code class=\"language-java\">import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication\npublic class DemoApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(DemoApplication.class, args);\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 2,
+    "text": "Which dependency is typically used for building REST APIs in Spring Boot?",
+    "choices": [
+      "spring-boot-starter-web",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-security",
+      "spring-boot-starter-thymeleaf"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-web</strong> is correct because it pulls in the dependencies needed for REST controllers, JSON serialization, and the embedded servlet container used by most Spring Boot APIs.</p><p>Example: after adding that starter, you can expose an endpoint like this:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n    @GetMapping\n    public List&lt;String&gt; findAll() {\n        return List.of(\"Alice\", \"Bob\");\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 3,
+    "text": "In Spring, which annotation is used for constructor-based dependency injection?",
+    "choices": [
+      "@Autowired",
+      "@Inject",
+      "@Value",
+      "None of the above"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Autowired</strong> is correct because Spring uses it to inject a matching bean, and it is commonly seen on constructors when wiring required dependencies.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class OrderService {\n    private final PaymentService paymentService;\n\n    @Autowired\n    public OrderService(PaymentService paymentService) {\n        this.paymentService = paymentService;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 4,
+    "text": "Which file defines Spring profiles and properties for different environments?",
+    "choices": [
+      "application.properties",
+      "pom.xml",
+      "build.gradle",
+      "Dockerfile"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>application.properties</strong> is correct because that file is the conventional place to keep Spring Boot configuration such as ports, profiles, logging, and datasource properties.</p><p>Example:<pre><code>server.port=8081\nspring.profiles.active=dev\nlogging.level.org.springframework.web=DEBUG</code></pre></p>"
+  },
+  {
+    "id": 5,
+    "text": "Which Spring module provides integration with relational databases using repositories?",
+    "choices": [
+      "Spring Data JPA",
+      "Spring MVC",
+      "Spring Security",
+      "Spring Batch"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Spring Data JPA</strong> is correct because it provides repository abstractions and JPA integration so relational data access can be written with much less boilerplate.</p><p>Example:<pre><code class=\"language-java\">@Entity\npublic class Customer {\n    @Id\n    private Long id;\n}\n\npublic interface CustomerRepository extends JpaRepository&lt;Customer, Long&gt; {\n}</code></pre></p>"
+  },
+  {
+    "id": 6,
+    "text": "In Spring Data JPA, which annotation marks the primary key of an entity?",
+    "choices": [
+      "@Id",
+      "@Primary",
+      "@Key",
+      "@EntityId"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Id</strong> is correct because JPA uses <code>@Id</code> to mark the field or property that represents the primary key of an entity.</p><p>Example:<pre><code class=\"language-java\">@Entity\npublic class Product {\n    @Id\n    private Long id;\n    private String name;\n}</code></pre></p>"
+  },
+  {
+    "id": 7,
+    "text": "What is the default port for a Spring Boot application?",
+    "choices": [
+      "8080",
+      "3000",
+      "8000",
+      "5000"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>8080</strong> is correct because Spring Boot listens on port 8080 by default unless you override <code>server.port</code>.</p><p>Example: if you run the app locally with default settings, you usually open <code>http://localhost:8080</code>.</p>"
+  },
+  {
+    "id": 8,
+    "text": "Which annotation maps an HTTP GET request to a controller method?",
+    "choices": [
+      "@GetMapping",
+      "@RequestMapping(method=POST)",
+      "@PostMapping",
+      "@DeleteMapping"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@GetMapping</strong> is correct because it is the shortcut annotation for mapping HTTP GET requests to a controller method.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/books\")\npublic class BookController {\n    @GetMapping\n    public List&lt;String&gt; list() {\n        return List.of(\"Spring in Action\");\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 9,
+    "text": "Which Spring Boot starter adds actuator endpoints for monitoring?",
+    "choices": [
+      "spring-boot-starter-actuator",
+      "spring-boot-starter-test",
+      "spring-boot-starter-web",
+      "spring-boot-starter-mail"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-actuator</strong> is correct because it adds production-ready endpoints for health checks, metrics, and application diagnostics.</p><p>Example: after adding the starter, endpoints such as <code>/actuator/health</code> can be exposed for monitoring.</p>"
+  },
+  {
+    "id": 10,
+    "text": "What does CORS stand for in web development?",
+    "choices": [
+      "Cross-Origin Resource Sharing",
+      "Cross-Origin Request Service",
+      "Client-Origin Resource Sharing",
+      "Cross-Object Resource Service"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Cross-Origin Resource Sharing</strong> is correct because it is the proper definition of the term asked in the question.</p><p>Example: In a real project, <code>Cross-Origin Resource Sharing</code> is a practical choice for the scenario described here.</p>"
+  },
+  {
+    "id": 11,
+    "text": "In Angular, which file defines a component's metadata?",
+    "choices": [
+      "component.ts",
+      "index.html",
+      "styles.css",
+      "main.ts"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>component.ts</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: A team might store environment settings or component-related configuration in <code>component.ts</code>.</p>"
+  },
+  {
+    "id": 12,
+    "text": "Which decorator defines an Angular component?",
+    "choices": [
+      "@Component",
+      "@NgModule",
+      "@Injectable",
+      "@Directive"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@Component</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: You might place <code>@Component</code> above a class, method, or constructor to enable that Spring behavior.</p>"
+  },
+  {
+    "id": 13,
+    "text": "In Angular templates, which binding is used for property binding?",
+    "choices": [
+      "[property]=",
+      " (event)=",
+      "{{ interpolation }}",
+      "*ngIf="
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>[property]=</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In an Angular app, <code>[property]=</code> would appear in the component, template, or CLI workflow for this task.</p>"
+  },
+  {
+    "id": 14,
+    "text": "Which Angular feature is used for conditional rendering?",
+    "choices": [
+      "*ngIf",
+      "*ngFor",
+      "[hidden]",
+      "ngModel"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>*ngIf</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In an Angular app, <code>*ngIf</code> would appear in the component, template, or CLI workflow for this task.</p>"
+  },
+  {
+    "id": 15,
+    "text": "Which Angular CLI command generates a new component?",
+    "choices": [
+      "ng generate component my-comp",
+      "npm create component my-comp",
+      "ng new component my-comp",
+      "ng add component my-comp"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng generate component my-comp</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: Run <code>ng generate component my-comp</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 16,
+    "text": "In React, what hook is used to manage local state in a functional component?",
+    "choices": [
+      "useState",
+      "useEffect",
+      "useContext",
+      "useReducer"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useState</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>useState</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 17,
+    "text": "Which method did class components use for lifecycle after mounting?",
+    "choices": [
+      "componentDidMount",
+      "useEffect",
+      "useLayoutEffect",
+      "renderComplete"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>componentDidMount</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>componentDidMount</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 18,
+    "text": "What does JSX stand for?",
+    "choices": [
+      "JavaScript XML",
+      "JavaScript eXtended",
+      "JSON Styled eXtension",
+      "JavaScript eXtensible XML"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>JavaScript XML</strong> is correct because it is the proper definition of the term asked in the question.</p><p>Example: In a React component, you would use <code>JavaScript XML</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 19,
+    "text": "In React, which prop is used to pass data to child components?",
+    "choices": [
+      "props",
+      "state",
+      "context",
+      "key"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>props</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>props</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 20,
+    "text": "Which command creates a new React app using Create React App?",
+    "choices": [
+      "npx create-react-app my-app",
+      "npm init react-app my-app",
+      "yarn new react-app my-app",
+      "npm create-react-app my-app"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>npx create-react-app my-app</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: Run <code>npx create-react-app my-app</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 21,
+    "text": "Which HTTP status code indicates a successful GET request?",
+    "choices": [
+      "200",
+      "201",
+      "400",
+      "500"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>200</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: An API returning <code>200</code> tells the client this specific HTTP outcome occurred.</p>"
+  },
+  {
+    "id": 22,
+    "text": "Which database is a relational DB?",
+    "choices": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Cassandra"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>PostgreSQL</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: Add <code>PostgreSQL</code> to your project dependencies when you need that feature in the application.</p>"
+  },
+  {
+    "id": 23,
+    "text": "Which header is used to send a JWT token for authentication?",
+    "choices": [
+      "Authorization",
+      "X-CSRF-Token",
+      "Content-Type",
+      "Accept"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Authorization</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: In a real project, <code>Authorization</code> is a practical choice for the scenario described here.</p>"
+  },
+  {
+    "id": 24,
+    "text": "Which Dockerfile instruction sets the base image?",
+    "choices": [
+      "FROM",
+      "RUN",
+      "CMD",
+      "ENTRYPOINT"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>FROM</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: A statement like <code>FROM * FROM users</code> shows how this SQL command is used.</p>"
+  },
+  {
+    "id": 25,
+    "text": "Which tool is commonly used for continuous integration?",
+    "choices": [
+      "Jenkins",
+      "Webpack",
+      "ESLint",
+      "Prettier"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Jenkins</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: Add <code>Jenkins</code> to your project dependencies when you need that feature in the application.</p>"
+  },
+  {
+    "id": 26,
+    "text": "In Angular, which service pattern provides HTTP calls?",
+    "choices": [
+      "HttpClient",
+      "HttpService",
+      "AjaxService",
+      "FetchService"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>HttpClient</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: When designing or calling an API, <code>HttpClient</code> is the option you would use for this situation.</p>"
+  },
+  {
+    "id": 27,
+    "text": "Which React hook runs after every render by default?",
+    "choices": [
+      "useEffect",
+      "useMemo",
+      "useCallback",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useEffect</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>useEffect</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 28,
+    "text": "Which Spring annotation secures methods or classes?",
+    "choices": [
+      "@PreAuthorize",
+      "@Service",
+      "@Controller",
+      "@Repository"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@PreAuthorize</strong> is correct because it is a Spring Security annotation used to enforce authorization rules before a method is executed.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class AdminService {\n    @PreAuthorize(\"hasRole('ADMIN')\")\n    public void deleteUser(Long id) {\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 29,
+    "text": "Which SQL statement retrieves rows from a table?",
+    "choices": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>SELECT</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: A statement like <code>SELECT * FROM users</code> shows how this SQL command is used.</p>"
+  },
+  {
+    "id": 30,
+    "text": "What is the purpose of a reverse proxy in front of an app?",
+    "choices": [
+      "Load balancing and routing",
+      "Translating SQL queries",
+      "Compiling source code",
+      "Minifying assets"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Load balancing and routing</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: In a real project, <code>Load balancing and routing</code> is a practical choice for the scenario described here.</p>"
+  },
+  {
+    "id": 31,
+    "text": "In React, which attribute helps identify list items for efficient re-rendering?",
+    "choices": [
+      "key",
+      "id",
+      "ref",
+      "index"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>key</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>key</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 32,
+    "text": "Which Angular lifecycle hook runs after component initialization?",
+    "choices": [
+      "ngOnInit",
+      "ngAfterViewInit",
+      "constructor",
+      "ngDoCheck"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ngOnInit</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In a React component, you would use <code>ngOnInit</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 33,
+    "text": "Which Spring annotation maps a class to a REST controller?",
+    "choices": [
+      "@RestController",
+      "@Controller",
+      "@Service",
+      "@Component"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RestController</strong> is correct because it combines <code>@Controller</code> and <code>@ResponseBody</code>, which makes it the standard choice for JSON-based APIs.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/health\")\npublic class HealthController {\n    @GetMapping\n    public Map&lt;String, String&gt; health() {\n        return Map.of(\"status\", \"UP\");\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 34,
+    "text": "Which package manager is typically used with Angular projects?",
+    "choices": [
+      "npm",
+      "pip",
+      "gem",
+      "composer"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>npm</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: Run <code>npm</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 35,
+    "text": "In full-stack development, what does SPA stand for?",
+    "choices": [
+      "Single Page Application",
+      "Server Page Application",
+      "Simple Page App",
+      "Secure Page Access"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Single Page Application</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: In a real project, <code>Single Page Application</code> is a practical choice for the scenario described here.</p>"
+  },
+  {
+    "id": 36,
+    "text": "Which React feature allows avoiding prop drilling by providing global data?",
+    "choices": [
+      "Context API",
+      "Redux-only",
+      "Local storage",
+      "Refs"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Context API</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>Context API</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 37,
+    "text": "Which HTTP method is idempotent?",
+    "choices": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>PUT</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: When designing or calling an API, <code>PUT</code> is the option you would use for this situation.</p>"
+  },
+  {
+    "id": 38,
+    "text": "Which Angular directive is used to loop over collections?",
+    "choices": [
+      "*ngFor",
+      "*ngIf",
+      "[ngStyle]",
+      "(click)"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>*ngFor</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: You would apply <code>*ngFor</code> directly where you want that framework behavior to happen.</p>"
+  },
+  {
+    "id": 39,
+    "text": "Which Spring component scans for annotated classes during startup?",
+    "choices": [
+      "Component scanning",
+      "AutoConfiguration",
+      "BeanFactory",
+      "ApplicationContext only"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Component scanning</strong> is correct because Spring uses component scanning to discover classes annotated with stereotypes such as <code>@Component</code>, <code>@Service</code>, and <code>@Repository</code>.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class AuditFormatter {\n}</code></pre></p>"
+  },
+  {
+    "id": 40,
+    "text": "What does REST stand for in web services?",
+    "choices": [
+      "Representational State Transfer",
+      "Remote Execution Service Transfer",
+      "Resource State Transfer",
+      "ReSTful Service Type"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Representational State Transfer</strong> is correct because it is the proper definition of the term asked in the question.</p><p>Example: When designing or calling an API, <code>Representational State Transfer</code> is the option you would use for this situation.</p>"
+  },
+  {
+    "id": 41,
+    "text": "Which tool bundles JavaScript modules for browser use?",
+    "choices": [
+      "Webpack",
+      "Maven",
+      "Gradle",
+      "Gulp (note: bundlers vary)"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Webpack</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: Add <code>Webpack</code> to your project dependencies when you need that feature in the application.</p>"
+  },
+  {
+    "id": 42,
+    "text": "Which database type is document-oriented?",
+    "choices": [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "OracleDB"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>MongoDB</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: Add <code>MongoDB</code> to your project dependencies when you need that feature in the application.</p>"
+  },
+  {
+    "id": 43,
+    "text": "Which HTTP status indicates resource created?",
+    "choices": [
+      "201",
+      "200",
+      "404",
+      "500"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>201</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: An API returning <code>201</code> tells the client this specific HTTP outcome occurred.</p>"
+  },
+  {
+    "id": 44,
+    "text": "Which Angular concept groups related components and services?",
+    "choices": [
+      "NgModule",
+      "ComponentGroup",
+      "ServicePackage",
+      "DirectiveModule"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>NgModule</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In an Angular app, <code>NgModule</code> would appear in the component, template, or CLI workflow for this task.</p>"
+  },
+  {
+    "id": 45,
+    "text": "In Spring Boot, which file enables configuring logging levels?",
+    "choices": [
+      "application.properties",
+      "pom.xml",
+      "README.md",
+      "Dockerfile"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>application.properties</strong> is correct because that file is the conventional place to keep Spring Boot configuration such as ports, profiles, logging, and datasource properties.</p><p>Example:<pre><code>server.port=8081\nspring.profiles.active=dev\nlogging.level.org.springframework.web=DEBUG</code></pre></p>"
+  },
+  {
+    "id": 46,
+    "text": "Which React hook memoizes a value?",
+    "choices": [
+      "useMemo",
+      "useCallback",
+      "useState",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useMemo</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>useMemo</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 47,
+    "text": "Which authentication method uses username/password plus a token?",
+    "choices": [
+      "JWT with credentials",
+      "Basic auth only",
+      "API key only",
+      "Digest auth only"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>JWT with credentials</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: In a real project, <code>JWT with credentials</code> is a practical choice for the scenario described here.</p>"
+  },
+  {
+    "id": 48,
+    "text": "Which CSS methodology scopes styles to components in React?",
+    "choices": [
+      "CSS Modules",
+      "Global CSS",
+      "Inline styles only",
+      "SASS only"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>CSS Modules</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>CSS Modules</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 49,
+    "text": "Which command builds an Angular project for production?",
+    "choices": [
+      "ng build --prod",
+      "npm run build:prod",
+      "ng serve --prod",
+      "npm build --prod"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng build --prod</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: Run <code>ng build --prod</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 50,
+    "text": "Which layer typically handles business logic in a full-stack app?",
+    "choices": [
+      "Backend",
+      "Frontend",
+      "Database",
+      "Reverse proxy"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "<p><strong>Backend</strong> is correct because it is the standard full-stack concept or tool that matches the scenario.</p><p>Example: In a real project, <code>Backend</code> is a practical choice for the scenario described here.</p>"
+  },
+  {
+    "id": 51,
+    "text": "What is the core idea behind the Spring Framework?",
+    "choices": [
+      "Inversion of Control",
+      "Manual memory management",
+      "Template metaprogramming",
+      "Binary serialization"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Inversion of Control</strong> is correct because IoC means the framework manages object creation and dependency wiring instead of application code doing it manually everywhere.</p><p>Example: rather than calling <code>new EmailService()</code> inside each class, Spring creates the bean once and injects it where needed.</p>"
+  },
+  {
+    "id": 52,
+    "text": "Which Spring container is commonly used in enterprise applications?",
+    "choices": [
+      "ApplicationContext",
+      "ServletContext",
+      "JndiContext",
+      "BeanRegistryOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>ApplicationContext</strong> is correct because it is Spring’s full-featured container and adds events, resources, internationalization, and bean lookup on top of basic bean management.</p><p>Example:<pre><code class=\"language-java\">ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);\nOrderService service = context.getBean(OrderService.class);</code></pre></p>"
+  },
+  {
+    "id": 53,
+    "text": "What does IoC stand for in Spring?",
+    "choices": [
+      "Inversion of Control",
+      "Injection of Components",
+      "Interface over Class",
+      "Instance object creation"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Inversion of Control</strong> is correct because IoC means the framework manages object creation and dependency wiring instead of application code doing it manually everywhere.</p><p>Example: rather than calling <code>new EmailService()</code> inside each class, Spring creates the bean once and injects it where needed.</p>"
+  },
+  {
+    "id": 54,
+    "text": "Which feature of Spring wires dependencies automatically?",
+    "choices": [
+      "Dependency Injection",
+      "Aspect Weaving",
+      "Transaction Propagation",
+      "Bean Post Processing"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Dependency Injection</strong> is correct because dependency injection is the mechanism Spring uses to supply collaborators to a class without that class instantiating them directly.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class ReportService {\n    private final MailClient mailClient;\n\n    public ReportService(MailClient mailClient) {\n        this.mailClient = mailClient;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 55,
+    "text": "Which annotation marks a class as a Spring-managed component?",
+    "choices": [
+      "@Component",
+      "@Bean",
+      "@Value",
+      "@ImportResourceOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Component</strong> is correct because it marks a class as a Spring-managed bean so it can be discovered during component scanning and injected elsewhere.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class SlugGenerator {\n    public String slugify(String value) {\n        return value.toLowerCase();\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 56,
+    "text": "Which annotation is specialized for service-layer classes?",
+    "choices": [
+      "@Service",
+      "@Repository",
+      "@Qualifier",
+      "@PrimaryKey"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Service</strong> is correct because it is a specialization of <code>@Component</code> used to express that a class holds business logic.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class InvoiceService {\n    public BigDecimal calculateTotal() {\n        return BigDecimal.TEN;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 57,
+    "text": "Which annotation is specialized for DAO or persistence classes?",
+    "choices": [
+      "@Repository",
+      "@ControllerAdvice",
+      "@ConfigurationProperties",
+      "@EnableCaching"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Repository</strong> is correct because it marks persistence-layer classes and also allows Spring to translate low-level data access exceptions into its own exception hierarchy.</p><p>Example:<pre><code class=\"language-java\">@Repository\npublic class JdbcCustomerRepository {\n    private final JdbcTemplate jdbcTemplate;\n\n    public JdbcCustomerRepository(JdbcTemplate jdbcTemplate) {\n        this.jdbcTemplate = jdbcTemplate;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 58,
+    "text": "Which annotation is commonly used for MVC controllers returning views?",
+    "choices": [
+      "@Controller",
+      "@RestController",
+      "@Bean",
+      "@Profile"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Controller</strong> is correct because it marks a Spring MVC controller that typically returns a view name instead of raw JSON.</p><p>Example:<pre><code class=\"language-java\">@Controller\npublic class HomeController {\n    @GetMapping(\"/home\")\n    public String home() {\n        return \"home\";\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 59,
+    "text": "Which XML element was historically used to enable component scanning?",
+    "choices": [
+      "context:component-scan",
+      "beans:scan",
+      "spring:discover",
+      "mvc:autowire"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>context:component-scan</strong> is correct because that XML element tells the Spring container which packages should be scanned for annotated beans in XML-based configuration.</p><p>Example:<pre><code>&lt;context:component-scan base-package=\"com.example.app\" /&gt;</code></pre></p>"
+  },
+  {
+    "id": 60,
+    "text": "Which annotation enables component scanning in Java config?",
+    "choices": [
+      "@ComponentScan",
+      "@ScanComponents",
+      "@EnableBeans",
+      "@DiscoverPackages"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@ComponentScan</strong> is correct because it tells Spring which packages should be scanned for components when you are using Java configuration.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@ComponentScan(basePackages = \"com.example.app\")\npublic class AppConfig {\n}</code></pre></p>"
+  },
+  {
+    "id": 61,
+    "text": "Which annotation marks a class as a source of bean definitions?",
+    "choices": [
+      "@Configuration",
+      "@Component",
+      "@Import",
+      "@BeanFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Configuration</strong> is correct because it marks a class as a source of bean definitions and application configuration.</p><p>Example:<pre><code class=\"language-java\">@Configuration\npublic class AppConfig {\n    @Bean\n    public Clock clock() {\n        return Clock.systemUTC();\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 62,
+    "text": "Which annotation defines a bean method inside a configuration class?",
+    "choices": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Order"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Bean</strong> is correct because it defines a bean explicitly inside a configuration class, which is useful when you need custom construction logic.</p><p>Example:<pre><code class=\"language-java\">@Configuration\npublic class AppConfig {\n    @Bean\n    public RestTemplate restTemplate() {\n        return new RestTemplate();\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 63,
+    "text": "Which dependency injection style is generally preferred in Spring?",
+    "choices": [
+      "Constructor injection",
+      "Field injection",
+      "Setter injection only",
+      "XML injection only"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Constructor injection</strong> is correct because it makes dependencies explicit, works well with immutability, and is the preferred style for required collaborators in Spring applications.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class UserService {\n    private final UserRepository userRepository;\n\n    public UserService(UserRepository userRepository) {\n        this.userRepository = userRepository;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 64,
+    "text": "Which annotation can inject a dependency by type?",
+    "choices": [
+      "@Autowired",
+      "@ResponseBody",
+      "@TransactionalEventListener",
+      "@EnableAspectJAutoProxy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Autowired</strong> is correct because Spring uses it to inject a matching bean, and it is commonly seen on constructors when wiring required dependencies.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class OrderService {\n    private final PaymentService paymentService;\n\n    @Autowired\n    public OrderService(PaymentService paymentService) {\n        this.paymentService = paymentService;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 65,
+    "text": "Which JSR annotation can also be used for dependency injection in Spring?",
+    "choices": [
+      "@Inject",
+      "@PathVariable",
+      "@InitBinder",
+      "@AliasFor"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Inject</strong> is correct because it is the JSR-330 alternative to <code>@Autowired</code> and can also be used by Spring for dependency injection.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class BillingService {\n    private final TaxService taxService;\n\n    @Inject\n    public BillingService(TaxService taxService) {\n        this.taxService = taxService;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 66,
+    "text": "Which annotation injects property values into fields or parameters?",
+    "choices": [
+      "@Value",
+      "@PropertySource",
+      "@Profile",
+      "@Lazy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Value</strong> is correct because it injects configuration values or evaluated expressions into fields, constructor parameters, or methods.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class GreetingConfig {\n    @Value(\"${app.greeting:Hello}\")\n    private String greeting;\n}</code></pre></p>"
+  },
+  {
+    "id": 67,
+    "text": "Which annotation helps choose a specific bean when multiple candidates exist?",
+    "choices": [
+      "@Qualifier",
+      "@Primary",
+      "@DependsOn",
+      "@ScopeProxy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Qualifier</strong> is correct because it helps Spring choose the correct bean when multiple beans share the same type.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class NotificationService {\n    public NotificationService(@Qualifier(\"smsSender\") MessageSender sender) {\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 68,
+    "text": "Which annotation marks one bean as the default candidate among multiple beans?",
+    "choices": [
+      "@Primary",
+      "@Order",
+      "@Lazy",
+      "@Fallback"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Primary</strong> is correct because it marks one bean as the default candidate when multiple beans of the same type are available.</p><p>Example:<pre><code class=\"language-java\">@Bean\n@Primary\npublic MessageSender emailSender() {\n    return new EmailSender();\n}</code></pre></p>"
+  },
+  {
+    "id": 69,
+    "text": "Which bean scope creates a single shared instance per container?",
+    "choices": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>singleton</strong> is correct because singleton scope creates one shared bean instance per Spring container, and it is the default bean scope.</p><p>Example: most service beans such as <code>UserService</code> are managed as singletons.</p>"
+  },
+  {
+    "id": 70,
+    "text": "Which bean scope creates a new bean instance each time it is requested?",
+    "choices": [
+      "prototype",
+      "singleton",
+      "application",
+      "globalSession"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>prototype</strong> is correct because prototype scope creates a fresh bean instance every time the bean is requested from the container.</p><p>Example: requesting the bean twice gives you two different objects instead of the same shared instance.</p>"
+  },
+  {
+    "id": 71,
+    "text": "Which Spring scope is tied to a single HTTP request?",
+    "choices": [
+      "request",
+      "singleton",
+      "prototype",
+      "websocketOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>request</strong> is correct because request scope creates one bean instance for each HTTP request in a web application.</p><p>Example: a request-scoped bean can store a request-specific correlation id safely.</p>"
+  },
+  {
+    "id": 72,
+    "text": "Which scope stores a bean per HTTP session?",
+    "choices": [
+      "session",
+      "request",
+      "prototype",
+      "singleton"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>session</strong> is correct because session scope keeps one bean instance per HTTP session, which is useful for session-specific state.</p><p>Example: a shopping cart in a traditional MVC application often uses session scope.</p>"
+  },
+  {
+    "id": 73,
+    "text": "Which interface can customize beans before and after initialization?",
+    "choices": [
+      "BeanPostProcessor",
+      "FactoryBean",
+      "ResourceLoader",
+      "MessageSource"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>BeanPostProcessor</strong> is correct because that interface lets you customize beans before and after initialization, which is how many framework features hook into bean creation.</p><p>Example:<pre><code class=\"language-java\">public class AuditPostProcessor implements BeanPostProcessor {\n    @Override\n    public Object postProcessAfterInitialization(Object bean, String beanName) {\n        return bean;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 74,
+    "text": "Which callback method can run after bean properties are set?",
+    "choices": [
+      "afterPropertiesSet",
+      "destroySingletons",
+      "postProcessBeanFactory",
+      "resolveArgument"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>afterPropertiesSet</strong> is correct because that callback from <code>InitializingBean</code> runs after Spring sets bean properties and before the bean is used.</p><p>Example:<pre><code class=\"language-java\">public class CacheLoader implements InitializingBean {\n    @Override\n    public void afterPropertiesSet() {\n        // warm up cache\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 75,
+    "text": "Which annotation can designate an initialization method on a bean?",
+    "choices": [
+      "@PostConstruct",
+      "@PreDestroy",
+      "@InitBinder",
+      "@EnableScheduling"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@PostConstruct</strong> is correct because it marks a method that should run after dependency injection is complete so the bean can perform initialization work.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class CacheConfig {\n    @PostConstruct\n    public void init() {\n        // initialize resources\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 76,
+    "text": "Which annotation can designate cleanup logic before bean destruction?",
+    "choices": [
+      "@PreDestroy",
+      "@PostConstruct",
+      "@Autowired",
+      "@Bean"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@PreDestroy</strong> is correct because it marks cleanup logic that Spring should run before the bean is destroyed.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class SocketClient {\n    @PreDestroy\n    public void shutdown() {\n        // close connections\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 77,
+    "text": "Which Spring interface allows lazy custom creation of complex objects?",
+    "choices": [
+      "FactoryBean",
+      "ApplicationListener",
+      "BeanNameAware",
+      "ScopeMetadataResolver"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>FactoryBean</strong> is correct because it gives you control over how a complex bean is created while still letting Spring manage the final object.</p><p>Example: many framework integrations use <code>FactoryBean</code> when the target object needs custom bootstrapping logic.</p>"
+  },
+  {
+    "id": 78,
+    "text": "What does the BeanFactory provide in Spring?",
+    "choices": [
+      "Basic bean management",
+      "HTTP routing",
+      "SQL migrations",
+      "Class loading only"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Basic bean management</strong> is correct because <code>BeanFactory</code> is Spring’s minimal container focused on bean creation and lookup.</p><p>Example: higher-level containers such as <code>ApplicationContext</code> build on top of this bean-management foundation.</p>"
+  },
+  {
+    "id": 79,
+    "text": "What additional features does ApplicationContext provide over BeanFactory?",
+    "choices": [
+      "Internationalization and events",
+      "Direct JDBC pooling",
+      "Built-in servlet rendering only",
+      "Bytecode compilation"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Internationalization and events</strong> is correct because those are key capabilities that <code>ApplicationContext</code> adds beyond the lower-level <code>BeanFactory</code>.</p><p>Example: you can resolve localized messages and publish application events through the application context.</p>"
+  },
+  {
+    "id": 80,
+    "text": "Which Spring module provides AOP support?",
+    "choices": [
+      "Spring AOP",
+      "Spring JDBC",
+      "Spring WebFlux",
+      "Spring LDAP only"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Spring AOP</strong> is correct because that module provides aspect-oriented programming support for cross-cutting concerns such as logging, security, and transactions.</p><p>Example: you can apply timing or logging logic around service methods without duplicating code in every class.</p>"
+  },
+  {
+    "id": 81,
+    "text": "What does AOP stand for?",
+    "choices": [
+      "Aspect-Oriented Programming",
+      "Application Object Processing",
+      "Automated Output Parsing",
+      "Access-Oriented Policies"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Aspect-Oriented Programming</strong> is correct because AOP separates cross-cutting concerns from business logic by applying behavior around matched execution points.</p><p>Example: centralized logging can be implemented once in an aspect instead of repeated in every service method.</p>"
+  },
+  {
+    "id": 82,
+    "text": "Which AOP concept represents cross-cutting logic?",
+    "choices": [
+      "Aspect",
+      "BeanDefinition",
+      "Dispatcher",
+      "FactoryMethod"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Aspect</strong> is correct because an aspect is the unit that groups cross-cutting behavior such as pointcuts and advice.</p><p>Example:<pre><code class=\"language-java\">@Aspect\n@Component\npublic class LoggingAspect {\n}</code></pre></p>"
+  },
+  {
+    "id": 83,
+    "text": "Which AOP concept identifies where advice should run?",
+    "choices": [
+      "Pointcut",
+      "Scope",
+      "Context",
+      "Profile"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Pointcut</strong> is correct because a pointcut defines which methods or join points should be matched so advice can run there.</p><p>Example:<pre><code class=\"language-java\">@Pointcut(\"execution(* com.example.service..*(..))\")\npublic void serviceMethods() {\n}</code></pre></p>"
+  },
+  {
+    "id": 84,
+    "text": "Which AOP advice runs before a matched method executes?",
+    "choices": [
+      "@Before",
+      "@AfterReturning",
+      "@Around",
+      "@AfterThrowing"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Before</strong> is correct because that advice runs before the matched method executes, which is useful for checks or logging.</p><p>Example:<pre><code class=\"language-java\">@Before(\"execution(* com.example.service..*(..))\")\npublic void logCall() {\n}</code></pre></p>"
+  },
+  {
+    "id": 85,
+    "text": "Which AOP advice can control whether the target method proceeds?",
+    "choices": [
+      "@Around",
+      "@Before",
+      "@After",
+      "@Pointcut"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Around</strong> is correct because around advice can run logic before and after the target method and can control whether the method proceeds at all.</p><p>Example:<pre><code class=\"language-java\">@Around(\"execution(* com.example.service..*(..))\")\npublic Object measure(ProceedingJoinPoint pjp) throws Throwable {\n    long start = System.nanoTime();\n    Object result = pjp.proceed();\n    long end = System.nanoTime();\n    return result;\n}</code></pre></p>"
+  },
+  {
+    "id": 86,
+    "text": "Which proxy mechanism is used when a bean implements interfaces by default?",
+    "choices": [
+      "JDK dynamic proxies",
+      "CGLIB only",
+      "ByteBuddy only",
+      "No proxy is created"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>JDK dynamic proxies</strong> is correct because Spring uses JDK dynamic proxies by default when the target bean implements one or more interfaces.</p><p>Example: if <code>UserService</code> implements <code>IUserService</code>, Spring can proxy the interface at runtime.</p>"
+  },
+  {
+    "id": 87,
+    "text": "Which proxy mechanism is often used for class-based proxies in Spring?",
+    "choices": [
+      "CGLIB",
+      "JDK RMI",
+      "Javassist RPC",
+      "Servlet filters"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>CGLIB</strong> is correct because CGLIB is used when Spring needs a class-based proxy, usually because there is no suitable interface to proxy.</p><p>Example: a concrete service class without interfaces can still be proxied for transactions or AOP advice.</p>"
+  },
+  {
+    "id": 88,
+    "text": "Which annotation enables proxy-based transaction management?",
+    "choices": [
+      "@EnableTransactionManagement",
+      "@EnableWebMvc",
+      "@EnableCaching",
+      "@EnableAsync"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@EnableTransactionManagement</strong> is correct because it enables Spring’s proxy-based infrastructure for processing transactional methods.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@EnableTransactionManagement\npublic class PersistenceConfig {\n}</code></pre></p>"
+  },
+  {
+    "id": 89,
+    "text": "Which annotation demarcates transactional methods?",
+    "choices": [
+      "@Transactional",
+      "@Transacted",
+      "@Commit",
+      "@RollbackOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Transactional</strong> is correct because it marks a method or class boundary where Spring should start, join, commit, or roll back a transaction.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class TransferService {\n    @Transactional\n    public void transfer() {\n        // debit and credit in one transaction\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 90,
+    "text": "What is the default transaction propagation in Spring?",
+    "choices": [
+      "REQUIRED",
+      "REQUIRES_NEW",
+      "SUPPORTS",
+      "MANDATORY"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>REQUIRED</strong> is correct because that propagation setting means the method joins an existing transaction if one exists, or starts a new one otherwise.</p><p>Example: a service method annotated with <code>@Transactional</code> uses <code>REQUIRED</code> unless you explicitly choose another propagation mode.</p>"
+  },
+  {
+    "id": 91,
+    "text": "Which propagation starts a new transaction and suspends any existing one?",
+    "choices": [
+      "REQUIRES_NEW",
+      "REQUIRED",
+      "NESTED",
+      "NEVER"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>REQUIRES_NEW</strong> is correct because it always starts a new transaction and suspends any existing one, which is useful when a unit of work must commit independently.</p><p>Example: audit logging is sometimes executed in a separate <code>REQUIRES_NEW</code> transaction.</p>"
+  },
+  {
+    "id": 92,
+    "text": "Which transaction isolation level prevents dirty reads?",
+    "choices": [
+      "READ_COMMITTED",
+      "READ_UNCOMMITTED",
+      "NONE",
+      "DEFAULT_ALWAYS"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>READ_COMMITTED</strong> is correct because that isolation level prevents dirty reads by ensuring a transaction only sees committed changes from other transactions.</p><p>Example: one transaction cannot read another transaction’s uncommitted update at this level.</p>"
+  },
+  {
+    "id": 93,
+    "text": "Which unchecked exception type triggers rollback by default in Spring transactions?",
+    "choices": [
+      "RuntimeException",
+      "IOException",
+      "SQLException only",
+      "CheckedException"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>RuntimeException</strong> is correct because Spring rolls back transactions by default for unchecked exceptions such as <code>RuntimeException</code> and its subclasses.</p><p>Example: if a service throws <code>IllegalStateException</code>, the active transaction is rolled back by default.</p>"
+  },
+  {
+    "id": 94,
+    "text": "Which interface abstracts programmatic transaction control?",
+    "choices": [
+      "PlatformTransactionManager",
+      "TransactionTemplateBuilder",
+      "JdbcAccessor",
+      "PersistenceUnitManager"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>PlatformTransactionManager</strong> is correct because it is Spring’s central strategy interface for beginning, committing, and rolling back transactions programmatically.</p><p>Example: implementations exist for JDBC, JPA, and other persistence technologies.</p>"
+  },
+  {
+    "id": 95,
+    "text": "Which helper class simplifies programmatic transactions?",
+    "choices": [
+      "TransactionTemplate",
+      "JdbcTemplate",
+      "RestTemplate",
+      "BeanTemplate"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>TransactionTemplate</strong> is correct because it simplifies programmatic transaction handling by wrapping code in a callback instead of manually controlling begin and commit.</p><p>Example:<pre><code class=\"language-java\">transactionTemplate.execute(status -&gt; {\n    repository.save(order);\n    return null;\n});</code></pre></p>"
+  },
+  {
+    "id": 96,
+    "text": "Which Spring module simplifies JDBC access?",
+    "choices": [
+      "Spring JDBC",
+      "Spring Test",
+      "Spring Tiles",
+      "Spring Script"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Spring JDBC</strong> is correct because that module reduces JDBC boilerplate around connections, statements, result processing, and exception handling.</p><p>Example: instead of manually closing resources everywhere, you can delegate that work to Spring JDBC helpers.</p>"
+  },
+  {
+    "id": 97,
+    "text": "Which class is central to Spring JDBC operations?",
+    "choices": [
+      "JdbcTemplate",
+      "JdbcManager",
+      "ResultMapper",
+      "ConnectionBean"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>JdbcTemplate</strong> is correct because it is the central helper class in Spring JDBC for executing SQL and mapping results with much less boilerplate.</p><p>Example:<pre><code class=\"language-java\">List&lt;String&gt; names = jdbcTemplate.query(\n    \"select name from users\",\n    (rs, rowNum) -&gt; rs.getString(\"name\")\n);</code></pre></p>"
+  },
+  {
+    "id": 98,
+    "text": "Which interface maps a JDBC ResultSet row to an object?",
+    "choices": [
+      "RowMapper",
+      "BeanMapper",
+      "EntityScanner",
+      "RecordFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>RowMapper</strong> is correct because it maps a single <code>ResultSet</code> row to a domain object, which keeps mapping logic reusable and focused.</p><p>Example:<pre><code class=\"language-java\">RowMapper&lt;User&gt; mapper = (rs, rowNum) -&gt; new User(\n    rs.getLong(\"id\"),\n    rs.getString(\"name\")\n);</code></pre></p>"
+  },
+  {
+    "id": 99,
+    "text": "Which exception hierarchy does Spring use for data access errors?",
+    "choices": [
+      "DataAccessException",
+      "PersistenceError",
+      "JdbcFailureThrowable",
+      "DbRuntimeFault"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>DataAccessException</strong> is correct because Spring wraps low-level persistence failures in this consistent exception hierarchy so your application is not tied to vendor-specific exceptions.</p><p>Example: JDBC and JPA failures can both surface as subclasses of <code>DataAccessException</code>.</p>"
+  },
+  {
+    "id": 100,
+    "text": "Which Spring feature translates vendor-specific persistence exceptions?",
+    "choices": [
+      "Exception translation",
+      "Bean scoping",
+      "View resolution",
+      "Message conversion"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Exception translation</strong> is correct because Spring translates vendor-specific persistence exceptions into its own data-access exception hierarchy so error handling stays consistent.</p><p>Example: a database constraint violation can be converted into a Spring exception instead of leaking a vendor-specific SQL exception.</p>"
+  },
+  {
+    "id": 101,
+    "text": "Which annotation can enable exception translation for repositories?",
+    "choices": [
+      "@Repository",
+      "@Service",
+      "@ComponentScan",
+      "@Import"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Repository</strong> is correct because it marks persistence-layer classes and also allows Spring to translate low-level data access exceptions into its own exception hierarchy.</p><p>Example:<pre><code class=\"language-java\">@Repository\npublic class JdbcCustomerRepository {\n    private final JdbcTemplate jdbcTemplate;\n\n    public JdbcCustomerRepository(JdbcTemplate jdbcTemplate) {\n        this.jdbcTemplate = jdbcTemplate;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 102,
+    "text": "Which Spring module integrates with ORM frameworks like Hibernate?",
+    "choices": [
+      "Spring ORM",
+      "Spring WS",
+      "Spring Shell",
+      "Spring Session"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Spring ORM</strong> is correct because it integrates Spring with ORM technologies such as Hibernate and JPA by simplifying configuration and transaction participation.</p><p>Example: teams use it to combine transaction management with entity-based persistence.</p>"
+  },
+  {
+    "id": 103,
+    "text": "Which package contains core dependency injection support?",
+    "choices": [
+      "spring-beans",
+      "spring-test",
+      "spring-websocket",
+      "spring-messaging"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>spring-beans</strong> is correct because that module contains Spring’s core bean-definition and dependency-injection infrastructure.</p><p>Example: bean creation, wiring, and lifecycle management all build on classes from <code>spring-beans</code>.</p>"
+  },
+  {
+    "id": 104,
+    "text": "Which package contains the ApplicationContext abstraction?",
+    "choices": [
+      "spring-context",
+      "spring-jdbc",
+      "spring-aspects",
+      "spring-r2dbc"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>spring-context</strong> is correct because that module provides <code>ApplicationContext</code>, events, resources, and other higher-level container features.</p><p>Example: when you bootstrap a Spring application context, you are using functionality from <code>spring-context</code>.</p>"
+  },
+  {
+    "id": 105,
+    "text": "Which package contains dispatcher and web MVC infrastructure?",
+    "choices": [
+      "spring-webmvc",
+      "spring-core",
+      "spring-jcl",
+      "spring-expression"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>spring-webmvc</strong> is correct because that module contains the servlet-based Spring MVC framework, including request mapping and the dispatcher servlet.</p><p>Example: controller annotations and view resolution in classic Spring MVC come from <code>spring-webmvc</code>.</p>"
+  },
+  {
+    "id": 106,
+    "text": "Which front controller is central to Spring MVC?",
+    "choices": [
+      "DispatcherServlet",
+      "ContextLoaderListener",
+      "CharacterEncodingFilter",
+      "ViewResolver"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>DispatcherServlet</strong> is correct because it is the front controller in Spring MVC that receives incoming requests and dispatches them to handlers.</p><p>Example: every HTTP request in a Spring MVC app typically enters through the <code>DispatcherServlet</code>.</p>"
+  },
+  {
+    "id": 107,
+    "text": "Which annotation maps HTTP requests onto handler classes or methods?",
+    "choices": [
+      "@RequestMapping",
+      "@ModelAttribute",
+      "@SessionAttributes",
+      "@MatrixVariable"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@RequestMapping</strong> is correct because it maps HTTP requests to controller classes or methods and can define paths, methods, and media types.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/orders\")\npublic class OrderController {\n}</code></pre></p>"
+  },
+  {
+    "id": 108,
+    "text": "Which annotation is a shortcut for HTTP POST mappings?",
+    "choices": [
+      "@PostMapping",
+      "@RequestBody",
+      "@PatchMapping",
+      "@PutMapping"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@PostMapping</strong> is correct because it is the shortcut annotation for handling HTTP POST requests in a controller method.</p><p>Example:<pre><code class=\"language-java\">@PostMapping\npublic Order create(@RequestBody Order order) {\n    return order;\n}</code></pre></p>"
+  },
+  {
+    "id": 109,
+    "text": "Which annotation binds a URL path segment to a method parameter?",
+    "choices": [
+      "@PathVariable",
+      "@RequestParam",
+      "@CookieValue",
+      "@RequestHeader"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@PathVariable</strong> is correct because it binds a value from the URL path into a controller method parameter.</p><p>Example:<pre><code class=\"language-java\">@GetMapping(\"/users/{id}\")\npublic User findById(@PathVariable Long id) {\n    return service.findById(id);\n}</code></pre></p>"
+  },
+  {
+    "id": 110,
+    "text": "Which annotation binds a query parameter to a method parameter?",
+    "choices": [
+      "@RequestParam",
+      "@PathVariable",
+      "@ModelAttribute",
+      "@ResponseStatus"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@RequestParam</strong> is correct because it binds a query-string or form parameter to a method argument.</p><p>Example:<pre><code class=\"language-java\">@GetMapping(\"/search\")\npublic List&lt;User&gt; search(@RequestParam String name) {\n    return service.search(name);\n}</code></pre></p>"
+  },
+  {
+    "id": 111,
+    "text": "Which annotation binds the HTTP request body to an object?",
+    "choices": [
+      "@RequestBody",
+      "@RequestParam",
+      "@ControllerAdvice",
+      "@CrossOrigin"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@RequestBody</strong> is correct because it tells Spring to deserialize the HTTP request body into a Java object using a message converter such as Jackson.</p><p>Example:<pre><code class=\"language-java\">@PostMapping\npublic User create(@RequestBody UserRequest request) {\n    return service.create(request);\n}</code></pre></p>"
+  },
+  {
+    "id": 112,
+    "text": "Which annotation writes a controller return value directly to the response body?",
+    "choices": [
+      "@ResponseBody",
+      "@RequestBody",
+      "@ModelAttribute",
+      "@ExceptionHandler"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@ResponseBody</strong> is correct because it instructs Spring MVC to write the method return value directly to the HTTP response body instead of resolving a view.</p><p>Example:<pre><code class=\"language-java\">@GetMapping(\"/ping\")\n@ResponseBody\npublic Map&lt;String, String&gt; ping() {\n    return Map.of(\"status\", \"ok\");\n}</code></pre></p>"
+  },
+  {
+    "id": 113,
+    "text": "Which controller stereotype combines @Controller and @ResponseBody?",
+    "choices": [
+      "@RestController",
+      "@ControllerAdvice",
+      "@Configuration",
+      "@SessionScope"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@RestController</strong> is correct because it combines <code>@Controller</code> and <code>@ResponseBody</code>, which makes it the standard choice for JSON-based APIs.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/health\")\npublic class HealthController {\n    @GetMapping\n    public Map&lt;String, String&gt; health() {\n        return Map.of(\"status\", \"UP\");\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 114,
+    "text": "Which Spring MVC abstraction resolves logical view names to views?",
+    "choices": [
+      "ViewResolver",
+      "HandlerAdapter",
+      "LocaleResolver",
+      "BeanWrapper"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>ViewResolver</strong> is correct because it translates a logical view name returned by a controller into the actual view implementation to render.</p><p>Example: returning <code>\"home\"</code> from a controller can be resolved to a template such as <code>home.html</code>.</p>"
+  },
+  {
+    "id": 115,
+    "text": "Which object holds model attributes and the selected view in Spring MVC?",
+    "choices": [
+      "ModelAndView",
+      "ResponseEntity",
+      "BindingResult",
+      "BeanDefinition"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>ModelAndView</strong> is correct because it carries both the model data and the selected view name in one object.</p><p>Example:<pre><code class=\"language-java\">@GetMapping(\"/dashboard\")\npublic ModelAndView dashboard() {\n    ModelAndView mv = new ModelAndView(\"dashboard\");\n    mv.addObject(\"count\", 42);\n    return mv;\n}</code></pre></p>"
+  },
+  {
+    "id": 116,
+    "text": "Which interface processes incoming requests before a controller executes?",
+    "choices": [
+      "HandlerInterceptor",
+      "BeanPostProcessor",
+      "Converter",
+      "Formatter"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>HandlerInterceptor</strong> is correct because it runs before or after controller execution and is often used for logging, authentication, or request timing.</p><p>Example: you might add an interceptor to log every request path before controller logic runs.</p>"
+  },
+  {
+    "id": 117,
+    "text": "Which MVC component adapts handlers to the DispatcherServlet?",
+    "choices": [
+      "HandlerAdapter",
+      "ViewResolver",
+      "ResourceHandler",
+      "TaskExecutor"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>HandlerAdapter</strong> is correct because it is the MVC component that lets <code>DispatcherServlet</code> invoke different types of handlers in a uniform way.</p><p>Example: the dispatcher delegates to a handler adapter so the matched controller method can actually be called.</p>"
+  },
+  {
+    "id": 118,
+    "text": "Which annotation handles exceptions within a controller?",
+    "choices": [
+      "@ExceptionHandler",
+      "@Controller",
+      "@ResponseBody",
+      "@InitBinder"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@ExceptionHandler</strong> is correct because it handles exceptions raised by controller methods and converts them into an appropriate HTTP response.</p><p>Example:<pre><code class=\"language-java\">@ExceptionHandler(UserNotFoundException.class)\n@ResponseStatus(HttpStatus.NOT_FOUND)\npublic Map&lt;String, String&gt; handle(UserNotFoundException ex) {\n    return Map.of(\"error\", ex.getMessage());\n}</code></pre></p>"
+  },
+  {
+    "id": 119,
+    "text": "Which annotation applies exception handling globally across controllers?",
+    "choices": [
+      "@ControllerAdvice",
+      "@RestController",
+      "@Order",
+      "@Configuration"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@ControllerAdvice</strong> is correct because it centralizes exception handling or binder configuration across multiple controllers.</p><p>Example: instead of repeating error handling in every controller, you can define one global advice class.</p>"
+  },
+  {
+    "id": 120,
+    "text": "Which object stores validation and binding errors in Spring MVC?",
+    "choices": [
+      "BindingResult",
+      "ModelMap",
+      "FlashMap",
+      "WebDataBinderFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>BindingResult</strong> is correct because it stores validation and data-binding errors so a controller can inspect them and decide what to do next.</p><p>Example:<pre><code class=\"language-java\">public String save(@Valid UserForm form, BindingResult bindingResult) {\n    if (bindingResult.hasErrors()) {\n        return \"user-form\";\n    }\n    return \"redirect:/users\";\n}</code></pre></p>"
+  },
+  {
+    "id": 121,
+    "text": "Which annotation triggers bean validation on a request body or model object?",
+    "choices": [
+      "@Valid",
+      "@ValidatedOnly",
+      "@Check",
+      "@Assert"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Valid</strong> is correct because it triggers Bean Validation on the annotated object so Spring can automatically validate incoming request models.</p><p>Example:<pre><code class=\"language-java\">public ResponseEntity&lt;User&gt; create(@Valid @RequestBody UserRequest request) {\n    return ResponseEntity.ok(service.create(request));\n}</code></pre></p>"
+  },
+  {
+    "id": 122,
+    "text": "Which Spring interface converts text to typed objects?",
+    "choices": [
+      "Converter",
+      "Resolver",
+      "Pointcut",
+      "Advisor"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Converter</strong> is correct because it converts one type to another inside Spring’s conversion system, which is useful for request parameters and configuration binding.</p><p>Example: a custom converter can turn a String id into a domain-specific identifier object.</p>"
+  },
+  {
+    "id": 123,
+    "text": "Which Spring interface formats typed objects for display and parsing?",
+    "choices": [
+      "Formatter",
+      "Mapper",
+      "Adapter",
+      "Compiler"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Formatter</strong> is correct because a formatter handles both parsing and printing of values, often for locale-sensitive display and input.</p><p>Example: dates and currency values are common candidates for custom formatters.</p>"
+  },
+  {
+    "id": 124,
+    "text": "Which feature supports locale-specific message resolution?",
+    "choices": [
+      "MessageSource",
+      "ViewResolver",
+      "BeanWrapper",
+      "TaskScheduler"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>MessageSource</strong> is correct because it resolves messages for internationalization so the application can display locale-specific text.</p><p>Example: one validation key can map to different messages for English and French users.</p>"
+  },
+  {
+    "id": 125,
+    "text": "Which file type is often used to externalize messages for i18n?",
+    "choices": [
+      "properties files",
+      "YAML schemas only",
+      "SQL scripts",
+      "Servlet descriptors"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>properties files</strong> is correct because message bundles are commonly stored in properties files because Spring can load them easily for i18n.</p><p>Example: files such as <code>messages.properties</code> and <code>messages_fr.properties</code> can store localized text.</p>"
+  },
+  {
+    "id": 126,
+    "text": "Which annotation loads a properties file into the environment?",
+    "choices": [
+      "@PropertySource",
+      "@Profile",
+      "@DependsOn",
+      "@Role"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@PropertySource</strong> is correct because it loads an external properties file into the Spring environment so values from that file can be resolved.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@PropertySource(\"classpath:custom.properties\")\npublic class AppConfig {\n}</code></pre></p>"
+  },
+  {
+    "id": 127,
+    "text": "Which Spring abstraction provides access to property values and profiles?",
+    "choices": [
+      "Environment",
+      "ApplicationEvent",
+      "Resource",
+      "BeanFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Environment</strong> is correct because the Spring <code>Environment</code> provides access to properties, active profiles, and related environment-specific settings.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class ProfilePrinter {\n    public ProfilePrinter(Environment environment) {\n        System.out.println(Arrays.toString(environment.getActiveProfiles()));\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 128,
+    "text": "Which annotation restricts a bean to specific active profiles?",
+    "choices": [
+      "@Profile",
+      "@Primary",
+      "@DependsOn",
+      "@Order"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Profile</strong> is correct because it limits a bean or configuration class to specific active profiles such as <code>dev</code> or <code>prod</code>.</p><p>Example:<pre><code class=\"language-java\">@Bean\n@Profile(\"dev\")\npublic DataSource h2DataSource() {\n    return new EmbeddedDatabaseBuilder().build();\n}</code></pre></p>"
+  },
+  {
+    "id": 129,
+    "text": "Which resource prefix loads a classpath resource in Spring?",
+    "choices": [
+      "classpath:",
+      "file-http:",
+      "jar-only:",
+      "beans:"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>classpath:</strong> is correct because that prefix tells Spring to resolve the resource from the application classpath.</p><p>Example: <code>classpath:application.properties</code> refers to a file packaged inside the application.</p>"
+  },
+  {
+    "id": 130,
+    "text": "Which Spring abstraction represents external resources uniformly?",
+    "choices": [
+      "Resource",
+      "Asset",
+      "Endpoint",
+      "ArchiveEntry"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Resource</strong> is correct because it is Spring’s abstraction for working with classpath files, filesystem files, and URLs in a uniform way.</p><p>Example: the same code can read from a classpath resource or a file resource through the <code>Resource</code> API.</p>"
+  },
+  {
+    "id": 0,
+    "text": null,
+    "choices": [],
+    "correctIndex": 0,
+    "topic": null,
+    "explanation": "<p><strong></strong> is correct because it directly answers the concept being tested.</p><p>Example: In a real project, you would use <code></code> when solving this kind of problem.</p>"
+  },
+  {
+    "id": 131,
+    "text": "Which interface loads resources from various locations?",
+    "choices": [
+      "ResourceLoader",
+      "ClassLoaderFactory",
+      "ViewLoader",
+      "ContextScanner"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>ResourceLoader</strong> is correct because it loads resources from different locations such as the classpath, filesystem, or remote URLs.</p><p>Example:<pre><code class=\"language-java\">Resource resource = resourceLoader.getResource(\"classpath:data.txt\");</code></pre></p>"
+  },
+  {
+    "id": 132,
+    "text": "Which Spring feature publishes and listens for application-level events?",
+    "choices": [
+      "Application events",
+      "AOP advice",
+      "Bean scopes",
+      "MVC interceptors"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>Application events</strong> is correct because Spring’s event system lets one part of the application publish an event and other parts react without tight coupling.</p><p>Example: creating a user can publish a <code>UserCreatedEvent</code> that another listener uses to send a welcome email.</p>"
+  },
+  {
+    "id": 133,
+    "text": "Which interface listens for Spring application events?",
+    "choices": [
+      "ApplicationListener",
+      "EventSubscriber",
+      "BeanObserver",
+      "LifecycleHook"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>ApplicationListener</strong> is correct because it is the callback interface for receiving Spring application events.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class UserCreatedListener implements ApplicationListener&lt;UserCreatedEvent&gt; {\n    @Override\n    public void onApplicationEvent(UserCreatedEvent event) {\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 134,
+    "text": "Which method can publish an event from the application context?",
+    "choices": [
+      "publishEvent",
+      "dispatchEventNow",
+      "notifyBeans",
+      "sendContextMessage"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>publishEvent</strong> is correct because that method on the application context publishes an event to registered listeners.</p><p>Example:<pre><code class=\"language-java\">applicationContext.publishEvent(new UserCreatedEvent(this, userId));</code></pre></p>"
+  },
+  {
+    "id": 135,
+    "text": "Which annotation registers a method as an event listener?",
+    "choices": [
+      "@EventListener",
+      "@Listener",
+      "@Observe",
+      "@AfterEvent"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@EventListener</strong> is correct because it registers a method as an event listener without requiring the class to implement <code>ApplicationListener</code>.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class WelcomeEmailListener {\n    @EventListener\n    public void onUserCreated(UserCreatedEvent event) {\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 0,
+    "text": " Spring automatically invokes the annotated method",
+    "choices": [],
+    "correctIndex": 0,
+    "topic": null,
+    "explanation": "<p><strong></strong> is correct because it directly answers the concept being tested.</p><p>Example: In a real project, you would use <code></code> when solving this kind of problem.</p>"
+  },
+  {
+    "id": 136,
+    "text": "Which annotation enables asynchronous method execution in Spring?",
+    "choices": [
+      "@EnableAsync",
+      "@EnableScheduling",
+      "@EnableCaching",
+      "@EnableRetry"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@EnableAsync</strong> is correct because it enables support for running methods annotated with <code>@Async</code> in the background.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@EnableAsync\npublic class AsyncConfig {\n}</code></pre></p>"
+  },
+  {
+    "id": 137,
+    "text": "Which annotation marks a method to run asynchronously?",
+    "choices": [
+      "@Async",
+      "@Scheduled",
+      "@Transactional",
+      "@Lazy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Async</strong> is correct because it marks a method to run asynchronously, usually using a configured task executor.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class MailService {\n    @Async\n    public void sendWelcomeEmail(String email) {\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 138,
+    "text": "Which TaskExecutor implementation is commonly used for async execution?",
+    "choices": [
+      "ThreadPoolTaskExecutor",
+      "SimpleJdbcExecutor",
+      "ServletTaskBridge",
+      "BeanTaskFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>ThreadPoolTaskExecutor</strong> is correct because it is a common Spring executor implementation for async task execution with configurable pool settings.</p><p>Example:<pre><code class=\"language-java\">@Bean\npublic ThreadPoolTaskExecutor taskExecutor() {\n    ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();\n    executor.setCorePoolSize(4);\n    executor.initialize();\n    return executor;\n}</code></pre></p>"
+  },
+  {
+    "id": 139,
+    "text": "Which annotation enables scheduled task execution?",
+    "choices": [
+      "@EnableScheduling",
+      "@EnableAsync",
+      "@EnableWebMvc",
+      "@EnableLoadTimeWeaving"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@EnableScheduling</strong> is correct because it enables detection of scheduled methods so Spring can execute them automatically.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@EnableScheduling\npublic class SchedulingConfig {\n}</code></pre></p>"
+  },
+  {
+    "id": 140,
+    "text": "Which annotation schedules a method with a cron or fixed delay?",
+    "choices": [
+      "@Scheduled",
+      "@Async",
+      "@EventListener",
+      "@Cacheable"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Scheduled</strong> is correct because it schedules a method to run automatically based on a fixed delay, fixed rate, or cron expression.</p><p>Example:<pre><code class=\"language-java\">@Scheduled(cron = \"0 0 * * * *\")\npublic void refreshCache() {\n}</code></pre></p>"
+  },
+  {
+    "id": 141,
+    "text": "Which expression language is used inside Spring configuration and annotations?",
+    "choices": [
+      "SpEL",
+      "OGNL only",
+      "MVEL only",
+      "XPath"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>SpEL</strong> is correct because Spring Expression Language lets you evaluate expressions inside configuration, annotations, and bean definitions.</p><p>Example: you might write <code>#{systemProperties['user.home']}</code> to read a system property.</p>"
+  },
+  {
+    "id": 142,
+    "text": "Which prefix is used for SpEL expressions in annotations?",
+    "choices": [
+      "#{...}",
+      "${...}",
+      "@{...}",
+      "%{...}"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>#{...}</strong> is correct because that syntax is used for Spring Expression Language expressions.</p><p>Example: <code>@Value(\"#{2 * 3}\")</code> injects the evaluated result of the expression.</p>"
+  },
+  {
+    "id": 143,
+    "text": "Which placeholder syntax is commonly used for property values in Spring?",
+    "choices": [
+      "${...}",
+      "#{...}",
+      "<...>",
+      "%(...)s"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>${...}</strong> is correct because that syntax is used for property placeholders resolved from Spring configuration sources.</p><p>Example: <code>@Value(\"${server.port}\")</code> injects the configured port value.</p>"
+  },
+  {
+    "id": 144,
+    "text": "Which annotation can mark a dependency for lazy initialization?",
+    "choices": [
+      "@Lazy",
+      "@DependsOn",
+      "@Role",
+      "@Import"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Lazy</strong> is correct because it delays bean creation until the bean is actually needed instead of initializing it eagerly at startup.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class ReportService {\n    public ReportService(@Lazy AnalyticsClient analyticsClient) {\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 145,
+    "text": "Which annotation declares that one bean depends on another bean being initialized first?",
+    "choices": [
+      "@DependsOn",
+      "@Order",
+      "@Primary",
+      "@Qualifier"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@DependsOn</strong> is correct because it tells Spring that one bean should be initialized only after another named bean has been created first.</p><p>Example:<pre><code class=\"language-java\">@Bean\n@DependsOn(\"dataSource\")\npublic FlywayMigrationInitializer flywayInitializer() {\n    return new FlywayMigrationInitializer();\n}</code></pre></p>"
+  },
+  {
+    "id": 146,
+    "text": "Which annotation imports additional configuration classes?",
+    "choices": [
+      "@Import",
+      "@Include",
+      "@EnableConfig",
+      "@ComponentScanOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@Import</strong> is correct because it brings additional configuration classes into the current Spring configuration.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@Import(SecurityConfig.class)\npublic class AppConfig {\n}</code></pre></p>"
+  },
+  {
+    "id": 147,
+    "text": "Which annotation enables AspectJ auto proxy support in Java config?",
+    "choices": [
+      "@EnableAspectJAutoProxy",
+      "@EnableAopProxy",
+      "@EnableProxyBeans",
+      "@ProxyConfig"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@EnableAspectJAutoProxy</strong> is correct because it enables processing of classes annotated with <code>@Aspect</code> using Spring AOP proxies.</p><p>Example:<pre><code class=\"language-java\">@Configuration\n@EnableAspectJAutoProxy\npublic class AopConfig {\n}</code></pre></p>"
+  },
+  {
+    "id": 148,
+    "text": "Which Spring testing annotation loads an application context for integration tests?",
+    "choices": [
+      "@SpringJUnitConfig",
+      "@MockBean",
+      "@DirtiesContextOnly",
+      "@NestedTestConfig"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@SpringJUnitConfig</strong> is correct because it integrates Spring’s test context support with JUnit so your test can load and use an application context.</p><p>Example:<pre><code class=\"language-java\">@SpringJUnitConfig(AppConfig.class)\nclass UserServiceTest {\n    @Autowired\n    UserService userService;\n}</code></pre></p>"
+  },
+  {
+    "id": 149,
+    "text": "Which Spring test annotation indicates a context should be reloaded after a test?",
+    "choices": [
+      "@DirtiesContext",
+      "@Rollback",
+      "@Commit",
+      "@SqlConfig"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>@DirtiesContext</strong> is correct because it tells the Spring test framework that the application context should be closed and rebuilt after the test.</p><p>Example: use it when a test changes bean state or configuration in a way that could affect later tests.</p>"
+  },
+  {
+    "id": 150,
+    "text": "Which utility class in Spring tests can perform requests against MVC controllers?",
+    "choices": [
+      "MockMvc",
+      "TestRestTemplate",
+      "WebClient",
+      "JdbcTemplate"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "<p><strong>MockMvc</strong> is correct because it lets you test Spring MVC controllers without deploying the application to a real servlet container.</p><p>Example:<pre><code class=\"language-java\">mockMvc.perform(get(\"/api/users\"))\n       .andExpect(status().isOk());</code></pre></p>"
+  }
+]

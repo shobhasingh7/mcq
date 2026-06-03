@@ -1,23 +1,24 @@
 package com.example.mcq.service;
 
 import com.example.mcq.model.Question;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class QuestionService {
     private final List<Question> questions = new ArrayList<>();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     public QuestionService() {
-        loadQuestionsFromCsv("questions.csv");
+        loadQuestionsFromJson("questions.json");
     }
 
     public List<Question> findAll() {
@@ -30,56 +31,32 @@ public class QuestionService {
                 .findFirst();
     }
 
-    private void loadQuestionsFromCsv(String resourceName) {
+    private void loadQuestionsFromJson(String resourceName) {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(resourceName)) {
             if (inputStream == null) {
                 throw new IllegalStateException("Resource not found: " + resourceName);
             }
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
-                String header = reader.readLine();
-                if (header == null) {
-                    return;
-                }
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    List<String> fields = parseCsvLine(line);
-                    if (fields.size() < 4) {
-                        continue;
-                    }
-                    int id = Integer.parseInt(fields.get(0).trim());
-                    String text = fields.get(1).trim();
-                    List<String> choices = List.of(fields.get(2).split("\\|"));
-                    int correctIndex = Integer.parseInt(fields.get(3).trim());
-                    questions.add(new Question(id, text, choices, correctIndex));
-                }
+            List<Question> loadedQuestions = objectMapper.readValue(inputStream, new TypeReference<List<Question>>() {});
+            for (Question loadedQuestion : loadedQuestions) {
+                List<String> choices = new ArrayList<>(loadedQuestion.getChoices());
+                int correctIndex = shuffleChoices(choices, loadedQuestion.getCorrectIndex());
+                questions.add(new Question(
+                        loadedQuestion.getId(),
+                        loadedQuestion.getText(),
+                        choices,
+                        correctIndex,
+                        loadedQuestion.getTopic(),
+                        loadedQuestion.getExplanation()
+                ));
             }
         } catch (IOException e) {
-            throw new IllegalStateException("Unable to load questions from CSV", e);
+            throw new IllegalStateException("Unable to load questions from JSON", e);
         }
     }
 
-    private List<String> parseCsvLine(String line) {
-        List<String> fields = new ArrayList<>();
-        StringBuilder current = new StringBuilder();
-        boolean inQuotes = false;
-
-        for (int i = 0; i < line.length(); i++) {
-            char ch = line.charAt(i);
-            if (ch == '"') {
-                if (inQuotes && i + 1 < line.length() && line.charAt(i + 1) == '"') {
-                    current.append('"');
-                    i++;
-                } else {
-                    inQuotes = !inQuotes;
-                }
-            } else if (ch == ',' && !inQuotes) {
-                fields.add(current.toString());
-                current.setLength(0);
-            } else {
-                current.append(ch);
-            }
-        }
-        fields.add(current.toString());
-        return fields;
+    private int shuffleChoices(List<String> choices, int correctIndex) {
+        String correctChoice = choices.get(correctIndex);
+        Collections.shuffle(choices);
+        return choices.indexOf(correctChoice);
     }
 }

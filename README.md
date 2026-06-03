@@ -1,25 +1,37 @@
-# MCQ Spring Boot Web App
+# MCQ Angular + Vercel App
 
-A simple Spring Boot multiple-choice quiz application with a static frontend.
+A multiple-choice quiz application built as an Angular frontend with Vercel serverless API functions.
 
 ## Features
 
-- REST API for question list and batch answer submission
-- Static frontend served by Spring Boot
-- Questions loaded from `src/main/resources/questions.csv`
+- Angular single-page frontend
+- Vercel API functions for question retrieval and answer submission
+- Questions loaded from `src/main/resources/questions.json`
 - Clear button for each question to reset answers
 - Final submit button to submit all answers at once
 - Automatic score calculation and display with percentage
+- Explanation rendering with multiline HTML support for code snippets
 
 ## Run locally
 
-1. Install Java 17 or newer.
-2. Build the project:
+1. Install Node.js 18+.
+2. Install dependencies:
    ```bash
-   mvn clean package
+   npm install
    ```
-3. Run the app:
+3. Start the Angular development server:
    ```bash
-   mvn spring-boot:run
+   npm start
    ```
-4. Open `http://localhost:8080` in your browser.
+4. In a separate terminal, run Vercel locally if you want the `/api/*` functions:
+   ```bash
+   npx vercel dev
+   ```
+5. Open the local URL shown by Vercel.
+
+## Deploy to Vercel
+
+1. Import this repository into Vercel.
+2. Keep the default install command `npm install`.
+3. Use the provided build command from `vercel.json`.
+4. Deploy.

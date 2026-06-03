@@ -7,15 +7,19 @@ public class Question {
     private String text;
     private List<String> choices;
     private int correctIndex;
+    private String topic;
+    private String explanation;
 
     public Question() {
     }
 
-    public Question(int id, String text, List<String> choices, int correctIndex) {
+    public Question(int id, String text, List<String> choices, int correctIndex, String topic, String explanation) {
         this.id = id;
         this.text = text;
         this.choices = choices;
         this.correctIndex = correctIndex;
+        this.topic = topic;
+        this.explanation = explanation;
     }
 
     public int getId() {
@@ -48,5 +52,21 @@ public class Question {
 
     public void setCorrectIndex(int correctIndex) {
         this.correctIndex = correctIndex;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
     }
 }

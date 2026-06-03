@@ -1,0 +1,108 @@
+<div class="app-shell">
+  <header class="hero">
+    <p class="eyebrow">React + Angular + Spring Boot + Spring 
+    </p>
+    <h1>Multiple Choice Quiz</h1>
+    <p class="hero-copy">
+      Practice topic-tagged questions, submit answers one by one, and review explanations for the ones you get right.
+    </p>
+  </header>
+
+  <section *ngIf="loading" class="status-card">
+    Loading questions...
+  </section>
+
+  <section *ngIf="errorMessage" class="status-card error">
+    {{ errorMessage }}
+  </section>
+
+  <ng-container *ngIf="!loading && !errorMessage">
+    <section
+      *ngFor="let question of pagedQuestions; trackBy: trackQuestion"
+      class="question-card"
+    >
+      <div class="question-topic">{{ question.topic }}</div>
+      <div class="question-text">{{ question.text }}</div>
+
+      <div class="choices">
+        <label
+          *ngFor="let choice of question.choices; let choiceIndex = index; trackBy: trackChoice"
+          class="choice-label"
+        >
+          <input
+            type="radio"
+            [name]="'question-' + question.id"
+            [value]="choiceIndex"
+            [ngModel]="answers[question.id]"
+            (ngModelChange)="setAnswer(question.id, choiceIndex)"
+          />
+          <span>{{ choice }}</span>
+        </label>
+      </div>
+
+      <div class="button-group">
+        <button type="button" class="clear-button" (click)="clearAnswer(question.id)">
+          Clear
+        </button>
+        <button type="button" class="submit-button" (click)="submitSingleAnswer(question.id)">
+          Submit
+        </button>
+      </div>
+
+      <div
+        *ngIf="results[question.id] as result"
+        class="question-result"
+        [class.success]="result.correct"
+        [class.error]="!result.correct"
+      >
+        <div class="question-feedback">{{ result.feedback }}</div>
+        <div
+          *ngIf="result.correct && result.explanation"
+          class="question-explanation"
+          [innerHTML]="formatExplanation(result.explanation)"
+        ></div>
+      </div>
+    </section>
+
+    <nav *ngIf="totalPages > 1" class="pagination-nav">
+      <button
+        type="button"
+        class="pagination-button"
+        [disabled]="currentPage === 1"
+        (click)="goToPage(currentPage - 1)"
+      >
+        ← Previous
+      </button>
+
+      <span class="page-info">Page {{ currentPage }} of {{ totalPages }}</span>
+
+      <button
+        type="button"
+        class="pagination-button"
+        [disabled]="currentPage === totalPages"
+        (click)="goToPage(currentPage + 1)"
+      >
+        Next →
+      </button>
+    </nav>
+
+    <section class="final-submit-panel">
+      <button type="button" class="final-submit-button" (click)="submitAllAnswers()">
+        Submit All Answers
+      </button>
+    </section>
+
+    <section
+      *ngIf="finalResult"
+      class="score-card"
+      [class.pass]="finalResult.percentage >= 50"
+      [class.fail]="finalResult.percentage < 50"
+    >
+      <div class="score-message">{{ finalResult.message }}</div>
+      <div *ngIf="allAnswered" class="score-details">
+        <span>Correct: {{ finalResult.correctAnswers }}/{{ finalResult.totalQuestions }}</span>
+        <span>Percentage: {{ finalResult.percentage.toFixed(1) }}%</span>
+      </div>
+    </section>
+  </ng-container>
+</div>

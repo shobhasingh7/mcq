@@ -31,7 +31,8 @@ public class QuestionController {
                 .map(question -> {
                     boolean correct = question.getCorrectIndex() == request.getSelectedIndex();
                     String feedback = correct ? "Correct!" : "Incorrect. Try again.";
-                    return ResponseEntity.ok(new AnswerResponse(correct, feedback));
+                    String explanation = correct ? question.getExplanation() : null;
+                    return ResponseEntity.ok(new AnswerResponse(correct, feedback, explanation));
                 })
                 .orElse(ResponseEntity.badRequest().body(new AnswerResponse(false, "Question not found.")));
     }

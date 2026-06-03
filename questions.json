@@ -1,0 +1,1972 @@
+[
+  {
+    "id": 1,
+    "text": "What is the Spring Boot annotation to mark the main application class?",
+    "choices": [
+      "@SpringBootApplication",
+      "@EnableAutoConfiguration",
+      "@Configuration",
+      "@Component"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is @SpringBootApplication because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 2,
+    "text": "Which dependency is typically used for building REST APIs in Spring Boot?",
+    "choices": [
+      "spring-boot-starter-web",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-security",
+      "spring-boot-starter-thymeleaf"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is spring-boot-starter-web because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 3,
+    "text": "In Spring, which annotation is used for constructor-based dependency injection?",
+    "choices": [
+      "@Autowired",
+      "@Inject",
+      "@Value",
+      "None of the above"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is @Autowired because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 4,
+    "text": "Which file defines Spring profiles and properties for different environments?",
+    "choices": [
+      "application.properties",
+      "pom.xml",
+      "build.gradle",
+      "Dockerfile"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is application.properties because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 5,
+    "text": "Which Spring module provides integration with relational databases using repositories?",
+    "choices": [
+      "Spring Data JPA",
+      "Spring MVC",
+      "Spring Security",
+      "Spring Batch"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is Spring Data JPA because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 6,
+    "text": "In Spring Data JPA, which annotation marks the primary key of an entity?",
+    "choices": [
+      "@Id",
+      "@Primary",
+      "@Key",
+      "@EntityId"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is @Id because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 7,
+    "text": "What is the default port for a Spring Boot application?",
+    "choices": [
+      "8080",
+      "3000",
+      "8000",
+      "5000"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is 8080 because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 8,
+    "text": "Which annotation maps an HTTP GET request to a controller method?",
+    "choices": [
+      "@GetMapping",
+      "@RequestMapping(method=POST)",
+      "@PostMapping",
+      "@DeleteMapping"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is @GetMapping because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 9,
+    "text": "Which Spring Boot starter adds actuator endpoints for monitoring?",
+    "choices": [
+      "spring-boot-starter-actuator",
+      "spring-boot-starter-test",
+      "spring-boot-starter-web",
+      "spring-boot-starter-mail"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is spring-boot-starter-actuator because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 10,
+    "text": "What does CORS stand for in web development?",
+    "choices": [
+      "Cross-Origin Resource Sharing",
+      "Cross-Origin Request Service",
+      "Client-Origin Resource Sharing",
+      "Cross-Object Resource Service"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Cross-Origin Resource Sharing because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 11,
+    "text": "In Angular, which file defines a component's metadata?",
+    "choices": [
+      "component.ts",
+      "index.html",
+      "styles.css",
+      "main.ts"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is component.ts because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 12,
+    "text": "Which decorator defines an Angular component?",
+    "choices": [
+      "@Component",
+      "@NgModule",
+      "@Injectable",
+      "@Directive"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is @Component because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 13,
+    "text": "In Angular templates, which binding is used for property binding?",
+    "choices": [
+      "[property]=",
+      " (event)=",
+      "{{ interpolation }}",
+      "*ngIf="
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is [property]= because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 14,
+    "text": "Which Angular feature is used for conditional rendering?",
+    "choices": [
+      "*ngIf",
+      "*ngFor",
+      "[hidden]",
+      "ngModel"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is *ngIf because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 15,
+    "text": "Which Angular CLI command generates a new component?",
+    "choices": [
+      "ng generate component my-comp",
+      "npm create component my-comp",
+      "ng new component my-comp",
+      "ng add component my-comp"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is ng generate component my-comp because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 16,
+    "text": "In React, what hook is used to manage local state in a functional component?",
+    "choices": [
+      "useState",
+      "useEffect",
+      "useContext",
+      "useReducer"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is useState because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 17,
+    "text": "Which method did class components use for lifecycle after mounting?",
+    "choices": [
+      "componentDidMount",
+      "useEffect",
+      "useLayoutEffect",
+      "renderComplete"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is componentDidMount because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 18,
+    "text": "What does JSX stand for?",
+    "choices": [
+      "JavaScript XML",
+      "JavaScript eXtended",
+      "JSON Styled eXtension",
+      "JavaScript eXtensible XML"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is JavaScript XML because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 19,
+    "text": "In React, which prop is used to pass data to child components?",
+    "choices": [
+      "props",
+      "state",
+      "context",
+      "key"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is props because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 20,
+    "text": "Which command creates a new React app using Create React App?",
+    "choices": [
+      "npx create-react-app my-app",
+      "npm init react-app my-app",
+      "yarn new react-app my-app",
+      "npm create-react-app my-app"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is npx create-react-app my-app because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 21,
+    "text": "Which HTTP status code indicates a successful GET request?",
+    "choices": [
+      "200",
+      "201",
+      "400",
+      "500"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is 200 because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 22,
+    "text": "Which database is a relational DB?",
+    "choices": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Cassandra"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is PostgreSQL because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 23,
+    "text": "Which header is used to send a JWT token for authentication?",
+    "choices": [
+      "Authorization",
+      "X-CSRF-Token",
+      "Content-Type",
+      "Accept"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Authorization because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 24,
+    "text": "Which Dockerfile instruction sets the base image?",
+    "choices": [
+      "FROM",
+      "RUN",
+      "CMD",
+      "ENTRYPOINT"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is FROM because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 25,
+    "text": "Which tool is commonly used for continuous integration?",
+    "choices": [
+      "Jenkins",
+      "Webpack",
+      "ESLint",
+      "Prettier"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Jenkins because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 26,
+    "text": "In Angular, which service pattern provides HTTP calls?",
+    "choices": [
+      "HttpClient",
+      "HttpService",
+      "AjaxService",
+      "FetchService"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is HttpClient because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 27,
+    "text": "Which React hook runs after every render by default?",
+    "choices": [
+      "useEffect",
+      "useMemo",
+      "useCallback",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is useEffect because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 28,
+    "text": "Which Spring annotation secures methods or classes?",
+    "choices": [
+      "@PreAuthorize",
+      "@Service",
+      "@Controller",
+      "@Repository"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is @PreAuthorize because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 29,
+    "text": "Which SQL statement retrieves rows from a table?",
+    "choices": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is SELECT because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 30,
+    "text": "What is the purpose of a reverse proxy in front of an app?",
+    "choices": [
+      "Load balancing and routing",
+      "Translating SQL queries",
+      "Compiling source code",
+      "Minifying assets"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Load balancing and routing because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 31,
+    "text": "In React, which attribute helps identify list items for efficient re-rendering?",
+    "choices": [
+      "key",
+      "id",
+      "ref",
+      "index"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is key because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 32,
+    "text": "Which Angular lifecycle hook runs after component initialization?",
+    "choices": [
+      "ngOnInit",
+      "ngAfterViewInit",
+      "constructor",
+      "ngDoCheck"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is ngOnInit because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 33,
+    "text": "Which Spring annotation maps a class to a REST controller?",
+    "choices": [
+      "@RestController",
+      "@Controller",
+      "@Service",
+      "@Component"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is @RestController because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 34,
+    "text": "Which package manager is typically used with Angular projects?",
+    "choices": [
+      "npm",
+      "pip",
+      "gem",
+      "composer"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is npm because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 35,
+    "text": "In full-stack development, what does SPA stand for?",
+    "choices": [
+      "Single Page Application",
+      "Server Page Application",
+      "Simple Page App",
+      "Secure Page Access"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Single Page Application because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 36,
+    "text": "Which React feature allows avoiding prop drilling by providing global data?",
+    "choices": [
+      "Context API",
+      "Redux-only",
+      "Local storage",
+      "Refs"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is Context API because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 37,
+    "text": "Which HTTP method is idempotent?",
+    "choices": [
+      "PUT",
+      "POST",
+      "PATCH",
+      "CONNECT"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is PUT because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 38,
+    "text": "Which Angular directive is used to loop over collections?",
+    "choices": [
+      "*ngFor",
+      "*ngIf",
+      "[ngStyle]",
+      "(click)"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is *ngFor because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 39,
+    "text": "Which Spring component scans for annotated classes during startup?",
+    "choices": [
+      "Component scanning",
+      "AutoConfiguration",
+      "BeanFactory",
+      "ApplicationContext only"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is Component scanning because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 40,
+    "text": "What does REST stand for in web services?",
+    "choices": [
+      "Representational State Transfer",
+      "Remote Execution Service Transfer",
+      "Resource State Transfer",
+      "ReSTful Service Type"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Representational State Transfer because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 41,
+    "text": "Which tool bundles JavaScript modules for browser use?",
+    "choices": [
+      "Webpack",
+      "Maven",
+      "Gradle",
+      "Gulp (note: bundlers vary)"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Webpack because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 42,
+    "text": "Which database type is document-oriented?",
+    "choices": [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "OracleDB"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is MongoDB because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 43,
+    "text": "Which HTTP status indicates resource created?",
+    "choices": [
+      "201",
+      "200",
+      "404",
+      "500"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is 201 because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 44,
+    "text": "Which Angular concept groups related components and services?",
+    "choices": [
+      "NgModule",
+      "ComponentGroup",
+      "ServicePackage",
+      "DirectiveModule"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is NgModule because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 45,
+    "text": "In Spring Boot, which file enables configuring logging levels?",
+    "choices": [
+      "application.properties",
+      "pom.xml",
+      "README.md",
+      "Dockerfile"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "The correct answer is application.properties because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 46,
+    "text": "Which React hook memoizes a value?",
+    "choices": [
+      "useMemo",
+      "useCallback",
+      "useState",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is useMemo because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 47,
+    "text": "Which authentication method uses username/password plus a token?",
+    "choices": [
+      "JWT with credentials",
+      "Basic auth only",
+      "API key only",
+      "Digest auth only"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is JWT with credentials because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 48,
+    "text": "Which CSS methodology scopes styles to components in React?",
+    "choices": [
+      "CSS Modules",
+      "Global CSS",
+      "Inline styles only",
+      "SASS only"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "The correct answer is CSS Modules because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 49,
+    "text": "Which command builds an Angular project for production?",
+    "choices": [
+      "ng build --prod",
+      "npm run build:prod",
+      "ng serve --prod",
+      "npm build --prod"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "The correct answer is ng build --prod because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 50,
+    "text": "Which layer typically handles business logic in a full-stack app?",
+    "choices": [
+      "Backend",
+      "Frontend",
+      "Database",
+      "Reverse proxy"
+    ],
+    "correctIndex": 0,
+    "topic": "FullStack",
+    "explanation": "The correct answer is Backend because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 51,
+    "text": "What is the core idea behind the Spring Framework?",
+    "choices": [
+      "Inversion of Control",
+      "Manual memory management",
+      "Template metaprogramming",
+      "Binary serialization"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Inversion of Control because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 52,
+    "text": "Which Spring container is commonly used in enterprise applications?",
+    "choices": [
+      "ApplicationContext",
+      "ServletContext",
+      "JndiContext",
+      "BeanRegistryOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is ApplicationContext because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 53,
+    "text": "What does IoC stand for in Spring?",
+    "choices": [
+      "Inversion of Control",
+      "Injection of Components",
+      "Interface over Class",
+      "Instance object creation"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Inversion of Control because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 54,
+    "text": "Which feature of Spring wires dependencies automatically?",
+    "choices": [
+      "Dependency Injection",
+      "Aspect Weaving",
+      "Transaction Propagation",
+      "Bean Post Processing"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Dependency Injection because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 55,
+    "text": "Which annotation marks a class as a Spring-managed component?",
+    "choices": [
+      "@Component",
+      "@Bean",
+      "@Value",
+      "@ImportResourceOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Component because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 56,
+    "text": "Which annotation is specialized for service-layer classes?",
+    "choices": [
+      "@Service",
+      "@Repository",
+      "@Qualifier",
+      "@PrimaryKey"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Service because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 57,
+    "text": "Which annotation is specialized for DAO or persistence classes?",
+    "choices": [
+      "@Repository",
+      "@ControllerAdvice",
+      "@ConfigurationProperties",
+      "@EnableCaching"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Repository because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 58,
+    "text": "Which annotation is commonly used for MVC controllers returning views?",
+    "choices": [
+      "@Controller",
+      "@RestController",
+      "@Bean",
+      "@Profile"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Controller because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 59,
+    "text": "Which XML element was historically used to enable component scanning?",
+    "choices": [
+      "context:component-scan",
+      "beans:scan",
+      "spring:discover",
+      "mvc:autowire"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is context:component-scan because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 60,
+    "text": "Which annotation enables component scanning in Java config?",
+    "choices": [
+      "@ComponentScan",
+      "@ScanComponents",
+      "@EnableBeans",
+      "@DiscoverPackages"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @ComponentScan because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 61,
+    "text": "Which annotation marks a class as a source of bean definitions?",
+    "choices": [
+      "@Configuration",
+      "@Component",
+      "@Import",
+      "@BeanFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Configuration because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 62,
+    "text": "Which annotation defines a bean method inside a configuration class?",
+    "choices": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Order"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Bean because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 63,
+    "text": "Which dependency injection style is generally preferred in Spring?",
+    "choices": [
+      "Constructor injection",
+      "Field injection",
+      "Setter injection only",
+      "XML injection only"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Constructor injection because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 64,
+    "text": "Which annotation can inject a dependency by type?",
+    "choices": [
+      "@Autowired",
+      "@ResponseBody",
+      "@TransactionalEventListener",
+      "@EnableAspectJAutoProxy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Autowired because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 65,
+    "text": "Which JSR annotation can also be used for dependency injection in Spring?",
+    "choices": [
+      "@Inject",
+      "@PathVariable",
+      "@InitBinder",
+      "@AliasFor"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Inject because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 66,
+    "text": "Which annotation injects property values into fields or parameters?",
+    "choices": [
+      "@Value",
+      "@PropertySource",
+      "@Profile",
+      "@Lazy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Value because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 67,
+    "text": "Which annotation helps choose a specific bean when multiple candidates exist?",
+    "choices": [
+      "@Qualifier",
+      "@Primary",
+      "@DependsOn",
+      "@ScopeProxy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Qualifier because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 68,
+    "text": "Which annotation marks one bean as the default candidate among multiple beans?",
+    "choices": [
+      "@Primary",
+      "@Order",
+      "@Lazy",
+      "@Fallback"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Primary because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 69,
+    "text": "Which bean scope creates a single shared instance per container?",
+    "choices": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is singleton because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 70,
+    "text": "Which bean scope creates a new bean instance each time it is requested?",
+    "choices": [
+      "prototype",
+      "singleton",
+      "application",
+      "globalSession"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is prototype because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 71,
+    "text": "Which Spring scope is tied to a single HTTP request?",
+    "choices": [
+      "request",
+      "singleton",
+      "prototype",
+      "websocketOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is request because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 72,
+    "text": "Which scope stores a bean per HTTP session?",
+    "choices": [
+      "session",
+      "request",
+      "prototype",
+      "singleton"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is session because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 73,
+    "text": "Which interface can customize beans before and after initialization?",
+    "choices": [
+      "BeanPostProcessor",
+      "FactoryBean",
+      "ResourceLoader",
+      "MessageSource"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is BeanPostProcessor because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 74,
+    "text": "Which callback method can run after bean properties are set?",
+    "choices": [
+      "afterPropertiesSet",
+      "destroySingletons",
+      "postProcessBeanFactory",
+      "resolveArgument"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is afterPropertiesSet because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 75,
+    "text": "Which annotation can designate an initialization method on a bean?",
+    "choices": [
+      "@PostConstruct",
+      "@PreDestroy",
+      "@InitBinder",
+      "@EnableScheduling"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @PostConstruct because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 76,
+    "text": "Which annotation can designate cleanup logic before bean destruction?",
+    "choices": [
+      "@PreDestroy",
+      "@PostConstruct",
+      "@Autowired",
+      "@Bean"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @PreDestroy because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 77,
+    "text": "Which Spring interface allows lazy custom creation of complex objects?",
+    "choices": [
+      "FactoryBean",
+      "ApplicationListener",
+      "BeanNameAware",
+      "ScopeMetadataResolver"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is FactoryBean because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 78,
+    "text": "What does the BeanFactory provide in Spring?",
+    "choices": [
+      "Basic bean management",
+      "HTTP routing",
+      "SQL migrations",
+      "Class loading only"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Basic bean management because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 79,
+    "text": "What additional features does ApplicationContext provide over BeanFactory?",
+    "choices": [
+      "Internationalization and events",
+      "Direct JDBC pooling",
+      "Built-in servlet rendering only",
+      "Bytecode compilation"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Internationalization and events because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 80,
+    "text": "Which Spring module provides AOP support?",
+    "choices": [
+      "Spring AOP",
+      "Spring JDBC",
+      "Spring WebFlux",
+      "Spring LDAP only"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Spring AOP because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 81,
+    "text": "What does AOP stand for?",
+    "choices": [
+      "Aspect-Oriented Programming",
+      "Application Object Processing",
+      "Automated Output Parsing",
+      "Access-Oriented Policies"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Aspect-Oriented Programming because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 82,
+    "text": "Which AOP concept represents cross-cutting logic?",
+    "choices": [
+      "Aspect",
+      "BeanDefinition",
+      "Dispatcher",
+      "FactoryMethod"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Aspect because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 83,
+    "text": "Which AOP concept identifies where advice should run?",
+    "choices": [
+      "Pointcut",
+      "Scope",
+      "Context",
+      "Profile"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Pointcut because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 84,
+    "text": "Which AOP advice runs before a matched method executes?",
+    "choices": [
+      "@Before",
+      "@AfterReturning",
+      "@Around",
+      "@AfterThrowing"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Before because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 85,
+    "text": "Which AOP advice can control whether the target method proceeds?",
+    "choices": [
+      "@Around",
+      "@Before",
+      "@After",
+      "@Pointcut"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Around because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 86,
+    "text": "Which proxy mechanism is used when a bean implements interfaces by default?",
+    "choices": [
+      "JDK dynamic proxies",
+      "CGLIB only",
+      "ByteBuddy only",
+      "No proxy is created"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is JDK dynamic proxies because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 87,
+    "text": "Which proxy mechanism is often used for class-based proxies in Spring?",
+    "choices": [
+      "CGLIB",
+      "JDK RMI",
+      "Javassist RPC",
+      "Servlet filters"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is CGLIB because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 88,
+    "text": "Which annotation enables proxy-based transaction management?",
+    "choices": [
+      "@EnableTransactionManagement",
+      "@EnableWebMvc",
+      "@EnableCaching",
+      "@EnableAsync"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @EnableTransactionManagement because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 89,
+    "text": "Which annotation demarcates transactional methods?",
+    "choices": [
+      "@Transactional",
+      "@Transacted",
+      "@Commit",
+      "@RollbackOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Transactional because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 90,
+    "text": "What is the default transaction propagation in Spring?",
+    "choices": [
+      "REQUIRED",
+      "REQUIRES_NEW",
+      "SUPPORTS",
+      "MANDATORY"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is REQUIRED because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 91,
+    "text": "Which propagation starts a new transaction and suspends any existing one?",
+    "choices": [
+      "REQUIRES_NEW",
+      "REQUIRED",
+      "NESTED",
+      "NEVER"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is REQUIRES_NEW because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 92,
+    "text": "Which transaction isolation level prevents dirty reads?",
+    "choices": [
+      "READ_COMMITTED",
+      "READ_UNCOMMITTED",
+      "NONE",
+      "DEFAULT_ALWAYS"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is READ_COMMITTED because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 93,
+    "text": "Which unchecked exception type triggers rollback by default in Spring transactions?",
+    "choices": [
+      "RuntimeException",
+      "IOException",
+      "SQLException only",
+      "CheckedException"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is RuntimeException because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 94,
+    "text": "Which interface abstracts programmatic transaction control?",
+    "choices": [
+      "PlatformTransactionManager",
+      "TransactionTemplateBuilder",
+      "JdbcAccessor",
+      "PersistenceUnitManager"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is PlatformTransactionManager because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 95,
+    "text": "Which helper class simplifies programmatic transactions?",
+    "choices": [
+      "TransactionTemplate",
+      "JdbcTemplate",
+      "RestTemplate",
+      "BeanTemplate"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is TransactionTemplate because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 96,
+    "text": "Which Spring module simplifies JDBC access?",
+    "choices": [
+      "Spring JDBC",
+      "Spring Test",
+      "Spring Tiles",
+      "Spring Script"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Spring JDBC because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 97,
+    "text": "Which class is central to Spring JDBC operations?",
+    "choices": [
+      "JdbcTemplate",
+      "JdbcManager",
+      "ResultMapper",
+      "ConnectionBean"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is JdbcTemplate because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 98,
+    "text": "Which interface maps a JDBC ResultSet row to an object?",
+    "choices": [
+      "RowMapper",
+      "BeanMapper",
+      "EntityScanner",
+      "RecordFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is RowMapper because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 99,
+    "text": "Which exception hierarchy does Spring use for data access errors?",
+    "choices": [
+      "DataAccessException",
+      "PersistenceError",
+      "JdbcFailureThrowable",
+      "DbRuntimeFault"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is DataAccessException because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 100,
+    "text": "Which Spring feature translates vendor-specific persistence exceptions?",
+    "choices": [
+      "Exception translation",
+      "Bean scoping",
+      "View resolution",
+      "Message conversion"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Exception translation because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 101,
+    "text": "Which annotation can enable exception translation for repositories?",
+    "choices": [
+      "@Repository",
+      "@Service",
+      "@ComponentScan",
+      "@Import"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Repository because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 102,
+    "text": "Which Spring module integrates with ORM frameworks like Hibernate?",
+    "choices": [
+      "Spring ORM",
+      "Spring WS",
+      "Spring Shell",
+      "Spring Session"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Spring ORM because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 103,
+    "text": "Which package contains core dependency injection support?",
+    "choices": [
+      "spring-beans",
+      "spring-test",
+      "spring-websocket",
+      "spring-messaging"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is spring-beans because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 104,
+    "text": "Which package contains the ApplicationContext abstraction?",
+    "choices": [
+      "spring-context",
+      "spring-jdbc",
+      "spring-aspects",
+      "spring-r2dbc"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is spring-context because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 105,
+    "text": "Which package contains dispatcher and web MVC infrastructure?",
+    "choices": [
+      "spring-webmvc",
+      "spring-core",
+      "spring-jcl",
+      "spring-expression"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is spring-webmvc because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 106,
+    "text": "Which front controller is central to Spring MVC?",
+    "choices": [
+      "DispatcherServlet",
+      "ContextLoaderListener",
+      "CharacterEncodingFilter",
+      "ViewResolver"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is DispatcherServlet because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 107,
+    "text": "Which annotation maps HTTP requests onto handler classes or methods?",
+    "choices": [
+      "@RequestMapping",
+      "@ModelAttribute",
+      "@SessionAttributes",
+      "@MatrixVariable"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @RequestMapping because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 108,
+    "text": "Which annotation is a shortcut for HTTP POST mappings?",
+    "choices": [
+      "@PostMapping",
+      "@RequestBody",
+      "@PatchMapping",
+      "@PutMapping"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @PostMapping because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 109,
+    "text": "Which annotation binds a URL path segment to a method parameter?",
+    "choices": [
+      "@PathVariable",
+      "@RequestParam",
+      "@CookieValue",
+      "@RequestHeader"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @PathVariable because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 110,
+    "text": "Which annotation binds a query parameter to a method parameter?",
+    "choices": [
+      "@RequestParam",
+      "@PathVariable",
+      "@ModelAttribute",
+      "@ResponseStatus"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @RequestParam because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 111,
+    "text": "Which annotation binds the HTTP request body to an object?",
+    "choices": [
+      "@RequestBody",
+      "@RequestParam",
+      "@ControllerAdvice",
+      "@CrossOrigin"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @RequestBody because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 112,
+    "text": "Which annotation writes a controller return value directly to the response body?",
+    "choices": [
+      "@ResponseBody",
+      "@RequestBody",
+      "@ModelAttribute",
+      "@ExceptionHandler"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @ResponseBody because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 113,
+    "text": "Which controller stereotype combines @Controller and @ResponseBody?",
+    "choices": [
+      "@RestController",
+      "@ControllerAdvice",
+      "@Configuration",
+      "@SessionScope"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @RestController because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 114,
+    "text": "Which Spring MVC abstraction resolves logical view names to views?",
+    "choices": [
+      "ViewResolver",
+      "HandlerAdapter",
+      "LocaleResolver",
+      "BeanWrapper"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is ViewResolver because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 115,
+    "text": "Which object holds model attributes and the selected view in Spring MVC?",
+    "choices": [
+      "ModelAndView",
+      "ResponseEntity",
+      "BindingResult",
+      "BeanDefinition"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is ModelAndView because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 116,
+    "text": "Which interface processes incoming requests before a controller executes?",
+    "choices": [
+      "HandlerInterceptor",
+      "BeanPostProcessor",
+      "Converter",
+      "Formatter"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is HandlerInterceptor because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 117,
+    "text": "Which MVC component adapts handlers to the DispatcherServlet?",
+    "choices": [
+      "HandlerAdapter",
+      "ViewResolver",
+      "ResourceHandler",
+      "TaskExecutor"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is HandlerAdapter because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 118,
+    "text": "Which annotation handles exceptions within a controller?",
+    "choices": [
+      "@ExceptionHandler",
+      "@Controller",
+      "@ResponseBody",
+      "@InitBinder"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @ExceptionHandler because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 119,
+    "text": "Which annotation applies exception handling globally across controllers?",
+    "choices": [
+      "@ControllerAdvice",
+      "@RestController",
+      "@Order",
+      "@Configuration"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @ControllerAdvice because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 120,
+    "text": "Which object stores validation and binding errors in Spring MVC?",
+    "choices": [
+      "BindingResult",
+      "ModelMap",
+      "FlashMap",
+      "WebDataBinderFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is BindingResult because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 121,
+    "text": "Which annotation triggers bean validation on a request body or model object?",
+    "choices": [
+      "@Valid",
+      "@ValidatedOnly",
+      "@Check",
+      "@Assert"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Valid because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 122,
+    "text": "Which Spring interface converts text to typed objects?",
+    "choices": [
+      "Converter",
+      "Resolver",
+      "Pointcut",
+      "Advisor"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Converter because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 123,
+    "text": "Which Spring interface formats typed objects for display and parsing?",
+    "choices": [
+      "Formatter",
+      "Mapper",
+      "Adapter",
+      "Compiler"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Formatter because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 124,
+    "text": "Which feature supports locale-specific message resolution?",
+    "choices": [
+      "MessageSource",
+      "ViewResolver",
+      "BeanWrapper",
+      "TaskScheduler"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is MessageSource because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 125,
+    "text": "Which file type is often used to externalize messages for i18n?",
+    "choices": [
+      "properties files",
+      "YAML schemas only",
+      "SQL scripts",
+      "Servlet descriptors"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is properties files because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 126,
+    "text": "Which annotation loads a properties file into the environment?",
+    "choices": [
+      "@PropertySource",
+      "@Profile",
+      "@DependsOn",
+      "@Role"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @PropertySource because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 127,
+    "text": "Which Spring abstraction provides access to property values and profiles?",
+    "choices": [
+      "Environment",
+      "ApplicationEvent",
+      "Resource",
+      "BeanFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Environment because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 128,
+    "text": "Which annotation restricts a bean to specific active profiles?",
+    "choices": [
+      "@Profile",
+      "@Primary",
+      "@DependsOn",
+      "@Order"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Profile because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 129,
+    "text": "Which resource prefix loads a classpath resource in Spring?",
+    "choices": [
+      "classpath:",
+      "file-http:",
+      "jar-only:",
+      "beans:"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is classpath: because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 130,
+    "text": "Which Spring abstraction represents external resources uniformly?",
+    "choices": [
+      "Resource",
+      "Asset",
+      "Endpoint",
+      "ArchiveEntry"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The Spring abstraction that represents external resources uniformly is the Resource interface (org.springframework.core.io.Resource). "
+  },
+  {
+    "id": 0,
+    "text": null,
+    "choices": [
+
+    ],
+    "correctIndex": 0,
+    "topic": null,
+    "explanation": ""
+  },
+  {
+    "id": 131,
+    "text": "Which interface loads resources from various locations?",
+    "choices": [
+      "ResourceLoader",
+      "ClassLoaderFactory",
+      "ViewLoader",
+      "ContextScanner"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is ResourceLoader because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 132,
+    "text": "Which Spring feature publishes and listens for application-level events?",
+    "choices": [
+      "Application events",
+      "AOP advice",
+      "Bean scopes",
+      "MVC interceptors"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is Application events because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 133,
+    "text": "Which interface listens for Spring application events?",
+    "choices": [
+      "ApplicationListener",
+      "EventSubscriber",
+      "BeanObserver",
+      "LifecycleHook"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is ApplicationListener because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 134,
+    "text": "Which method can publish an event from the application context?",
+    "choices": [
+      "publishEvent",
+      "dispatchEventNow",
+      "notifyBeans",
+      "sendContextMessage"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is publishEvent because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 135,
+    "text": "Which annotation registers a method as an event listener?",
+    "choices": [
+      "@EventListener",
+      "@Listener",
+      "@Observe",
+      "@AfterEvent"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "In Spring Framework the annotation used to register a method as an event listener is @EventListener. "
+  },
+  {
+    "id": 0,
+    "text": " Spring automatically invokes the annotated method",
+    "choices": [
+
+    ],
+    "correctIndex": 0,
+    "topic": null,
+    "explanation": ""
+  },
+  {
+    "id": 136,
+    "text": "Which annotation enables asynchronous method execution in Spring?",
+    "choices": [
+      "@EnableAsync",
+      "@EnableScheduling",
+      "@EnableCaching",
+      "@EnableRetry"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @EnableAsync because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 137,
+    "text": "Which annotation marks a method to run asynchronously?",
+    "choices": [
+      "@Async",
+      "@Scheduled",
+      "@Transactional",
+      "@Lazy"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Async because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 138,
+    "text": "Which TaskExecutor implementation is commonly used for async execution?",
+    "choices": [
+      "ThreadPoolTaskExecutor",
+      "SimpleJdbcExecutor",
+      "ServletTaskBridge",
+      "BeanTaskFactory"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is ThreadPoolTaskExecutor because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 139,
+    "text": "Which annotation enables scheduled task execution?",
+    "choices": [
+      "@EnableScheduling",
+      "@EnableAsync",
+      "@EnableWebMvc",
+      "@EnableLoadTimeWeaving"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @EnableScheduling because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 140,
+    "text": "Which annotation schedules a method with a cron or fixed delay?",
+    "choices": [
+      "@Scheduled",
+      "@Async",
+      "@EventListener",
+      "@Cacheable"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Scheduled because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 141,
+    "text": "Which expression language is used inside Spring configuration and annotations?",
+    "choices": [
+      "SpEL",
+      "OGNL only",
+      "MVEL only",
+      "XPath"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is SpEL because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 142,
+    "text": "Which prefix is used for SpEL expressions in annotations?",
+    "choices": [
+      "#{...}",
+      "${...}",
+      "@{...}",
+      "%{...}"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is #{...} because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 143,
+    "text": "Which placeholder syntax is commonly used for property values in Spring?",
+    "choices": [
+      "${...}",
+      "#{...}",
+      "<...>",
+      "%(...)s"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is ${...} because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 144,
+    "text": "Which annotation can mark a dependency for lazy initialization?",
+    "choices": [
+      "@Lazy",
+      "@DependsOn",
+      "@Role",
+      "@Import"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Lazy because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 145,
+    "text": "Which annotation declares that one bean depends on another bean being initialized first?",
+    "choices": [
+      "@DependsOn",
+      "@Order",
+      "@Primary",
+      "@Qualifier"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @DependsOn because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 146,
+    "text": "Which annotation imports additional configuration classes?",
+    "choices": [
+      "@Import",
+      "@Include",
+      "@EnableConfig",
+      "@ComponentScanOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @Import because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 147,
+    "text": "Which annotation enables AspectJ auto proxy support in Java config?",
+    "choices": [
+      "@EnableAspectJAutoProxy",
+      "@EnableAopProxy",
+      "@EnableProxyBeans",
+      "@ProxyConfig"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @EnableAspectJAutoProxy because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 148,
+    "text": "Which Spring testing annotation loads an application context for integration tests?",
+    "choices": [
+      "@SpringJUnitConfig",
+      "@MockBean",
+      "@DirtiesContextOnly",
+      "@NestedTestConfig"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @SpringJUnitConfig because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 149,
+    "text": "Which Spring test annotation indicates a context should be reloaded after a test?",
+    "choices": [
+      "@DirtiesContext",
+      "@Rollback",
+      "@Commit",
+      "@SqlConfig"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is @DirtiesContext because it directly matches the concept asked in this question."
+  },
+  {
+    "id": 150,
+    "text": "Which utility class in Spring tests can perform requests against MVC controllers?",
+    "choices": [
+      "MockMvc",
+      "TestRestTemplate",
+      "WebClient",
+      "JdbcTemplate"
+    ],
+    "correctIndex": 0,
+    "topic": "spring",
+    "explanation": "The correct answer is MockMvc because it directly matches the concept asked in this question."
+  }
+]
