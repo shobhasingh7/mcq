@@ -1,0 +1,158 @@
+[
+  {
+    "id": 301,
+    "text": "Which keyword is used to define a class in Java?",
+    "choices": [
+      "class",
+      "struct",
+      "object",
+      "define"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>class</strong> is correct because Java uses the <code>class</code> keyword to declare a new class type.</p><p>Example:</p><pre><code class=\"language-java\">public class User {\n    private String name;\n}</code></pre>"
+  },
+  {
+    "id": 302,
+    "text": "Which method is the entry point of a standard Java application?",
+    "choices": [
+      "main",
+      "start",
+      "run",
+      "init"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>main</strong> is correct because the JVM starts a standalone Java application by calling the <code>main</code> method.</p><p>Example:</p><pre><code class=\"language-java\">public class App {\n    public static void main(String[] args) {\n        System.out.println(\"Hello Java\");\n    }\n}</code></pre>"
+  },
+  {
+    "id": 303,
+    "text": "Which access modifier makes a member visible only within the same class?",
+    "choices": [
+      "private",
+      "public",
+      "protected",
+      "default"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>private</strong> is correct because a <code>private</code> field or method can only be accessed inside the class that declares it.</p><p>Example:</p><pre><code class=\"language-java\">public class Account {\n    private double balance;\n}</code></pre>"
+  },
+  {
+    "id": 304,
+    "text": "Which collection stores elements in insertion order and allows duplicates?",
+    "choices": [
+      "List",
+      "Set",
+      "Map",
+      "Queue only"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>List</strong> is correct because a Java <code>List</code> preserves element order and can contain duplicate values.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;String&gt; names = new ArrayList&lt;&gt;();\nnames.add(\"A\");\nnames.add(\"A\");</code></pre>"
+  },
+  {
+    "id": 305,
+    "text": "Which keyword is used to inherit from a class in Java?",
+    "choices": [
+      "extends",
+      "implements",
+      "inherits",
+      "super"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>extends</strong> is correct because Java uses <code>extends</code> when one class inherits from another class.</p><p>Example:</p><pre><code class=\"language-java\">public class AdminUser extends User {\n}</code></pre>"
+  },
+  {
+    "id": 306,
+    "text": "Which keyword is used when a class follows an interface contract?",
+    "choices": [
+      "implements",
+      "extends",
+      "inherits",
+      "instanceof"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>implements</strong> is correct because classes use <code>implements</code> to provide the behavior required by an interface.</p><p>Example:</p><pre><code class=\"language-java\">public class EmailSender implements MessageSender {\n    public void send(String message) {\n    }\n}</code></pre>"
+  },
+  {
+    "id": 307,
+    "text": "Which statement is used to handle exceptions in Java?",
+    "choices": [
+      "try-catch",
+      "if-else",
+      "switch-case",
+      "for-each"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>try-catch</strong> is correct because Java handles exceptions by placing risky code inside a <code>try</code> block and responding in a <code>catch</code> block.</p><p>Example:</p><pre><code class=\"language-java\">try {\n    Integer.parseInt(\"abc\");\n} catch (NumberFormatException ex) {\n    System.out.println(\"Invalid number\");\n}</code></pre>"
+  },
+  {
+    "id": 308,
+    "text": "Which type is commonly used for true or false values in Java?",
+    "choices": [
+      "boolean",
+      "int",
+      "String",
+      "char"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>boolean</strong> is correct because Java represents logical true or false values with the <code>boolean</code> type.</p><p>Example:</p><pre><code class=\"language-java\">boolean isActive = true;</code></pre>"
+  },
+  {
+    "id": 309,
+    "text": "Which keyword is used to create a new object in Java?",
+    "choices": [
+      "new",
+      "make",
+      "create",
+      "alloc"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>new</strong> is correct because Java creates object instances with the <code>new</code> keyword.</p><p>Example:</p><pre><code class=\"language-java\">User user = new User();</code></pre>"
+  },
+  {
+    "id": 310,
+    "text": "Which class is commonly used for dynamic arrays in Java?",
+    "choices": [
+      "ArrayList",
+      "HashSet",
+      "HashMap",
+      "TreeMap"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>ArrayList</strong> is correct because it is a resizable array implementation of the <code>List</code> interface.</p><p>Example:</p><pre><code class=\"language-java\">List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();\nnumbers.add(10);</code></pre>"
+  },
+  {
+    "id": 311,
+    "text": "Which annotation marks a method that overrides a superclass method?",
+    "choices": [
+      "@Override",
+      "@Inherited",
+      "@Implemented",
+      "@Super"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>@Override</strong> is correct because it tells the compiler that the method is intended to override a parent class or interface method.</p><p>Example:</p><pre><code class=\"language-java\">@Override\npublic String toString() {\n    return \"User\";\n}</code></pre>"
+  },
+  {
+    "id": 312,
+    "text": "Which keyword prevents a variable from being reassigned after initialization?",
+    "choices": [
+      "final",
+      "const",
+      "static",
+      "sealed"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>final</strong> is correct because a <code>final</code> variable can be assigned once and then cannot be changed to reference a different value.</p><p>Example:</p><pre><code class=\"language-java\">final String appName = \"QuizApp\";</code></pre>"
+  }
+]
