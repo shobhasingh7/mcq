@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 7601,
+    "text": "What is Apache Kafka primarily used for?",
+    "choices": [
+      "Distributed event streaming and durable message transport",
+      "Rendering server-side HTML views",
+      "Managing SQL schema migrations",
+      "Compiling Java bytecode"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Distributed event streaming and durable message transport</strong> is correct because Kafka is designed for high-throughput event streaming, durable storage, and asynchronous communication between systems.</p><p>Example: order events can be published once and consumed by billing, analytics, and notification services.</p>"
+  },
+  {
+    "id": 7602,
+    "text": "What is a Kafka topic?",
+    "choices": [
+      "A named stream of records",
+      "A single consumer thread",
+      "A Docker image registry",
+      "A database transaction log table"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A named stream of records</strong> is correct because topics are the main category under which Kafka stores and serves messages.</p><p>Example: an application can publish checkout events to a topic named <code>orders</code>.</p>"
+  },
+  {
+    "id": 7603,
+    "text": "What is a Kafka producer?",
+    "choices": [
+      "A client that publishes records to Kafka topics",
+      "A broker that stores partitions on disk",
+      "A consumer group coordinator only",
+      "A schema registry implementation"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A client that publishes records to Kafka topics</strong> is correct because producers send records into Kafka and can choose topics, keys, and partitions.</p><p>Example: a payment service can produce <code>PaymentAuthorized</code> events.</p>"
+  },
+  {
+    "id": 7604,
+    "text": "What is a Kafka consumer?",
+    "choices": [
+      "A client that reads records from Kafka topics",
+      "A broker-side storage driver",
+      "A topic partition leader",
+      "A load balancer for REST APIs"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A client that reads records from Kafka topics</strong> is correct because consumers subscribe to topics and process records as they are read from Kafka.</p><p>Example: an analytics service can consume page-view events from a topic.</p>"
+  },
+  {
+    "id": 7605,
+    "text": "What is a Kafka broker?",
+    "choices": [
+      "A Kafka server that stores data and serves producers and consumers",
+      "A client-side library for serialization",
+      "A JVM garbage collector option",
+      "A database connection pool"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A Kafka server that stores data and serves producers and consumers</strong> is correct because brokers form the Kafka cluster and are responsible for storing partitions and handling client requests.</p><p>Example: a Kafka cluster may have three brokers for redundancy and scale.</p>"
+  },
+  {
+    "id": 7606,
+    "text": "What is a Kafka cluster?",
+    "choices": [
+      "A group of Kafka brokers working together",
+      "A set of consumers in one process only",
+      "A special type of partition key",
+      "A Docker Compose file for development"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A group of Kafka brokers working together</strong> is correct because clusters provide the distributed infrastructure that makes Kafka scalable and fault tolerant.</p><p>Example: several brokers can replicate topic data across machines.</p>"
+  },
+  {
+    "id": 7607,
+    "text": "What is a partition in Kafka?",
+    "choices": [
+      "An ordered subset of a topic",
+      "A consumer-side retry queue",
+      "A TLS certificate chain",
+      "A registry login scope"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>An ordered subset of a topic</strong> is correct because partitions allow Kafka to scale horizontally while preserving order within each partition.</p><p>Example: the <code>orders</code> topic can have multiple partitions to support higher throughput.</p>"
+  },
+  {
+    "id": 7608,
+    "text": "Why does Kafka use partitions?",
+    "choices": [
+      "To scale throughput and parallelism",
+      "To encrypt payloads automatically",
+      "To avoid using disks entirely",
+      "To make all topics single-threaded"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>To scale throughput and parallelism</strong> is correct because partitions let multiple brokers store topic data and multiple consumers process it in parallel.</p><p>Example: different partitions of the same topic can be read by different consumers in a group.</p>"
+  },
+  {
+    "id": 7609,
+    "text": "What is guaranteed within a single Kafka partition?",
+    "choices": [
+      "Message order is preserved within that partition",
+      "Global ordering across the whole cluster",
+      "Exactly-once delivery without configuration",
+      "Automatic schema validation"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Message order is preserved within that partition</strong> is correct because Kafka maintains append order inside a partition, which is important for related events keyed to the same entity.</p><p>Example: all events for one customer can stay ordered if they land in the same partition.</p>"
+  },
+  {
+    "id": 7610,
+    "text": "What is not guaranteed across multiple Kafka partitions?",
+    "choices": [
+      "A single global order across the entire topic",
+      "Per-partition offsets",
+      "Durable storage",
+      "Broker-based replication"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A single global order across the entire topic</strong> is correct because once a topic has multiple partitions, records in different partitions can be processed independently and out of relative order.</p><p>Example: events in partition 0 and partition 1 may be consumed at different speeds.</p>"
+  },
+  {
+    "id": 7611,
+    "text": "What is a Kafka record key commonly used for?",
+    "choices": [
+      "Choosing a partition so related records stay together",
+      "Encrypting the message body",
+      "Authenticating the consumer group",
+      "Compressing batches of messages"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Choosing a partition so related records stay together</strong> is correct because keys help Kafka deterministically route related records to the same partition.</p><p>Example: using <code>customerId</code> as the key keeps one customer’s events ordered together.</p>"
+  },
+  {
+    "id": 7612,
+    "text": "What happens when a producer sends records with the same key?",
+    "choices": [
+      "They usually go to the same partition",
+      "They are broadcast to every partition",
+      "They are always written to the leader and every follower twice",
+      "They are converted into tombstone records"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They usually go to the same partition</strong> is correct because Kafka’s partitioner typically maps the same key to the same partition so ordering can be preserved for that entity.</p><p>Example: all <code>orderId=123</code> events can stay together.</p>"
+  },
+  {
+    "id": 7613,
+    "text": "What is an offset in Kafka?",
+    "choices": [
+      "The position of a record within a partition",
+      "A topic-level TLS secret",
+      "A broker’s disk mount path",
+      "A consumer retry counter"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>The position of a record within a partition</strong> is correct because offsets identify where records live in a partition and where consumers are in their read progress.</p><p>Example: a consumer may have processed records up to offset 105 in partition 2.</p>"
+  },
+  {
+    "id": 7614,
+    "text": "What is a consumer group in Kafka?",
+    "choices": [
+      "A set of consumers that share work for reading a topic",
+      "A set of brokers storing the same partition",
+      "A collection of producers with one API key",
+      "A schema registry namespace"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A set of consumers that share work for reading a topic</strong> is correct because consumer groups enable parallel consumption while ensuring each partition is read by only one group member at a time.</p><p>Example: three consumers in one group can split six partitions among themselves.</p>"
+  },
+  {
+    "id": 7615,
+    "text": "Why do consumer groups matter in Kafka?",
+    "choices": [
+      "They allow horizontal scaling of message consumption",
+      "They make every consumer receive every record",
+      "They eliminate partitioning entirely",
+      "They convert topics into queues automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They allow horizontal scaling of message consumption</strong> is correct because groups let applications process more data by adding more consumer instances.</p><p>Example: increasing the number of consumers can reduce lag if enough partitions exist.</p>"
+  },
+  {
+    "id": 7616,
+    "text": "How many consumers in the same group can read one partition at the same time?",
+    "choices": [
+      "Only one active consumer in that group",
+      "All consumers in the group",
+      "Exactly two for redundancy",
+      "Unlimited if acknowledgments are enabled"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Only one active consumer in that group</strong> is correct because Kafka assigns each partition to at most one active consumer per group to preserve order and avoid duplicate work inside that group.</p><p>Example: if a topic has four partitions, one group can have at most four actively assigned consumers.</p>"
+  },
+  {
+    "id": 7617,
+    "text": "What happens if a consumer group has more consumers than partitions?",
+    "choices": [
+      "Some consumers will be idle",
+      "Kafka creates new partitions automatically",
+      "Every consumer receives duplicate records",
+      "The topic becomes compacted"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Some consumers will be idle</strong> is correct because extra consumers cannot be assigned work if there are not enough partitions to distribute.</p><p>Example: six consumers against three partitions means three consumers do no work.</p>"
+  },
+  {
+    "id": 7618,
+    "text": "What is a consumer group rebalance?",
+    "choices": [
+      "Redistributing partition assignments among consumers",
+      "Compacting a topic to remove old values",
+      "Promoting a broker to controller mode only",
+      "Encrypting messages during a restart"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Redistributing partition assignments among consumers</strong> is correct because rebalances happen when consumers join, leave, or fail, and Kafka must redistribute partition ownership.</p><p>Example: starting a new consumer can trigger a rebalance that reassigns partitions.</p>"
+  },
+  {
+    "id": 7619,
+    "text": "Why can frequent rebalances be disruptive?",
+    "choices": [
+      "They can temporarily pause consumption and add instability",
+      "They permanently delete old offsets",
+      "They change record keys automatically",
+      "They disable replication"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They can temporarily pause consumption and add instability</strong> is correct because too many rebalances slow throughput and make consumer performance less predictable.</p><p>Example: repeatedly restarting consumers can cause repeated assignment churn.</p>"
+  },
+  {
+    "id": 7620,
+    "text": "What is consumer lag in Kafka?",
+    "choices": [
+      "How far a consumer is behind the latest offset",
+      "The time a producer waits before batching",
+      "The number of brokers in the cluster",
+      "The count of tombstone records only"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>How far a consumer is behind the latest offset</strong> is correct because lag shows whether consumers are keeping up with newly produced records.</p><p>Example: a reporting service with growing lag is falling behind real-time events.</p>"
+  },
+  {
+    "id": 7621,
+    "text": "Why is consumer lag an important metric?",
+    "choices": [
+      "It reveals backlog and slow consumption",
+      "It shows broker disk encryption status",
+      "It measures only TLS certificate age",
+      "It replaces application logging"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It reveals backlog and slow consumption</strong> is correct because lag is one of the most useful operational signals for streaming health.</p><p>Example: a spike in lag can indicate a consumer bug or an unexpected traffic surge.</p>"
+  },
+  {
+    "id": 7622,
+    "text": "What is Kafka retention?",
+    "choices": [
+      "How long Kafka keeps records before deleting them",
+      "How many consumers are allowed in a group",
+      "The maximum number of partitions per broker",
+      "The schema version stored in messages"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>How long Kafka keeps records before deleting them</strong> is correct because Kafka stores records for a configured retention period, which enables replay and delayed consumption.</p><p>Example: a topic may retain data for 7 days even after it is consumed.</p>"
+  },
+  {
+    "id": 7623,
+    "text": "Why does Kafka keep consumed records for a retention period?",
+    "choices": [
+      "So records can be replayed or consumed later by other consumers",
+      "Because offsets cannot advance",
+      "Because Kafka has no deletion process",
+      "Because all consumers must read from the beginning"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>So records can be replayed or consumed later by other consumers</strong> is correct because Kafka treats topics more like durable logs than one-time queues.</p><p>Example: a new analytics consumer can read older events still within retention.</p>"
+  },
+  {
+    "id": 7624,
+    "text": "What is replay in Kafka?",
+    "choices": [
+      "Reading old records again from an earlier offset",
+      "Re-encoding messages with a different serializer",
+      "Publishing duplicates to all topics",
+      "Migrating brokers to a new cluster automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Reading old records again from an earlier offset</strong> is correct because replay is possible because Kafka retains records independently of whether one consumer has already processed them.</p><p>Example: resetting offsets allows a consumer to rebuild a reporting database.</p>"
+  },
+  {
+    "id": 7625,
+    "text": "What is the earliest offset reset behavior used for?",
+    "choices": [
+      "Starting consumption from the oldest available records",
+      "Deleting records before a consumer starts",
+      "Forcing only leader partitions to respond",
+      "Disabling idempotent production"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Starting consumption from the oldest available records</strong> is correct because earliest is useful for full reprocessing or for new consumers that need historical data.</p><p>Example: a new data warehouse consumer can start from the beginning of retained history.</p>"
+  },
+  {
+    "id": 7626,
+    "text": "What is the latest offset reset behavior used for?",
+    "choices": [
+      "Starting consumption from newly arriving records only",
+      "Replaying from the oldest offset",
+      "Skipping leader election",
+      "Compacting all partitions"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Starting consumption from newly arriving records only</strong> is correct because latest is often used when an application only cares about fresh events going forward.</p><p>Example: a monitoring consumer may only need new metrics from now on.</p>"
+  },
+  {
+    "id": 7627,
+    "text": "What is a Kafka topic replication factor?",
+    "choices": [
+      "The number of broker copies maintained for each partition",
+      "The number of consumers required per partition",
+      "The number of producers allowed per topic",
+      "The maximum key size for records"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>The number of broker copies maintained for each partition</strong> is correct because replication improves durability and fault tolerance by keeping copies on multiple brokers.</p><p>Example: a replication factor of 3 keeps three broker copies of each partition.</p>"
+  },
+  {
+    "id": 7628,
+    "text": "Why is replication important in Kafka?",
+    "choices": [
+      "It helps protect against broker failure",
+      "It guarantees global ordering",
+      "It removes the need for keys",
+      "It prevents all duplicate deliveries"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It helps protect against broker failure</strong> is correct because replication ensures a partition can still be served if one broker goes down.</p><p>Example: another replica can become leader if the current leader fails.</p>"
+  },
+  {
+    "id": 7629,
+    "text": "What is a leader partition replica?",
+    "choices": [
+      "The replica that handles reads and writes for a partition",
+      "The replica that only stores schemas",
+      "A consumer-side local cache",
+      "A client library for admin commands"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>The replica that handles reads and writes for a partition</strong> is correct because Kafka designates one replica as the leader and routes client operations through it.</p><p>Example: producers send records to the leader for the target partition.</p>"
+  },
+  {
+    "id": 7630,
+    "text": "What is a follower replica?",
+    "choices": [
+      "A replica that copies data from the partition leader",
+      "A consumer that reads only old offsets",
+      "A producer retry batch",
+      "A topic with no retention"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A replica that copies data from the partition leader</strong> is correct because followers stay in sync with the leader and can take over if leadership changes.</p><p>Example: if the leader broker fails, a follower may be promoted to leader.</p>"
+  },
+  {
+    "id": 7631,
+    "text": "What is an in-sync replica (ISR)?",
+    "choices": [
+      "A replica that is caught up closely enough with the leader",
+      "A producer with idempotency enabled",
+      "A consumer group metadata record",
+      "A broker with no partitions assigned"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A replica that is caught up closely enough with the leader</strong> is correct because ISR membership matters for durability and failover because only sufficiently up-to-date replicas are considered safe candidates.</p><p>Example: a lagging replica may fall out of the ISR until it catches up again.</p>"
+  },
+  {
+    "id": 7632,
+    "text": "Why does Kafka track the ISR set?",
+    "choices": [
+      "To know which replicas are sufficiently up to date for durability decisions",
+      "To determine how many producers can connect",
+      "To compress topic data more efficiently",
+      "To pick the serializer for each message"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>To know which replicas are sufficiently up to date for durability decisions</strong> is correct because the ISR affects whether writes are considered safe and which replicas can become leaders.</p><p>Example: requiring acknowledgments from ISR replicas increases write durability.</p>"
+  },
+  {
+    "id": 7633,
+    "text": "What does acks=all mean for a Kafka producer?",
+    "choices": [
+      "The leader waits for all in-sync replicas to acknowledge the write",
+      "The producer sends the record to every topic in the cluster",
+      "Every consumer must confirm the message",
+      "The broker deletes the record after one read"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>The leader waits for all in-sync replicas to acknowledge the write</strong> is correct because acks=all gives stronger durability guarantees than weaker acknowledgment modes.</p><p>Example: payment events often use stronger acknowledgment settings than disposable metrics.</p>"
+  },
+  {
+    "id": 7634,
+    "text": "What does acks=1 mean for a Kafka producer?",
+    "choices": [
+      "The leader acknowledges after writing the record locally",
+      "Every replica must acknowledge before the leader writes",
+      "No acknowledgment is returned to the producer",
+      "The consumer group stores the offset automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>The leader acknowledges after writing the record locally</strong> is correct because acks=1 is faster than waiting for all ISR replicas but is less durable in some failure windows.</p><p>Example: a record acknowledged only by the leader could still be lost if the leader fails before followers catch up.</p>"
+  },
+  {
+    "id": 7635,
+    "text": "What does acks=0 mean for a Kafka producer?",
+    "choices": [
+      "The producer does not wait for broker acknowledgment",
+      "The broker stores no data at all",
+      "Only consumers can acknowledge the record",
+      "All replicas must confirm twice"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>The producer does not wait for broker acknowledgment</strong> is correct because acks=0 can improve throughput but offers the weakest delivery assurance from the producer perspective.</p><p>Example: low-value telemetry may sometimes tolerate weaker acknowledgment semantics.</p>"
+  },
+  {
+    "id": 7636,
+    "text": "What is idempotent production in Kafka?",
+    "choices": [
+      "A producer feature that helps avoid duplicate records during retries",
+      "A topic configuration that enforces global uniqueness",
+      "A consumer group mode that drops all repeats",
+      "A broker-side schema registry plugin"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A producer feature that helps avoid duplicate records during retries</strong> is correct because idempotence makes producer retries safer by preventing some duplicate appends caused by transient failures.</p><p>Example: if a network glitch occurs during send retry, Kafka can avoid writing the same record twice from that producer session.</p>"
+  },
+  {
+    "id": 7637,
+    "text": "Why is idempotent production useful?",
+    "choices": [
+      "It improves reliability during retries without creating as many duplicates",
+      "It removes the need for keys entirely",
+      "It compacts topics automatically",
+      "It guarantees every consumer is idempotent"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It improves reliability during retries without creating as many duplicates</strong> is correct because retrying network operations is common, so reducing duplicate appends is valuable for correctness.</p><p>Example: financial events are often sent with stronger producer safety settings.</p>"
+  },
+  {
+    "id": 7638,
+    "text": "What is a Kafka producer retry?",
+    "choices": [
+      "A repeated send attempt after a transient failure",
+      "A consumer offset reset to earliest",
+      "A broker leader election event",
+      "A compaction cleanup process"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A repeated send attempt after a transient failure</strong> is correct because retries are important because temporary network or broker issues can interrupt sending even when the system is still healthy overall.</p><p>Example: a producer may retry after a brief connection timeout.</p>"
+  },
+  {
+    "id": 7639,
+    "text": "Why do producer retries need careful configuration?",
+    "choices": [
+      "Because retries can interact with ordering, duplicates, and latency",
+      "Because Kafka has no timeout settings",
+      "Because retries always delete failed records",
+      "Because consumers cannot handle delayed data"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Because retries can interact with ordering, duplicates, and latency</strong> is correct because retry behavior influences both correctness and throughput, especially in partition-ordered workflows.</p><p>Example: aggressive retries may increase end-to-end latency during outages.</p>"
+  },
+  {
+    "id": 7640,
+    "text": "What is a Kafka tombstone record?",
+    "choices": [
+      "A record with a key and null value used in compacted topics to represent deletion",
+      "A permanently unreadable corrupted message",
+      "A consumer heartbeat with no payload",
+      "A leader-election metadata record stored in ZooKeeper"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A record with a key and null value used in compacted topics to represent deletion</strong> is correct because tombstones are part of log compaction semantics and commonly signal removal of the current value for a key.</p><p>Example: a null-valued record for a user key can indicate that the user should be deleted from a compacted state store.</p>"
+  },
+  {
+    "id": 7641,
+    "text": "What is log compaction in Kafka?",
+    "choices": [
+      "Keeping the latest record for each key rather than all historical records forever",
+      "Compressing network traffic between brokers only",
+      "Deleting all records older than one minute",
+      "Rebalancing partitions across consumers"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Keeping the latest record for each key rather than all historical records forever</strong> is correct because compaction is useful for changelog-style topics where the latest state per key matters more than every historical update.</p><p>Example: an account-profile topic can keep the newest profile value for each user key.</p>"
+  },
+  {
+    "id": 7642,
+    "text": "When is log compaction especially useful?",
+    "choices": [
+      "For topics representing current state by key",
+      "For topics that must never delete anything",
+      "Only for non-keyed events",
+      "Only for broker metrics"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>For topics representing current state by key</strong> is correct because compaction helps stateful applications rebuild current values without storing unbounded redundant history for each key.</p><p>Example: a product-catalog changelog topic can reconstruct the latest product data.</p>"
+  },
+  {
+    "id": 7643,
+    "text": "What is the difference between retention-based deletion and compaction?",
+    "choices": [
+      "Retention removes records by age or size, while compaction preserves the latest value per key",
+      "They are exactly the same feature with different names",
+      "Compaction only affects consumers and retention only affects producers",
+      "Retention works only on empty topics"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Retention removes records by age or size, while compaction preserves the latest value per key</strong> is correct because Kafka supports both strategies because some topics need historical windows and others need key-based latest state.</p><p>Example: one topic may keep seven days of events, while another compacted topic keeps only the latest state per key.</p>"
+  },
+  {
+    "id": 7644,
+    "text": "What is a Kafka consumer offset commit?",
+    "choices": [
+      "Saving the consumer’s read position so it can resume later",
+      "Deleting a partition after processing",
+      "Publishing a reply to the producer",
+      "Adding a new broker to the ISR"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Saving the consumer’s read position so it can resume later</strong> is correct because offset commits allow consumers to track progress and recover after restart without rereading everything.</p><p>Example: a consumer can resume from the last committed offset after a deployment restart.</p>"
+  },
+  {
+    "id": 7645,
+    "text": "What is automatic offset commit?",
+    "choices": [
+      "Kafka client periodically commits offsets on behalf of the consumer",
+      "The broker commits offsets before delivery",
+      "The producer commits offsets after publishing",
+      "A mode that disables lag tracking"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Kafka client periodically commits offsets on behalf of the consumer</strong> is correct because auto-commit is convenient but may not match the application’s exact processing completion semantics.</p><p>Example: auto-commit can be risky if records are marked as read before business processing truly finishes.</p>"
+  },
+  {
+    "id": 7646,
+    "text": "Why might manual offset commit be preferred?",
+    "choices": [
+      "It allows committing only after successful processing",
+      "It makes partitions unordered",
+      "It removes all lag automatically",
+      "It disables rebalances"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It allows committing only after successful processing</strong> is correct because manual control is useful when correctness matters more than convenience.</p><p>Example: an order event can be committed only after the database update succeeds.</p>"
+  },
+  {
+    "id": 7647,
+    "text": "What risk can exist with committing offsets too early?",
+    "choices": [
+      "Messages may be skipped after a failure",
+      "The topic replication factor drops",
+      "The broker deletes the ISR",
+      "The producer key changes"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Messages may be skipped after a failure</strong> is correct because if a consumer marks progress before finishing the work, a crash can cause unprocessed records to be lost from that consumer’s perspective.</p><p>Example: a service might commit offset 200, crash, and restart at 201 even though record 200 was never applied.</p>"
+  },
+  {
+    "id": 7648,
+    "text": "What risk can exist with committing offsets too late?",
+    "choices": [
+      "Messages may be reprocessed after a crash",
+      "Topics will compact automatically",
+      "Partitions are permanently locked",
+      "The producer loses its schema"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Messages may be reprocessed after a crash</strong> is correct because late commits are often safer than early commits, but they increase duplicate-processing risk and require idempotent handlers.</p><p>Example: a consumer may process record 500 successfully but crash before committing, then read 500 again after restart.</p>"
+  },
+  {
+    "id": 7649,
+    "text": "Why do Kafka consumers often need idempotent processing?",
+    "choices": [
+      "Because at-least-once consumption can cause reprocessing",
+      "Because Kafka lacks partitions",
+      "Because compaction deletes all offsets",
+      "Because producers cannot use retries"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Because at-least-once consumption can cause reprocessing</strong> is correct because consumer-side idempotency is a common guard against duplicates during crashes, retries, and delayed commits.</p><p>Example: a payment processor can store processed event IDs to prevent double charging.</p>"
+  },
+  {
+    "id": 7650,
+    "text": "What is exactly-once semantics in Kafka best understood as?",
+    "choices": [
+      "A feature set that still requires careful end-to-end design",
+      "A universal guarantee for any code reading a topic",
+      "A way to remove consumer groups",
+      "A retention mode for compacted topics"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A feature set that still requires careful end-to-end design</strong> is correct because Kafka supports strong features for transactional workflows, but application boundaries still matter for achieving correct exactly-once outcomes.</p><p>Example: writing to external systems still requires careful coordination, not just broker settings.</p>"
+  },
+  {
+    "id": 7651,
+    "text": "What is a Kafka transaction?",
+    "choices": [
+      "A way to group producer writes and related offset commits atomically in some workflows",
+      "A consumer-only method for purging partitions",
+      "A broker restart strategy",
+      "A type of schema evolution"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A way to group producer writes and related offset commits atomically in some workflows</strong> is correct because transactions help applications coordinate output records and consumed offsets for stronger processing guarantees.</p><p>Example: a stream processor can read input, write output, and commit offsets together.</p>"
+  },
+  {
+    "id": 7652,
+    "text": "Why are Kafka transactions useful in stream processing?",
+    "choices": [
+      "They help avoid partial output when a processing step fails",
+      "They force all topics to be compacted",
+      "They make every consumer stateless",
+      "They remove the need for partition keys"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They help avoid partial output when a processing step fails</strong> is correct because without transactions, a processor might write output records but fail before marking its input progress consistently.</p><p>Example: a stream app can avoid duplicating derived events during crashes.</p>"
+  },
+  {
+    "id": 7653,
+    "text": "What is Kafka Streams?",
+    "choices": [
+      "A Java library for building stream-processing applications on Kafka",
+      "A broker plugin that creates partitions automatically",
+      "A Docker image for running ZooKeeper",
+      "A topic compaction dashboard"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A Java library for building stream-processing applications on Kafka</strong> is correct because Kafka Streams lets developers build stateful and stateless stream transformations using Kafka topics as inputs and outputs.</p><p>Example: it can join order and payment streams to produce fulfillment events.</p>"
+  },
+  {
+    "id": 7654,
+    "text": "What is a stream processing application?",
+    "choices": [
+      "An application that continuously processes records as they arrive",
+      "A batch job that only runs once a month",
+      "A broker that only stores logs",
+      "A topic that cannot be partitioned"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>An application that continuously processes records as they arrive</strong> is correct because stream processing is useful when systems need near-real-time transformation, enrichment, or aggregation.</p><p>Example: detecting fraud signals from live payment events is a streaming use case.</p>"
+  },
+  {
+    "id": 7655,
+    "text": "What is a state store in Kafka Streams?",
+    "choices": [
+      "Local state used by a stream-processing application",
+      "A remote-only broker metadata database",
+      "A registry for producer API keys",
+      "A backup cluster for dead letters"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Local state used by a stream-processing application</strong> is correct because state stores support joins, aggregations, windows, and other operations that require remembering prior records.</p><p>Example: a stream app can keep running totals by customer in a state store.</p>"
+  },
+  {
+    "id": 7656,
+    "text": "What is a changelog topic in Kafka Streams?",
+    "choices": [
+      "A topic used to back up local state store changes",
+      "A topic that only stores consumer lag metrics",
+      "A broker health-check endpoint",
+      "A queue used only for retries"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A topic used to back up local state store changes</strong> is correct because changelog topics make local state fault tolerant by persisting updates back into Kafka.</p><p>Example: if a stream task moves to another instance, it can rebuild state from the changelog.</p>"
+  },
+  {
+    "id": 7657,
+    "text": "What is a KTable conceptually in Kafka Streams?",
+    "choices": [
+      "A table-like view of the latest value per key",
+      "A consumer group that can read only compacted topics",
+      "A broker partition leadership record",
+      "A serialization format for Avro schemas"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A table-like view of the latest value per key</strong> is correct because KTable models changing keyed state rather than a raw append-only event stream.</p><p>Example: a customer-profile KTable can represent the latest profile data for each customer key.</p>"
+  },
+  {
+    "id": 7658,
+    "text": "What is a KStream conceptually in Kafka Streams?",
+    "choices": [
+      "A continuous stream of records where each event matters independently",
+      "A compacted topic that never changes keys",
+      "A cluster controller election algorithm",
+      "A local broker storage tier"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A continuous stream of records where each event matters independently</strong> is correct because KStream is event-oriented and commonly used for transformations, filters, maps, and fan-out processing.</p><p>Example: clickstream events are often modeled as a KStream.</p>"
+  },
+  {
+    "id": 7659,
+    "text": "What is a windowed aggregation?",
+    "choices": [
+      "An aggregation performed over a time window",
+      "A replication strategy between brokers",
+      "A producer retry schedule",
+      "A method for encrypting offsets"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>An aggregation performed over a time window</strong> is correct because windowing is important when counting or summarizing events over intervals rather than forever.</p><p>Example: count how many orders arrive every five minutes.</p>"
+  },
+  {
+    "id": 7660,
+    "text": "Why are event-time windows useful?",
+    "choices": [
+      "They let processing reason about when events actually happened",
+      "They force all consumers to read from offset zero",
+      "They disable late records",
+      "They remove the need for retention"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They let processing reason about when events actually happened</strong> is correct because event-time semantics are valuable when records may arrive late or out of order relative to processing time.</p><p>Example: mobile events delayed by weak connectivity can still fall into the correct business-time window.</p>"
+  },
+  {
+    "id": 7661,
+    "text": "What is late-arriving data in Kafka stream processing?",
+    "choices": [
+      "Records that arrive after their expected event-time window has mostly passed",
+      "Records with null keys only",
+      "Records published by followers instead of leaders",
+      "Records stored without replication"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Records that arrive after their expected event-time window has mostly passed</strong> is correct because late data is common in distributed systems and must be handled deliberately in windowed computations.</p><p>Example: a user event created at 10:00 may not reach Kafka until 10:07.</p>"
+  },
+  {
+    "id": 7662,
+    "text": "What is schema registry commonly used for with Kafka?",
+    "choices": [
+      "Managing and validating message schemas such as Avro or Protobuf",
+      "Scheduling broker leader elections",
+      "Deleting expired partitions",
+      "Assigning consumer group IDs"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Managing and validating message schemas such as Avro or Protobuf</strong> is correct because schema registries help teams evolve contracts safely and keep producers and consumers aligned.</p><p>Example: a producer can register a new compatible event schema version before publishing.</p>"
+  },
+  {
+    "id": 7663,
+    "text": "Why are Avro or Protobuf often used with Kafka?",
+    "choices": [
+      "They provide structured schemas and compact serialization",
+      "They are required by every Kafka cluster",
+      "They remove the need for keys",
+      "They replace retention settings"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They provide structured schemas and compact serialization</strong> is correct because binary schema-based formats can improve size efficiency and contract discipline compared with unstructured payloads.</p><p>Example: a high-throughput event stream may use Avro instead of plain JSON for efficiency.</p>"
+  },
+  {
+    "id": 7664,
+    "text": "What is schema compatibility in Kafka ecosystems?",
+    "choices": [
+      "Rules about whether new schema versions can work with existing producers or consumers",
+      "A method for choosing broker rack placement",
+      "A setting for network compression only",
+      "A transaction timeout for stream processors"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Rules about whether new schema versions can work with existing producers or consumers</strong> is correct because compatibility checks help prevent deployments that would break live data pipelines.</p><p>Example: adding an optional field may be compatible, while removing a required field may not be.</p>"
+  },
+  {
+    "id": 7665,
+    "text": "What is backward schema compatibility?",
+    "choices": [
+      "New consumers can read older data or older consumers can still read new data depending on the configured rule orientation",
+      "A way to shrink partition counts",
+      "A replication cleanup command",
+      "A producer-only retry policy"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>New consumers can read older data or older consumers can still read new data depending on the configured rule orientation</strong> is correct because teams use compatibility modes to support rolling deployments where components do not upgrade simultaneously.</p><p>Example: a consumer may continue working after a producer adds a new optional field.</p>"
+  },
+  {
+    "id": 7666,
+    "text": "What is a Kafka Connect source connector?",
+    "choices": [
+      "A connector that imports data into Kafka from another system",
+      "A connector that pushes Kafka data back to a database only",
+      "A broker extension that manages ISR",
+      "A stream processor state store"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A connector that imports data into Kafka from another system</strong> is correct because source connectors are used for ingesting data from databases, SaaS systems, files, and more into Kafka topics.</p><p>Example: a Debezium connector can capture database changes into Kafka.</p>"
+  },
+  {
+    "id": 7667,
+    "text": "What is a Kafka Connect sink connector?",
+    "choices": [
+      "A connector that exports Kafka data to another system",
+      "A connector that creates Kafka brokers dynamically",
+      "A producer retry monitor",
+      "A topic partition reassignment plan"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A connector that exports Kafka data to another system</strong> is correct because sink connectors deliver topic records into destinations such as databases, search systems, or object storage.</p><p>Example: events from Kafka can be written into Elasticsearch with a sink connector.</p>"
+  },
+  {
+    "id": 7668,
+    "text": "What is Kafka Connect?",
+    "choices": [
+      "A framework for integrating Kafka with external systems using connectors",
+      "A library for building React applications",
+      "A broker-only replacement for Kafka Streams",
+      "A schema language for Avro"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A framework for integrating Kafka with external systems using connectors</strong> is correct because Kafka Connect reduces the amount of custom integration code teams must write for common data movement tasks.</p><p>Example: connectors can move records between Kafka and PostgreSQL.</p>"
+  },
+  {
+    "id": 7669,
+    "text": "What is Debezium commonly used for with Kafka?",
+    "choices": [
+      "Capturing database change events into Kafka",
+      "Compacting topics by key",
+      "Encrypting producer connections",
+      "Managing consumer lag dashboards"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Capturing database change events into Kafka</strong> is correct because Debezium is widely used for change data capture from relational databases into Kafka topics.</p><p>Example: inserts and updates in an orders table can become Kafka events.</p>"
+  },
+  {
+    "id": 7670,
+    "text": "What is change data capture (CDC)?",
+    "choices": [
+      "Turning database changes into an event stream",
+      "Deleting old records by retention policy",
+      "Balancing producers across partitions",
+      "Serializing data into JSON only"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Turning database changes into an event stream</strong> is correct because CDC is a common way to integrate legacy databases with event-driven architectures without polling full tables repeatedly.</p><p>Example: a customer row update can be emitted as an event when the database transaction commits.</p>"
+  },
+  {
+    "id": 7671,
+    "text": "Why is CDC useful in event-driven systems?",
+    "choices": [
+      "It lets downstream systems react to database changes without tight synchronous coupling",
+      "It forces every topic to be compacted",
+      "It removes the need for schemas",
+      "It guarantees no duplicates ever occur"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It lets downstream systems react to database changes without tight synchronous coupling</strong> is correct because CDC helps bridge traditional transactional systems into event streams for analytics, search, and integration.</p><p>Example: inventory updates in a database can flow to search and reporting systems through Kafka.</p>"
+  },
+  {
+    "id": 7672,
+    "text": "What is a Kafka ACL?",
+    "choices": [
+      "An access control rule for Kafka operations",
+      "A replication factor shortcut",
+      "A topic compaction mode",
+      "A schema registry compatibility level"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>An access control rule for Kafka operations</strong> is correct because ACLs help enforce security by specifying who can read, write, create, or manage Kafka resources.</p><p>Example: one application principal may be allowed to write to <code>payments</code> but not read from it.</p>"
+  },
+  {
+    "id": 7673,
+    "text": "Why are ACLs important in Kafka security?",
+    "choices": [
+      "They restrict who can access topics and cluster operations",
+      "They make all topics durable automatically",
+      "They choose partitions based on keys",
+      "They replace TLS encryption"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They restrict who can access topics and cluster operations</strong> is correct because Kafka often carries sensitive business events, so access must be limited by role and application need.</p><p>Example: analytics consumers should not necessarily be allowed to publish operational commands.</p>"
+  },
+  {
+    "id": 7674,
+    "text": "What is SASL in Kafka security?",
+    "choices": [
+      "A framework used for client authentication",
+      "A compaction algorithm for changelog topics",
+      "A format for partition reassignment files",
+      "A retry mode for transactional producers"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A framework used for client authentication</strong> is correct because Kafka can use SASL mechanisms to authenticate clients before allowing broker access.</p><p>Example: a cluster may use SASL/SCRAM for username-password authentication.</p>"
+  },
+  {
+    "id": 7675,
+    "text": "Why is TLS useful in Kafka?",
+    "choices": [
+      "It encrypts client-broker and broker-broker traffic",
+      "It assigns offsets automatically",
+      "It compacts topics by time",
+      "It eliminates rebalances"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It encrypts client-broker and broker-broker traffic</strong> is correct because TLS helps protect event data and credentials from interception over the network.</p><p>Example: payment events can travel securely between applications and the Kafka cluster.</p>"
+  },
+  {
+    "id": 7676,
+    "text": "What is rack awareness in Kafka?",
+    "choices": [
+      "A strategy for spreading replicas across failure domains",
+      "A way to map consumers to UI dashboards",
+      "A schema naming convention",
+      "A producer-side compression codec"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A strategy for spreading replicas across failure domains</strong> is correct because rack awareness improves resilience by helping replicas avoid being placed all in the same failure zone.</p><p>Example: replicas can be distributed across multiple availability zones.</p>"
+  },
+  {
+    "id": 7677,
+    "text": "Why is rack awareness useful?",
+    "choices": [
+      "It reduces the chance that one infrastructure failure removes all replicas",
+      "It guarantees zero lag",
+      "It allows unlimited partitions per broker",
+      "It disables compaction"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It reduces the chance that one infrastructure failure removes all replicas</strong> is correct because placing replicas across failure domains improves availability during outages.</p><p>Example: one data center issue should not wipe out every copy of a partition.</p>"
+  },
+  {
+    "id": 7678,
+    "text": "What is partition reassignment?",
+    "choices": [
+      "Moving partition replicas between brokers",
+      "Resetting consumer offsets to latest",
+      "Changing a topic from compacted to encrypted",
+      "Publishing a tombstone from a consumer"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Moving partition replicas between brokers</strong> is correct because reassignment is used for scaling, balancing storage, replacing brokers, or changing replication layouts.</p><p>Example: adding new brokers may require moving partitions so load is shared.</p>"
+  },
+  {
+    "id": 7679,
+    "text": "Why might teams reassign Kafka partitions?",
+    "choices": [
+      "To rebalance storage, throughput, or fault tolerance across brokers",
+      "To force all consumers into one group",
+      "To delete topic schemas permanently",
+      "To disable idempotent producers"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>To rebalance storage, throughput, or fault tolerance across brokers</strong> is correct because cluster growth and operational changes often require redistributing data among brokers.</p><p>Example: a hot broker with too many busy partitions may need some moved away.</p>"
+  },
+  {
+    "id": 7680,
+    "text": "What is a hot partition?",
+    "choices": [
+      "A partition receiving disproportionately high traffic",
+      "A partition with no leader assigned",
+      "A partition that has been compacted",
+      "A partition stored only in memory"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A partition receiving disproportionately high traffic</strong> is correct because hot partitions can create uneven load and become performance bottlenecks.</p><p>Example: using a poor partition key may send too many records to one partition.</p>"
+  },
+  {
+    "id": 7681,
+    "text": "Why can poor key selection create hot partitions?",
+    "choices": [
+      "Too many records for one entity or skewed key values can cluster on one partition",
+      "Kafka ignores keys when partitions are present",
+      "Every key is randomly routed to all partitions",
+      "Keys are only used by consumers after storage"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Too many records for one entity or skewed key values can cluster on one partition</strong> is correct because balanced key distribution is important for even throughput and consumer scaling.</p><p>Example: a null key strategy may distribute differently than a heavily skewed customer ID.</p>"
+  },
+  {
+    "id": 7682,
+    "text": "What is a Kafka controller in modern Kafka architecture?",
+    "choices": [
+      "A broker role responsible for cluster metadata coordination and leadership decisions",
+      "A consumer that manages retries for all groups",
+      "A schema registry proxy",
+      "A Docker sidecar for log shipping"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A broker role responsible for cluster metadata coordination and leadership decisions</strong> is correct because the controller helps coordinate partition leadership and metadata changes across the cluster.</p><p>Example: broker failures trigger controller-led leadership updates.</p>"
+  },
+  {
+    "id": 7683,
+    "text": "What is KRaft in Kafka?",
+    "choices": [
+      "Kafka’s built-in metadata quorum mode that avoids ZooKeeper",
+      "A compression codec for producers",
+      "A connector runtime for CDC",
+      "A consumer group balancing protocol"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Kafka’s built-in metadata quorum mode that avoids ZooKeeper</strong> is correct because KRaft replaces the older ZooKeeper dependency with Kafka’s own metadata quorum approach.</p><p>Example: newer Kafka deployments can run without a separate ZooKeeper cluster.</p>"
+  },
+  {
+    "id": 7684,
+    "text": "What was ZooKeeper historically used for in Kafka?",
+    "choices": [
+      "Cluster metadata coordination and controller election",
+      "Storing all topic payloads permanently",
+      "Serializing Avro schemas",
+      "Routing messages by record key"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Cluster metadata coordination and controller election</strong> is correct because older Kafka architectures depended on ZooKeeper for key coordination tasks outside the brokers themselves.</p><p>Example: many modern deployments move away from this by using KRaft.</p>"
+  },
+  {
+    "id": 7685,
+    "text": "What is log segment rolling in Kafka?",
+    "choices": [
+      "Splitting partition logs into manageable segment files over time or size",
+      "Rebalancing consumers after a deployment",
+      "Changing producer acks per batch",
+      "Encrypting old partitions at rest"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Splitting partition logs into manageable segment files over time or size</strong> is correct because Kafka stores partition logs in segments for efficient retention and storage management.</p><p>Example: a large topic partition is stored as multiple sequential segment files on disk.</p>"
+  },
+  {
+    "id": 7686,
+    "text": "Why does Kafka use log segments?",
+    "choices": [
+      "They make retention, deletion, and storage management practical",
+      "They provide consumer authentication",
+      "They eliminate the need for offsets",
+      "They ensure one topic per broker"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They make retention, deletion, and storage management practical</strong> is correct because segment files let Kafka clean up old data incrementally rather than rewriting one giant file.</p><p>Example: expired segments can be removed when retention time is reached.</p>"
+  },
+  {
+    "id": 7687,
+    "text": "What is batching on the producer side?",
+    "choices": [
+      "Grouping multiple records into one request for efficiency",
+      "Writing one record per connection only",
+      "A way to compact topics by key",
+      "A consumer-side offset reset method"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Grouping multiple records into one request for efficiency</strong> is correct because batching improves throughput by reducing per-record network overhead.</p><p>Example: a producer can send many analytics events in one batch instead of thousands of tiny requests.</p>"
+  },
+  {
+    "id": 7688,
+    "text": "Why does compression often help Kafka throughput?",
+    "choices": [
+      "It reduces the amount of data sent over the network and written to disk",
+      "It forces all records into one partition",
+      "It prevents consumer lag",
+      "It eliminates rebalances"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It reduces the amount of data sent over the network and written to disk</strong> is correct because compressing batches can improve efficiency, especially for repetitive or verbose payloads.</p><p>Example: JSON events often compress well and reduce storage and bandwidth cost.</p>"
+  },
+  {
+    "id": 7689,
+    "text": "What is a common tradeoff with stronger durability settings in Kafka?",
+    "choices": [
+      "Higher durability can increase latency",
+      "Higher durability always lowers network usage",
+      "Durability disables transactions",
+      "Durability removes the need for monitoring"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Higher durability can increase latency</strong> is correct because waiting for more acknowledgments or replication safety usually costs some write performance.</p><p>Example: <code>acks=all</code> is often slower than <code>acks=1</code> but safer.</p>"
+  },
+  {
+    "id": 7690,
+    "text": "What is throughput-oriented producer tuning often trying to optimize?",
+    "choices": [
+      "How efficiently large volumes of records are sent",
+      "How to force exactly one consumer per topic",
+      "How to remove all broker replication",
+      "How to delete old offsets"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>How efficiently large volumes of records are sent</strong> is correct because producer tuning often balances batch size, linger time, compression, and acknowledgment behavior.</p><p>Example: analytics pipelines may tune for higher throughput than low-latency request flows.</p>"
+  },
+  {
+    "id": 7691,
+    "text": "What is linger.ms in producer tuning conceptually?",
+    "choices": [
+      "A small wait time to allow more records to accumulate into a batch",
+      "A delay before consumers can commit offsets",
+      "The retention time for tombstones",
+      "A timeout for controller election"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A small wait time to allow more records to accumulate into a batch</strong> is correct because lingering briefly can improve batching efficiency at the cost of a little extra latency.</p><p>Example: waiting a few milliseconds can let more records share one request.</p>"
+  },
+  {
+    "id": 7692,
+    "text": "Why should Kafka topics and partitions be monitored regularly?",
+    "choices": [
+      "Because throughput, lag, replication health, and storage issues can affect applications",
+      "Because Kafka has no built-in metrics",
+      "Because topics never change after creation",
+      "Because only consumers can fail"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Because throughput, lag, replication health, and storage issues can affect applications</strong> is correct because operational visibility is essential in distributed streaming systems that many services depend on.</p><p>Example: under-replicated partitions are an important warning signal.</p>"
+  },
+  {
+    "id": 7693,
+    "text": "What does under-replicated partition generally indicate?",
+    "choices": [
+      "Some replicas are not fully caught up or available",
+      "A consumer has committed too far ahead",
+      "The topic has no key set",
+      "The schema registry is offline"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Some replicas are not fully caught up or available</strong> is correct because under-replication is a potential durability and availability concern and should be investigated quickly.</p><p>Example: a slow or failed broker can cause follower replicas to fall behind.</p>"
+  },
+  {
+    "id": 7694,
+    "text": "Why is under-replication a risk?",
+    "choices": [
+      "There are fewer healthy up-to-date copies available if another failure occurs",
+      "It means compaction has succeeded correctly",
+      "It improves write throughput automatically",
+      "It guarantees consumers see no duplicates"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>There are fewer healthy up-to-date copies available if another failure occurs</strong> is correct because if the cluster loses another broker while replication is degraded, data availability can suffer more easily.</p><p>Example: a partition with one healthy replica is more vulnerable than one with three in sync.</p>"
+  },
+  {
+    "id": 7695,
+    "text": "What is a poison-pill message pattern in Kafka consumption?",
+    "choices": [
+      "A malformed or problematic record that repeatedly breaks consumers",
+      "A special compacted tombstone reserved by the broker",
+      "A transactional marker created after every commit",
+      "A leader-election metadata record"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A malformed or problematic record that repeatedly breaks consumers</strong> is correct because consumers need strategies for handling bad records so one broken payload does not stall the whole pipeline forever.</p><p>Example: an invalid JSON payload can crash a deserializer every time it is read.</p>"
+  },
+  {
+    "id": 7696,
+    "text": "How can consumers handle problematic records more safely?",
+    "choices": [
+      "By using error handling, dead-letter topics, or skip/retry strategies",
+      "By deleting the entire broker log",
+      "By forcing the producer to compact immediately",
+      "By disabling offset commits forever"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>By using error handling, dead-letter topics, or skip/retry strategies</strong> is correct because robust consumers protect the pipeline from being blocked by one bad record.</p><p>Example: a dead-letter topic can capture the payload and error details for later review.</p>"
+  },
+  {
+    "id": 7697,
+    "text": "What is a dead-letter topic?",
+    "choices": [
+      "A topic that stores records that failed normal processing",
+      "A broker metadata topic for leader elections",
+      "A compacted topic used only for offsets",
+      "A sink connector status stream"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>A topic that stores records that failed normal processing</strong> is correct because dead-letter topics are useful for isolating bad records without stopping healthy traffic.</p><p>Example: deserialization failures can be rerouted to a dedicated DLQ topic.</p>"
+  },
+  {
+    "id": 7698,
+    "text": "Why are dead-letter topics useful?",
+    "choices": [
+      "They separate failed records from the main processing path",
+      "They eliminate the need for consumer logging",
+      "They guarantee exactly-once delivery",
+      "They remove schema compatibility requirements"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>They separate failed records from the main processing path</strong> is correct because routing bad records aside helps operations investigate without blocking business workflows.</p><p>Example: one broken event should not stop thousands of valid events from being processed.</p>"
+  },
+  {
+    "id": 7699,
+    "text": "What is a common use case for Kafka in microservices?",
+    "choices": [
+      "Publishing domain events for other services to react to asynchronously",
+      "Serving HTML templates to browsers directly",
+      "Replacing all relational databases",
+      "Managing TLS certificates for pods"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>Publishing domain events for other services to react to asynchronously</strong> is correct because Kafka is often used as the event backbone for loosely coupled service communication.</p><p>Example: the order service publishes events that inventory and shipping consume independently.</p>"
+  },
+  {
+    "id": 7700,
+    "text": "Why can Kafka be valuable for event-driven architecture?",
+    "choices": [
+      "It provides durable, scalable, replayable event distribution",
+      "It guarantees every service shares one schema forever",
+      "It removes the need for APIs completely",
+      "It makes all workflows synchronous"
+    ],
+    "correctIndex": 0,
+    "topic": "Kafka",
+    "explanation": "<p><strong>It provides durable, scalable, replayable event distribution</strong> is correct because Kafka helps teams move from direct coupling toward asynchronous event streams that multiple consumers can use.</p><p>Example: one event can power real-time analytics, search indexing, and notifications.</p>"
+  }
+]
