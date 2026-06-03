@@ -1,0 +1,158 @@
+[
+  {
+    "id": 201,
+    "text": "What is Node.js primarily used for?",
+    "choices": [
+      "Running JavaScript on the server",
+      "Styling web pages",
+      "Compiling Java bytecode",
+      "Managing relational schemas only"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Running JavaScript on the server</strong> is correct because Node.js is a JavaScript runtime built on Chrome's V8 engine and is commonly used to build backend services, APIs, and CLI tools.</p><p>Example: a team might use Node.js to create an HTTP API that serves data to a React or Angular frontend.</p>"
+  },
+  {
+    "id": 202,
+    "text": "Which command typically initializes a new Node.js project?",
+    "choices": [
+      "npm init",
+      "node start",
+      "npm serve",
+      "node create"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>npm init</strong> is correct because it creates a <code>package.json</code> file, which stores metadata, scripts, and dependencies for a Node.js project.</p><p>Example:</p><pre><code>npm init -y</code></pre>"
+  },
+  {
+    "id": 203,
+    "text": "Which file usually stores project dependencies and scripts in a Node.js app?",
+    "choices": [
+      "package.json",
+      "node.config",
+      "server.xml",
+      "tsconfig.app"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>package.json</strong> is correct because it is the standard manifest file for a Node.js project.</p><p>Example:</p><pre><code class=\"language-java\">{\n  \"name\": \"demo-app\",\n  \"scripts\": {\n    \"start\": \"node server.js\"\n  }\n}</code></pre>"
+  },
+  {
+    "id": 204,
+    "text": "Which built-in Node.js module is commonly used to create a simple HTTP server?",
+    "choices": [
+      "http",
+      "path",
+      "fs",
+      "events"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>http</strong> is correct because Node.js provides the built-in <code>http</code> module for handling requests and responses without needing a framework.</p><p>Example:</p><pre><code>const http = require('http');\nhttp.createServer((req, res) =&gt; {\n  res.end('Hello');\n}).listen(3000);</code></pre>"
+  },
+  {
+    "id": 205,
+    "text": "Which package manager is bundled with Node.js by default?",
+    "choices": [
+      "npm",
+      "yarn",
+      "pip",
+      "composer"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>npm</strong> is correct because it ships with Node.js and is the default tool for installing dependencies and running scripts.</p><p>Example: you can install Express with <code>npm install express</code>.</p>"
+  },
+  {
+    "id": 206,
+    "text": "Which Node.js module is used for working with the file system?",
+    "choices": [
+      "fs",
+      "url",
+      "os",
+      "crypto"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>fs</strong> is correct because the file system module provides APIs for reading, writing, and watching files and directories.</p><p>Example:</p><pre><code>const fs = require('fs');\nconst text = fs.readFileSync('notes.txt', 'utf8');</code></pre>"
+  },
+  {
+    "id": 207,
+    "text": "What does the event loop help Node.js handle efficiently?",
+    "choices": [
+      "Many concurrent I/O operations",
+      "Only CPU-bound loops",
+      "Browser rendering layouts",
+      "SQL query compilation only"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Many concurrent I/O operations</strong> is correct because Node.js uses an event-driven, non-blocking architecture that is especially strong for networking and file I/O workloads.</p><p>Example: a Node.js API can handle many incoming requests while waiting for database or file responses.</p>"
+  },
+  {
+    "id": 208,
+    "text": "Which syntax is used in CommonJS modules to export values?",
+    "choices": [
+      "module.exports",
+      "export default",
+      "@Export",
+      "public export"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>module.exports</strong> is correct because CommonJS is the traditional Node.js module system, and values are shared from one file to another through <code>module.exports</code>.</p><p>Example:</p><pre><code>function add(a, b) {\n  return a + b;\n}\n\nmodule.exports = { add };</code></pre>"
+  },
+  {
+    "id": 209,
+    "text": "Which object gives access to environment variables in Node.js?",
+    "choices": [
+      "process.env",
+      "window.env",
+      "global.config",
+      "system.props"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>process.env</strong> is correct because Node.js exposes environment variables on the <code>process</code> object.</p><p>Example:</p><pre><code>const port = process.env.PORT || 3000;</code></pre>"
+  },
+  {
+    "id": 210,
+    "text": "Which framework is widely used to build web APIs in Node.js?",
+    "choices": [
+      "Express",
+      "Hibernate",
+      "Spring MVC",
+      "JUnit"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>Express</strong> is correct because it is one of the most common minimal web frameworks for routing, middleware, and API development in Node.js.</p><p>Example:</p><pre><code>const express = require('express');\nconst app = express();\n\napp.get('/api/health', (req, res) =&gt; {\n  res.json({ status: 'ok' });\n});</code></pre>"
+  },
+  {
+    "id": 211,
+    "text": "Which keyword is commonly used to wait for a Promise result inside an async function?",
+    "choices": [
+      "await",
+      "yield",
+      "wait",
+      "pause"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>await</strong> is correct because it pauses execution inside an <code>async</code> function until the Promise settles, making asynchronous code easier to read.</p><p>Example:</p><pre><code>async function loadUser() {\n  const response = await fetchUser();\n  return response;\n}</code></pre>"
+  },
+  {
+    "id": 212,
+    "text": "Which built-in object represents the currently running Node.js process?",
+    "choices": [
+      "process",
+      "runtime",
+      "server",
+      "engine"
+    ],
+    "correctIndex": 0,
+    "topic": "Nodejs",
+    "explanation": "<p><strong>process</strong> is correct because Node.js exposes information about the current application process through the global <code>process</code> object.</p><p>Example: you can read <code>process.pid</code> for the process id or <code>process.argv</code> for command-line arguments.</p>"
+  }
+]
