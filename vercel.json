@@ -4,7 +4,7 @@
   "framework": null,
   "functions": {
     "api/*.js": {
-      "includeFiles": "src/main/resources/questions.json"
+      "includeFiles": "src/main/resources/questions-by-topic/*.json"
     }
   }
 }

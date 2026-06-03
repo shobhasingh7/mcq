@@ -1,5 +1,5 @@
 const http = require('http');
-const { readQuestions } = require('./api/_lib/questions');
+const { listTopics, normalizeTopic, readQuestions } = require('./api/_lib/questions');
 
 const PORT = Number.parseInt(process.env.PORT ?? '3000', 10);
 
@@ -44,20 +44,31 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  const requestUrl = new URL(req.url, `http://localhost:${PORT}`);
+
   if (req.method === 'OPTIONS') {
     sendJson(res, 204, {});
     return;
   }
 
-  if (req.method === 'GET' && req.url === '/api/questions') {
-    sendJson(res, 200, readQuestions());
+  if (req.method === 'GET' && requestUrl.pathname === '/api/topics') {
+    sendJson(res, 200, listTopics());
     return;
   }
 
-  if (req.method === 'POST' && req.url === '/api/submit') {
+  if (req.method === 'GET' && requestUrl.pathname === '/api/questions') {
     try {
-      const { questionId, selectedIndex } = await readJsonBody(req);
-      const question = readQuestions().find((entry) => entry.id === Number(questionId));
+      sendJson(res, 200, readQuestions(normalizeTopic(requestUrl.searchParams.get('topic'))));
+    } catch (_error) {
+      sendJson(res, 400, { message: 'A valid topic query parameter is required.' });
+    }
+    return;
+  }
+
+  if (req.method === 'POST' && requestUrl.pathname === '/api/submit') {
+    try {
+      const { questionId, selectedIndex, topic } = await readJsonBody(req);
+      const question = readQuestions(normalizeTopic(topic)).find((entry) => entry.id === Number(questionId));
 
       if (!question) {
         sendJson(res, 400, {
@@ -82,11 +93,13 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  if (req.method === 'POST' && req.url === '/api/submit-all') {
+  if (req.method === 'POST' && requestUrl.pathname === '/api/submit-all') {
     try {
-      const { answers } = await readJsonBody(req);
+      const { answers, topic } = await readJsonBody(req);
       const submittedAnswers = Array.isArray(answers) ? answers : [];
-      const questionsById = new Map(readQuestions().map((question) => [question.id, question]));
+      const questionsById = new Map(
+        readQuestions(normalizeTopic(topic)).map((question) => [question.id, question])
+      );
 
       let correctAnswers = 0;
       for (const answer of submittedAnswers) {

@@ -1,0 +1,132 @@
+[
+  {
+    "id": 16,
+    "text": "In React, what hook is used to manage local state in a functional component?",
+    "choices": [
+      "useState",
+      "useEffect",
+      "useContext",
+      "useReducer"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useState</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>useState</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 17,
+    "text": "Which method did class components use for lifecycle after mounting?",
+    "choices": [
+      "componentDidMount",
+      "useEffect",
+      "useLayoutEffect",
+      "renderComplete"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>componentDidMount</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>componentDidMount</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 18,
+    "text": "What does JSX stand for?",
+    "choices": [
+      "JavaScript XML",
+      "JavaScript eXtended",
+      "JSON Styled eXtension",
+      "JavaScript eXtensible XML"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>JavaScript XML</strong> is correct because it is the proper definition of the term asked in the question.</p><p>Example: In a React component, you would use <code>JavaScript XML</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 19,
+    "text": "In React, which prop is used to pass data to child components?",
+    "choices": [
+      "props",
+      "state",
+      "context",
+      "key"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>props</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>props</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 20,
+    "text": "Which command creates a new React app using Create React App?",
+    "choices": [
+      "npx create-react-app my-app",
+      "npm init react-app my-app",
+      "yarn new react-app my-app",
+      "npm create-react-app my-app"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>npx create-react-app my-app</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: Run <code>npx create-react-app my-app</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 27,
+    "text": "Which React hook runs after every render by default?",
+    "choices": [
+      "useEffect",
+      "useMemo",
+      "useCallback",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useEffect</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>useEffect</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 31,
+    "text": "In React, which attribute helps identify list items for efficient re-rendering?",
+    "choices": [
+      "key",
+      "id",
+      "ref",
+      "index"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>key</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>key</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 36,
+    "text": "Which React feature allows avoiding prop drilling by providing global data?",
+    "choices": [
+      "Context API",
+      "Redux-only",
+      "Local storage",
+      "Refs"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>Context API</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>Context API</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 46,
+    "text": "Which React hook memoizes a value?",
+    "choices": [
+      "useMemo",
+      "useCallback",
+      "useState",
+      "useRef"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>useMemo</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>useMemo</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 48,
+    "text": "Which CSS methodology scopes styles to components in React?",
+    "choices": [
+      "CSS Modules",
+      "Global CSS",
+      "Inline styles only",
+      "SASS only"
+    ],
+    "correctIndex": 0,
+    "topic": "React",
+    "explanation": "<p><strong>CSS Modules</strong> is correct because it is the React API or pattern designed for that behavior.</p><p>Example: In a React component, you would use <code>CSS Modules</code> when implementing the behavior described here.</p>"
+  }
+]

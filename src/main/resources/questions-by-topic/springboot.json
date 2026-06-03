@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "text": "What is the Spring Boot annotation to mark the main application class?",
+    "choices": [
+      "@SpringBootApplication",
+      "@EnableAutoConfiguration",
+      "@Configuration",
+      "@Component"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@SpringBootApplication</strong> is correct because it combines <code>@Configuration</code>, <code>@EnableAutoConfiguration</code>, and <code>@ComponentScan</code>, so it is the standard annotation on the main Spring Boot class.</p><p>Example: a typical entry point looks like this:<pre><code class=\"language-java\">import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication\npublic class DemoApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(DemoApplication.class, args);\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 2,
+    "text": "Which dependency is typically used for building REST APIs in Spring Boot?",
+    "choices": [
+      "spring-boot-starter-web",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-security",
+      "spring-boot-starter-thymeleaf"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-web</strong> is correct because it pulls in the dependencies needed for REST controllers, JSON serialization, and the embedded servlet container used by most Spring Boot APIs.</p><p>Example: after adding that starter, you can expose an endpoint like this:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n    @GetMapping\n    public List&lt;String&gt; findAll() {\n        return List.of(\"Alice\", \"Bob\");\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 3,
+    "text": "In Spring, which annotation is used for constructor-based dependency injection?",
+    "choices": [
+      "@Autowired",
+      "@Inject",
+      "@Value",
+      "None of the above"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Autowired</strong> is correct because Spring uses it to inject a matching bean, and it is commonly seen on constructors when wiring required dependencies.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class OrderService {\n    private final PaymentService paymentService;\n\n    @Autowired\n    public OrderService(PaymentService paymentService) {\n        this.paymentService = paymentService;\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 4,
+    "text": "Which file defines Spring profiles and properties for different environments?",
+    "choices": [
+      "application.properties",
+      "pom.xml",
+      "build.gradle",
+      "Dockerfile"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>application.properties</strong> is correct because that file is the conventional place to keep Spring Boot configuration such as ports, profiles, logging, and datasource properties.</p><p>Example:<pre><code>server.port=8081\nspring.profiles.active=dev\nlogging.level.org.springframework.web=DEBUG</code></pre></p>"
+  },
+  {
+    "id": 5,
+    "text": "Which Spring module provides integration with relational databases using repositories?",
+    "choices": [
+      "Spring Data JPA",
+      "Spring MVC",
+      "Spring Security",
+      "Spring Batch"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Spring Data JPA</strong> is correct because it provides repository abstractions and JPA integration so relational data access can be written with much less boilerplate.</p><p>Example:<pre><code class=\"language-java\">@Entity\npublic class Customer {\n    @Id\n    private Long id;\n}\n\npublic interface CustomerRepository extends JpaRepository&lt;Customer, Long&gt; {\n}</code></pre></p>"
+  },
+  {
+    "id": 6,
+    "text": "In Spring Data JPA, which annotation marks the primary key of an entity?",
+    "choices": [
+      "@Id",
+      "@Primary",
+      "@Key",
+      "@EntityId"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@Id</strong> is correct because JPA uses <code>@Id</code> to mark the field or property that represents the primary key of an entity.</p><p>Example:<pre><code class=\"language-java\">@Entity\npublic class Product {\n    @Id\n    private Long id;\n    private String name;\n}</code></pre></p>"
+  },
+  {
+    "id": 7,
+    "text": "What is the default port for a Spring Boot application?",
+    "choices": [
+      "8080",
+      "3000",
+      "8000",
+      "5000"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>8080</strong> is correct because Spring Boot listens on port 8080 by default unless you override <code>server.port</code>.</p><p>Example: if you run the app locally with default settings, you usually open <code>http://localhost:8080</code>.</p>"
+  },
+  {
+    "id": 8,
+    "text": "Which annotation maps an HTTP GET request to a controller method?",
+    "choices": [
+      "@GetMapping",
+      "@RequestMapping(method=POST)",
+      "@PostMapping",
+      "@DeleteMapping"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@GetMapping</strong> is correct because it is the shortcut annotation for mapping HTTP GET requests to a controller method.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/books\")\npublic class BookController {\n    @GetMapping\n    public List&lt;String&gt; list() {\n        return List.of(\"Spring in Action\");\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 9,
+    "text": "Which Spring Boot starter adds actuator endpoints for monitoring?",
+    "choices": [
+      "spring-boot-starter-actuator",
+      "spring-boot-starter-test",
+      "spring-boot-starter-web",
+      "spring-boot-starter-mail"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>spring-boot-starter-actuator</strong> is correct because it adds production-ready endpoints for health checks, metrics, and application diagnostics.</p><p>Example: after adding the starter, endpoints such as <code>/actuator/health</code> can be exposed for monitoring.</p>"
+  },
+  {
+    "id": 28,
+    "text": "Which Spring annotation secures methods or classes?",
+    "choices": [
+      "@PreAuthorize",
+      "@Service",
+      "@Controller",
+      "@Repository"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@PreAuthorize</strong> is correct because it is a Spring Security annotation used to enforce authorization rules before a method is executed.</p><p>Example:<pre><code class=\"language-java\">@Service\npublic class AdminService {\n    @PreAuthorize(\"hasRole('ADMIN')\")\n    public void deleteUser(Long id) {\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 33,
+    "text": "Which Spring annotation maps a class to a REST controller?",
+    "choices": [
+      "@RestController",
+      "@Controller",
+      "@Service",
+      "@Component"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>@RestController</strong> is correct because it combines <code>@Controller</code> and <code>@ResponseBody</code>, which makes it the standard choice for JSON-based APIs.</p><p>Example:<pre><code class=\"language-java\">@RestController\n@RequestMapping(\"/api/health\")\npublic class HealthController {\n    @GetMapping\n    public Map&lt;String, String&gt; health() {\n        return Map.of(\"status\", \"UP\");\n    }\n}</code></pre></p>"
+  },
+  {
+    "id": 39,
+    "text": "Which Spring component scans for annotated classes during startup?",
+    "choices": [
+      "Component scanning",
+      "AutoConfiguration",
+      "BeanFactory",
+      "ApplicationContext only"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>Component scanning</strong> is correct because Spring uses component scanning to discover classes annotated with stereotypes such as <code>@Component</code>, <code>@Service</code>, and <code>@Repository</code>.</p><p>Example:<pre><code class=\"language-java\">@Component\npublic class AuditFormatter {\n}</code></pre></p>"
+  },
+  {
+    "id": 45,
+    "text": "In Spring Boot, which file enables configuring logging levels?",
+    "choices": [
+      "application.properties",
+      "pom.xml",
+      "README.md",
+      "Dockerfile"
+    ],
+    "correctIndex": 0,
+    "topic": "SpringBoot",
+    "explanation": "<p><strong>application.properties</strong> is correct because that file is the conventional place to keep Spring Boot configuration such as ports, profiles, logging, and datasource properties.</p><p>Example:<pre><code>server.port=8081\nspring.profiles.active=dev\nlogging.level.org.springframework.web=DEBUG</code></pre></p>"
+  }
+]

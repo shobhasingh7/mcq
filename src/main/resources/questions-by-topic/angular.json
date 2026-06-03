@@ -1,0 +1,145 @@
+[
+  {
+    "id": 11,
+    "text": "In Angular, which file defines a component's metadata?",
+    "choices": [
+      "component.ts",
+      "index.html",
+      "styles.css",
+      "main.ts"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>component.ts</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: A team might store environment settings or component-related configuration in <code>component.ts</code>.</p>"
+  },
+  {
+    "id": 12,
+    "text": "Which decorator defines an Angular component?",
+    "choices": [
+      "@Component",
+      "@NgModule",
+      "@Injectable",
+      "@Directive"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>@Component</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: You might place <code>@Component</code> above a class, method, or constructor to enable that Spring behavior.</p>"
+  },
+  {
+    "id": 13,
+    "text": "In Angular templates, which binding is used for property binding?",
+    "choices": [
+      "[property]=",
+      " (event)=",
+      "{{ interpolation }}",
+      "*ngIf="
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>[property]=</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In an Angular app, <code>[property]=</code> would appear in the component, template, or CLI workflow for this task.</p>"
+  },
+  {
+    "id": 14,
+    "text": "Which Angular feature is used for conditional rendering?",
+    "choices": [
+      "*ngIf",
+      "*ngFor",
+      "[hidden]",
+      "ngModel"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>*ngIf</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In an Angular app, <code>*ngIf</code> would appear in the component, template, or CLI workflow for this task.</p>"
+  },
+  {
+    "id": 15,
+    "text": "Which Angular CLI command generates a new component?",
+    "choices": [
+      "ng generate component my-comp",
+      "npm create component my-comp",
+      "ng new component my-comp",
+      "ng add component my-comp"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng generate component my-comp</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: Run <code>ng generate component my-comp</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 26,
+    "text": "In Angular, which service pattern provides HTTP calls?",
+    "choices": [
+      "HttpClient",
+      "HttpService",
+      "AjaxService",
+      "FetchService"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>HttpClient</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: When designing or calling an API, <code>HttpClient</code> is the option you would use for this situation.</p>"
+  },
+  {
+    "id": 32,
+    "text": "Which Angular lifecycle hook runs after component initialization?",
+    "choices": [
+      "ngOnInit",
+      "ngAfterViewInit",
+      "constructor",
+      "ngDoCheck"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ngOnInit</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In a React component, you would use <code>ngOnInit</code> when implementing the behavior described here.</p>"
+  },
+  {
+    "id": 34,
+    "text": "Which package manager is typically used with Angular projects?",
+    "choices": [
+      "npm",
+      "pip",
+      "gem",
+      "composer"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>npm</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: Run <code>npm</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  },
+  {
+    "id": 38,
+    "text": "Which Angular directive is used to loop over collections?",
+    "choices": [
+      "*ngFor",
+      "*ngIf",
+      "[ngStyle]",
+      "(click)"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>*ngFor</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: You would apply <code>*ngFor</code> directly where you want that framework behavior to happen.</p>"
+  },
+  {
+    "id": 44,
+    "text": "Which Angular concept groups related components and services?",
+    "choices": [
+      "NgModule",
+      "ComponentGroup",
+      "ServicePackage",
+      "DirectiveModule"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>NgModule</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: In an Angular app, <code>NgModule</code> would appear in the component, template, or CLI workflow for this task.</p>"
+  },
+  {
+    "id": 49,
+    "text": "Which command builds an Angular project for production?",
+    "choices": [
+      "ng build --prod",
+      "npm run build:prod",
+      "ng serve --prod",
+      "npm build --prod"
+    ],
+    "correctIndex": 0,
+    "topic": "Angular",
+    "explanation": "<p><strong>ng build --prod</strong> is correct because it is the Angular decorator, command, or framework feature used for this job.</p><p>Example: Run <code>ng build --prod</code> from the terminal when you want to perform that scaffolding or build task.</p>"
+  }
+]

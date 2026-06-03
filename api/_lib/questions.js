@@ -1,15 +1,50 @@
 const fs = require('fs');
 const path = require('path');
 
-const QUESTIONS_PATH = path.join(process.cwd(), 'src', 'main', 'resources', 'questions.json');
+const QUESTIONS_DIR = path.join(process.cwd(), 'src', 'main', 'resources', 'questions-by-topic');
 
-function readQuestions() {
-  const questions = JSON.parse(fs.readFileSync(QUESTIONS_PATH, 'utf8'));
+function readQuestions(topic) {
+  const topicFile = path.join(QUESTIONS_DIR, `${normalizeTopic(topic)}.json`);
+  const questions = JSON.parse(fs.readFileSync(topicFile, 'utf8'));
 
   return questions.map((question) => shuffleQuestion({
     ...question,
     choices: [...question.choices]
   }));
+}
+
+function listTopics() {
+  return fs.readdirSync(QUESTIONS_DIR)
+    .filter((fileName) => fileName.endsWith('.json'))
+    .map((fileName) => {
+      const id = fileName.replace(/\.json$/, '');
+      const questions = JSON.parse(fs.readFileSync(path.join(QUESTIONS_DIR, fileName), 'utf8'));
+
+      return {
+        id,
+        label: formatTopicLabel(id),
+        questionCount: questions.length
+      };
+    })
+    .sort((left, right) => left.label.localeCompare(right.label));
+}
+
+function normalizeTopic(topic) {
+  if (!topic) {
+    throw new Error('Topic is required.');
+  }
+
+  return String(topic).trim().toLowerCase();
+}
+
+function formatTopicLabel(topic) {
+  if (topic === 'springboot') {
+    return 'Spring Boot';
+  }
+  if (topic === 'spring') {
+    return 'Spring';
+  }
+  return topic.charAt(0).toUpperCase() + topic.slice(1);
 }
 
 function shuffleQuestion(question) {
@@ -59,5 +94,7 @@ async function getJsonBody(req) {
 
 module.exports = {
   getJsonBody,
+  listTopics,
+  normalizeTopic,
   readQuestions
 };

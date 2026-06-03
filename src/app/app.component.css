@@ -38,6 +38,63 @@ h1 {
   border-color: rgba(185, 28, 28, 0.15);
 }
 
+.topic-selector-card {
+  margin-bottom: 1.4rem;
+  padding: 1.2rem 1.25rem 1.3rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 60px rgba(148, 163, 184, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.topic-selector-copy h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.topic-selector-copy p {
+  margin: 0.45rem 0 0;
+  color: #475569;
+}
+
+.topic-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.topic-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(226, 232, 240, 0.65);
+  color: #334155;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.topic-chip:hover {
+  transform: translateY(-1px);
+}
+
+.topic-chip.selected {
+  background: linear-gradient(135deg, #2563eb, #0f766e);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
+}
+
+.topic-chip small {
+  opacity: 0.82;
+  font-size: 0.8rem;
+}
+
 .question-card {
   margin-bottom: 1.2rem;
   padding: 1.15rem 1.25rem 1.25rem;

@@ -13,9 +13,16 @@ interface Question {
   explanation: string;
 }
 
+interface QuizTopic {
+  id: string;
+  label: string;
+  questionCount: number;
+}
+
 interface AnswerPayload {
   questionId: number;
   selectedIndex: number;
+  topic: string;
 }
 
 interface AnswerResult {
@@ -44,17 +51,19 @@ export class AppComponent {
 
   readonly questionsPerPage = 10;
 
+  topics: QuizTopic[] = [];
   allQuestions: Question[] = [];
+  selectedTopic = '';
   answers: Record<number, number> = {};
   results: Record<number, AnswerResult> = {};
 
   currentPage = 1;
-  loading = true;
+  loading = false;
   errorMessage = '';
   finalResult: BatchAnswerResponse | null = null;
 
   constructor() {
-    this.loadQuestions();
+    this.loadTopics();
   }
 
   get pagedQuestions(): Question[] {
@@ -71,21 +80,21 @@ export class AppComponent {
       && this.allQuestions.every((question) => this.answers[question.id] !== undefined);
   }
 
-  loadQuestions(): void {
+  loadTopics(): void {
     this.loading = true;
     this.errorMessage = '';
 
-    this.http.get<Question[]>('/api/questions')
+    this.http.get<QuizTopic[]>('/api/topics')
       .pipe(timeout(this.apiTimeoutMs))
       .subscribe({
-      next: (questions) => {
-        this.allQuestions = questions;
+      next: (topics) => {
+        this.topics = topics;
         this.loading = false;
-        this.currentPage = 1;
+        this.allQuestions = [];
       },
       error: () => {
         this.loading = false;
-        this.errorMessage = 'Unable to load questions. If you are running locally, start the API with `npm run serve:api`.';
+        this.errorMessage = 'Unable to load topics. If you are running locally, start the API with `npm run serve:api`.';
       }
     });
   }
@@ -96,6 +105,42 @@ export class AppComponent {
 
   trackChoice(index: number): number {
     return index;
+  }
+
+  trackTopic(_index: number, topic: QuizTopic): string {
+    return topic.id;
+  }
+
+  chooseTopic(topicId: string): void {
+    if (this.selectedTopic === topicId) {
+      return;
+    }
+
+    this.selectedTopic = topicId;
+    this.answers = {};
+    this.results = {};
+    this.finalResult = null;
+    this.currentPage = 1;
+    this.loadQuestionsForTopic(topicId);
+  }
+
+  private loadQuestionsForTopic(topicId: string): void {
+    this.loading = true;
+    this.errorMessage = '';
+
+    this.http.get<Question[]>(`/api/questions?topic=${encodeURIComponent(topicId)}`)
+      .pipe(timeout(this.apiTimeoutMs))
+      .subscribe({
+        next: (questions) => {
+          this.allQuestions = questions;
+          this.loading = false;
+        },
+        error: () => {
+          this.allQuestions = [];
+          this.loading = false;
+          this.errorMessage = 'Unable to load questions for the selected topic.';
+        }
+      });
   }
 
   setAnswer(questionId: number, selectedIndex: number): void {
@@ -118,7 +163,7 @@ export class AppComponent {
       return;
     }
 
-    const payload: AnswerPayload = { questionId, selectedIndex };
+    const payload: AnswerPayload = { questionId, selectedIndex, topic: this.selectedTopic };
     this.http.post<AnswerResult>('/api/submit', payload)
       .pipe(timeout(this.apiTimeoutMs))
       .subscribe({
@@ -146,6 +191,7 @@ export class AppComponent {
     }
 
     const payload = {
+      topic: this.selectedTopic,
       answers: Object.entries(this.answers).map(([questionId, selectedIndex]) => ({
         questionId: Number(questionId),
         selectedIndex

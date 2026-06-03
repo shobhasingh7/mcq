@@ -1,22 +1,45 @@
 <div class="app-shell">
   <header class="hero">
-    <p class="eyebrow">React + Angular + Spring Boot + Spring 
-    </p>
+    <p class="eyebrow">Angular Topic Quiz</p>
     <h1>Multiple Choice Quiz</h1>
     <p class="hero-copy">
-      Practice topic-tagged questions, submit answers one by one, and review explanations for the ones you get right.
+      Pick one topic, answer only questions from that topic, and review explanations for the ones you get right.
     </p>
   </header>
-
-  <section *ngIf="loading" class="status-card">
-    Loading questions...
-  </section>
 
   <section *ngIf="errorMessage" class="status-card error">
     {{ errorMessage }}
   </section>
 
-  <ng-container *ngIf="!loading && !errorMessage">
+  <section class="topic-selector-card">
+    <div class="topic-selector-copy">
+      <h2>Choose A Topic</h2>
+      <p>Select one topic to load the matching quiz file.</p>
+    </div>
+
+    <div class="topic-chip-list">
+      <button
+        *ngFor="let topic of topics; trackBy: trackTopic"
+        type="button"
+        class="topic-chip"
+        [class.selected]="selectedTopic === topic.id"
+        (click)="chooseTopic(topic.id)"
+      >
+        <span>{{ topic.label }}</span>
+        <small>{{ topic.questionCount }} questions</small>
+      </button>
+    </div>
+  </section>
+
+  <section *ngIf="loading" class="status-card">
+    Loading {{ selectedTopic ? 'questions' : 'topics' }}...
+  </section>
+
+  <section *ngIf="!loading && !selectedTopic && !errorMessage" class="status-card">
+    Choose a topic above to start the quiz.
+  </section>
+
+  <ng-container *ngIf="!loading && selectedTopic && !errorMessage">
     <section
       *ngFor="let question of pagedQuestions; trackBy: trackQuestion"
       class="question-card"
