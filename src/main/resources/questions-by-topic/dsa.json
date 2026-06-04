@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 8001,
+    "text": "What does Big O notation primarily describe?",
+    "choices": [
+      "How an algorithm scales as input size grows",
+      "The exact runtime in milliseconds",
+      "The number of variables in a program",
+      "The number of lines of code"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>How an algorithm scales as input size grows</strong> is correct because Big O abstracts away machine-specific timing and focuses on growth rate as input becomes larger.</p><p>Example: a loop that visits every element once is usually described as <code>O(n)</code>.</p>"
+  },
+  {
+    "id": 8002,
+    "text": "What does time complexity measure?",
+    "choices": [
+      "How runtime grows with input size",
+      "How much disk space is used",
+      "How many classes a program contains",
+      "How readable the code is"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>How runtime grows with input size</strong> is correct because Time complexity estimates the amount of work an algorithm performs as the input gets bigger.</p><p>Example: nested loops over the same array often produce <code>O(n^2)</code> time.</p>"
+  },
+  {
+    "id": 8003,
+    "text": "What does space complexity measure?",
+    "choices": [
+      "How much extra memory an algorithm uses",
+      "How many CPU cores are required",
+      "How many test cases exist",
+      "How long the code file is"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>How much extra memory an algorithm uses</strong> is correct because Space complexity focuses on additional memory such as auxiliary arrays, recursion stack frames, or temporary data structures.</p><p>Example: copying an array into another array usually needs <code>O(n)</code> extra space.</p>"
+  },
+  {
+    "id": 8004,
+    "text": "Which Big O case is most commonly used in interviews and high-level analysis?",
+    "choices": [
+      "Worst-case growth",
+      "Best-case growth only",
+      "Average typing speed",
+      "Compiler optimization level"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Worst-case growth</strong> is correct because Worst-case analysis gives a safe upper bound for how bad performance can get.</p><p>Example: binary search is still <code>O(log n)</code> in the worst case.</p>"
+  },
+  {
+    "id": 8005,
+    "text": "Which time complexity means runtime stays the same regardless of input size?",
+    "choices": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(1)</strong> is correct because Constant time means the work does not scale with the number of input elements.</p><p>Example: accessing <code>arr[0]</code> is typically <code>O(1)</code>.</p>"
+  },
+  {
+    "id": 8006,
+    "text": "Which time complexity means runtime grows in direct proportion to input size?",
+    "choices": [
+      "O(n)",
+      "O(1)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n)</strong> is correct because Linear time algorithms do one pass or proportional work over the input.</p><p>Example: scanning an array once to find the maximum is <code>O(n)</code>.</p>"
+  },
+  {
+    "id": 8007,
+    "text": "Which time complexity is common when the search space is cut in half repeatedly?",
+    "choices": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(log n)</strong> is correct because Logarithmic growth appears when each step removes a large fraction of the remaining input.</p><p>Example: binary search on a sorted array is <code>O(log n)</code>.</p>"
+  },
+  {
+    "id": 8008,
+    "text": "Which time complexity is typical for two nested loops over the same array?",
+    "choices": [
+      "O(n^2)",
+      "O(log n)",
+      "O(n)",
+      "O(1)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n^2)</strong> is correct because Quadratic time appears when for each element you process many or all other elements.</p><p>Example: checking every pair of elements often costs <code>O(n^2)</code>.</p>"
+  },
+  {
+    "id": 8009,
+    "text": "Which time complexity is commonly associated with merge sort?",
+    "choices": [
+      "O(n log n)",
+      "O(n^2)",
+      "O(1)",
+      "O(log n)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n log n)</strong> is correct because Merge sort splits recursively and then merges, creating logarithmic depth with linear work per level.</p><p>Example: each level processes all elements once, across about <code>log n</code> levels.</p>"
+  },
+  {
+    "id": 8010,
+    "text": "Which growth rate becomes impractical fastest as input increases?",
+    "choices": [
+      "O(2^n)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(2^n)</strong> is correct because Exponential algorithms explode quickly because the work roughly doubles with each extra element.</p><p>Example: naive recursion for some subset-style problems can lead to <code>O(2^n)</code>.</p>"
+  },
+  {
+    "id": 8011,
+    "text": "Why is O(1) generally considered better than O(n)?",
+    "choices": [
+      "It does not grow with input size",
+      "It always uses no memory",
+      "It always has simpler code",
+      "It requires sorting first"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>It does not grow with input size</strong> is correct because An algorithm with constant growth stays stable even when the input gets much larger.</p><p>Example: hash table lookup is often described as average <code>O(1)</code>.</p>"
+  },
+  {
+    "id": 8012,
+    "text": "Which notation ignores constant factors such as 2n vs 5n?",
+    "choices": [
+      "Big O notation",
+      "ASCII notation",
+      "Regex notation",
+      "JSON notation"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Big O notation</strong> is correct because Big O keeps the dominant growth behavior and drops low-impact constants for clarity.</p><p>Example: both <code>2n + 3</code> and <code>5n + 100</code> simplify to <code>O(n)</code>.</p>"
+  },
+  {
+    "id": 8013,
+    "text": "What is the dominant term of n^2 + n + 1 for Big O?",
+    "choices": [
+      "n^2",
+      "n",
+      "1",
+      "n^3"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>n^2</strong> is correct because As input grows, the highest-order term dominates the total growth.</p><p>Example: <code>n^2 + n + 1</code> is simplified to <code>O(n^2)</code>.</p>"
+  },
+  {
+    "id": 8014,
+    "text": "Why is average-case complexity sometimes less emphasized than worst-case complexity?",
+    "choices": [
+      "Worst-case gives a safer upper bound",
+      "Average-case is always identical",
+      "Worst-case is always smaller",
+      "Average-case cannot be measured"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Worst-case gives a safer upper bound</strong> is correct because Worst-case complexity is easier to communicate reliably without assumptions about input distribution.</p><p>Example: a hash table may have average <code>O(1)</code> lookup but a worse theoretical worst case.</p>"
+  },
+  {
+    "id": 8015,
+    "text": "What is an array?",
+    "choices": [
+      "A sequential collection of same-type elements stored by index",
+      "A tree with two children",
+      "A key-value map only",
+      "A recursive function"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A sequential collection of same-type elements stored by index</strong> is correct because Arrays support direct indexed access and are one of the most fundamental linear data structures.</p><p>Example: <code>int[] nums = {1, 2, 3};</code></p>"
+  },
+  {
+    "id": 8016,
+    "text": "What is a major advantage of arrays?",
+    "choices": [
+      "Fast indexed access",
+      "Automatic resizing without cost",
+      "Always constant-time insertion in the middle",
+      "No memory limits"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Fast indexed access</strong> is correct because Because elements are stored sequentially, random access by index is typically very efficient.</p><p>Example: reading <code>arr[500]</code> is usually <code>O(1)</code>.</p>"
+  },
+  {
+    "id": 8017,
+    "text": "What is a major drawback of arrays?",
+    "choices": [
+      "Middle insertions and deletions can be expensive",
+      "They cannot store integers",
+      "They do not support traversal",
+      "They are always unsorted"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Middle insertions and deletions can be expensive</strong> is correct because Shifting elements to preserve order can cost linear time in fixed-position array layouts.</p><p>Example: inserting at the front of an array can require moving every existing element.</p>"
+  },
+  {
+    "id": 8018,
+    "text": "What is a string in most programming languages?",
+    "choices": [
+      "A sequence of characters",
+      "A balanced tree",
+      "A numeric hash map",
+      "A queue of integers"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A sequence of characters</strong> is correct because Strings are specialized linear containers for text data and often behave similarly to character arrays.</p><p>Example: <code>String text = \"hello\";</code></p>"
+  },
+  {
+    "id": 8019,
+    "text": "What is a linked list?",
+    "choices": [
+      "A sequence of nodes where each node points to the next",
+      "A sorted array only",
+      "A graph with cycles only",
+      "A hash function table"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A sequence of nodes where each node points to the next</strong> is correct because Linked lists trade random access speed for flexible insertions and deletions through pointer updates.</p><p>Example: each node stores a value and a <code>next</code> reference.</p>"
+  },
+  {
+    "id": 8020,
+    "text": "What is a key benefit of a linked list compared with an array?",
+    "choices": [
+      "Efficient insertion or deletion when you already have the node reference",
+      "Faster random access",
+      "Always less memory usage",
+      "Automatic sorting"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Efficient insertion or deletion when you already have the node reference</strong> is correct because Linked lists avoid shifting large blocks of data because links are updated instead.</p><p>Example: removing the current node can be done by rewiring pointers.</p>"
+  },
+  {
+    "id": 8021,
+    "text": "What is a drawback of linked lists compared with arrays?",
+    "choices": [
+      "Slow random access by index",
+      "They cannot grow",
+      "They cannot store duplicates",
+      "They cannot be traversed"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Slow random access by index</strong> is correct because To reach an element by position, a linked list usually must walk node by node from the head.</p><p>Example: finding the 500th node is typically <code>O(n)</code>.</p>"
+  },
+  {
+    "id": 8022,
+    "text": "What does LIFO stand for in a stack?",
+    "choices": [
+      "Last In, First Out",
+      "Left In, First Out",
+      "Last In, Final Out",
+      "Linear In, First Out"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Last In, First Out</strong> is correct because A stack returns the most recently added item first.</p><p>Example: browser back navigation behaves much like a stack.</p>"
+  },
+  {
+    "id": 8023,
+    "text": "Which operation adds an element to a stack?",
+    "choices": [
+      "push",
+      "enqueue",
+      "poll",
+      "dequeue"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>push</strong> is correct because The <code>push</code> operation places a new element on top of the stack.</p><p>Example: pushing 5 after 3 makes 5 the next value popped.</p>"
+  },
+  {
+    "id": 8024,
+    "text": "Which operation removes the top element from a stack?",
+    "choices": [
+      "pop",
+      "peek",
+      "enqueue",
+      "append"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>pop</strong> is correct because The <code>pop</code> operation removes and returns the current top item.</p><p>Example: after popping, the previous element becomes the new top.</p>"
+  },
+  {
+    "id": 8025,
+    "text": "Which operation reads the top element of a stack without removing it?",
+    "choices": [
+      "peek",
+      "pop",
+      "poll",
+      "offer"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>peek</strong> is correct because The <code>peek</code> operation inspects the current top while leaving the stack unchanged.</p><p>Example: use <code>peek()</code> before deciding whether to pop.</p>"
+  },
+  {
+    "id": 8026,
+    "text": "What does FIFO stand for in a queue?",
+    "choices": [
+      "First In, First Out",
+      "Fast In, Fast Out",
+      "First In, Final Out",
+      "Front In, First Out"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>First In, First Out</strong> is correct because A queue processes elements in the order they arrive.</p><p>Example: printing jobs often follow queue behavior.</p>"
+  },
+  {
+    "id": 8027,
+    "text": "Which operation adds an element to a queue?",
+    "choices": [
+      "enqueue",
+      "pop",
+      "peek",
+      "reverse"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>enqueue</strong> is correct because Enqueue places a new element at the rear of the queue.</p><p>Example: enqueueing A then B means A leaves first.</p>"
+  },
+  {
+    "id": 8028,
+    "text": "Which operation removes the front element from a queue?",
+    "choices": [
+      "dequeue",
+      "push",
+      "peek",
+      "append"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>dequeue</strong> is correct because Dequeue removes the oldest waiting element from the front.</p><p>Example: a service desk calls the next customer from the queue.</p>"
+  },
+  {
+    "id": 8029,
+    "text": "What is a common use case for a stack?",
+    "choices": [
+      "Function call tracking or undo behavior",
+      "Direct key-value lookup",
+      "Shortest path on weighted graphs only",
+      "Hash-based joins"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Function call tracking or undo behavior</strong> is correct because Stacks are natural when the most recent action must be handled first.</p><p>Example: recursion relies on a call stack internally.</p>"
+  },
+  {
+    "id": 8030,
+    "text": "What is a common use case for a queue?",
+    "choices": [
+      "Scheduling or breadth-first processing",
+      "Random access sorting only",
+      "Constant-time binary search",
+      "Balanced tree rotations"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Scheduling or breadth-first processing</strong> is correct because Queues are useful when work should happen in arrival order.</p><p>Example: breadth-first search processes nodes level by level using a queue.</p>"
+  },
+  {
+    "id": 8031,
+    "text": "What is a hash table?",
+    "choices": [
+      "A key-value structure using hashing for fast lookup",
+      "A sorted linked list",
+      "A recursive tree only",
+      "A sequential character buffer"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A key-value structure using hashing for fast lookup</strong> is correct because Hash tables map keys to buckets or positions derived from a hash function.</p><p>Example: checking whether a username exists can often be done quickly with a hash map.</p>"
+  },
+  {
+    "id": 8032,
+    "text": "What is a common average-case lookup time for a good hash table?",
+    "choices": [
+      "O(1)",
+      "O(n^2)",
+      "O(log n)",
+      "O(2^n)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(1)</strong> is correct because With good hashing and load distribution, key lookup is usually close to constant time on average.</p><p>Example: retrieving a value by key in a hash map is often average <code>O(1)</code>.</p>"
+  },
+  {
+    "id": 8033,
+    "text": "What is a hash collision?",
+    "choices": [
+      "Two keys mapping to the same storage location or bucket",
+      "A key being sorted incorrectly",
+      "A queue becoming empty",
+      "A tree losing a child"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Two keys mapping to the same storage location or bucket</strong> is correct because Collisions are normal in hashing and must be handled by a resolution strategy.</p><p>Example: chaining or open addressing are two common collision-handling methods.</p>"
+  },
+  {
+    "id": 8034,
+    "text": "What is a tree?",
+    "choices": [
+      "A hierarchical structure of parent-child nodes",
+      "A circular queue only",
+      "A flat array of numbers",
+      "A hash function output"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A hierarchical structure of parent-child nodes</strong> is correct because Trees are useful for representing hierarchical relationships and ordered search structures.</p><p>Example: a file system directory structure is naturally tree-like.</p>"
+  },
+  {
+    "id": 8035,
+    "text": "What is the root of a tree?",
+    "choices": [
+      "The topmost starting node",
+      "Any node with two children",
+      "The deepest leaf",
+      "The last inserted node"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>The topmost starting node</strong> is correct because The root is the unique top-level node from which all others descend.</p><p>Example: in an organization chart, the CEO node can be the root.</p>"
+  },
+  {
+    "id": 8036,
+    "text": "What is a leaf node in a tree?",
+    "choices": [
+      "A node with no children",
+      "A node with exactly one child",
+      "The root node only",
+      "A node with a parent and sibling"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A node with no children</strong> is correct because Leaf nodes end a branch of the tree and do not point further downward.</p><p>Example: the last folder in a directory path can be treated like a leaf if it has no subfolders.</p>"
+  },
+  {
+    "id": 8037,
+    "text": "What is a binary tree?",
+    "choices": [
+      "A tree where each node has at most two children",
+      "A tree with exactly two nodes",
+      "A tree that stores only binary digits",
+      "A tree sorted by memory address"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A tree where each node has at most two children</strong> is correct because Binary trees restrict branching to left and right children.</p><p>Example: each node can point to a left child and a right child.</p>"
+  },
+  {
+    "id": 8038,
+    "text": "What is a binary search tree (BST)?",
+    "choices": [
+      "A binary tree where left values are smaller and right values are larger",
+      "A tree that can only hold sorted arrays",
+      "A graph with one cycle",
+      "A hash table with two buckets"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A binary tree where left values are smaller and right values are larger</strong> is correct because BST ordering allows searching by repeatedly choosing left or right based on comparisons.</p><p>Example: values less than 10 go left of node 10, values greater go right.</p>"
+  },
+  {
+    "id": 8039,
+    "text": "What is a heap?",
+    "choices": [
+      "A tree-based structure specialized for quickly accessing min or max values",
+      "A linked list with random access",
+      "A stack with recursion only",
+      "A graph adjacency matrix"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A tree-based structure specialized for quickly accessing min or max values</strong> is correct because Heaps are often used for priority queues because the extreme element stays near the root.</p><p>Example: in a min-heap, the smallest value is at the root.</p>"
+  },
+  {
+    "id": 8040,
+    "text": "What is a min-heap property?",
+    "choices": [
+      "Every parent is less than or equal to its children",
+      "Every node has two children",
+      "All leaves are sorted",
+      "The root is always the largest"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Every parent is less than or equal to its children</strong> is correct because This ordering ensures the minimum element can be retrieved quickly from the root.</p><p>Example: the top of a min-heap is the smallest scheduled task time.</p>"
+  },
+  {
+    "id": 8041,
+    "text": "What is a max-heap property?",
+    "choices": [
+      "Every parent is greater than or equal to its children",
+      "Every node is balanced perfectly",
+      "Children are always equal",
+      "The root is always the smallest"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Every parent is greater than or equal to its children</strong> is correct because This ordering ensures the maximum element is quickly available at the root.</p><p>Example: a max-heap can quickly return the highest priority job.</p>"
+  },
+  {
+    "id": 8042,
+    "text": "What is a graph?",
+    "choices": [
+      "A structure made of vertices and edges",
+      "A recursive sorting method only",
+      "A single linked list",
+      "A hash collision table"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A structure made of vertices and edges</strong> is correct because Graphs model relationships and networks where nodes can connect in many arbitrary ways.</p><p>Example: city routes or social network connections are graph problems.</p>"
+  },
+  {
+    "id": 8043,
+    "text": "What is a vertex in a graph?",
+    "choices": [
+      "A node in the graph",
+      "A stack frame",
+      "A hash bucket",
+      "A recursion depth level"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A node in the graph</strong> is correct because Vertices are the objects or points being connected in the graph.</p><p>Example: each person in a social graph can be a vertex.</p>"
+  },
+  {
+    "id": 8044,
+    "text": "What is an edge in a graph?",
+    "choices": [
+      "A connection between two vertices",
+      "A sorted array index",
+      "A stack pointer",
+      "A recursion base case"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A connection between two vertices</strong> is correct because Edges describe how vertices relate to each other.</p><p>Example: a road between two cities is an edge.</p>"
+  },
+  {
+    "id": 8045,
+    "text": "What is a directed graph?",
+    "choices": [
+      "A graph where edges have direction",
+      "A graph with no cycles",
+      "A graph with weights only",
+      "A graph that uses arrays exclusively"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A graph where edges have direction</strong> is correct because Directed graphs model one-way relationships such as follower links or task dependencies.</p><p>Example: if A points to B, it does not automatically mean B points to A.</p>"
+  },
+  {
+    "id": 8046,
+    "text": "What is an undirected graph?",
+    "choices": [
+      "A graph where edges work both ways",
+      "A graph with no vertices",
+      "A graph with no traversal",
+      "A graph that cannot contain cycles"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A graph where edges work both ways</strong> is correct because Undirected graphs are used when the relationship is naturally mutual.</p><p>Example: a friendship edge often behaves as undirected.</p>"
+  },
+  {
+    "id": 8047,
+    "text": "What is a weighted graph?",
+    "choices": [
+      "A graph whose edges carry values like cost or distance",
+      "A graph with duplicated vertices only",
+      "A graph stored in a stack",
+      "A graph with no traversal order"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A graph whose edges carry values like cost or distance</strong> is correct because Weights let graph algorithms optimize for cheapest, shortest, or highest-value paths.</p><p>Example: a road network may store travel distance on each edge.</p>"
+  },
+  {
+    "id": 8048,
+    "text": "What is linear search?",
+    "choices": [
+      "Checking elements one by one until a match is found",
+      "Splitting the array in half repeatedly",
+      "Using hashing directly",
+      "Sorting before every comparison"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Checking elements one by one until a match is found</strong> is correct because Linear search is simple and works on unsorted data, but it may examine many elements.</p><p>Example: searching an unsorted array for 42 may require scanning from start to finish.</p>"
+  },
+  {
+    "id": 8049,
+    "text": "What is the typical time complexity of linear search?",
+    "choices": [
+      "O(n)",
+      "O(1)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n)</strong> is correct because In the worst case, linear search inspects every element once.</p><p>Example: if the target is absent, all elements may be checked.</p>"
+  },
+  {
+    "id": 8050,
+    "text": "What is binary search?",
+    "choices": [
+      "A search algorithm that repeatedly halves the search interval",
+      "A search algorithm that uses a heap",
+      "A search algorithm that only works on linked lists quickly",
+      "A sort algorithm for trees"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A search algorithm that repeatedly halves the search interval</strong> is correct because Binary search is highly efficient, but it requires ordered data and indexable access.</p><p>Example: compare against the middle element, then discard half the range each step.</p>"
+  },
+  {
+    "id": 8051,
+    "text": "What requirement must usually be met before using binary search?",
+    "choices": [
+      "The data must be sorted",
+      "The data must be unique",
+      "The data must be stored in a queue",
+      "The data must be recursive"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>The data must be sorted</strong> is correct because Binary search depends on ordering so it can safely eliminate half the candidates after each comparison.</p><p>Example: applying binary search to unsorted data can skip the correct answer entirely.</p>"
+  },
+  {
+    "id": 8052,
+    "text": "What is the typical time complexity of binary search?",
+    "choices": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(n^2)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(log n)</strong> is correct because By discarding half the remaining range each step, binary search grows logarithmically.</p><p>Example: searching one million sorted items takes only around 20 comparisons in theory.</p>"
+  },
+  {
+    "id": 8053,
+    "text": "Why is binary search usually inefficient on a linked list?",
+    "choices": [
+      "Because linked lists do not support fast random access to the middle",
+      "Because linked lists are always unsorted",
+      "Because binary search needs hashing",
+      "Because linked lists cannot store numbers"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Because linked lists do not support fast random access to the middle</strong> is correct because Finding the middle repeatedly in a linked list requires extra traversal, removing the main benefit of binary search.</p><p>Example: arrays are usually a much better fit than singly linked lists here.</p>"
+  },
+  {
+    "id": 8054,
+    "text": "What is bubble sort?",
+    "choices": [
+      "A sorting algorithm that repeatedly swaps adjacent out-of-order elements",
+      "A graph traversal algorithm",
+      "A tree balancing algorithm",
+      "A queue partitioning algorithm"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A sorting algorithm that repeatedly swaps adjacent out-of-order elements</strong> is correct because Bubble sort is simple to understand but generally inefficient for large inputs.</p><p>Example: larger values repeatedly “bubble” toward the end of the array.</p>"
+  },
+  {
+    "id": 8055,
+    "text": "What is the average or worst-case time complexity of bubble sort?",
+    "choices": [
+      "O(n^2)",
+      "O(log n)",
+      "O(n)",
+      "O(1)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n^2)</strong> is correct because Bubble sort uses repeated passes with many adjacent comparisons and swaps.</p><p>Example: on a large random array, bubble sort becomes much slower than divide-and-conquer sorts.</p>"
+  },
+  {
+    "id": 8056,
+    "text": "What is insertion sort?",
+    "choices": [
+      "A sorting algorithm that builds a sorted prefix one element at a time",
+      "A sorting algorithm based on partition trees only",
+      "A shortest-path algorithm",
+      "A hash-based ordering method"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A sorting algorithm that builds a sorted prefix one element at a time</strong> is correct because Insertion sort places each new element into its correct position within the already sorted part.</p><p>Example: it is similar to how people sort cards in their hands.</p>"
+  },
+  {
+    "id": 8057,
+    "text": "When can insertion sort perform well?",
+    "choices": [
+      "On small or nearly sorted datasets",
+      "Only on heaps",
+      "Only on graphs",
+      "When random access is impossible"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>On small or nearly sorted datasets</strong> is correct because Its low overhead makes insertion sort surprisingly good for tiny inputs or arrays that are already close to sorted.</p><p>Example: moving just a few misplaced elements can be efficient.</p>"
+  },
+  {
+    "id": 8058,
+    "text": "What is merge sort?",
+    "choices": [
+      "A divide-and-conquer sort that splits, sorts, and merges",
+      "A linear-time hash sort",
+      "A queue traversal algorithm",
+      "A graph coloring method"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A divide-and-conquer sort that splits, sorts, and merges</strong> is correct because Merge sort recursively breaks the input down and then combines sorted halves efficiently.</p><p>Example: split the array in half until single-element pieces remain, then merge them back in order.</p>"
+  },
+  {
+    "id": 8059,
+    "text": "What is a common time complexity of merge sort?",
+    "choices": [
+      "O(n log n)",
+      "O(n^2)",
+      "O(1)",
+      "O(log n)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n log n)</strong> is correct because Merge sort does linear work per level of recursion across logarithmic depth.</p><p>Example: it performs well consistently even on large unsorted arrays.</p>"
+  },
+  {
+    "id": 8060,
+    "text": "What is a common drawback of merge sort?",
+    "choices": [
+      "It often needs extra memory for merging",
+      "It cannot sort numbers",
+      "It only works on trees",
+      "It requires hashing first"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>It often needs extra memory for merging</strong> is correct because Unlike some in-place algorithms, merge sort commonly uses auxiliary storage while combining halves.</p><p>Example: merging two sorted subarrays often requires temporary space.</p>"
+  },
+  {
+    "id": 8061,
+    "text": "What is quick sort?",
+    "choices": [
+      "A divide-and-conquer sort that partitions around a pivot",
+      "A graph search algorithm",
+      "A stack-only sorting algorithm",
+      "A linked list insertion algorithm"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A divide-and-conquer sort that partitions around a pivot</strong> is correct because Quick sort chooses a pivot, partitions smaller and larger elements around it, and recursively sorts the parts.</p><p>Example: elements less than the pivot go left, greater elements go right.</p>"
+  },
+  {
+    "id": 8062,
+    "text": "What is a common average-case time complexity of quick sort?",
+    "choices": [
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)",
+      "O(1)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n log n)</strong> is correct because With reasonably balanced partitions, quick sort performs very efficiently on average.</p><p>Example: it is often fast in practice because of good cache behavior and low overhead.</p>"
+  },
+  {
+    "id": 8063,
+    "text": "What is a worst-case time complexity of poorly partitioned quick sort?",
+    "choices": [
+      "O(n^2)",
+      "O(1)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>O(n^2)</strong> is correct because If the pivot repeatedly creates highly unbalanced partitions, the recursion degrades badly.</p><p>Example: always picking the smallest element as pivot on sorted input can cause worst-case behavior.</p>"
+  },
+  {
+    "id": 8064,
+    "text": "What is the two-pointer technique?",
+    "choices": [
+      "A method using two indices to traverse or compare a sequence",
+      "A tree rotation strategy",
+      "A hash collision fix",
+      "A graph weighting system"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A method using two indices to traverse or compare a sequence</strong> is correct because Two pointers often reduce unnecessary repeated work in sorted arrays, strings, or linked lists.</p><p>Example: one pointer can start from the left and the other from the right.</p>"
+  },
+  {
+    "id": 8065,
+    "text": "When is the two-pointer approach especially useful?",
+    "choices": [
+      "When working with sorted arrays, substrings, or pair problems",
+      "Only for tree traversals",
+      "Only for recursion depth control",
+      "Only for heaps"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>When working with sorted arrays, substrings, or pair problems</strong> is correct because Two pointers are effective when pointer movement can systematically narrow the search space.</p><p>Example: finding two numbers in a sorted array that sum to a target is a classic case.</p>"
+  },
+  {
+    "id": 8066,
+    "text": "What is a sliding window?",
+    "choices": [
+      "A technique that maintains a moving range over sequential data",
+      "A binary tree balancing rule",
+      "A heap construction method",
+      "A graph partition algorithm"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A technique that maintains a moving range over sequential data</strong> is correct because Sliding window avoids recomputing work from scratch for every subarray or substring.</p><p>Example: a fixed-size window can keep a running sum while moving one step at a time.</p>"
+  },
+  {
+    "id": 8067,
+    "text": "When is a sliding window especially useful?",
+    "choices": [
+      "For substring or subarray problems on continuous ranges",
+      "Only for recursion trees",
+      "Only for graph shortest paths",
+      "Only for balanced BST updates"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>For substring or subarray problems on continuous ranges</strong> is correct because It is ideal when the solution depends on contiguous segments of an array or string.</p><p>Example: longest substring without repeating characters is a classic sliding-window problem.</p>"
+  },
+  {
+    "id": 8068,
+    "text": "What is recursion?",
+    "choices": [
+      "A technique where a function calls itself",
+      "A sorting method that requires no functions",
+      "A hash table implementation",
+      "A queue balancing approach"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A technique where a function calls itself</strong> is correct because Recursion solves a problem by reducing it into smaller instances of the same problem.</p><p>Example: factorial and tree traversal are common recursion examples.</p>"
+  },
+  {
+    "id": 8069,
+    "text": "What is a base case in recursion?",
+    "choices": [
+      "The condition that stops further recursive calls",
+      "The first variable in a loop",
+      "A hash collision rule",
+      "A linked list tail pointer only"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>The condition that stops further recursive calls</strong> is correct because Without a base case, recursion can continue indefinitely and overflow the call stack.</p><p>Example: factorial stops when <code>n == 0</code> or <code>n == 1</code>.</p>"
+  },
+  {
+    "id": 8070,
+    "text": "What is a recursive call?",
+    "choices": [
+      "A call where a function invokes itself with a smaller or altered problem",
+      "A function calling only library code",
+      "A function returning without work",
+      "A queue insertion"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A call where a function invokes itself with a smaller or altered problem</strong> is correct because Recursive calls progressively reduce the problem until a base case is reached.</p><p>Example: <code>factorial(n)</code> may call <code>factorial(n - 1)</code>.</p>"
+  },
+  {
+    "id": 8071,
+    "text": "What is a common downside of deep recursion?",
+    "choices": [
+      "Stack overflow risk and function-call overhead",
+      "It cannot handle arrays",
+      "It always uses constant memory",
+      "It always sorts the input"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Stack overflow risk and function-call overhead</strong> is correct because Recursive depth consumes stack frames, which may become expensive or unsafe for large inputs.</p><p>Example: recursing one million levels is usually not practical in ordinary programs.</p>"
+  },
+  {
+    "id": 8072,
+    "text": "What is backtracking?",
+    "choices": [
+      "A recursive problem-solving method that tries choices and undoes them when needed",
+      "A hash table resizing strategy",
+      "A graph representation format",
+      "A queue compression method"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A recursive problem-solving method that tries choices and undoes them when needed</strong> is correct because Backtracking explores search spaces systematically by making a decision, recursing, and reversing that decision if it fails.</p><p>Example: generating permutations or solving Sudoku often uses backtracking.</p>"
+  },
+  {
+    "id": 8073,
+    "text": "What is brute force in algorithm design?",
+    "choices": [
+      "Trying all possibilities directly",
+      "Using only binary search",
+      "Always choosing the optimal greedy step",
+      "Converting arrays to trees first"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Trying all possibilities directly</strong> is correct because Brute force is often simple and correct but may be too slow for large inputs.</p><p>Example: checking every pair in an array for a target sum is brute force.</p>"
+  },
+  {
+    "id": 8074,
+    "text": "What is a greedy algorithm?",
+    "choices": [
+      "An algorithm that makes the best local choice at each step",
+      "An algorithm that always uses recursion",
+      "An algorithm that stores all states",
+      "An algorithm that must use graphs"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>An algorithm that makes the best local choice at each step</strong> is correct because Greedy methods can be efficient, but they only work when local optimal choices lead to a global optimum.</p><p>Example: interval scheduling often has a greedy solution.</p>"
+  },
+  {
+    "id": 8075,
+    "text": "What is dynamic programming?",
+    "choices": [
+      "A technique that stores solutions to overlapping subproblems",
+      "A sort that always partitions around a pivot",
+      "A queue implementation using arrays",
+      "A graph traversal with no memory"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A technique that stores solutions to overlapping subproblems</strong> is correct because Dynamic programming avoids repeated work by remembering previously computed results.</p><p>Example: Fibonacci numbers can be computed efficiently with memoization or tabulation.</p>"
+  },
+  {
+    "id": 8076,
+    "text": "What is memoization?",
+    "choices": [
+      "Caching recursive subproblem results",
+      "Sorting values before searching",
+      "Using two queues instead of one",
+      "Balancing a tree after every insert"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Caching recursive subproblem results</strong> is correct because Memoization is top-down dynamic programming where recursive answers are stored for reuse.</p><p>Example: caching <code>fib(20)</code> prevents recomputing the same smaller values many times.</p>"
+  },
+  {
+    "id": 8077,
+    "text": "What is tabulation?",
+    "choices": [
+      "Bottom-up dynamic programming using a table",
+      "A graph stored as an adjacency list",
+      "A recursive-only technique",
+      "A stack balancing method"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Bottom-up dynamic programming using a table</strong> is correct because Tabulation solves smaller subproblems iteratively first, then builds up to the final answer.</p><p>Example: filling a DP array from index 0 to n is tabulation.</p>"
+  },
+  {
+    "id": 8078,
+    "text": "What is an adjacency list?",
+    "choices": [
+      "A graph representation storing neighbors for each vertex",
+      "A graph representation using only matrices",
+      "A heap shape property",
+      "A queue traversal log"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A graph representation storing neighbors for each vertex</strong> is correct because Adjacency lists are space-efficient for sparse graphs and make neighbor traversal natural.</p><p>Example: vertex 1 might store neighbors [2, 4, 5].</p>"
+  },
+  {
+    "id": 8079,
+    "text": "What is an adjacency matrix?",
+    "choices": [
+      "A 2D matrix indicating whether pairs of vertices are connected",
+      "A linked list of vertices only",
+      "A queue of weighted edges",
+      "A stack of graph paths"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A 2D matrix indicating whether pairs of vertices are connected</strong> is correct because Adjacency matrices allow very fast edge existence checks but can use much more memory on sparse graphs.</p><p>Example: <code>matrix[i][j]</code> can indicate whether edge i -> j exists.</p>"
+  },
+  {
+    "id": 8080,
+    "text": "Which graph representation is often more space-efficient for sparse graphs?",
+    "choices": [
+      "Adjacency list",
+      "Adjacency matrix",
+      "Binary heap",
+      "Stack"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Adjacency list</strong> is correct because When few edges exist relative to possible pairs, adjacency lists avoid storing many empty connections.</p><p>Example: a social graph with relatively few friendships per user is usually sparse.</p>"
+  },
+  {
+    "id": 8081,
+    "text": "What is depth-first search (DFS)?",
+    "choices": [
+      "A traversal that goes as deep as possible before backtracking",
+      "A traversal that visits nodes level by level first",
+      "A sorting algorithm for arrays",
+      "A hashing technique for strings"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A traversal that goes as deep as possible before backtracking</strong> is correct because DFS explores one branch fully before switching to another branch.</p><p>Example: DFS can be implemented recursively or with an explicit stack.</p>"
+  },
+  {
+    "id": 8082,
+    "text": "What data structure naturally supports iterative DFS?",
+    "choices": [
+      "Stack",
+      "Queue",
+      "Heap",
+      "Hash table"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Stack</strong> is correct because Because DFS wants last-in-first-out behavior when returning to unexplored branches, a stack fits naturally.</p><p>Example: push neighbors and keep exploring the most recent one first.</p>"
+  },
+  {
+    "id": 8083,
+    "text": "What is breadth-first search (BFS)?",
+    "choices": [
+      "A traversal that visits nodes level by level",
+      "A traversal that always uses recursion only",
+      "A sort based on partitioning",
+      "A binary search variant"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A traversal that visits nodes level by level</strong> is correct because BFS explores all immediate neighbors first before moving outward to the next layer.</p><p>Example: BFS is useful for shortest path in an unweighted graph.</p>"
+  },
+  {
+    "id": 8084,
+    "text": "What data structure naturally supports BFS?",
+    "choices": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Array only"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Queue</strong> is correct because Because BFS processes nodes in arrival order, a queue is the natural supporting structure.</p><p>Example: enqueue neighbors and process them in the order discovered.</p>"
+  },
+  {
+    "id": 8085,
+    "text": "Why is BFS useful for shortest path in an unweighted graph?",
+    "choices": [
+      "It explores nodes in increasing distance order",
+      "It always uses less memory than DFS",
+      "It sorts edge weights automatically",
+      "It requires recursion"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>It explores nodes in increasing distance order</strong> is correct because Since each edge has equal cost, level-by-level exploration reaches the nearest solution first.</p><p>Example: the first time BFS reaches a node, it has found the shortest number-of-edges path to it.</p>"
+  },
+  {
+    "id": 8086,
+    "text": "What does a stable sorting algorithm preserve?",
+    "choices": [
+      "The relative order of equal elements",
+      "Only the smallest element",
+      "The original array length only",
+      "The recursion depth"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>The relative order of equal elements</strong> is correct because Stability matters when secondary ordering from earlier processing should remain intact among equal keys.</p><p>Example: sorting employees by department after previously sorting by name benefits from stability.</p>"
+  },
+  {
+    "id": 8087,
+    "text": "Which of these is commonly stable?",
+    "choices": [
+      "Merge sort",
+      "Quick sort by default in theory",
+      "Heap sort",
+      "Selection sort"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Merge sort</strong> is correct because Merge sort is classically stable because equal elements from the left half can be kept before equal ones from the right half.</p><p>Example: equal keys preserve their earlier order after merge sort.</p>"
+  },
+  {
+    "id": 8088,
+    "text": "What is an invariant in algorithm problem solving?",
+    "choices": [
+      "A condition that remains true throughout part of execution",
+      "A variable that never changes input size",
+      "A recursion error message",
+      "A hash bucket count"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A condition that remains true throughout part of execution</strong> is correct because Invariants help reason about correctness by stating what must always hold during a loop or process.</p><p>Example: in insertion sort, the left portion is kept sorted after each iteration.</p>"
+  },
+  {
+    "id": 8089,
+    "text": "Why are invariants useful?",
+    "choices": [
+      "They help prove correctness step by step",
+      "They always improve asymptotic complexity",
+      "They remove the need for tests",
+      "They turn recursion into iteration automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>They help prove correctness step by step</strong> is correct because A good invariant clarifies why each step preserves progress toward the final correct result.</p><p>Example: a sliding window invariant may guarantee all characters in the window are unique.</p>"
+  },
+  {
+    "id": 8090,
+    "text": "What is a sentinel value in algorithm design?",
+    "choices": [
+      "A special marker value used to simplify logic",
+      "A node with two parents",
+      "A queue that cannot dequeue",
+      "An index that stores hashes"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A special marker value used to simplify logic</strong> is correct because Sentinels can reduce edge-case branches by representing a boundary or termination condition.</p><p>Example: a dummy head node can simplify linked-list insertions.</p>"
+  },
+  {
+    "id": 8091,
+    "text": "What is a dummy node commonly used for in linked list problems?",
+    "choices": [
+      "To simplify edge cases at the head of the list",
+      "To balance a BST",
+      "To store graph weights",
+      "To compress string data"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>To simplify edge cases at the head of the list</strong> is correct because A dummy node provides a stable node before the real head so insertions and deletions are easier to code uniformly.</p><p>Example: removing the first real node becomes similar to removing any middle node.</p>"
+  },
+  {
+    "id": 8092,
+    "text": "What is amortized analysis?",
+    "choices": [
+      "Analyzing average cost per operation over a sequence of operations",
+      "Analyzing only the fastest operation",
+      "Analyzing only recursive algorithms",
+      "Analyzing memory leaks after deployment"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Analyzing average cost per operation over a sequence of operations</strong> is correct because Some operations are occasionally expensive but inexpensive on average across many calls.</p><p>Example: dynamic array append is often amortized <code>O(1)</code> even though resizing is occasionally expensive.</p>"
+  },
+  {
+    "id": 8093,
+    "text": "Why is dynamic array append often amortized O(1)?",
+    "choices": [
+      "Most appends are cheap and occasional resizes are spread across many operations",
+      "Each append always resizes the array",
+      "Append never copies elements",
+      "Arrays always have infinite capacity"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Most appends are cheap and occasional resizes are spread across many operations</strong> is correct because Resizing happens only from time to time, so the expensive copies are averaged out over many successful cheap appends.</p><p>Example: doubling capacity means many later appends cost only one simple write.</p>"
+  },
+  {
+    "id": 8094,
+    "text": "What is the first good step when solving a DSA interview problem?",
+    "choices": [
+      "Clarify the input, output, and constraints",
+      "Write code immediately without questions",
+      "Sort every input by default",
+      "Choose recursion before thinking"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Clarify the input, output, and constraints</strong> is correct because Understanding the problem fully prevents building the wrong solution and guides the right data structure choice.</p><p>Example: ask whether the array is sorted, whether duplicates exist, and what size limits matter.</p>"
+  },
+  {
+    "id": 8095,
+    "text": "Why do constraints matter in DSA problem solving?",
+    "choices": [
+      "They guide which algorithms are practical",
+      "They only affect variable names",
+      "They are unrelated to performance",
+      "They remove the need for correctness"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>They guide which algorithms are practical</strong> is correct because An approach that works for n = 100 may fail badly for n = 10^6.</p><p>Example: an <code>O(n^2)</code> approach is often too slow for one million elements.</p>"
+  },
+  {
+    "id": 8096,
+    "text": "What is a useful habit before optimizing a DSA solution?",
+    "choices": [
+      "Build a correct simple solution first",
+      "Always jump directly to the most advanced technique",
+      "Assume the interviewer wants recursion",
+      "Ignore edge cases"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Build a correct simple solution first</strong> is correct because A correct baseline helps reasoning and can often be improved later with confidence.</p><p>Example: start with brute force, then optimize to hashing or two pointers if needed.</p>"
+  },
+  {
+    "id": 8097,
+    "text": "Why should edge cases be tested in DSA problems?",
+    "choices": [
+      "They reveal hidden bugs in assumptions",
+      "They make asymptotic notation unnecessary",
+      "They only matter for graph problems",
+      "They automatically optimize runtime"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>They reveal hidden bugs in assumptions</strong> is correct because Small special inputs often break otherwise reasonable-looking logic.</p><p>Example: empty arrays, one-element inputs, duplicates, or already sorted data are common edge cases.</p>"
+  },
+  {
+    "id": 8098,
+    "text": "What is an off-by-one error?",
+    "choices": [
+      "A bug caused by using boundaries incorrectly by one position",
+      "A hash collision in arrays",
+      "A missing recursion base case only",
+      "A graph cycle detection issue"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>A bug caused by using boundaries incorrectly by one position</strong> is correct because Off-by-one mistakes are common in loops, substring ranges, and pointer movement.</p><p>Example: iterating with <code>i <= arr.length</code> instead of <code>i < arr.length</code> causes trouble.</p>"
+  },
+  {
+    "id": 8099,
+    "text": "Why is dry-running an algorithm on a small example useful?",
+    "choices": [
+      "It helps verify the logic step by step",
+      "It automatically proves optimality",
+      "It removes memory usage",
+      "It converts recursion to iteration"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>It helps verify the logic step by step</strong> is correct because Walking through a tiny input often reveals flaws in pointer updates, conditions, or invariants.</p><p>Example: test a sliding-window algorithm manually on a 5-character string.</p>"
+  },
+  {
+    "id": 8100,
+    "text": "What is pseudo-code useful for in DSA learning?",
+    "choices": [
+      "Expressing logic clearly without language-specific details",
+      "Replacing all real implementation work",
+      "Guaranteeing constant-time execution",
+      "Avoiding test cases entirely"
+    ],
+    "correctIndex": 0,
+    "topic": "DSA",
+    "explanation": "<p><strong>Expressing logic clearly without language-specific details</strong> is correct because Pseudo-code helps focus on the algorithm itself before worrying about syntax.</p><p>Example: outline the loop, decisions, and updates before writing Java or Python code.</p>"
+  }
+]

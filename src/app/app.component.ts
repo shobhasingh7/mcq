@@ -254,7 +254,19 @@ export class AppComponent {
       return '';
     }
 
-    return explanation.replace(
+    return this.wrapJavaBlocks(explanation);
+  }
+
+  formatQuestionText(text: string | null | undefined): string {
+    if (!text) {
+      return '';
+    }
+
+    return this.wrapJavaBlocks(text);
+  }
+
+  private wrapJavaBlocks(content: string): string {
+    return content.replace(
       /<pre>\s*<code class="language-java">([\s\S]*?)<\/code>\s*<\/pre>/g,
       '<div class="java-snippet"><div class="java-snippet-label">Java</div><pre><code class="language-java">$1</code></pre></div>'
     );

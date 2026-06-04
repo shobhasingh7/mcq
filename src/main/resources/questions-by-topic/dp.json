@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 8201,
+    "text": "Which design pattern ensures only one instance of a class exists and provides a shared access point?",
+    "choices": [
+      "Singleton",
+      "Observer",
+      "Adapter",
+      "Composite"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Singleton</strong> is correct because it ensures only one instance of a class exists and provides a shared access point.</p><p>Example use case: shared configuration or one global service instance.</p>"
+  },
+  {
+    "id": 8202,
+    "text": "Singleton belongs to which major pattern category?",
+    "choices": [
+      "Creational",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Creational</strong> is correct because Singleton is classified under that pattern family.</p><p>Example: Singleton is commonly discussed as part of creational pattern design.</p>"
+  },
+  {
+    "id": 8203,
+    "text": "Which scenario is the best fit for the Singleton pattern?",
+    "choices": [
+      "shared configuration or one global service instance",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>shared configuration or one global service instance</strong> is correct because Singleton is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as shared configuration or one global service instance.</p>"
+  },
+  {
+    "id": 8204,
+    "text": "What is a common benefit of using the Singleton pattern well?",
+    "choices": [
+      "It improves design by helping with shared configuration or one global service instance",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with shared configuration or one global service instance</strong> is correct because Singleton is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Singleton specifically to support shared configuration or one global service instance.</p>"
+  },
+  {
+    "id": 8205,
+    "text": "Which design pattern moves object creation into dedicated creator logic so clients depend less on concrete classes?",
+    "choices": [
+      "Factory Method",
+      "Memento",
+      "Mediator",
+      "Decorator"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Factory Method</strong> is correct because it moves object creation into dedicated creator logic so clients depend less on concrete classes.</p><p>Example use case: selecting one implementation from several concrete types.</p>"
+  },
+  {
+    "id": 8206,
+    "text": "Factory Method belongs to which major pattern category?",
+    "choices": [
+      "Creational",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Creational</strong> is correct because Factory Method is classified under that pattern family.</p><p>Example: Factory Method is commonly discussed as part of creational pattern design.</p>"
+  },
+  {
+    "id": 8207,
+    "text": "Which scenario is the best fit for the Factory Method pattern?",
+    "choices": [
+      "selecting one implementation from several concrete types",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>selecting one implementation from several concrete types</strong> is correct because Factory Method is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as selecting one implementation from several concrete types.</p>"
+  },
+  {
+    "id": 8208,
+    "text": "What is a common benefit of using the Factory Method pattern well?",
+    "choices": [
+      "It improves design by helping with selecting one implementation from several concrete types",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with selecting one implementation from several concrete types</strong> is correct because Factory Method is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Factory Method specifically to support selecting one implementation from several concrete types.</p>"
+  },
+  {
+    "id": 8209,
+    "text": "Which design pattern creates families of related objects without binding clients to concrete classes?",
+    "choices": [
+      "Abstract Factory",
+      "Command",
+      "Proxy",
+      "Iterator"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Abstract Factory</strong> is correct because it creates families of related objects without binding clients to concrete classes.</p><p>Example use case: building matching UI component families or product families.</p>"
+  },
+  {
+    "id": 8210,
+    "text": "Abstract Factory belongs to which major pattern category?",
+    "choices": [
+      "Creational",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Creational</strong> is correct because Abstract Factory is classified under that pattern family.</p><p>Example: Abstract Factory is commonly discussed as part of creational pattern design.</p>"
+  },
+  {
+    "id": 8211,
+    "text": "Which scenario is the best fit for the Abstract Factory pattern?",
+    "choices": [
+      "building matching UI component families or product families",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>building matching UI component families or product families</strong> is correct because Abstract Factory is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as building matching UI component families or product families.</p>"
+  },
+  {
+    "id": 8212,
+    "text": "What is a common benefit of using the Abstract Factory pattern well?",
+    "choices": [
+      "It improves design by helping with building matching UI component families or product families",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with building matching UI component families or product families</strong> is correct because Abstract Factory is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Abstract Factory specifically to support building matching UI component families or product families.</p>"
+  },
+  {
+    "id": 8213,
+    "text": "Which design pattern constructs complex objects step by step, especially when many optional fields exist?",
+    "choices": [
+      "Builder",
+      "Observer",
+      "State",
+      "Bridge"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Builder</strong> is correct because it constructs complex objects step by step, especially when many optional fields exist.</p><p>Example use case: readable creation of immutable or configurable objects.</p>"
+  },
+  {
+    "id": 8214,
+    "text": "Builder belongs to which major pattern category?",
+    "choices": [
+      "Creational",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Creational</strong> is correct because Builder is classified under that pattern family.</p><p>Example: Builder is commonly discussed as part of creational pattern design.</p>"
+  },
+  {
+    "id": 8215,
+    "text": "Which scenario is the best fit for the Builder pattern?",
+    "choices": [
+      "readable creation of immutable or configurable objects",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>readable creation of immutable or configurable objects</strong> is correct because Builder is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as readable creation of immutable or configurable objects.</p>"
+  },
+  {
+    "id": 8216,
+    "text": "What is a common benefit of using the Builder pattern well?",
+    "choices": [
+      "It improves design by helping with readable creation of immutable or configurable objects",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with readable creation of immutable or configurable objects</strong> is correct because Builder is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Builder specifically to support readable creation of immutable or configurable objects.</p>"
+  },
+  {
+    "id": 8217,
+    "text": "Which design pattern creates objects by copying existing ones instead of building from scratch?",
+    "choices": [
+      "Prototype",
+      "Template Method",
+      "Facade",
+      "Visitor"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Prototype</strong> is correct because it creates objects by copying existing ones instead of building from scratch.</p><p>Example use case: reusing configuration by cloning a prepared object.</p>"
+  },
+  {
+    "id": 8218,
+    "text": "Prototype belongs to which major pattern category?",
+    "choices": [
+      "Creational",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Creational</strong> is correct because Prototype is classified under that pattern family.</p><p>Example: Prototype is commonly discussed as part of creational pattern design.</p>"
+  },
+  {
+    "id": 8219,
+    "text": "Which scenario is the best fit for the Prototype pattern?",
+    "choices": [
+      "reusing configuration by cloning a prepared object",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>reusing configuration by cloning a prepared object</strong> is correct because Prototype is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as reusing configuration by cloning a prepared object.</p>"
+  },
+  {
+    "id": 8220,
+    "text": "What is a common benefit of using the Prototype pattern well?",
+    "choices": [
+      "It improves design by helping with reusing configuration by cloning a prepared object",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with reusing configuration by cloning a prepared object</strong> is correct because Prototype is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Prototype specifically to support reusing configuration by cloning a prepared object.</p>"
+  },
+  {
+    "id": 8221,
+    "text": "Which design pattern converts one interface into another expected by the client?",
+    "choices": [
+      "Adapter",
+      "Strategy",
+      "Flyweight",
+      "Builder"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Adapter</strong> is correct because it converts one interface into another expected by the client.</p><p>Example use case: integrating legacy or third-party code with a new API.</p>"
+  },
+  {
+    "id": 8222,
+    "text": "Adapter belongs to which major pattern category?",
+    "choices": [
+      "Structural",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Structural</strong> is correct because Adapter is classified under that pattern family.</p><p>Example: Adapter is commonly discussed as part of structural pattern design.</p>"
+  },
+  {
+    "id": 8223,
+    "text": "Which scenario is the best fit for the Adapter pattern?",
+    "choices": [
+      "integrating legacy or third-party code with a new API",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>integrating legacy or third-party code with a new API</strong> is correct because Adapter is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as integrating legacy or third-party code with a new API.</p>"
+  },
+  {
+    "id": 8224,
+    "text": "What is a common benefit of using the Adapter pattern well?",
+    "choices": [
+      "It improves design by helping with integrating legacy or third-party code with a new API",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with integrating legacy or third-party code with a new API</strong> is correct because Adapter is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Adapter specifically to support integrating legacy or third-party code with a new API.</p>"
+  },
+  {
+    "id": 8225,
+    "text": "Which design pattern adds behavior dynamically by wrapping an object?",
+    "choices": [
+      "Decorator",
+      "Prototype",
+      "Mediator",
+      "Interpreter"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Decorator</strong> is correct because it adds behavior dynamically by wrapping an object.</p><p>Example use case: layering logging, caching, retrying, or security around a service.</p>"
+  },
+  {
+    "id": 8226,
+    "text": "Decorator belongs to which major pattern category?",
+    "choices": [
+      "Structural",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Structural</strong> is correct because Decorator is classified under that pattern family.</p><p>Example: Decorator is commonly discussed as part of structural pattern design.</p>"
+  },
+  {
+    "id": 8227,
+    "text": "Which scenario is the best fit for the Decorator pattern?",
+    "choices": [
+      "layering logging, caching, retrying, or security around a service",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>layering logging, caching, retrying, or security around a service</strong> is correct because Decorator is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as layering logging, caching, retrying, or security around a service.</p>"
+  },
+  {
+    "id": 8228,
+    "text": "What is a common benefit of using the Decorator pattern well?",
+    "choices": [
+      "It improves design by helping with layering logging, caching, retrying, or security around a service",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with layering logging, caching, retrying, or security around a service</strong> is correct because Decorator is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Decorator specifically to support layering logging, caching, retrying, or security around a service.</p>"
+  },
+  {
+    "id": 8229,
+    "text": "Which design pattern provides a simplified interface to a complex subsystem?",
+    "choices": [
+      "Facade",
+      "State",
+      "Observer",
+      "Factory Method"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Facade</strong> is correct because it provides a simplified interface to a complex subsystem.</p><p>Example use case: hiding many low-level service calls behind one entry point.</p>"
+  },
+  {
+    "id": 8230,
+    "text": "Facade belongs to which major pattern category?",
+    "choices": [
+      "Structural",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Structural</strong> is correct because Facade is classified under that pattern family.</p><p>Example: Facade is commonly discussed as part of structural pattern design.</p>"
+  },
+  {
+    "id": 8231,
+    "text": "Which scenario is the best fit for the Facade pattern?",
+    "choices": [
+      "hiding many low-level service calls behind one entry point",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>hiding many low-level service calls behind one entry point</strong> is correct because Facade is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as hiding many low-level service calls behind one entry point.</p>"
+  },
+  {
+    "id": 8232,
+    "text": "What is a common benefit of using the Facade pattern well?",
+    "choices": [
+      "It improves design by helping with hiding many low-level service calls behind one entry point",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with hiding many low-level service calls behind one entry point</strong> is correct because Facade is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Facade specifically to support hiding many low-level service calls behind one entry point.</p>"
+  },
+  {
+    "id": 8233,
+    "text": "Which design pattern controls access to another object, often for lazy loading, security, or remote access?",
+    "choices": [
+      "Proxy",
+      "Composite",
+      "Builder",
+      "Template Method"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Proxy</strong> is correct because it controls access to another object, often for lazy loading, security, or remote access.</p><p>Example use case: deferring expensive initialization until needed.</p>"
+  },
+  {
+    "id": 8234,
+    "text": "Proxy belongs to which major pattern category?",
+    "choices": [
+      "Structural",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Structural</strong> is correct because Proxy is classified under that pattern family.</p><p>Example: Proxy is commonly discussed as part of structural pattern design.</p>"
+  },
+  {
+    "id": 8235,
+    "text": "Which scenario is the best fit for the Proxy pattern?",
+    "choices": [
+      "deferring expensive initialization until needed",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>deferring expensive initialization until needed</strong> is correct because Proxy is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as deferring expensive initialization until needed.</p>"
+  },
+  {
+    "id": 8236,
+    "text": "What is a common benefit of using the Proxy pattern well?",
+    "choices": [
+      "It improves design by helping with deferring expensive initialization until needed",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with deferring expensive initialization until needed</strong> is correct because Proxy is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Proxy specifically to support deferring expensive initialization until needed.</p>"
+  },
+  {
+    "id": 8237,
+    "text": "Which design pattern separates abstraction from implementation so both can vary independently?",
+    "choices": [
+      "Bridge",
+      "Command",
+      "Null Object",
+      "Memento"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Bridge</strong> is correct because it separates abstraction from implementation so both can vary independently.</p><p>Example use case: avoiding class explosion from multiple dimensions of variation.</p>"
+  },
+  {
+    "id": 8238,
+    "text": "Bridge belongs to which major pattern category?",
+    "choices": [
+      "Structural",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Structural</strong> is correct because Bridge is classified under that pattern family.</p><p>Example: Bridge is commonly discussed as part of structural pattern design.</p>"
+  },
+  {
+    "id": 8239,
+    "text": "Which scenario is the best fit for the Bridge pattern?",
+    "choices": [
+      "avoiding class explosion from multiple dimensions of variation",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>avoiding class explosion from multiple dimensions of variation</strong> is correct because Bridge is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as avoiding class explosion from multiple dimensions of variation.</p>"
+  },
+  {
+    "id": 8240,
+    "text": "What is a common benefit of using the Bridge pattern well?",
+    "choices": [
+      "It improves design by helping with avoiding class explosion from multiple dimensions of variation",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with avoiding class explosion from multiple dimensions of variation</strong> is correct because Bridge is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Bridge specifically to support avoiding class explosion from multiple dimensions of variation.</p>"
+  },
+  {
+    "id": 8241,
+    "text": "Which design pattern treats individual objects and object groups uniformly?",
+    "choices": [
+      "Composite",
+      "Factory Method",
+      "Visitor",
+      "Singleton"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Composite</strong> is correct because it treats individual objects and object groups uniformly.</p><p>Example use case: modeling hierarchical trees like menus or file systems.</p>"
+  },
+  {
+    "id": 8242,
+    "text": "Composite belongs to which major pattern category?",
+    "choices": [
+      "Structural",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Structural</strong> is correct because Composite is classified under that pattern family.</p><p>Example: Composite is commonly discussed as part of structural pattern design.</p>"
+  },
+  {
+    "id": 8243,
+    "text": "Which scenario is the best fit for the Composite pattern?",
+    "choices": [
+      "modeling hierarchical trees like menus or file systems",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>modeling hierarchical trees like menus or file systems</strong> is correct because Composite is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as modeling hierarchical trees like menus or file systems.</p>"
+  },
+  {
+    "id": 8244,
+    "text": "What is a common benefit of using the Composite pattern well?",
+    "choices": [
+      "It improves design by helping with modeling hierarchical trees like menus or file systems",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with modeling hierarchical trees like menus or file systems</strong> is correct because Composite is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Composite specifically to support modeling hierarchical trees like menus or file systems.</p>"
+  },
+  {
+    "id": 8245,
+    "text": "Which design pattern shares common intrinsic state to reduce memory usage?",
+    "choices": [
+      "Flyweight",
+      "Observer",
+      "Chain of Responsibility",
+      "Builder"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Flyweight</strong> is correct because it shares common intrinsic state to reduce memory usage.</p><p>Example use case: reusing many similar lightweight objects efficiently.</p>"
+  },
+  {
+    "id": 8246,
+    "text": "Flyweight belongs to which major pattern category?",
+    "choices": [
+      "Structural",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Structural</strong> is correct because Flyweight is classified under that pattern family.</p><p>Example: Flyweight is commonly discussed as part of structural pattern design.</p>"
+  },
+  {
+    "id": 8247,
+    "text": "Which scenario is the best fit for the Flyweight pattern?",
+    "choices": [
+      "reusing many similar lightweight objects efficiently",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>reusing many similar lightweight objects efficiently</strong> is correct because Flyweight is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as reusing many similar lightweight objects efficiently.</p>"
+  },
+  {
+    "id": 8248,
+    "text": "What is a common benefit of using the Flyweight pattern well?",
+    "choices": [
+      "It improves design by helping with reusing many similar lightweight objects efficiently",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with reusing many similar lightweight objects efficiently</strong> is correct because Flyweight is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Flyweight specifically to support reusing many similar lightweight objects efficiently.</p>"
+  },
+  {
+    "id": 8249,
+    "text": "Which design pattern defines interchangeable algorithms behind a common interface?",
+    "choices": [
+      "Strategy",
+      "Adapter",
+      "Memento",
+      "Facade"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Strategy</strong> is correct because it defines interchangeable algorithms behind a common interface.</p><p>Example use case: switching pricing, validation, or export behavior at runtime.</p>"
+  },
+  {
+    "id": 8250,
+    "text": "Strategy belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Strategy is classified under that pattern family.</p><p>Example: Strategy is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8251,
+    "text": "Which scenario is the best fit for the Strategy pattern?",
+    "choices": [
+      "switching pricing, validation, or export behavior at runtime",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>switching pricing, validation, or export behavior at runtime</strong> is correct because Strategy is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as switching pricing, validation, or export behavior at runtime.</p>"
+  },
+  {
+    "id": 8252,
+    "text": "What is a common benefit of using the Strategy pattern well?",
+    "choices": [
+      "It improves design by helping with switching pricing, validation, or export behavior at runtime",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with switching pricing, validation, or export behavior at runtime</strong> is correct because Strategy is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Strategy specifically to support switching pricing, validation, or export behavior at runtime.</p>"
+  },
+  {
+    "id": 8253,
+    "text": "Which design pattern notifies many subscribers when a subject changes state?",
+    "choices": [
+      "Observer",
+      "Prototype",
+      "Bridge",
+      "Builder"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Observer</strong> is correct because it notifies many subscribers when a subject changes state.</p><p>Example use case: event-driven systems and UI listener relationships.</p>"
+  },
+  {
+    "id": 8254,
+    "text": "Observer belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Observer is classified under that pattern family.</p><p>Example: Observer is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8255,
+    "text": "Which scenario is the best fit for the Observer pattern?",
+    "choices": [
+      "event-driven systems and UI listener relationships",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>event-driven systems and UI listener relationships</strong> is correct because Observer is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as event-driven systems and UI listener relationships.</p>"
+  },
+  {
+    "id": 8256,
+    "text": "What is a common benefit of using the Observer pattern well?",
+    "choices": [
+      "It improves design by helping with event-driven systems and UI listener relationships",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with event-driven systems and UI listener relationships</strong> is correct because Observer is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Observer specifically to support event-driven systems and UI listener relationships.</p>"
+  },
+  {
+    "id": 8257,
+    "text": "Which design pattern wraps a request in an object so it can be queued, logged, or undone?",
+    "choices": [
+      "Command",
+      "Adapter",
+      "Singleton",
+      "Facade"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Command</strong> is correct because it wraps a request in an object so it can be queued, logged, or undone.</p><p>Example use case: undo histories, job queues, and deferred actions.</p>"
+  },
+  {
+    "id": 8258,
+    "text": "Command belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Command is classified under that pattern family.</p><p>Example: Command is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8259,
+    "text": "Which scenario is the best fit for the Command pattern?",
+    "choices": [
+      "undo histories, job queues, and deferred actions",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>undo histories, job queues, and deferred actions</strong> is correct because Command is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as undo histories, job queues, and deferred actions.</p>"
+  },
+  {
+    "id": 8260,
+    "text": "What is a common benefit of using the Command pattern well?",
+    "choices": [
+      "It improves design by helping with undo histories, job queues, and deferred actions",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with undo histories, job queues, and deferred actions</strong> is correct because Command is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Command specifically to support undo histories, job queues, and deferred actions.</p>"
+  },
+  {
+    "id": 8261,
+    "text": "Which design pattern changes an object’s behavior when its internal state changes?",
+    "choices": [
+      "State",
+      "Proxy",
+      "Builder",
+      "Composite"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>State</strong> is correct because it changes an object’s behavior when its internal state changes.</p><p>Example use case: modeling lifecycle-dependent behavior like order states.</p>"
+  },
+  {
+    "id": 8262,
+    "text": "State belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because State is classified under that pattern family.</p><p>Example: State is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8263,
+    "text": "Which scenario is the best fit for the State pattern?",
+    "choices": [
+      "modeling lifecycle-dependent behavior like order states",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>modeling lifecycle-dependent behavior like order states</strong> is correct because State is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as modeling lifecycle-dependent behavior like order states.</p>"
+  },
+  {
+    "id": 8264,
+    "text": "What is a common benefit of using the State pattern well?",
+    "choices": [
+      "It improves design by helping with modeling lifecycle-dependent behavior like order states",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with modeling lifecycle-dependent behavior like order states</strong> is correct because State is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose State specifically to support modeling lifecycle-dependent behavior like order states.</p>"
+  },
+  {
+    "id": 8265,
+    "text": "Which design pattern defines an algorithm skeleton while allowing subclasses to customize steps?",
+    "choices": [
+      "Template Method",
+      "Observer",
+      "Prototype",
+      "Adapter"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Template Method</strong> is correct because it defines an algorithm skeleton while allowing subclasses to customize steps.</p><p>Example use case: keeping workflow fixed while varying selected phases.</p>"
+  },
+  {
+    "id": 8266,
+    "text": "Template Method belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Template Method is classified under that pattern family.</p><p>Example: Template Method is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8267,
+    "text": "Which scenario is the best fit for the Template Method pattern?",
+    "choices": [
+      "keeping workflow fixed while varying selected phases",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>keeping workflow fixed while varying selected phases</strong> is correct because Template Method is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as keeping workflow fixed while varying selected phases.</p>"
+  },
+  {
+    "id": 8268,
+    "text": "What is a common benefit of using the Template Method pattern well?",
+    "choices": [
+      "It improves design by helping with keeping workflow fixed while varying selected phases",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with keeping workflow fixed while varying selected phases</strong> is correct because Template Method is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Template Method specifically to support keeping workflow fixed while varying selected phases.</p>"
+  },
+  {
+    "id": 8269,
+    "text": "Which design pattern provides a consistent way to traverse a collection without exposing internals?",
+    "choices": [
+      "Iterator",
+      "Mediator",
+      "Factory Method",
+      "Bridge"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Iterator</strong> is correct because it provides a consistent way to traverse a collection without exposing internals.</p><p>Example use case: walking through elements of a collection safely.</p>"
+  },
+  {
+    "id": 8270,
+    "text": "Iterator belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Iterator is classified under that pattern family.</p><p>Example: Iterator is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8271,
+    "text": "Which scenario is the best fit for the Iterator pattern?",
+    "choices": [
+      "walking through elements of a collection safely",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>walking through elements of a collection safely</strong> is correct because Iterator is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as walking through elements of a collection safely.</p>"
+  },
+  {
+    "id": 8272,
+    "text": "What is a common benefit of using the Iterator pattern well?",
+    "choices": [
+      "It improves design by helping with walking through elements of a collection safely",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with walking through elements of a collection safely</strong> is correct because Iterator is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Iterator specifically to support walking through elements of a collection safely.</p>"
+  },
+  {
+    "id": 8273,
+    "text": "Which design pattern centralizes communication between collaborating objects?",
+    "choices": [
+      "Mediator",
+      "Proxy",
+      "Builder",
+      "Decorator"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Mediator</strong> is correct because it centralizes communication between collaborating objects.</p><p>Example use case: reducing direct coupling among many UI components or colleagues.</p>"
+  },
+  {
+    "id": 8274,
+    "text": "Mediator belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Mediator is classified under that pattern family.</p><p>Example: Mediator is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8275,
+    "text": "Which scenario is the best fit for the Mediator pattern?",
+    "choices": [
+      "reducing direct coupling among many UI components or colleagues",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>reducing direct coupling among many UI components or colleagues</strong> is correct because Mediator is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as reducing direct coupling among many UI components or colleagues.</p>"
+  },
+  {
+    "id": 8276,
+    "text": "What is a common benefit of using the Mediator pattern well?",
+    "choices": [
+      "It improves design by helping with reducing direct coupling among many UI components or colleagues",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with reducing direct coupling among many UI components or colleagues</strong> is correct because Mediator is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Mediator specifically to support reducing direct coupling among many UI components or colleagues.</p>"
+  },
+  {
+    "id": 8277,
+    "text": "Which design pattern passes a request through a sequence of handlers until one handles it?",
+    "choices": [
+      "Chain of Responsibility",
+      "Prototype",
+      "Memento",
+      "Flyweight"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Chain of Responsibility</strong> is correct because it passes a request through a sequence of handlers until one handles it.</p><p>Example use case: middleware pipelines or approval chains.</p>"
+  },
+  {
+    "id": 8278,
+    "text": "Chain of Responsibility belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Chain of Responsibility is classified under that pattern family.</p><p>Example: Chain of Responsibility is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8279,
+    "text": "Which scenario is the best fit for the Chain of Responsibility pattern?",
+    "choices": [
+      "middleware pipelines or approval chains",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>middleware pipelines or approval chains</strong> is correct because Chain of Responsibility is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as middleware pipelines or approval chains.</p>"
+  },
+  {
+    "id": 8280,
+    "text": "What is a common benefit of using the Chain of Responsibility pattern well?",
+    "choices": [
+      "It improves design by helping with middleware pipelines or approval chains",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with middleware pipelines or approval chains</strong> is correct because Chain of Responsibility is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Chain of Responsibility specifically to support middleware pipelines or approval chains.</p>"
+  },
+  {
+    "id": 8281,
+    "text": "Which design pattern captures and restores object state without exposing internals?",
+    "choices": [
+      "Memento",
+      "Adapter",
+      "Strategy",
+      "Bridge"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Memento</strong> is correct because it captures and restores object state without exposing internals.</p><p>Example use case: undo, restore, or checkpoint features.</p>"
+  },
+  {
+    "id": 8282,
+    "text": "Memento belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Memento is classified under that pattern family.</p><p>Example: Memento is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8283,
+    "text": "Which scenario is the best fit for the Memento pattern?",
+    "choices": [
+      "undo, restore, or checkpoint features",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>undo, restore, or checkpoint features</strong> is correct because Memento is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as undo, restore, or checkpoint features.</p>"
+  },
+  {
+    "id": 8284,
+    "text": "What is a common benefit of using the Memento pattern well?",
+    "choices": [
+      "It improves design by helping with undo, restore, or checkpoint features",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with undo, restore, or checkpoint features</strong> is correct because Memento is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Memento specifically to support undo, restore, or checkpoint features.</p>"
+  },
+  {
+    "id": 8285,
+    "text": "Which design pattern adds operations to object structures without changing the element classes?",
+    "choices": [
+      "Visitor",
+      "Singleton",
+      "Observer",
+      "Proxy"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Visitor</strong> is correct because it adds operations to object structures without changing the element classes.</p><p>Example use case: running several different operations over one object tree.</p>"
+  },
+  {
+    "id": 8286,
+    "text": "Visitor belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Visitor is classified under that pattern family.</p><p>Example: Visitor is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8287,
+    "text": "Which scenario is the best fit for the Visitor pattern?",
+    "choices": [
+      "running several different operations over one object tree",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>running several different operations over one object tree</strong> is correct because Visitor is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as running several different operations over one object tree.</p>"
+  },
+  {
+    "id": 8288,
+    "text": "What is a common benefit of using the Visitor pattern well?",
+    "choices": [
+      "It improves design by helping with running several different operations over one object tree",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with running several different operations over one object tree</strong> is correct because Visitor is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Visitor specifically to support running several different operations over one object tree.</p>"
+  },
+  {
+    "id": 8289,
+    "text": "Which design pattern represents and evaluates a simple grammar or expression language?",
+    "choices": [
+      "Interpreter",
+      "Facade",
+      "Builder",
+      "Composite"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Interpreter</strong> is correct because it represents and evaluates a simple grammar or expression language.</p><p>Example use case: processing simple rule or expression syntax.</p>"
+  },
+  {
+    "id": 8290,
+    "text": "Interpreter belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Interpreter is classified under that pattern family.</p><p>Example: Interpreter is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8291,
+    "text": "Which scenario is the best fit for the Interpreter pattern?",
+    "choices": [
+      "processing simple rule or expression syntax",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>processing simple rule or expression syntax</strong> is correct because Interpreter is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as processing simple rule or expression syntax.</p>"
+  },
+  {
+    "id": 8292,
+    "text": "What is a common benefit of using the Interpreter pattern well?",
+    "choices": [
+      "It improves design by helping with processing simple rule or expression syntax",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with processing simple rule or expression syntax</strong> is correct because Interpreter is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Interpreter specifically to support processing simple rule or expression syntax.</p>"
+  },
+  {
+    "id": 8293,
+    "text": "Which design pattern provides a do-nothing implementation so clients can avoid repeated null checks?",
+    "choices": [
+      "Null Object",
+      "Factory Method",
+      "Visitor",
+      "State"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Null Object</strong> is correct because it provides a do-nothing implementation so clients can avoid repeated null checks.</p><p>Example use case: replacing absent dependencies with safe no-op behavior.</p>"
+  },
+  {
+    "id": 8294,
+    "text": "Null Object belongs to which major pattern category?",
+    "choices": [
+      "Behavioral",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Behavioral</strong> is correct because Null Object is classified under that pattern family.</p><p>Example: Null Object is commonly discussed as part of behavioral pattern design.</p>"
+  },
+  {
+    "id": 8295,
+    "text": "Which scenario is the best fit for the Null Object pattern?",
+    "choices": [
+      "replacing absent dependencies with safe no-op behavior",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>replacing absent dependencies with safe no-op behavior</strong> is correct because Null Object is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as replacing absent dependencies with safe no-op behavior.</p>"
+  },
+  {
+    "id": 8296,
+    "text": "What is a common benefit of using the Null Object pattern well?",
+    "choices": [
+      "It improves design by helping with replacing absent dependencies with safe no-op behavior",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with replacing absent dependencies with safe no-op behavior</strong> is correct because Null Object is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Null Object specifically to support replacing absent dependencies with safe no-op behavior.</p>"
+  },
+  {
+    "id": 8297,
+    "text": "Which design pattern supplies dependencies from outside instead of creating them internally?",
+    "choices": [
+      "Dependency Injection",
+      "Flyweight",
+      "Template Method",
+      "Memento"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Dependency Injection</strong> is correct because it supplies dependencies from outside instead of creating them internally.</p><p>Example use case: reducing coupling and improving testability.</p>"
+  },
+  {
+    "id": 8298,
+    "text": "Dependency Injection belongs to which major pattern category?",
+    "choices": [
+      "Architectural / Creational",
+      "Database",
+      "Syntax",
+      "Networking"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>Architectural / Creational</strong> is correct because Dependency Injection is classified under that pattern family.</p><p>Example: Dependency Injection is commonly discussed as part of architectural / creational pattern design.</p>"
+  },
+  {
+    "id": 8299,
+    "text": "Which scenario is the best fit for the Dependency Injection pattern?",
+    "choices": [
+      "reducing coupling and improving testability",
+      "Sorting numbers with quick sort",
+      "Performing SQL joins between tables",
+      "Calculating Big O notation manually"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>reducing coupling and improving testability</strong> is correct because Dependency Injection is most helpful in that kind of design situation.</p><p>Reason: the pattern exists to solve recurring design problems such as reducing coupling and improving testability.</p>"
+  },
+  {
+    "id": 8300,
+    "text": "What is a common benefit of using the Dependency Injection pattern well?",
+    "choices": [
+      "It improves design by helping with reducing coupling and improving testability",
+      "It guarantees zero bugs in production",
+      "It automatically makes every algorithm O(1)",
+      "It removes the need for interfaces or abstraction"
+    ],
+    "correctIndex": 0,
+    "topic": "DP",
+    "explanation": "<p><strong>It improves design by helping with reducing coupling and improving testability</strong> is correct because Dependency Injection is valuable when it makes responsibilities clearer and the design easier to extend.</p><p>Example: teams often choose Dependency Injection specifically to support reducing coupling and improving testability.</p>"
+  }
+]

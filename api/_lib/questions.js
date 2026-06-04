@@ -44,6 +44,12 @@ function formatTopicLabel(topic) {
   if (topic === 'amq') {
     return 'AMQ';
   }
+  if (topic === 'dsa') {
+    return 'DSA';
+  }
+  if (topic === 'dp') {
+    return 'DP';
+  }
   if (topic === 'springboot') {
     return 'Spring Boot';
   }

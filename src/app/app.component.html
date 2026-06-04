@@ -51,7 +51,10 @@
       class="question-card"
     >
       <div class="question-topic">{{ question.topic }}</div>
-      <div class="question-text">{{ question.text }}</div>
+      <div
+        class="question-text"
+        [innerHTML]="formatQuestionText(question.text)"
+      ></div>
 
       <div class="choices">
         <label
