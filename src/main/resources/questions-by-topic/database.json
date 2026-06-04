@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 7801,
+    "text": "What does SQL stand for?",
+    "choices": [
+      "Structured Query Language",
+      "Simple Query Logic",
+      "Standard Question Language",
+      "Sequential Query Layer"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Structured Query Language</strong> is correct because SQL is the standard language used to define, query, and modify relational database data.</p><p>Example: <code>SELECT * FROM users;</code> is a SQL query.</p>"
+  },
+  {
+    "id": 7802,
+    "text": "Which SQL statement is used to retrieve rows from a table?",
+    "choices": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>SELECT</strong> is correct because The <code>SELECT</code> statement is used to read data from one or more tables.</p><pre><code class=\"language-sql\">SELECT id, name FROM customers;</code></pre>"
+  },
+  {
+    "id": 7803,
+    "text": "Which SQL statement adds new rows to a table?",
+    "choices": [
+      "INSERT",
+      "CREATE",
+      "ALTER",
+      "TRUNCATE"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>INSERT</strong> is correct because The <code>INSERT</code> statement creates new rows in a table.</p><pre><code class=\"language-sql\">INSERT INTO tasks (title, status) VALUES ('Learn SQL', 'todo');</code></pre>"
+  },
+  {
+    "id": 7804,
+    "text": "Which SQL statement modifies existing rows?",
+    "choices": [
+      "UPDATE",
+      "MERGE",
+      "PATCH",
+      "ALTER"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>UPDATE</strong> is correct because The <code>UPDATE</code> statement changes values in rows that already exist.</p><pre><code class=\"language-sql\">UPDATE tasks SET status = 'done' WHERE id = 1;</code></pre>"
+  },
+  {
+    "id": 7805,
+    "text": "Which SQL statement removes rows from a table?",
+    "choices": [
+      "DELETE",
+      "DROP",
+      "CLEAR",
+      "REMOVE"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>DELETE</strong> is correct because The <code>DELETE</code> statement removes matching rows while keeping the table structure.</p><pre><code class=\"language-sql\">DELETE FROM tasks WHERE id = 1;</code></pre>"
+  },
+  {
+    "id": 7806,
+    "text": "Which SQL clause filters rows based on a condition?",
+    "choices": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "GROUP BY"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>WHERE</strong> is correct because The <code>WHERE</code> clause limits which rows are returned or modified based on predicates.</p><pre><code class=\"language-sql\">SELECT * FROM orders WHERE status = 'PAID';</code></pre>"
+  },
+  {
+    "id": 7807,
+    "text": "Which SQL clause sorts query results?",
+    "choices": [
+      "ORDER BY",
+      "SORT BY",
+      "ARRANGE",
+      "GROUP BY"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>ORDER BY</strong> is correct because The <code>ORDER BY</code> clause controls the order of returned rows.</p><pre><code class=\"language-sql\">SELECT name FROM customers ORDER BY created_at DESC;</code></pre>"
+  },
+  {
+    "id": 7808,
+    "text": "Which SQL clause groups rows for aggregation?",
+    "choices": [
+      "GROUP BY",
+      "PARTITION BY",
+      "ORDER BY",
+      "JOIN BY"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>GROUP BY</strong> is correct because The <code>GROUP BY</code> clause groups rows that share the same value so aggregate functions can be applied.</p><pre><code class=\"language-sql\">SELECT department_id, COUNT(*)\nFROM employees\nGROUP BY department_id;</code></pre>"
+  },
+  {
+    "id": 7809,
+    "text": "Which SQL clause filters grouped results after aggregation?",
+    "choices": [
+      "HAVING",
+      "WHERE",
+      "GROUP BY",
+      "LIMIT"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>HAVING</strong> is correct because The <code>HAVING</code> clause is used after grouping to filter aggregate results.</p><pre><code class=\"language-sql\">SELECT department_id, COUNT(*) AS total\nFROM employees\nGROUP BY department_id\nHAVING COUNT(*) &gt; 5;</code></pre>"
+  },
+  {
+    "id": 7810,
+    "text": "Which aggregate function returns the number of rows?",
+    "choices": [
+      "COUNT()",
+      "TOTAL()",
+      "SUM()",
+      "SIZE()"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>COUNT()</strong> is correct because The <code>COUNT()</code> function returns how many rows or non-null values match the query.</p><pre><code class=\"language-sql\">SELECT COUNT(*) FROM orders;</code></pre>"
+  },
+  {
+    "id": 7811,
+    "text": "Which aggregate function returns the total of numeric values?",
+    "choices": [
+      "SUM()",
+      "COUNT()",
+      "ADD()",
+      "ACCUMULATE()"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>SUM()</strong> is correct because The <code>SUM()</code> function adds numeric values across matching rows.</p><pre><code class=\"language-sql\">SELECT SUM(amount) FROM payments;</code></pre>"
+  },
+  {
+    "id": 7812,
+    "text": "Which aggregate function returns the average of numeric values?",
+    "choices": [
+      "AVG()",
+      "MEAN()",
+      "MID()",
+      "SUM()"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>AVG()</strong> is correct because The <code>AVG()</code> function computes the average of numeric values.</p><pre><code class=\"language-sql\">SELECT AVG(price) FROM products;</code></pre>"
+  },
+  {
+    "id": 7813,
+    "text": "Which aggregate function returns the highest value?",
+    "choices": [
+      "MAX()",
+      "TOP()",
+      "HIGH()",
+      "LAST()"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>MAX()</strong> is correct because The <code>MAX()</code> function returns the greatest value in the result set.</p><pre><code class=\"language-sql\">SELECT MAX(salary) FROM employees;</code></pre>"
+  },
+  {
+    "id": 7814,
+    "text": "Which aggregate function returns the lowest value?",
+    "choices": [
+      "MIN()",
+      "LOW()",
+      "BOTTOM()",
+      "FIRST()"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>MIN()</strong> is correct because The <code>MIN()</code> function returns the smallest value in the result set.</p><pre><code class=\"language-sql\">SELECT MIN(created_at) FROM sessions;</code></pre>"
+  },
+  {
+    "id": 7815,
+    "text": "What does a primary key do?",
+    "choices": [
+      "Uniquely identifies each row in a table",
+      "Stores only numeric data",
+      "Sorts rows automatically",
+      "Creates a backup table"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Uniquely identifies each row in a table</strong> is correct because A primary key enforces uniqueness and non-null identity for each row.</p><pre><code class=\"language-sql\">CREATE TABLE users (\n  id BIGINT PRIMARY KEY,\n  name VARCHAR(100)\n);</code></pre>"
+  },
+  {
+    "id": 7816,
+    "text": "What does a foreign key do?",
+    "choices": [
+      "Enforces a relationship to a row in another table",
+      "Encrypts table data",
+      "Stores JSON documents",
+      "Creates indexes automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Enforces a relationship to a row in another table</strong> is correct because A foreign key ensures referenced values exist in the related parent table.</p><pre><code class=\"language-sql\">ALTER TABLE orders\nADD CONSTRAINT fk_orders_customer\nFOREIGN KEY (customer_id) REFERENCES customers(id);</code></pre>"
+  },
+  {
+    "id": 7817,
+    "text": "What is a relational database?",
+    "choices": [
+      "A database that stores data in related tables",
+      "A database that stores only files",
+      "A spreadsheet-only system",
+      "A messaging queue"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A database that stores data in related tables</strong> is correct because Relational databases organize data into tables with defined relationships, often enforced through keys.</p><p>Example: customers and orders are stored in separate tables linked by <code>customer_id</code>.</p>"
+  },
+  {
+    "id": 7818,
+    "text": "What is a NoSQL database?",
+    "choices": [
+      "A non-relational database designed for flexible or specialized data models",
+      "A database that cannot run queries",
+      "A system without persistence",
+      "Only a graph database"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A non-relational database designed for flexible or specialized data models</strong> is correct because NoSQL databases often prioritize scale, flexible schema, or specialized access patterns instead of rigid relational structure.</p><p>Example: a document database may store an order and its line items in one JSON-like document.</p>"
+  },
+  {
+    "id": 7819,
+    "text": "Which type of NoSQL database stores JSON-like documents?",
+    "choices": [
+      "Document database",
+      "Column family database",
+      "Graph database",
+      "Key-value database only"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Document database</strong> is correct because Document databases store records as flexible structured documents rather than rows in fixed tables.</p><p>Example: MongoDB is a common document database.</p>"
+  },
+  {
+    "id": 7820,
+    "text": "Which type of NoSQL database stores data as simple key-value pairs?",
+    "choices": [
+      "Key-value database",
+      "Graph database",
+      "Document database",
+      "Relational database"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Key-value database</strong> is correct because Key-value stores are optimized for very fast lookup by key.</p><p>Example: Redis is often used as a key-value store for caching and sessions.</p>"
+  },
+  {
+    "id": 7821,
+    "text": "Which type of NoSQL database is optimized for relationships between entities?",
+    "choices": [
+      "Graph database",
+      "Document database",
+      "Time-series database",
+      "Key-value store"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Graph database</strong> is correct because Graph databases model nodes and edges, which makes relationship-heavy queries efficient.</p><p>Example: social network friend connections are a strong graph use case.</p>"
+  },
+  {
+    "id": 7822,
+    "text": "Which type of NoSQL database is designed for wide sparse datasets and large-scale writes?",
+    "choices": [
+      "Column family database",
+      "Document database",
+      "Graph database",
+      "Relational database"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Column family database</strong> is correct because Column family databases are useful for massive distributed datasets with flexible per-row columns.</p><p>Example: Cassandra is a well-known column family database.</p>"
+  },
+  {
+    "id": 7823,
+    "text": "What is an inner join?",
+    "choices": [
+      "A join that returns rows with matching values in both tables",
+      "A join that returns all rows from the left table",
+      "A join that returns unmatched rows only",
+      "A join that duplicates every row"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A join that returns rows with matching values in both tables</strong> is correct because An inner join keeps only records that satisfy the join condition on both sides.</p><pre><code class=\"language-sql\">SELECT o.id, c.name\nFROM orders o\nINNER JOIN customers c ON o.customer_id = c.id;</code></pre>"
+  },
+  {
+    "id": 7824,
+    "text": "What is a left join?",
+    "choices": [
+      "A join that returns all rows from the left table and matches from the right",
+      "A join that returns all rows from both tables",
+      "A join that excludes nulls entirely",
+      "A join that returns only unmatched rows"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A join that returns all rows from the left table and matches from the right</strong> is correct because A left join preserves every row from the left table even when no match exists on the right side.</p><pre><code class=\"language-sql\">SELECT c.name, o.id\nFROM customers c\nLEFT JOIN orders o ON c.id = o.customer_id;</code></pre>"
+  },
+  {
+    "id": 7825,
+    "text": "What is a right join?",
+    "choices": [
+      "A join that returns all rows from the right table and matches from the left",
+      "A join that always sorts ascending",
+      "A join that removes duplicates automatically",
+      "A join with no condition"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A join that returns all rows from the right table and matches from the left</strong> is correct because A right join preserves every row from the right table even when there is no match on the left side.</p><pre><code class=\"language-sql\">SELECT o.id, c.name\nFROM customers c\nRIGHT JOIN orders o ON c.id = o.customer_id;</code></pre>"
+  },
+  {
+    "id": 7826,
+    "text": "What is a full outer join?",
+    "choices": [
+      "A join that returns matched rows plus unmatched rows from both sides",
+      "A join that returns only exact duplicates",
+      "A join that groups rows before filtering",
+      "A join that requires three tables"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A join that returns matched rows plus unmatched rows from both sides</strong> is correct because A full outer join keeps all rows from both tables, filling missing matches with nulls.</p><pre><code class=\"language-sql\">SELECT a.id, b.id\nFROM table_a a\nFULL OUTER JOIN table_b b ON a.id = b.id;</code></pre>"
+  },
+  {
+    "id": 7827,
+    "text": "What is a cross join?",
+    "choices": [
+      "A join that returns the Cartesian product of two tables",
+      "A join that requires matching keys",
+      "A join that removes nulls",
+      "A join that sorts data"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A join that returns the Cartesian product of two tables</strong> is correct because A cross join pairs every row from one table with every row from the other table.</p><pre><code class=\"language-sql\">SELECT c.name, p.name\nFROM colors c\nCROSS JOIN products p;</code></pre>"
+  },
+  {
+    "id": 7828,
+    "text": "What is a self join?",
+    "choices": [
+      "A join where a table is joined to itself",
+      "A join that requires no aliases",
+      "A join on three tables at once",
+      "A join that uses only indexes"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A join where a table is joined to itself</strong> is correct because A self join is useful when rows in the same table relate to other rows in that same table.</p><pre><code class=\"language-sql\">SELECT e.name, m.name AS manager_name\nFROM employees e\nLEFT JOIN employees m ON e.manager_id = m.id;</code></pre>"
+  },
+  {
+    "id": 7829,
+    "text": "What is an index?",
+    "choices": [
+      "A data structure that speeds up data lookup",
+      "A type of backup only",
+      "A transaction log",
+      "A table relationship"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A data structure that speeds up data lookup</strong> is correct because Indexes improve query performance by letting the database find rows without scanning the whole table every time.</p><pre><code class=\"language-sql\">CREATE INDEX idx_orders_status ON orders(status);</code></pre>"
+  },
+  {
+    "id": 7830,
+    "text": "What is a common tradeoff of adding indexes?",
+    "choices": [
+      "Faster reads but slower writes and more storage usage",
+      "Faster writes and no storage cost",
+      "Automatic normalization",
+      "Guaranteed perfect plans"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Faster reads but slower writes and more storage usage</strong> is correct because Indexes help read performance, but inserts, updates, and deletes must also maintain them.</p><p>Example: a heavily indexed table can slow bulk insert performance.</p>"
+  },
+  {
+    "id": 7831,
+    "text": "When is an index especially useful?",
+    "choices": [
+      "When queries frequently filter or join on the indexed column",
+      "When a table has no reads",
+      "When storing binary files only",
+      "When every row has the same value"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>When queries frequently filter or join on the indexed column</strong> is correct because Indexes are most valuable on columns used in <code>WHERE</code>, <code>JOIN</code>, or <code>ORDER BY</code> clauses.</p><p>Example: indexing <code>customer_id</code> helps order lookups by customer.</p>"
+  },
+  {
+    "id": 7832,
+    "text": "What is a composite index?",
+    "choices": [
+      "An index built on multiple columns",
+      "An index stored in JSON format",
+      "An index that spans multiple databases",
+      "An index for only text search"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>An index built on multiple columns</strong> is correct because Composite indexes are useful when queries commonly filter or sort by more than one column together.</p><pre><code class=\"language-sql\">CREATE INDEX idx_orders_customer_status ON orders(customer_id, status);</code></pre>"
+  },
+  {
+    "id": 7833,
+    "text": "Why does column order matter in a composite index?",
+    "choices": [
+      "Because databases can use the leading columns most effectively",
+      "Because later columns are ignored forever",
+      "Because the index becomes unique automatically",
+      "Because column order only affects storage size"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Because databases can use the leading columns most effectively</strong> is correct because The leftmost columns in a composite index are usually the most important for index matching.</p><p>Example: an index on <code>(customer_id, status)</code> helps queries by <code>customer_id</code> more directly than queries by <code>status</code> alone.</p>"
+  },
+  {
+    "id": 7834,
+    "text": "What is a clustered index conceptually?",
+    "choices": [
+      "An index that determines the physical order of rows in some database systems",
+      "An index stored only in memory",
+      "An index shared across all tables",
+      "An index that can never be unique"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>An index that determines the physical order of rows in some database systems</strong> is correct because In systems that support clustered organization, the table data itself follows the clustered index order.</p><p>Example: some databases store rows physically by the primary key clustered index.</p>"
+  },
+  {
+    "id": 7835,
+    "text": "What is a non-clustered index conceptually?",
+    "choices": [
+      "A separate structure that points to table rows",
+      "An index that stores no keys",
+      "An index that changes transaction isolation",
+      "An index for temporary tables only"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A separate structure that points to table rows</strong> is correct because Non-clustered indexes usually store indexed values plus pointers or row identifiers to the actual data.</p><p>Example: a secondary index on <code>email</code> can point to the matching user row.</p>"
+  },
+  {
+    "id": 7836,
+    "text": "What is a table scan?",
+    "choices": [
+      "Reading all rows in a table to find matches",
+      "A backup restore process",
+      "A query plan cache",
+      "A clustered index rebuild"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Reading all rows in a table to find matches</strong> is correct because A table scan can be expensive on large tables because the database must inspect every row.</p><p>Example: querying an unindexed status column on a 50-million-row table may trigger a full scan.</p>"
+  },
+  {
+    "id": 7837,
+    "text": "What is an execution plan?",
+    "choices": [
+      "The database engine’s strategy for running a query",
+      "A database schema definition file",
+      "A transaction backup",
+      "A list of tables only"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>The database engine’s strategy for running a query</strong> is correct because Execution plans show how the optimizer intends to access tables, use indexes, and perform joins.</p><p>Example: an execution plan can show whether a query uses an index seek or a full table scan.</p>"
+  },
+  {
+    "id": 7838,
+    "text": "Why should execution plans be checked during query tuning?",
+    "choices": [
+      "They reveal how the database is actually executing the query",
+      "They automatically rewrite queries",
+      "They only matter for NoSQL databases",
+      "They guarantee no locking"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>They reveal how the database is actually executing the query</strong> is correct because A query that looks simple in SQL may still perform poorly depending on joins, filters, and indexes.</p><p>Example: a missing index often becomes obvious when the plan shows repeated full scans.</p>"
+  },
+  {
+    "id": 7839,
+    "text": "What is query optimization?",
+    "choices": [
+      "Improving a query so it uses resources more efficiently",
+      "Encrypting query text",
+      "Normalizing every table to 5NF",
+      "Converting SQL into NoSQL"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Improving a query so it uses resources more efficiently</strong> is correct because Query optimization focuses on reducing latency, I/O, CPU, and memory cost while returning the correct result.</p><p>Example: replacing <code>SELECT *</code> with only needed columns can reduce I/O.</p>"
+  },
+  {
+    "id": 7840,
+    "text": "Why is SELECT * often discouraged in production queries?",
+    "choices": [
+      "It can read unnecessary columns and increase I/O",
+      "It is invalid SQL",
+      "It disables indexes completely",
+      "It always causes deadlocks"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>It can read unnecessary columns and increase I/O</strong> is correct because Selecting only required columns usually improves performance and reduces network and memory usage.</p><pre><code class=\"language-sql\">SELECT id, name, email FROM users;</code></pre>"
+  },
+  {
+    "id": 7841,
+    "text": "What is normalization?",
+    "choices": [
+      "Organizing relational data to reduce redundancy and anomalies",
+      "Compressing rows to save disk",
+      "Copying data across shards",
+      "A type of query cache"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Organizing relational data to reduce redundancy and anomalies</strong> is correct because Normalization structures tables so data is stored once in the right place and updated consistently.</p><p>Example: storing customer details in one customer table is more normalized than repeating them in every order row.</p>"
+  },
+  {
+    "id": 7842,
+    "text": "What problem does normalization primarily try to reduce?",
+    "choices": [
+      "Redundant duplicated data and update anomalies",
+      "Lack of indexes",
+      "Transaction isolation conflicts only",
+      "JSON document size"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Redundant duplicated data and update anomalies</strong> is correct because Without normalization, the same fact may be repeated in many places and become inconsistent during updates.</p><p>Example: changing one customer address should not require editing hundreds of order rows.</p>"
+  },
+  {
+    "id": 7843,
+    "text": "What is First Normal Form (1NF)?",
+    "choices": [
+      "A table structure where each column holds atomic values and rows are uniquely identifiable",
+      "A table with no foreign keys",
+      "A table with only one column",
+      "A table stored in memory"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A table structure where each column holds atomic values and rows are uniquely identifiable</strong> is correct because 1NF removes repeating groups and requires scalar values rather than arrays stuffed into one column in a relational design.</p><p>Example: instead of one column containing <code>red,blue,green</code>, store values properly in related rows.</p>"
+  },
+  {
+    "id": 7844,
+    "text": "What is Second Normal Form (2NF)?",
+    "choices": [
+      "1NF plus removal of partial dependency on part of a composite key",
+      "A table with only one index",
+      "A rule that forbids joins",
+      "A requirement for NoSQL storage"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>1NF plus removal of partial dependency on part of a composite key</strong> is correct because 2NF matters when a table has a composite key and non-key columns depend on only part of that key.</p><p>Example: if <code>course_name</code> depends only on <code>course_id</code>, it should not be repeated in an enrollment table keyed by <code>(student_id, course_id)</code>.</p>"
+  },
+  {
+    "id": 7845,
+    "text": "What is Third Normal Form (3NF)?",
+    "choices": [
+      "2NF plus removal of transitive dependencies",
+      "A requirement that every table has three columns",
+      "A rule that all queries use subqueries",
+      "A form of index compression"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>2NF plus removal of transitive dependencies</strong> is correct because 3NF keeps non-key attributes dependent only on the key, not on other non-key attributes.</p><p>Example: storing department name in an employee row when it really depends on department ID is a transitive dependency.</p>"
+  },
+  {
+    "id": 7846,
+    "text": "What is denormalization?",
+    "choices": [
+      "Intentionally adding redundancy to improve certain read patterns",
+      "Removing all indexes",
+      "Converting rows to XML",
+      "Disabling constraints"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Intentionally adding redundancy to improve certain read patterns</strong> is correct because Denormalization is sometimes used for performance or reporting convenience when read speed matters more than perfect normalization.</p><p>Example: a reporting table might store customer name with each order snapshot to avoid repeated joins.</p>"
+  },
+  {
+    "id": 7847,
+    "text": "What is a transaction?",
+    "choices": [
+      "A unit of work that should succeed or fail as one logical operation",
+      "A single SQL keyword only",
+      "A table backup file",
+      "An index rebuild command"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A unit of work that should succeed or fail as one logical operation</strong> is correct because Transactions group related changes so the database can preserve correctness during success or failure.</p><pre><code class=\"language-sql\">BEGIN;\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT;</code></pre>"
+  },
+  {
+    "id": 7848,
+    "text": "What does ACID stand for?",
+    "choices": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Availability, Concurrency, Integrity, Distribution",
+      "Atomicity, Caching, Indexing, Durability",
+      "Accuracy, Consistency, Isolation, Duplication"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Atomicity, Consistency, Isolation, Durability</strong> is correct because ACID describes core transaction guarantees in relational database systems.</p><p>Example: a transfer should either fully happen or fully fail while remaining durable once committed.</p>"
+  },
+  {
+    "id": 7849,
+    "text": "What does Atomicity mean in ACID?",
+    "choices": [
+      "All steps of a transaction happen or none do",
+      "The transaction runs instantly",
+      "Only one user can query at a time",
+      "Rows are stored in key order"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>All steps of a transaction happen or none do</strong> is correct because Atomicity prevents partial success from leaving the database in an inconsistent state.</p><p>Example: debiting one bank account without crediting the other must not be left half-finished.</p>"
+  },
+  {
+    "id": 7850,
+    "text": "What does Consistency mean in ACID?",
+    "choices": [
+      "A transaction moves the database from one valid state to another",
+      "Every query always returns the newest data globally",
+      "The database schema never changes",
+      "Indexes are rebuilt automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A transaction moves the database from one valid state to another</strong> is correct because Consistency means constraints, rules, and invariants still hold after a committed transaction.</p><p>Example: a foreign key reference should not point to a non-existent parent row after commit.</p>"
+  },
+  {
+    "id": 7851,
+    "text": "What does Isolation mean in ACID?",
+    "choices": [
+      "Concurrent transactions should not interfere in unsafe ways",
+      "Only one transaction can run at a time",
+      "Transactions cannot read data",
+      "Every query is serialized by default in every system"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Concurrent transactions should not interfere in unsafe ways</strong> is correct because Isolation defines how much concurrent transactions can see or affect each other before commit.</p><p>Example: one transaction should not read half-completed updates from another transaction unless the isolation level allows it.</p>"
+  },
+  {
+    "id": 7852,
+    "text": "What does Durability mean in ACID?",
+    "choices": [
+      "Committed data should survive crashes",
+      "Queries should always use indexes",
+      "Rows should be stored in memory",
+      "Transactions should never block"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Committed data should survive crashes</strong> is correct because Durability means once a transaction commits successfully, the database will recover that change even after failure.</p><p>Example: a committed order should still exist after a server restart.</p>"
+  },
+  {
+    "id": 7853,
+    "text": "What is a commit?",
+    "choices": [
+      "The operation that permanently saves a transaction’s changes",
+      "The operation that discards a transaction",
+      "A command that adds an index",
+      "A query optimization hint"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>The operation that permanently saves a transaction’s changes</strong> is correct because Committing makes the transaction’s updates visible as a finished durable unit of work.</p><pre><code class=\"language-sql\">COMMIT;</code></pre>"
+  },
+  {
+    "id": 7854,
+    "text": "What is a rollback?",
+    "choices": [
+      "The operation that cancels a transaction’s uncommitted changes",
+      "A command that speeds up reads",
+      "A type of join",
+      "A method of denormalization"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>The operation that cancels a transaction’s uncommitted changes</strong> is correct because Rollback is used when part of the transaction fails and the database should return to its earlier state.</p><pre><code class=\"language-sql\">ROLLBACK;</code></pre>"
+  },
+  {
+    "id": 7855,
+    "text": "What is an isolation level?",
+    "choices": [
+      "A configuration that controls how one transaction is affected by others",
+      "A schema normalization rule",
+      "A backup retention setting",
+      "A form of compression"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A configuration that controls how one transaction is affected by others</strong> is correct because Isolation levels balance correctness, locking, blocking, and concurrency behavior.</p><p>Example: stricter isolation can reduce anomalies but may increase contention.</p>"
+  },
+  {
+    "id": 7856,
+    "text": "Which isolation level allows dirty reads?",
+    "choices": [
+      "Read Uncommitted",
+      "Read Committed",
+      "Repeatable Read",
+      "Serializable"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Read Uncommitted</strong> is correct because Read Uncommitted is the weakest standard isolation level because it can expose uncommitted changes from other transactions.</p><p>Example: a transaction could read a value that another transaction later rolls back.</p>"
+  },
+  {
+    "id": 7857,
+    "text": "Which isolation level typically prevents dirty reads but still allows non-repeatable reads?",
+    "choices": [
+      "Read Committed",
+      "Read Uncommitted",
+      "Serializable",
+      "Snapshot only"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Read Committed</strong> is correct because Read Committed ensures a transaction only sees committed data, but repeated reads can still change if another transaction commits in between.</p><p>Example: the same row read twice may return different committed values if another transaction updates it.</p>"
+  },
+  {
+    "id": 7858,
+    "text": "Which isolation level typically prevents dirty reads and non-repeatable reads but may still allow phantoms?",
+    "choices": [
+      "Repeatable Read",
+      "Read Uncommitted",
+      "Read Committed",
+      "Autocommit"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Repeatable Read</strong> is correct because Repeatable Read keeps previously read rows stable for the duration of the transaction, though range results may still change depending on the database.</p><p>Example: rereading the same row returns the same version during the transaction.</p>"
+  },
+  {
+    "id": 7859,
+    "text": "Which isolation level is the strictest standard SQL level?",
+    "choices": [
+      "Serializable",
+      "Repeatable Read",
+      "Snapshot",
+      "Read Committed"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Serializable</strong> is correct because Serializable aims to make concurrent transactions behave as if they ran one after another.</p><p>Example: it prevents anomalies at the cost of reduced concurrency or more retries.</p>"
+  },
+  {
+    "id": 7860,
+    "text": "What is a dirty read?",
+    "choices": [
+      "Reading uncommitted data from another transaction",
+      "Reading the same row twice",
+      "Reading a row that has no index",
+      "Reading from a backup"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Reading uncommitted data from another transaction</strong> is correct because Dirty reads are dangerous because the data might be rolled back and never become real committed state.</p><p>Example: seeing an account balance update that another transaction later aborts is a dirty read.</p>"
+  },
+  {
+    "id": 7861,
+    "text": "What is a non-repeatable read?",
+    "choices": [
+      "Reading the same row twice and seeing different committed values",
+      "Reading uncommitted data",
+      "Reading different rows from a range",
+      "Reading from a replica"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Reading the same row twice and seeing different committed values</strong> is correct because This happens when another transaction updates and commits the row between two reads.</p><p>Example: first you read salary as 5000, then later in the same transaction you read 5500 after another transaction committed.</p>"
+  },
+  {
+    "id": 7862,
+    "text": "What is a phantom read?",
+    "choices": [
+      "Re-running a range query and seeing newly inserted or removed matching rows",
+      "Reading a deleted row from cache only",
+      "Reading your own uncommitted updates",
+      "Reading a column with null"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Re-running a range query and seeing newly inserted or removed matching rows</strong> is correct because Phantom reads involve changes in the set of rows matching a predicate, not just changes to one row value.</p><p>Example: counting all pending orders twice and seeing extra rows after another transaction inserts one.</p>"
+  },
+  {
+    "id": 7863,
+    "text": "What is a lock in database concurrency control?",
+    "choices": [
+      "A mechanism used to control concurrent access to data",
+      "A method for encrypting columns",
+      "A query cache structure",
+      "A normalization form"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A mechanism used to control concurrent access to data</strong> is correct because Locks help preserve consistency by preventing conflicting operations from happening unsafely at the same time.</p><p>Example: one transaction may hold a row lock while updating a balance.</p>"
+  },
+  {
+    "id": 7864,
+    "text": "What is a shared lock generally used for?",
+    "choices": [
+      "Allowing reads while preventing conflicting writes",
+      "Preventing both reads and writes by everyone",
+      "Compressing index pages",
+      "Replicating rows across shards"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Allowing reads while preventing conflicting writes</strong> is correct because Shared locks are often compatible with other readers but not with writers that want exclusive access.</p><p>Example: several transactions may read a row while a write lock is still blocked.</p>"
+  },
+  {
+    "id": 7865,
+    "text": "What is an exclusive lock generally used for?",
+    "choices": [
+      "Protecting data while it is being modified",
+      "Allowing any transaction to read uncommitted changes",
+      "Improving query sort order",
+      "Preventing all index usage"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Protecting data while it is being modified</strong> is correct because Exclusive locks block conflicting reads or writes depending on the isolation model and database implementation.</p><p>Example: updating a row often requires exclusive ownership of that row.</p>"
+  },
+  {
+    "id": 7866,
+    "text": "What is a deadlock?",
+    "choices": [
+      "A situation where transactions wait on each other in a cycle",
+      "A transaction that committed too early",
+      "A query with no index",
+      "A table with duplicate keys"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A situation where transactions wait on each other in a cycle</strong> is correct because Deadlocks happen when each transaction holds something the other one needs, so neither can progress.</p><p>Example: transaction A locks row 1 then waits on row 2 while transaction B locks row 2 then waits on row 1.</p>"
+  },
+  {
+    "id": 7867,
+    "text": "How do databases usually resolve deadlocks?",
+    "choices": [
+      "By aborting one of the transactions",
+      "By committing both immediately",
+      "By rebuilding indexes",
+      "By switching to NoSQL mode"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>By aborting one of the transactions</strong> is correct because The database typically chooses one transaction as the victim so the other can continue.</p><p>Example: one transaction is rolled back and may need to be retried by the application.</p>"
+  },
+  {
+    "id": 7868,
+    "text": "What is an autocommit mode?",
+    "choices": [
+      "A mode where each statement is committed automatically unless a transaction is started explicitly",
+      "A mode that disables writes",
+      "A setting that enables dirty reads",
+      "A query cache refresh policy"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A mode where each statement is committed automatically unless a transaction is started explicitly</strong> is correct because Autocommit is convenient for simple statements but less suitable for multi-step changes that must succeed together.</p><p>Example: a single <code>UPDATE</code> may commit immediately unless wrapped inside <code>BEGIN ... COMMIT</code>.</p>"
+  },
+  {
+    "id": 7869,
+    "text": "What is a unique constraint?",
+    "choices": [
+      "A rule that prevents duplicate values in a column or column set",
+      "A rule that sorts rows physically",
+      "A rule that encrypts a column",
+      "A type of full outer join"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A rule that prevents duplicate values in a column or column set</strong> is correct because Unique constraints enforce business rules like one account per email address.</p><pre><code class=\"language-sql\">ALTER TABLE users ADD CONSTRAINT uq_users_email UNIQUE (email);</code></pre>"
+  },
+  {
+    "id": 7870,
+    "text": "What is a check constraint?",
+    "choices": [
+      "A rule that validates data against a condition",
+      "A rule that references another table",
+      "A rule that rebuilds statistics",
+      "A rule that creates a temporary table"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A rule that validates data against a condition</strong> is correct because Check constraints keep invalid values out by enforcing logical expressions at write time.</p><pre><code class=\"language-sql\">ALTER TABLE accounts ADD CONSTRAINT chk_balance_non_negative CHECK (balance &gt;= 0);</code></pre>"
+  },
+  {
+    "id": 7871,
+    "text": "What is a not null constraint?",
+    "choices": [
+      "A rule that disallows null values in a column",
+      "A rule that removes blank strings",
+      "A rule that creates an index automatically",
+      "A rule that groups by the column"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A rule that disallows null values in a column</strong> is correct because Not null constraints are useful for required fields that must always have a value.</p><pre><code class=\"language-sql\">CREATE TABLE customers (\n  id BIGINT PRIMARY KEY,\n  email VARCHAR(255) NOT NULL\n);</code></pre>"
+  },
+  {
+    "id": 7872,
+    "text": "What is referential integrity?",
+    "choices": [
+      "Keeping relationships between tables valid",
+      "Keeping all rows physically sorted",
+      "Ensuring every query uses an index",
+      "Storing data only in memory"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Keeping relationships between tables valid</strong> is correct because Referential integrity means child rows must reference real parent rows and relationship rules stay consistent.</p><p>Example: an order should not reference a customer ID that does not exist.</p>"
+  },
+  {
+    "id": 7873,
+    "text": "What is cardinality in database design?",
+    "choices": [
+      "The nature of the relationship between entities, such as one-to-many or many-to-many",
+      "The number of indexes on a table only",
+      "A type of isolation level",
+      "The order of columns in SQL"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>The nature of the relationship between entities, such as one-to-many or many-to-many</strong> is correct because Cardinality helps model how tables should relate and how foreign keys or join tables should be structured.</p><p>Example: one customer can have many orders, so the cardinality is one-to-many.</p>"
+  },
+  {
+    "id": 7874,
+    "text": "How is a many-to-many relationship usually modeled in a relational database?",
+    "choices": [
+      "With a junction table",
+      "With one giant JSON column",
+      "With a trigger only",
+      "By duplicating rows in both tables"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>With a junction table</strong> is correct because A junction table stores pairs of related keys and keeps the model normalized and queryable.</p><pre><code class=\"language-sql\">CREATE TABLE student_course (\n  student_id BIGINT REFERENCES students(id),\n  course_id BIGINT REFERENCES courses(id),\n  PRIMARY KEY (student_id, course_id)\n);</code></pre>"
+  },
+  {
+    "id": 7875,
+    "text": "What is a view?",
+    "choices": [
+      "A virtual table defined by a query",
+      "A physical backup of a table",
+      "An index that stores JSON",
+      "A transaction snapshot on disk"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A virtual table defined by a query</strong> is correct because Views simplify repeated query logic and can expose only selected columns or rows.</p><pre><code class=\"language-sql\">CREATE VIEW active_customers AS\nSELECT id, name FROM customers WHERE active = true;</code></pre>"
+  },
+  {
+    "id": 7876,
+    "text": "What is a materialized view?",
+    "choices": [
+      "A stored query result that can be refreshed",
+      "A normal view with no definition",
+      "A unique index on a join",
+      "A transaction journal"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A stored query result that can be refreshed</strong> is correct because Materialized views trade storage and refresh cost for faster reads of expensive queries.</p><p>Example: a daily sales summary can be precomputed into a materialized view.</p>"
+  },
+  {
+    "id": 7877,
+    "text": "What is a subquery?",
+    "choices": [
+      "A query nested inside another query",
+      "A query that uses no tables",
+      "A query that always performs worse",
+      "A query that cannot use indexes"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A query nested inside another query</strong> is correct because Subqueries can help express filtering, comparison, or derived result logic in SQL.</p><pre><code class=\"language-sql\">SELECT name\nFROM customers\nWHERE id IN (SELECT customer_id FROM orders WHERE total &gt; 1000);</code></pre>"
+  },
+  {
+    "id": 7878,
+    "text": "What is a correlated subquery?",
+    "choices": [
+      "A subquery that references columns from the outer query",
+      "A subquery with no WHERE clause",
+      "A subquery that returns only one row",
+      "A subquery that cannot run in SQL"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A subquery that references columns from the outer query</strong> is correct because Correlated subqueries are evaluated in relation to each row of the outer query, which can be powerful but sometimes expensive.</p><pre><code class=\"language-sql\">SELECT c.name\nFROM customers c\nWHERE EXISTS (\n  SELECT 1 FROM orders o WHERE o.customer_id = c.id\n);</code></pre>"
+  },
+  {
+    "id": 7879,
+    "text": "What is a common reason joins outperform repeated application-side lookups?",
+    "choices": [
+      "The database can optimize set-based work efficiently",
+      "Joins always use no memory",
+      "Joins eliminate indexes",
+      "Joins disable transactions"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>The database can optimize set-based work efficiently</strong> is correct because Set-based operations let the optimizer choose efficient plans instead of making many round trips from application code.</p><p>Example: one join query is usually better than fetching 10,000 orders and then querying each customer separately.</p>"
+  },
+  {
+    "id": 7880,
+    "text": "What is a covering index conceptually?",
+    "choices": [
+      "An index that contains all columns needed by a query",
+      "An index that covers multiple databases",
+      "An index that replaces the primary key",
+      "An index that blocks writes"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>An index that contains all columns needed by a query</strong> is correct because Covering indexes can avoid extra lookups to the base table because the needed data is already in the index structure.</p><p>Example: a query selecting only <code>status</code> and filtering by <code>customer_id</code> may be satisfied from one composite index.</p>"
+  },
+  {
+    "id": 7881,
+    "text": "What is sharding?",
+    "choices": [
+      "Splitting data across multiple database instances",
+      "Compressing a table into one file",
+      "Adding more indexes to one table",
+      "Grouping rows with GROUP BY"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Splitting data across multiple database instances</strong> is correct because Sharding is used to scale horizontally when one database node is not enough for the workload.</p><p>Example: customers may be split across shards by region or customer ID range.</p>"
+  },
+  {
+    "id": 7882,
+    "text": "What is replication in databases?",
+    "choices": [
+      "Keeping copies of data on multiple servers",
+      "Running one query twice",
+      "Building indexes in parallel only",
+      "Converting SQL to NoSQL"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Keeping copies of data on multiple servers</strong> is correct because Replication improves availability, read scaling, and disaster recovery depending on the architecture.</p><p>Example: a primary node handles writes while replicas serve some reads.</p>"
+  },
+  {
+    "id": 7883,
+    "text": "What is eventual consistency?",
+    "choices": [
+      "A model where replicas or systems may become consistent after some delay",
+      "A guarantee that every read is instantly current",
+      "A form of strict serializability",
+      "A rule of 3NF"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A model where replicas or systems may become consistent after some delay</strong> is correct because Eventual consistency is common in distributed systems where immediate global synchronization is too expensive or impractical.</p><p>Example: a replicated NoSQL store may show the newest write on one node before another catches up.</p>"
+  },
+  {
+    "id": 7884,
+    "text": "What is strong consistency?",
+    "choices": [
+      "A model where reads reflect the most recent committed write according to the system’s guarantees",
+      "A model with no transactions",
+      "A system that never uses replication",
+      "A type of denormalization"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A model where reads reflect the most recent committed write according to the system’s guarantees</strong> is correct because Strong consistency prioritizes correct up-to-date reads even if latency or coordination cost is higher.</p><p>Example: a bank balance read should often reflect the latest committed transfer result.</p>"
+  },
+  {
+    "id": 7885,
+    "text": "Why can NoSQL databases be attractive for some workloads?",
+    "choices": [
+      "They can offer flexible schemas, horizontal scale, or specialized access models",
+      "They make joins faster than all relational databases in every case",
+      "They eliminate the need for data modeling",
+      "They always provide stronger transactions"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>They can offer flexible schemas, horizontal scale, or specialized access models</strong> is correct because Different NoSQL models are optimized for different patterns such as documents, graphs, caching, or wide-column data.</p><p>Example: a document store can evolve product attributes without repeated table migrations.</p>"
+  },
+  {
+    "id": 7886,
+    "text": "Why can relational databases still be a strong default choice?",
+    "choices": [
+      "They provide mature SQL, strong integrity rules, and well-understood transactions",
+      "They cannot scale reads",
+      "They do not support indexing",
+      "They only work for small datasets"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>They provide mature SQL, strong integrity rules, and well-understood transactions</strong> is correct because Relational systems are excellent when data relationships, consistency, and expressive querying matter.</p><p>Example: finance and order-management systems often rely heavily on relational guarantees.</p>"
+  },
+  {
+    "id": 7887,
+    "text": "What is query selectivity?",
+    "choices": [
+      "How narrowly a predicate reduces the result set",
+      "How many joins a query contains",
+      "How many tables are normalized",
+      "The number of ACID properties used"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>How narrowly a predicate reduces the result set</strong> is correct because High-selectivity filters often benefit more from indexes because they eliminate most rows quickly.</p><p>Example: filtering by a rare email address is more selective than filtering by a status used by half the table.</p>"
+  },
+  {
+    "id": 7888,
+    "text": "Why might an index not help on a very low-selectivity column?",
+    "choices": [
+      "Because too many rows match, making a scan cheaper",
+      "Because the database ignores indexes on strings",
+      "Because low-selectivity columns cannot be indexed",
+      "Because unique constraints disable scans"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Because too many rows match, making a scan cheaper</strong> is correct because If a predicate matches a large portion of the table, jumping through the index may cost more than scanning sequentially.</p><p>Example: an index on a boolean column is not always very useful when most rows share the same value.</p>"
+  },
+  {
+    "id": 7889,
+    "text": "What is a database statistics concept?",
+    "choices": [
+      "Metadata the optimizer uses to estimate row counts and plan queries",
+      "A backup copy of all rows",
+      "A type of lock escalation",
+      "A schema migration plan"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Metadata the optimizer uses to estimate row counts and plan queries</strong> is correct because Optimizers rely on table and index statistics to choose efficient join order, access paths, and algorithms.</p><p>Example: stale statistics can make the optimizer underestimate how many rows a filter returns.</p>"
+  },
+  {
+    "id": 7890,
+    "text": "Why can stale statistics hurt performance?",
+    "choices": [
+      "The optimizer may choose a poor execution plan",
+      "They automatically corrupt indexes",
+      "They disable transactions",
+      "They make every query full scan"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>The optimizer may choose a poor execution plan</strong> is correct because If the database has outdated assumptions about data distribution, it may pick inefficient strategies.</p><p>Example: a join order that worked for 1,000 rows may become terrible when the table has grown to 10 million rows.</p>"
+  },
+  {
+    "id": 7891,
+    "text": "What is parameterized SQL?",
+    "choices": [
+      "SQL that uses parameters instead of string-concatenated values",
+      "SQL stored only in a procedure",
+      "A query that cannot be reused",
+      "SQL that always uses temp tables"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>SQL that uses parameters instead of string-concatenated values</strong> is correct because Parameterized SQL improves safety and often performance by separating query structure from user-provided values.</p><pre><code class=\"language-sql\">SELECT * FROM users WHERE email = ?;</code></pre>"
+  },
+  {
+    "id": 7892,
+    "text": "Why is parameterized SQL important for security?",
+    "choices": [
+      "It helps prevent SQL injection",
+      "It disables all joins",
+      "It normalizes every table",
+      "It makes transactions unnecessary"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>It helps prevent SQL injection</strong> is correct because Separating parameters from the SQL text keeps attacker input from changing the query structure.</p><p>Example: a login query should bind the username value instead of concatenating it into raw SQL text.</p>"
+  },
+  {
+    "id": 7893,
+    "text": "What is SQL injection?",
+    "choices": [
+      "An attack where untrusted input changes the meaning of a query",
+      "A performance tuning method",
+      "A backup restore process",
+      "A transaction rollback"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>An attack where untrusted input changes the meaning of a query</strong> is correct because SQL injection happens when application code builds query strings unsafely with user input.</p><p>Example: a malicious login input could turn a simple filter into a condition that always evaluates true.</p>"
+  },
+  {
+    "id": 7894,
+    "text": "What is a stored procedure?",
+    "choices": [
+      "A database-side routine containing SQL logic",
+      "An index stored in RAM",
+      "A backup format for schemas",
+      "A transaction log entry"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A database-side routine containing SQL logic</strong> is correct because Stored procedures can encapsulate business logic or repeated database operations close to the data.</p><pre><code class=\"language-sql\">CREATE PROCEDURE mark_order_paid(IN p_order_id BIGINT)\nBEGIN\n  UPDATE orders SET status = 'PAID' WHERE id = p_order_id;\nEND;</code></pre>"
+  },
+  {
+    "id": 7895,
+    "text": "What is a trigger?",
+    "choices": [
+      "A database routine that runs automatically on certain table events",
+      "A type of foreign key only",
+      "A query optimizer plan",
+      "A replica failover node"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>A database routine that runs automatically on certain table events</strong> is correct because Triggers fire in response to events such as insert, update, or delete, often for auditing or validation.</p><p>Example: an audit trigger can write a history row whenever a salary changes.</p>"
+  },
+  {
+    "id": 7896,
+    "text": "What is pagination in queries?",
+    "choices": [
+      "Returning a limited subset of rows at a time",
+      "Returning only grouped rows",
+      "Running one query per table",
+      "Normalizing a result set"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Returning a limited subset of rows at a time</strong> is correct because Pagination keeps result sets manageable for users and applications and can reduce unnecessary transfer.</p><pre><code class=\"language-sql\">SELECT * FROM products ORDER BY id LIMIT 20 OFFSET 40;</code></pre>"
+  },
+  {
+    "id": 7897,
+    "text": "Why can large OFFSET values become slow?",
+    "choices": [
+      "The database may still need to scan and skip many rows",
+      "OFFSET disables indexes permanently",
+      "OFFSET requires a transaction rollback",
+      "OFFSET can only be used in NoSQL"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>The database may still need to scan and skip many rows</strong> is correct because Offset-based pagination can degrade on large datasets because the skipped rows still need to be processed.</p><p>Example: page 10,000 with offset pagination may be much slower than page 2.</p>"
+  },
+  {
+    "id": 7898,
+    "text": "What is keyset pagination?",
+    "choices": [
+      "Pagination based on the last seen key rather than large offsets",
+      "A pagination method using GROUP BY only",
+      "A form of denormalization",
+      "A transaction isolation feature"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Pagination based on the last seen key rather than large offsets</strong> is correct because Keyset pagination is often faster and more stable for large ordered datasets.</p><pre><code class=\"language-sql\">SELECT * FROM products\nWHERE id &gt; 1000\nORDER BY id\nLIMIT 20;</code></pre>"
+  },
+  {
+    "id": 7899,
+    "text": "What is a covering query optimization idea?",
+    "choices": [
+      "Return only needed rows and columns",
+      "Use as many joins as possible",
+      "Avoid all constraints",
+      "Convert all tables to JSON"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>Return only needed rows and columns</strong> is correct because Efficient queries avoid unnecessary work by reducing both the number of rows and the width of each row returned.</p><p>Example: selecting just <code>id</code> and <code>name</code> is cheaper than loading every large text column unnecessarily.</p>"
+  },
+  {
+    "id": 7900,
+    "text": "Why is indexing foreign key columns often useful?",
+    "choices": [
+      "It can speed up joins and parent-child lookups",
+      "It disables referential integrity checks",
+      "It makes primary keys optional",
+      "It forces denormalization"
+    ],
+    "correctIndex": 0,
+    "topic": "Database",
+    "explanation": "<p><strong>It can speed up joins and parent-child lookups</strong> is correct because Foreign key columns are commonly used in joins and lookups, so indexing them often improves performance.</p><p>Example: an index on <code>orders.customer_id</code> helps fetch all orders for one customer.</p>"
+  }
+]
