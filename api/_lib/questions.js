@@ -56,6 +56,9 @@ function formatTopicLabel(topic) {
   if (topic === 'spring') {
     return 'Spring';
   }
+  if (topic === 'javasyntax') {
+    return 'Java Syntax';
+  }
   return topic.charAt(0).toUpperCase() + topic.slice(1);
 }
 

@@ -1454,5 +1454,1305 @@
     "correctIndex": 0,
     "topic": "Java",
     "explanation": "<p><strong>Inheritance</strong> is correct because Inheritance lets a subclass reuse fields or methods from a common parent class and optionally specialize behavior. It is one of the core OOP mechanisms for sharing code.</p><p>Example:</p><pre><code class=\"language-java\">class Animal {\n    void speak() {\n        System.out.println(\"sound\");\n    }\n}\n\nclass Dog extends Animal {\n}</code></pre>"
+  },
+  {
+    "id": 2101,
+    "text": "What does a Java class typically define?",
+    "choices": [
+      "State and behavior for objects",
+      "Only database tables",
+      "Only imported packages",
+      "Only primitive values"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>State and behavior for objects</strong> is correct because a class groups fields and methods together as a blueprint for creating objects in Java.</p>"
+  },
+  {
+    "id": 2102,
+    "text": "What is the primary purpose of a Java interface?",
+    "choices": [
+      "To define a contract of methods",
+      "To store mutable fields only",
+      "To replace every class",
+      "To prevent polymorphism"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To define a contract of methods</strong> is correct because an interface describes what implementing classes must provide without requiring shared concrete state.</p>"
+  },
+  {
+    "id": 2103,
+    "text": "When is an abstract class most useful in Java?",
+    "choices": [
+      "When shared base behavior should be reused but direct instantiation should be prevented",
+      "When no methods are needed",
+      "When every field must be static",
+      "When objects should never inherit behavior"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>When shared base behavior should be reused but direct instantiation should be prevented</strong> is correct because abstract classes can contain common implementation while forcing subclasses to complete the design.</p>"
+  },
+  {
+    "id": 2104,
+    "text": "Which OOP concept is mainly achieved by hiding fields behind methods?",
+    "choices": [
+      "Encapsulation",
+      "Serialization",
+      "Compilation",
+      "Casting"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Encapsulation</strong> is correct because Java encourages protecting internal state and exposing controlled access through methods such as getters, setters, or domain operations.</p>"
+  },
+  {
+    "id": 2105,
+    "text": "What is method overloading in Java?",
+    "choices": [
+      "Using the same method name with different parameter lists",
+      "Replacing a parent method with the exact same signature",
+      "Calling multiple methods at once",
+      "Declaring duplicate methods with identical parameters"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Using the same method name with different parameter lists</strong> is correct because overloaded methods are distinguished by their argument types or counts at compile time.</p>"
+  },
+  {
+    "id": 2106,
+    "text": "What is method overriding in Java?",
+    "choices": [
+      "Providing a new implementation of an inherited method with the same signature",
+      "Creating methods with different parameter counts",
+      "Hiding all superclass fields",
+      "Making a method private automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Providing a new implementation of an inherited method with the same signature</strong> is correct because overriding lets a subclass specialize behavior defined by its parent or interface.</p>"
+  },
+  {
+    "id": 2107,
+    "text": "Which example best demonstrates polymorphism in Java?",
+    "choices": [
+      "A parent reference holding a child object and calling an overridden method",
+      "A method returning two primitive values",
+      "A class with only static fields",
+      "A constructor calling another constructor"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>A parent reference holding a child object and calling an overridden method</strong> is correct because runtime dispatch allows the child implementation to execute through the parent type.</p>"
+  },
+  {
+    "id": 2108,
+    "text": "What is the main role of a constructor in Java?",
+    "choices": [
+      "To initialize a new object",
+      "To destroy an object manually",
+      "To import a package",
+      "To define an interface contract"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To initialize a new object</strong> is correct because constructors run during object creation and commonly assign required state.</p>"
+  },
+  {
+    "id": 2109,
+    "text": "What happens if a class declares no constructor at all?",
+    "choices": [
+      "Java provides a default no-argument constructor",
+      "The class cannot be instantiated",
+      "All fields become final",
+      "The class becomes abstract"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Java provides a default no-argument constructor</strong> is correct because the compiler adds one only when no constructor is explicitly declared.</p>"
+  },
+  {
+    "id": 2110,
+    "text": "What access level does a member have when no modifier is written in Java?",
+    "choices": [
+      "Package-private",
+      "Public",
+      "Protected everywhere",
+      "Private"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Package-private</strong> is correct because a member with no access modifier is visible to other classes in the same package only.</p>"
+  },
+  {
+    "id": 2111,
+    "text": "What does the protected access modifier allow?",
+    "choices": [
+      "Access from the same package and from subclasses",
+      "Access only from the same class",
+      "Access from anywhere without restriction",
+      "Access only through static methods"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Access from the same package and from subclasses</strong> is correct because <code>protected</code> is broader than private but narrower than public.</p>"
+  },
+  {
+    "id": 2112,
+    "text": "Which access modifier makes a class member visible from any package?",
+    "choices": [
+      "public",
+      "private",
+      "protected",
+      "default only"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>public</strong> is correct because public members are accessible anywhere the declaring type is visible.</p>"
+  },
+  {
+    "id": 2113,
+    "text": "Which modifier is most appropriate for a field that should be hidden from all other classes?",
+    "choices": [
+      "private",
+      "public",
+      "protected",
+      "abstract"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>private</strong> is correct because it restricts direct access to the declaring class and supports strong encapsulation.</p>"
+  },
+  {
+    "id": 2114,
+    "text": "What does the static keyword indicate for a field or method?",
+    "choices": [
+      "It belongs to the class rather than to each instance",
+      "It can be changed only once",
+      "It is always thread-safe",
+      "It is inherited privately"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It belongs to the class rather than to each instance</strong> is correct because static members are shared at the type level.</p>"
+  },
+  {
+    "id": 2115,
+    "text": "What does declaring a method as final prevent?",
+    "choices": [
+      "Overriding in subclasses",
+      "Calling the method from other classes",
+      "Compiling the class",
+      "Using parameters in the method"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Overriding in subclasses</strong> is correct because a final method keeps its implementation fixed throughout the inheritance chain.</p>"
+  },
+  {
+    "id": 2116,
+    "text": "What is the effect of declaring a class as final?",
+    "choices": [
+      "The class cannot be subclassed",
+      "The class cannot contain methods",
+      "The class becomes immutable automatically",
+      "The class cannot be instantiated"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>The class cannot be subclassed</strong> is correct because <code>final</code> stops inheritance for that type.</p>"
+  },
+  {
+    "id": 2117,
+    "text": "What does the synchronized keyword provide?",
+    "choices": [
+      "Mutual exclusion for a guarded method or block",
+      "Automatic object serialization",
+      "Faster garbage collection",
+      "Compile-time type checking only"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Mutual exclusion for a guarded method or block</strong> is correct because synchronized code uses a monitor so only one thread at a time can enter for the same lock.</p>"
+  },
+  {
+    "id": 2118,
+    "text": "Which keyword marks a field so it is skipped during default serialization?",
+    "choices": [
+      "transient",
+      "volatile",
+      "strictfp",
+      "native"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>transient</strong> is correct because transient fields are ignored by Java's default object serialization mechanism.</p>"
+  },
+  {
+    "id": 2119,
+    "text": "What problem does volatile mainly address in Java concurrency?",
+    "choices": [
+      "Visibility of writes between threads",
+      "Sorting collections",
+      "Avoiding object creation",
+      "Changing method overload resolution"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Visibility of writes between threads</strong> is correct because <code>volatile</code> helps one thread observe another thread's latest value updates.</p>"
+  },
+  {
+    "id": 2120,
+    "text": "Which operator checks whether an object is of a given type before casting?",
+    "choices": [
+      "instanceof",
+      "typeof",
+      "is",
+      "cast"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>instanceof</strong> is correct because it safely tests runtime type compatibility before a cast is performed.</p>"
+  },
+  {
+    "id": 2121,
+    "text": "Which collection is usually the default choice for an ordered, resizable list with fast indexed access?",
+    "choices": [
+      "ArrayList",
+      "HashSet",
+      "TreeMap",
+      "PriorityQueue"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>ArrayList</strong> is correct because it stores elements in insertion order and offers efficient random access by index.</p>"
+  },
+  {
+    "id": 2122,
+    "text": "Which List implementation is often chosen when frequent insertions or removals happen at the ends?",
+    "choices": [
+      "LinkedList",
+      "TreeSet",
+      "HashMap",
+      "ArrayDeque only as List"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>LinkedList</strong> is correct because it is node-based and can be suitable for certain insertion or removal patterns, though it is usually slower for indexed access.</p>"
+  },
+  {
+    "id": 2123,
+    "text": "Which collection stores key-value pairs without guaranteeing iteration order?",
+    "choices": [
+      "HashMap",
+      "LinkedHashMap",
+      "TreeMap",
+      "ArrayList"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>HashMap</strong> is correct because it is a common map implementation optimized for fast lookup and does not preserve insertion or sorted order.</p>"
+  },
+  {
+    "id": 2124,
+    "text": "Which Map implementation preserves insertion order?",
+    "choices": [
+      "LinkedHashMap",
+      "HashMap",
+      "TreeMap",
+      "Hashtable"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>LinkedHashMap</strong> is correct because it links entries to keep iteration order aligned with insertion order by default.</p>"
+  },
+  {
+    "id": 2125,
+    "text": "Which Map implementation keeps keys sorted according to natural order or a Comparator?",
+    "choices": [
+      "TreeMap",
+      "HashMap",
+      "LinkedHashMap",
+      "ArrayMap"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>TreeMap</strong> is correct because it stores entries in a sorted tree structure rather than hash buckets.</p>"
+  },
+  {
+    "id": 2126,
+    "text": "Which collection is designed to store unique elements only?",
+    "choices": [
+      "HashSet",
+      "ArrayList",
+      "LinkedList",
+      "Vector"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>HashSet</strong> is correct because sets reject duplicate elements and <code>HashSet</code> is the common hash-based implementation.</p>"
+  },
+  {
+    "id": 2127,
+    "text": "Which Set implementation keeps insertion order while still preventing duplicates?",
+    "choices": [
+      "LinkedHashSet",
+      "HashSet",
+      "TreeSet",
+      "PriorityQueue"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>LinkedHashSet</strong> is correct because it combines set uniqueness with predictable insertion-order iteration.</p>"
+  },
+  {
+    "id": 2128,
+    "text": "Which Set implementation keeps elements sorted?",
+    "choices": [
+      "TreeSet",
+      "HashSet",
+      "LinkedHashSet",
+      "ArrayList"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>TreeSet</strong> is correct because it stores unique values in sorted order using a tree-based structure.</p>"
+  },
+  {
+    "id": 2129,
+    "text": "Which interface represents a collection intended for processing elements in FIFO style?",
+    "choices": [
+      "Queue",
+      "Set",
+      "Map",
+      "Iterable only"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Queue</strong> is correct because the Queue interface models elements that are typically inserted at one end and removed from another.</p>"
+  },
+  {
+    "id": 2130,
+    "text": "Which interface supports adding and removing elements from both ends of a collection?",
+    "choices": [
+      "Deque",
+      "List",
+      "SortedMap",
+      "NavigableSet"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Deque</strong> is correct because a double-ended queue supports operations at both the front and the back.</p>"
+  },
+  {
+    "id": 2131,
+    "text": "What happens when put() is called on a HashMap with a key that already exists?",
+    "choices": [
+      "The old value is replaced",
+      "A duplicate key is added",
+      "The map throws an error every time",
+      "The key is removed"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>The old value is replaced</strong> is correct because a map cannot contain duplicate keys, so the new value becomes the mapping for that key.</p>"
+  },
+  {
+    "id": 2132,
+    "text": "Which Map method returns a fallback value when a key is absent?",
+    "choices": [
+      "getOrDefault()",
+      "fallbackGet()",
+      "orElseGet()",
+      "safeGet()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>getOrDefault()</strong> is correct because it avoids a separate null check when a map lookup might miss.</p>"
+  },
+  {
+    "id": 2133,
+    "text": "Which Map method is useful for lazily creating and storing a value only when a key is missing?",
+    "choices": [
+      "computeIfAbsent()",
+      "replaceAll()",
+      "containsValue()",
+      "putIfEquals()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>computeIfAbsent()</strong> is correct because it calculates a value only when no mapping is already present for the key.</p>"
+  },
+  {
+    "id": 2134,
+    "text": "Which Iterator method removes the current element safely during iteration?",
+    "choices": [
+      "remove()",
+      "delete()",
+      "erase()",
+      "clearOne()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>remove()</strong> is correct because it removes the last element returned by the iterator in a way that stays consistent with iteration.</p>"
+  },
+  {
+    "id": 2135,
+    "text": "Which method is commonly used to sort a List in place in modern Java?",
+    "choices": [
+      "sort()",
+      "order()",
+      "arrange()",
+      "rank()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>sort()</strong> is correct because <code>List.sort()</code> sorts the list using natural order or a supplied comparator.</p>"
+  },
+  {
+    "id": 2136,
+    "text": "Which interface is used to define custom sorting logic outside a class?",
+    "choices": [
+      "Comparator",
+      "Comparable",
+      "Iterable",
+      "Collector"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Comparator</strong> is correct because it lets code provide alternate ordering strategies without modifying the type being sorted.</p>"
+  },
+  {
+    "id": 2137,
+    "text": "Which statement about String in Java is true?",
+    "choices": [
+      "String is immutable",
+      "String always stores bytes only",
+      "String cannot be compared",
+      "String is a primitive type"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>String is immutable</strong> is correct because once a String is created, its contents cannot be changed.</p>"
+  },
+  {
+    "id": 2138,
+    "text": "Which class is preferred for building text efficiently in single-threaded code?",
+    "choices": [
+      "StringBuilder",
+      "String",
+      "StringBuffer",
+      "CharSequence"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>StringBuilder</strong> is correct because it provides mutable character storage without the synchronization cost of StringBuffer.</p>"
+  },
+  {
+    "id": 2139,
+    "text": "Which class provides a thread-safe mutable sequence of characters?",
+    "choices": [
+      "StringBuffer",
+      "StringBuilder",
+      "StringJoiner",
+      "Character"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>StringBuffer</strong> is correct because it is synchronized and intended for mutable string operations in shared-thread scenarios.</p>"
+  },
+  {
+    "id": 2140,
+    "text": "Which String method extracts part of a string?",
+    "choices": [
+      "substring()",
+      "subtext()",
+      "sliceText()",
+      "cut()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>substring()</strong> is correct because it returns a new String containing a selected range of characters.</p>"
+  },
+  {
+    "id": 2141,
+    "text": "Which String method removes leading and trailing whitespace in basic Java usage?",
+    "choices": [
+      "trim()",
+      "clip()",
+      "clean()",
+      "compress()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>trim()</strong> is correct because it returns a new string with surrounding whitespace removed.</p>"
+  },
+  {
+    "id": 2142,
+    "text": "Which method should usually be used to compare String contents?",
+    "choices": [
+      "equals()",
+      "==",
+      "compare()",
+      "same()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>equals()</strong> is correct because it compares logical text content rather than object identity.</p>"
+  },
+  {
+    "id": 2143,
+    "text": "Which String method compares text while ignoring letter case?",
+    "choices": [
+      "equalsIgnoreCase()",
+      "equals()",
+      "compareTo()",
+      "matches()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>equalsIgnoreCase()</strong> is correct because it checks whether two strings have the same letters regardless of uppercase or lowercase differences.</p>"
+  },
+  {
+    "id": 2144,
+    "text": "Which String method returns the character at a given index?",
+    "choices": [
+      "charAt()",
+      "getChar()",
+      "character()",
+      "at()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>charAt()</strong> is correct because it retrieves the UTF-16 code unit at a zero-based position.</p>"
+  },
+  {
+    "id": 2145,
+    "text": "Which String method breaks text into parts using a delimiter pattern?",
+    "choices": [
+      "split()",
+      "divide()",
+      "token()",
+      "separate()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>split()</strong> is correct because it returns an array of substrings based on a regular-expression delimiter.</p>"
+  },
+  {
+    "id": 2146,
+    "text": "Which String method returns a new string with matching text substituted?",
+    "choices": [
+      "replace()",
+      "update()",
+      "patch()",
+      "insert()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>replace()</strong> is correct because String operations produce new values rather than mutating the original text.</p>"
+  },
+  {
+    "id": 2147,
+    "text": "Which method is commonly used to build a formatted String value?",
+    "choices": [
+      "String.format()",
+      "String.build()",
+      "String.printf()",
+      "Formatter.text()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>String.format()</strong> is correct because it combines a format pattern and arguments into a new string.</p>"
+  },
+  {
+    "id": 2148,
+    "text": "Which String method added in Java 11 checks whether text is empty or contains only whitespace?",
+    "choices": [
+      "isBlank()",
+      "isSpaceOnly()",
+      "isTrimmedEmpty()",
+      "blank()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>isBlank()</strong> is correct because Java 11 added it to detect strings that have no non-whitespace characters.</p>"
+  },
+  {
+    "id": 2149,
+    "text": "Which String method added in Java 11 repeats the same text multiple times?",
+    "choices": [
+      "repeat()",
+      "multiply()",
+      "cloneText()",
+      "expand()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>repeat()</strong> is correct because Java 11 introduced it for concise repetition of string content.</p>"
+  },
+  {
+    "id": 2150,
+    "text": "Which String method added in Java 11 returns a stream of lines from text?",
+    "choices": [
+      "lines()",
+      "streamLines()",
+      "toLines()",
+      "readLines()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>lines()</strong> is correct because it produces a lazy stream of line values from the string content.</p>"
+  },
+  {
+    "id": 2151,
+    "text": "Which abstract class is the base for reading raw bytes in Java I/O?",
+    "choices": [
+      "InputStream",
+      "Reader",
+      "Writer",
+      "Scanner"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>InputStream</strong> is correct because it is the core byte-input abstraction in the Java I/O API.</p>"
+  },
+  {
+    "id": 2152,
+    "text": "What is the role of InputStreamReader in Java I/O?",
+    "choices": [
+      "It converts bytes from an InputStream into characters",
+      "It writes characters to a file",
+      "It buffers object serialization",
+      "It only reads primitive ints"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It converts bytes from an InputStream into characters</strong> is correct because <code>InputStreamReader</code> bridges byte streams and character streams using a character set.</p>"
+  },
+  {
+    "id": 2153,
+    "text": "Which class is commonly wrapped around a Reader to read text efficiently line by line?",
+    "choices": [
+      "BufferedReader",
+      "BufferedWriter",
+      "ObjectInputStream",
+      "PrintWriter"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>BufferedReader</strong> is correct because it buffers input and provides methods like <code>readLine()</code> for convenient text reading.</p>"
+  },
+  {
+    "id": 2154,
+    "text": "Why is BufferedInputStream often used?",
+    "choices": [
+      "To reduce expensive underlying read calls by buffering bytes",
+      "To convert text to objects",
+      "To sort file contents automatically",
+      "To lock files for multithreading"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To reduce expensive underlying read calls by buffering bytes</strong> is correct because buffering improves efficiency when many small reads occur.</p>"
+  },
+  {
+    "id": 2155,
+    "text": "Which stream class is typically used to read raw bytes from a file?",
+    "choices": [
+      "FileInputStream",
+      "StringReader",
+      "CharArrayReader",
+      "PrintStream"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>FileInputStream</strong> is correct because it opens a file as a byte-based input stream.</p>"
+  },
+  {
+    "id": 2156,
+    "text": "Which Java feature automatically closes I/O resources at the end of a block?",
+    "choices": [
+      "try-with-resources",
+      "finally-only close",
+      "synchronized block",
+      "autoimport"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>try-with-resources</strong> is correct because resources that implement <code>AutoCloseable</code> are closed automatically when the block finishes.</p>"
+  },
+  {
+    "id": 2157,
+    "text": "What value does read() typically return when an InputStream reaches the end of the stream?",
+    "choices": [
+      "-1",
+      "0",
+      "null",
+      "EOF"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>-1</strong> is correct because byte and character read methods commonly signal end-of-stream with a negative result.</p>"
+  },
+  {
+    "id": 2158,
+    "text": "Which method forces buffered output to be written immediately?",
+    "choices": [
+      "flush()",
+      "push()",
+      "commit()",
+      "release()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>flush()</strong> is correct because it pushes buffered data to the underlying destination without necessarily closing the stream.</p>"
+  },
+  {
+    "id": 2159,
+    "text": "Which abstract class is the base for writing raw bytes in Java?",
+    "choices": [
+      "OutputStream",
+      "Writer",
+      "InputStream",
+      "Reader"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>OutputStream</strong> is correct because it is the primary abstraction for byte output.</p>"
+  },
+  {
+    "id": 2160,
+    "text": "Which abstract class is the base for writing character data in Java?",
+    "choices": [
+      "Writer",
+      "OutputStream",
+      "Reader",
+      "Appendable"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Writer</strong> is correct because it represents character-oriented output instead of raw byte output.</p>"
+  },
+  {
+    "id": 2161,
+    "text": "Which Thread method actually starts a new thread of execution?",
+    "choices": [
+      "start()",
+      "run()",
+      "begin()",
+      "execute()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>start()</strong> is correct because it asks the JVM to create a separate execution path that will invoke <code>run()</code>.</p>"
+  },
+  {
+    "id": 2162,
+    "text": "What is the purpose of the run() method in a Thread or Runnable?",
+    "choices": [
+      "It contains the task code executed by the thread",
+      "It waits for another thread to finish",
+      "It locks the JVM monitor",
+      "It shuts down the garbage collector"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It contains the task code executed by the thread</strong> is correct because <code>run()</code> defines the work to perform when the thread is started.</p>"
+  },
+  {
+    "id": 2163,
+    "text": "Which Thread method lets one thread wait for another to finish?",
+    "choices": [
+      "join()",
+      "sleep()",
+      "yield()",
+      "awaitStart()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>join()</strong> is correct because it blocks until the target thread completes or the wait is otherwise interrupted or timed out.</p>"
+  },
+  {
+    "id": 2164,
+    "text": "Which Thread method pauses the current thread for a period of time?",
+    "choices": [
+      "sleep()",
+      "wait()",
+      "stop()",
+      "hold()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>sleep()</strong> is correct because it pauses the current thread without releasing any monitor it may already hold.</p>"
+  },
+  {
+    "id": 2165,
+    "text": "What does a Java monitor represent in synchronized code?",
+    "choices": [
+      "The lock associated with an object or class",
+      "A background garbage collector thread",
+      "A console output stream",
+      "A serialized snapshot"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>The lock associated with an object or class</strong> is correct because synchronized methods and blocks coordinate access through a monitor.</p>"
+  },
+  {
+    "id": 2166,
+    "text": "What does wait() do when called inside synchronized code on an object?",
+    "choices": [
+      "It releases that object's monitor and waits",
+      "It permanently stops the thread",
+      "It creates a new thread",
+      "It flushes buffered output"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It releases that object's monitor and waits</strong> is correct because <code>wait()</code> suspends the thread until notification or interruption while giving up the lock.</p>"
+  },
+  {
+    "id": 2167,
+    "text": "What does notify() do in Java concurrency?",
+    "choices": [
+      "It wakes one thread waiting on the same monitor",
+      "It wakes every thread in the JVM",
+      "It starts a new thread pool",
+      "It forces a context switch immediately"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It wakes one thread waiting on the same monitor</strong> is correct because notification targets threads waiting on that object's monitor.</p>"
+  },
+  {
+    "id": 2168,
+    "text": "What does notifyAll() do in Java concurrency?",
+    "choices": [
+      "It wakes all threads waiting on the same monitor",
+      "It unlocks every synchronized block in the program",
+      "It restarts all stopped threads",
+      "It clears the thread stack"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It wakes all threads waiting on the same monitor</strong> is correct because all waiters on that object become eligible to compete for the lock again.</p>"
+  },
+  {
+    "id": 2169,
+    "text": "Which class provides an explicit lock API as an alternative to synchronized?",
+    "choices": [
+      "ReentrantLock",
+      "AtomicInteger",
+      "ThreadLocal",
+      "SemaphoreOnly"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>ReentrantLock</strong> is correct because it offers explicit lock and unlock control plus advanced features such as timed lock attempts.</p>"
+  },
+  {
+    "id": 2170,
+    "text": "Which interface is commonly used to manage a pool of worker threads?",
+    "choices": [
+      "ExecutorService",
+      "Iterable",
+      "Collector",
+      "Closeable"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>ExecutorService</strong> is correct because it separates task submission from low-level thread creation and lifecycle management.</p>"
+  },
+  {
+    "id": 2171,
+    "text": "Which interface is like Runnable but can return a value and throw checked exceptions?",
+    "choices": [
+      "Callable",
+      "Supplier",
+      "Consumer",
+      "Comparator"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Callable</strong> is correct because its <code>call()</code> method can produce a result and declare checked exceptions.</p>"
+  },
+  {
+    "id": 2172,
+    "text": "Which type represents the result of an asynchronous computation submitted to an ExecutorService?",
+    "choices": [
+      "Future",
+      "Optional",
+      "ThreadGroup",
+      "Monitor"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Future</strong> is correct because it can later provide the task result, completion state, or cancellation status.</p>"
+  },
+  {
+    "id": 2173,
+    "text": "Which class is commonly used for a thread-safe counter without using synchronized blocks?",
+    "choices": [
+      "AtomicInteger",
+      "Integer",
+      "LongAdderList",
+      "Math"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>AtomicInteger</strong> is correct because it supports atomic operations such as increment-and-get across threads.</p>"
+  },
+  {
+    "id": 2174,
+    "text": "Which Map implementation is designed for safe concurrent access by multiple threads?",
+    "choices": [
+      "ConcurrentHashMap",
+      "HashMap",
+      "TreeMap",
+      "WeakHashMap"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>ConcurrentHashMap</strong> is correct because it supports concurrent updates and reads more safely than a plain HashMap.</p>"
+  },
+  {
+    "id": 2175,
+    "text": "Where are most Java objects allocated at runtime?",
+    "choices": [
+      "Heap memory",
+      "Method names",
+      "The import section",
+      "Only CPU registers"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Heap memory</strong> is correct because object instances generally live on the heap where garbage collection can manage them.</p>"
+  },
+  {
+    "id": 2176,
+    "text": "What is primarily stored on a thread's stack in Java?",
+    "choices": [
+      "Method frames and local variables",
+      "All heap objects",
+      "Only class definitions",
+      "Serialized files"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Method frames and local variables</strong> is correct because each thread keeps its own call stack for active method execution.</p>"
+  },
+  {
+    "id": 2177,
+    "text": "What is the main job of the Java garbage collector?",
+    "choices": [
+      "To reclaim memory from unreachable objects",
+      "To close all open files instantly",
+      "To sort objects in memory",
+      "To compile source code at startup"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To reclaim memory from unreachable objects</strong> is correct because the garbage collector identifies objects that can no longer be reached and frees their memory.</p>"
+  },
+  {
+    "id": 2178,
+    "text": "What is a common goal of the G1 garbage collector?",
+    "choices": [
+      "Balancing throughput with lower pause times on large heaps",
+      "Running only on single-core machines",
+      "Disabling parallel marking completely",
+      "Avoiding heap regions"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Balancing throughput with lower pause times on large heaps</strong> is correct because G1 divides the heap into regions and prioritizes predictable pause behavior.</p>"
+  },
+  {
+    "id": 2179,
+    "text": "What characterizes the Serial GC in Java?",
+    "choices": [
+      "It uses a single thread for garbage collection work",
+      "It never pauses application threads",
+      "It requires sealed classes",
+      "It stores objects off-heap by default"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It uses a single thread for garbage collection work</strong> is correct because Serial GC is simple and can suit small applications but is not ideal for large concurrent workloads.</p>"
+  },
+  {
+    "id": 2180,
+    "text": "What is the young generation in generational garbage collection mainly intended for?",
+    "choices": [
+      "Short-lived newly created objects",
+      "Only class metadata",
+      "Native library code",
+      "Long-lived cached values exclusively"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Short-lived newly created objects</strong> is correct because many Java objects die young, so the collector optimizes for frequent reclamation there.</p>"
+  },
+  {
+    "id": 2181,
+    "text": "Why is finalize() generally discouraged in modern Java?",
+    "choices": [
+      "It is unreliable and deprecated for object cleanup",
+      "It is required for every serializable class",
+      "It prevents inheritance",
+      "It improves performance too much"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It is unreliable and deprecated for object cleanup</strong> is correct because finalization timing is unpredictable and safer cleanup mechanisms are preferred.</p>"
+  },
+  {
+    "id": 2182,
+    "text": "What is true about a weak reference in Java?",
+    "choices": [
+      "It does not prevent its referent from being garbage collected",
+      "It guarantees an object will stay in memory",
+      "It works only for primitive values",
+      "It is stronger than a normal reference"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It does not prevent its referent from being garbage collected</strong> is correct because weak references are designed for structures such as caches where retention should be soft.</p>"
+  },
+  {
+    "id": 2183,
+    "text": "Which Java feature provides a concise way to declare immutable data carriers with generated accessors?",
+    "choices": [
+      "record",
+      "enum",
+      "module-info",
+      "package-info"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>record</strong> is correct because records reduce boilerplate for transparent data-holding classes and are standard in recent Java versions.</p>"
+  },
+  {
+    "id": 2184,
+    "text": "What do sealed classes introduced in recent Java versions allow you to do?",
+    "choices": [
+      "Restrict which classes are permitted to extend or implement a type",
+      "Force all fields to be private",
+      "Disable reflection",
+      "Prevent garbage collection"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Restrict which classes are permitted to extend or implement a type</strong> is correct because sealed hierarchies make inheritance boundaries explicit.</p>"
+  },
+  {
+    "id": 2185,
+    "text": "Which recent Java feature makes multi-line string literals easier to write?",
+    "choices": [
+      "Text blocks",
+      "Bridge methods",
+      "Wildcard imports",
+      "Lombok annotations"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Text blocks</strong> is correct because they allow readable multi-line string literals without heavy escaping.</p>"
+  },
+  {
+    "id": 2186,
+    "text": "What does the var keyword do in local variable declarations?",
+    "choices": [
+      "It lets the compiler infer the local variable type",
+      "It creates a dynamically typed variable",
+      "It makes the variable global",
+      "It forces the type to be Object"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It lets the compiler infer the local variable type</strong> is correct because <code>var</code> is local type inference, not dynamic typing.</p>"
+  },
+  {
+    "id": 2187,
+    "text": "Which HTTP API became a standard modern choice in Java 11?",
+    "choices": [
+      "HttpClient",
+      "URLConnectionOnly",
+      "WebRequestBuilder",
+      "RestTemplate"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>HttpClient</strong> is correct because Java 11 standardized the newer HTTP client API for synchronous and asynchronous requests.</p>"
+  },
+  {
+    "id": 2188,
+    "text": "Which Files method added in recent Java versions reads an entire file into a String?",
+    "choices": [
+      "readString()",
+      "readText()",
+      "slurp()",
+      "loadString()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>readString()</strong> is correct because <code>Files.readString()</code> offers a concise way to read whole text files.</p>"
+  },
+  {
+    "id": 2189,
+    "text": "What improvement does pattern matching for instanceof provide in modern Java?",
+    "choices": [
+      "It combines type checking and typed binding in one step",
+      "It replaces all switch statements",
+      "It removes the need for classes",
+      "It makes casting slower but safer"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It combines type checking and typed binding in one step</strong> is correct because successful <code>instanceof</code> checks can introduce a typed variable directly.</p>"
+  },
+  {
+    "id": 2190,
+    "text": "What is a key advantage of switch expressions in modern Java?",
+    "choices": [
+      "They can return values directly with less boilerplate",
+      "They only work with strings",
+      "They require fall-through in every case",
+      "They replace all if statements"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>They can return values directly with less boilerplate</strong> is correct because switch expressions make branching expressions clearer and reduce accidental fall-through.</p>"
+  },
+  {
+    "id": 2191,
+    "text": "Which interface marks a class as eligible for default Java object serialization?",
+    "choices": [
+      "Serializable",
+      "Externalizable",
+      "Cloneable",
+      "Closeable"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>Serializable</strong> is correct because it is the marker interface Java checks for standard object serialization support.</p>"
+  },
+  {
+    "id": 2192,
+    "text": "Why might a class declare a serialVersionUID field?",
+    "choices": [
+      "To control serialization compatibility across versions",
+      "To improve collection ordering",
+      "To disable deserialization",
+      "To make fields transient automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To control serialization compatibility across versions</strong> is correct because <code>serialVersionUID</code> identifies the expected serialized form of a class.</p>"
+  },
+  {
+    "id": 2193,
+    "text": "Which class is commonly used to write serialized objects to a stream?",
+    "choices": [
+      "ObjectOutputStream",
+      "DataInputStream",
+      "BufferedWriter",
+      "PrintStream"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>ObjectOutputStream</strong> is correct because it writes Java object graphs using the serialization mechanism.</p>"
+  },
+  {
+    "id": 2194,
+    "text": "Which class is commonly used to read serialized objects from a stream?",
+    "choices": [
+      "ObjectInputStream",
+      "ObjectOutputStream",
+      "BufferedInputStream",
+      "Scanner"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>ObjectInputStream</strong> is correct because it reconstructs previously serialized objects from an input stream.</p>"
+  },
+  {
+    "id": 2195,
+    "text": "How does Externalizable differ from Serializable?",
+    "choices": [
+      "It requires the class to manually define how state is written and read",
+      "It works only for primitive fields",
+      "It skips constructors during deserialization only",
+      "It cannot be used with Object streams"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>It requires the class to manually define how state is written and read</strong> is correct because <code>Externalizable</code> gives explicit control through <code>writeExternal</code> and <code>readExternal</code>.</p>"
+  },
+  {
+    "id": 2196,
+    "text": "Which methods can a Serializable class define to customize default serialization behavior?",
+    "choices": [
+      "writeObject() and readObject()",
+      "save() and load()",
+      "serialize() and deserialize()",
+      "marshal() and unmarshal()"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>writeObject() and readObject()</strong> is correct because these special methods let a Serializable class intercept and customize its serialized form.</p>"
+  },
+  {
+    "id": 2197,
+    "text": "What is the intent of the Decorator pattern?",
+    "choices": [
+      "To add behavior to an object dynamically by wrapping it",
+      "To enforce a single global instance",
+      "To visit every node in a tree automatically",
+      "To create objects only through reflection"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To add behavior to an object dynamically by wrapping it</strong> is correct because Decorator extends functionality without changing the original class directly.</p>"
+  },
+  {
+    "id": 2198,
+    "text": "What is the main goal of the Visitor pattern?",
+    "choices": [
+      "To separate operations from the object structure they work on",
+      "To synchronize access to shared data",
+      "To replace inheritance with enums",
+      "To serialize objects to JSON automatically"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To separate operations from the object structure they work on</strong> is correct because Visitor lets new operations be added without changing every element class in the structure.</p>"
+  },
+  {
+    "id": 2199,
+    "text": "What is the purpose of the Singleton pattern?",
+    "choices": [
+      "To ensure only one instance of a class exists and provide global access to it",
+      "To create many interchangeable objects",
+      "To avoid interfaces completely",
+      "To force serialization on every object"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To ensure only one instance of a class exists and provide global access to it</strong> is correct because Singleton centralizes a single shared instance.</p>"
+  },
+  {
+    "id": 2200,
+    "text": "What is the purpose of the Factory Method pattern?",
+    "choices": [
+      "To delegate object creation to a method instead of calling constructors directly everywhere",
+      "To decorate an object at runtime",
+      "To expose every constructor publicly",
+      "To serialize object graphs to files"
+    ],
+    "correctIndex": 0,
+    "topic": "Java",
+    "explanation": "<p><strong>To delegate object creation to a method instead of calling constructors directly everywhere</strong> is correct because Factory Method encapsulates creation logic and can return different implementations behind a common type.</p>"
   }
 ]

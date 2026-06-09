@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 6101,
+    "text": "Which of the following is a valid identifier in Java?",
+    "choices": [
+      "3rdVariable",
+      "my_variable$",
+      "class",
+      "total#Sum"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>my_variable$</strong> is correct because Java identifiers may use letters, digits, underscores, and the dollar sign, but they cannot start with a digit, use symbols like <code>#</code>, or be reserved keywords.</p>"
+  },
+  {
+    "id": 6102,
+    "text": "What is the correct way to declare and initialize a float variable in Java?",
+    "choices": [
+      "float x = 5.5;",
+      "float x = (double)5.5;",
+      "float x = 5.5f;",
+      "Float x = 5.5d;"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>float x = 5.5f;</strong> is correct because Java treats decimal literals as <code>double</code> by default, so a float literal needs the <code>f</code> suffix.</p>"
+  },
+  {
+    "id": 6103,
+    "text": "What happens if a Java statement does not end with a semicolon when one is required?",
+    "choices": [
+      "The JVM inserts it automatically.",
+      "The program compiles but runs slowly.",
+      "The compiler reports a syntax error.",
+      "The statement executes twice."
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>The compiler reports a syntax error</strong> is correct because Java requires semicolons to terminate most statements, and missing one prevents compilation.</p>"
+  },
+  {
+    "id": 6104,
+    "text": "Which line of code causes a compilation error?",
+    "choices": [
+      "int x = 10;",
+      "String s = 'Hello';",
+      "boolean b = true;",
+      "char c = 'A';"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>String s = 'Hello';</strong> is correct because single quotes are for a single <code>char</code>, while Java strings must use double quotes.</p>"
+  },
+  {
+    "id": 6105,
+    "text": "What is printed by this code? int x = 5; System.out.println(x++ + ++x);",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>12</strong> is correct because <code>x++</code> uses 5 and then increments to 6, while <code>++x</code> increments to 7 before use, so the sum is 12.</p>"
+  },
+  {
+    "id": 6106,
+    "text": "Which loop structure guarantees at least one execution of its body?",
+    "choices": [
+      "for",
+      "while",
+      "do-while",
+      "enhanced for"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>do-while</strong> is correct because its condition is checked after the loop body runs once.</p>"
+  },
+  {
+    "id": 6107,
+    "text": "What is the output of: int[] numbers = new int[3]; System.out.println(numbers[0]);",
+    "choices": [
+      "0",
+      "null",
+      "Compilation error",
+      "ArrayIndexOutOfBoundsException"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>0</strong> is correct because elements of a newly created <code>int</code> array are initialized to zero by default.</p>"
+  },
+  {
+    "id": 6108,
+    "text": "Which keyword is used to establish inheritance between two classes in Java?",
+    "choices": [
+      "implements",
+      "extends",
+      "inherits",
+      "super"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>extends</strong> is correct because a subclass inherits from a superclass using the <code>extends</code> keyword.</p>"
+  },
+  {
+    "id": 6109,
+    "text": "Are the identifiers myValue and myvalue considered the same in Java?",
+    "choices": [
+      "Yes, Java ignores case in variable names.",
+      "No, Java is case-sensitive.",
+      "Yes, but only in the same scope.",
+      "No, unless both use the same type."
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>No, Java is case-sensitive</strong> is correct because uppercase and lowercase letters are treated as different characters in identifiers.</p>"
+  },
+  {
+    "id": 6110,
+    "text": "Which is the correct signature for the main method in a standard Java application?",
+    "choices": [
+      "public void main(String[] args)",
+      "public static void main(String args)",
+      "public static void main(String[] args)",
+      "static public int main(String[] args)"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>public static void main(String[] args)</strong> is correct because that is the standard entry point signature recognized by the JVM.</p>"
+  },
+  {
+    "id": 6111,
+    "text": "Which primitive type stores a whole number in Java?",
+    "choices": [
+      "int",
+      "float",
+      "boolean",
+      "String"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>int</strong> is correct because it is Java's common 32-bit integer type for whole-number values.</p>"
+  },
+  {
+    "id": 6112,
+    "text": "Which declaration correctly creates a char variable?",
+    "choices": [
+      "char grade = \"A\";",
+      "char grade = 'A';",
+      "char grade = A;",
+      "char grade = 'AB';"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>char grade = 'A';</strong> is correct because a Java <code>char</code> stores a single character in single quotes.</p>"
+  },
+  {
+    "id": 6113,
+    "text": "Which of the following is a valid boolean assignment?",
+    "choices": [
+      "boolean done = \"true\";",
+      "boolean done = True;",
+      "boolean done = true;",
+      "bool done = true;"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>boolean done = true;</strong> is correct because Java uses lowercase <code>true</code> and the primitive type name is <code>boolean</code>.</p>"
+  },
+  {
+    "id": 6114,
+    "text": "What is the correct way to declare a String in Java?",
+    "choices": [
+      "String name = \"Java\";",
+      "string name = \"Java\";",
+      "String name = 'Java';",
+      "text name = \"Java\";"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>String name = \"Java\";</strong> is correct because Java uses the class name <code>String</code> with a capital S, and string literals use double quotes.</p>"
+  },
+  {
+    "id": 6115,
+    "text": "Which operator is used for assignment in Java?",
+    "choices": [
+      "=",
+      "==",
+      ":=",
+      "=>"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>=</strong> is correct because it assigns a value to a variable, while <code>==</code> compares two values.</p>"
+  },
+  {
+    "id": 6116,
+    "text": "Which operator checks equality for primitive values in Java?",
+    "choices": [
+      "=",
+      "equals",
+      "==",
+      "==="
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>==</strong> is correct because it compares primitive values for equality, while <code>=</code> performs assignment.</p>"
+  },
+  {
+    "id": 6117,
+    "text": "What is the result type of the expression 7 / 2 in Java?",
+    "choices": [
+      "3.5",
+      "3",
+      "4",
+      "Compilation error"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>3</strong> is correct because dividing two <code>int</code> values uses integer division and truncates the decimal part.</p>"
+  },
+  {
+    "id": 6118,
+    "text": "Which statement correctly declares a constant in Java?",
+    "choices": [
+      "const int MAX = 10;",
+      "final int MAX = 10;",
+      "static int MAX = 10;",
+      "readonly int MAX = 10;"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>final int MAX = 10;</strong> is correct because <code>final</code> prevents reassignment after initialization.</p>"
+  },
+  {
+    "id": 6119,
+    "text": "Which keyword refers to the current object instance?",
+    "choices": [
+      "this",
+      "super",
+      "self",
+      "current"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>this</strong> is correct because it refers to the current object and is often used to distinguish fields from parameters.</p>"
+  },
+  {
+    "id": 6120,
+    "text": "Which keyword calls a superclass constructor or method?",
+    "choices": [
+      "base",
+      "parent",
+      "super",
+      "this"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>super</strong> is correct because it refers to the immediate parent class.</p>"
+  },
+  {
+    "id": 6121,
+    "text": "Which access modifier makes a member visible only inside its own class?",
+    "choices": [
+      "public",
+      "protected",
+      "private",
+      "default"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>private</strong> is correct because private members can only be accessed within the class that declares them.</p>"
+  },
+  {
+    "id": 6122,
+    "text": "Which access modifier makes a member available from any class?",
+    "choices": [
+      "private",
+      "public",
+      "protected",
+      "package"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>public</strong> is correct because public members are accessible from anywhere their class is visible.</p>"
+  },
+  {
+    "id": 6123,
+    "text": "What happens when you declare an array as int[] values = new int[2];?",
+    "choices": [
+      "It creates an array with indexes 1 and 2.",
+      "It creates an array with two elements indexed 0 and 1.",
+      "It creates a resizable list.",
+      "It causes a runtime error."
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>It creates an array with two elements indexed 0 and 1</strong> is correct because Java arrays are zero-based.</p>"
+  },
+  {
+    "id": 6124,
+    "text": "Which expression accesses the third element of an array named nums?",
+    "choices": [
+      "nums[3]",
+      "nums(2)",
+      "nums[2]",
+      "nums{2}"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>nums[2]</strong> is correct because arrays start at index 0, so the third element is at index 2.</p>"
+  },
+  {
+    "id": 6125,
+    "text": "Which statement correctly declares and initializes an int array?",
+    "choices": [
+      "int[] a = {1, 2, 3};",
+      "int a[] = (1, 2, 3);",
+      "array int a = {1, 2, 3};",
+      "int[] a = new int(1, 2, 3);"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>int[] a = {1, 2, 3};</strong> is correct because brace initialization is valid Java array syntax.</p>"
+  },
+  {
+    "id": 6126,
+    "text": "What does values.length return for an array named values?",
+    "choices": [
+      "The highest valid index",
+      "The number of elements in the array",
+      "The memory size in bytes",
+      "A method reference"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>The number of elements in the array</strong> is correct because arrays expose their size through the <code>length</code> field.</p>"
+  },
+  {
+    "id": 6127,
+    "text": "Which loop is most appropriate to iterate through every element of an array when you do not need the index?",
+    "choices": [
+      "enhanced for loop",
+      "do-while loop",
+      "switch statement",
+      "if statement"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>enhanced for loop</strong> is correct because it iterates directly over each element without exposing the index variable.</p>"
+  },
+  {
+    "id": 6128,
+    "text": "Which statement is used to make a decision among multiple values of one expression?",
+    "choices": [
+      "for",
+      "switch",
+      "while",
+      "try"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>switch</strong> is correct because it selects one branch based on the value of an expression.</p>"
+  },
+  {
+    "id": 6129,
+    "text": "Which keyword exits a loop immediately?",
+    "choices": [
+      "continue",
+      "exit",
+      "return",
+      "break"
+    ],
+    "correctIndex": 3,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>break</strong> is correct because it terminates the nearest enclosing loop or switch statement immediately.</p>"
+  },
+  {
+    "id": 6130,
+    "text": "Which keyword skips the current loop iteration and moves to the next one?",
+    "choices": [
+      "skip",
+      "next",
+      "continue",
+      "break"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>continue</strong> is correct because it stops the current iteration and proceeds with the next loop cycle.</p>"
+  },
+  {
+    "id": 6131,
+    "text": "Which of the following is valid Java syntax for an if statement?",
+    "choices": [
+      "if x > 0 { }",
+      "if (x > 0) { }",
+      "if x > 0 then { }",
+      "if {x > 0} { }"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>if (x &gt; 0) { }</strong> is correct because Java requires the condition inside parentheses.</p>"
+  },
+  {
+    "id": 6132,
+    "text": "What is the result of the expression true && false?",
+    "choices": [
+      "true",
+      "false",
+      "0",
+      "Compilation error"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>false</strong> is correct because the logical AND operator returns true only when both operands are true.</p>"
+  },
+  {
+    "id": 6133,
+    "text": "What is the result of the expression true || false?",
+    "choices": [
+      "true",
+      "false",
+      "1",
+      "Compilation error"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>true</strong> is correct because the logical OR operator returns true when at least one operand is true.</p>"
+  },
+  {
+    "id": 6134,
+    "text": "Which operator negates a boolean value?",
+    "choices": [
+      "~",
+      "!",
+      "-",
+      "^"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>!</strong> is correct because logical NOT flips <code>true</code> to <code>false</code> and vice versa.</p>"
+  },
+  {
+    "id": 6135,
+    "text": "Which declaration correctly creates a double variable?",
+    "choices": [
+      "double price = 9.99;",
+      "double price = '9.99';",
+      "decimal price = 9.99;",
+      "Double price = 9,99;"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>double price = 9.99;</strong> is correct because <code>double</code> is the built-in floating-point type and decimal literals use a dot.</p>"
+  },
+  {
+    "id": 6136,
+    "text": "What is printed by System.out.println(\"Java\" + 17);?",
+    "choices": [
+      "Java",
+      "17Java",
+      "Java17",
+      "Compilation error"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>Java17</strong> is correct because using <code>+</code> with a string performs string concatenation.</p>"
+  },
+  {
+    "id": 6137,
+    "text": "Which keyword is used to define a class in Java?",
+    "choices": [
+      "class",
+      "Class",
+      "struct",
+      "define"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>class</strong> is correct because Java defines a class with the lowercase <code>class</code> keyword.</p>"
+  },
+  {
+    "id": 6138,
+    "text": "Which keyword is used to create an object in Java?",
+    "choices": [
+      "alloc",
+      "create",
+      "new",
+      "make"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>new</strong> is correct because it allocates memory and invokes a constructor.</p>"
+  },
+  {
+    "id": 6139,
+    "text": "Which line correctly creates an object of class Car?",
+    "choices": [
+      "Car car = new Car();",
+      "Car car = Car();",
+      "new Car car();",
+      "Car = new Car();"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>Car car = new Car();</strong> is correct because it declares a reference and assigns a new instance created by the constructor call.</p>"
+  },
+  {
+    "id": 6140,
+    "text": "Which syntax correctly defines a method with no return value?",
+    "choices": [
+      "void print() { }",
+      "print() void { }",
+      "method print() { }",
+      "public print() { }"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>void print() { }</strong> is correct because Java places the return type before the method name, and <code>void</code> means no value is returned.</p>"
+  },
+  {
+    "id": 6141,
+    "text": "Which syntax correctly declares a method parameter?",
+    "choices": [
+      "sum(int a, int b)",
+      "sum(a int, b int)",
+      "sum(int: a, int: b)",
+      "sum(a, b int)"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>sum(int a, int b)</strong> is correct because each parameter is declared as type followed by variable name.</p>"
+  },
+  {
+    "id": 6142,
+    "text": "Which statement correctly returns an int value from a method?",
+    "choices": [
+      "return 5;",
+      "returns 5;",
+      "yield 5;",
+      "print 5;"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>return 5;</strong> is correct because Java uses the <code>return</code> keyword to send a value back from a method.</p>"
+  },
+  {
+    "id": 6143,
+    "text": "What happens if a non-void method does not return a value on all execution paths?",
+    "choices": [
+      "It returns null automatically.",
+      "It returns 0 automatically.",
+      "The compiler reports an error.",
+      "The JVM fixes it at runtime."
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>The compiler reports an error</strong> is correct because Java requires every path in a non-void method to return a compatible value.</p>"
+  },
+  {
+    "id": 6144,
+    "text": "Which keyword is used to inherit behavior from an interface?",
+    "choices": [
+      "extends",
+      "implements",
+      "inherits",
+      "instanceof"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>implements</strong> is correct because classes follow interface contracts using the <code>implements</code> keyword.</p>"
+  },
+  {
+    "id": 6145,
+    "text": "Which declaration correctly creates an interface?",
+    "choices": [
+      "class Flyable { }",
+      "interface Flyable { }",
+      "implements Flyable { }",
+      "type Flyable interface { }"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>interface Flyable { }</strong> is correct because Java declares interfaces with the <code>interface</code> keyword.</p>"
+  },
+  {
+    "id": 6146,
+    "text": "Which keyword prevents a class from being subclassed?",
+    "choices": [
+      "static",
+      "sealed",
+      "final",
+      "private"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>final</strong> is correct because a final class cannot be extended.</p>"
+  },
+  {
+    "id": 6147,
+    "text": "Which keyword prevents a method from being overridden?",
+    "choices": [
+      "const",
+      "final",
+      "static",
+      "abstract"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>final</strong> is correct because a final method may be inherited but not overridden in a subclass.</p>"
+  },
+  {
+    "id": 6148,
+    "text": "Which keyword is used to declare a method that has no implementation in an abstract class?",
+    "choices": [
+      "virtual",
+      "interface",
+      "native",
+      "abstract"
+    ],
+    "correctIndex": 3,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>abstract</strong> is correct because abstract methods declare behavior that subclasses must implement.</p>"
+  },
+  {
+    "id": 6149,
+    "text": "Which declaration correctly defines an abstract class?",
+    "choices": [
+      "abstract class Shape { }",
+      "class abstract Shape { }",
+      "Shape abstract class { }",
+      "virtual class Shape { }"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>abstract class Shape { }</strong> is correct because the <code>abstract</code> modifier comes before the <code>class</code> keyword.</p>"
+  },
+  {
+    "id": 6150,
+    "text": "Which statement correctly compares two strings by value in Java?",
+    "choices": [
+      "a == b",
+      "a.equals(b)",
+      "a = b",
+      "compare(a, b)"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>a.equals(b)</strong> is correct because <code>equals</code> compares string contents, while <code>==</code> compares references.</p>"
+  },
+  {
+    "id": 6151,
+    "text": "Which package is imported automatically into every Java source file?",
+    "choices": [
+      "java.util",
+      "java.io",
+      "java.lang",
+      "java.net"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>java.lang</strong> is correct because it is imported implicitly, so classes like <code>String</code> and <code>System</code> are available without an explicit import.</p>"
+  },
+  {
+    "id": 6152,
+    "text": "Which statement correctly imports the List interface?",
+    "choices": [
+      "import java.util.List;",
+      "include java.util.List;",
+      "using java.util.List;",
+      "require java.util.List;"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>import java.util.List;</strong> is correct because Java uses the <code>import</code> keyword for type imports.</p>"
+  },
+  {
+    "id": 6153,
+    "text": "Which statement prints text to the console in Java?",
+    "choices": [
+      "Console.writeLine(\"Hi\");",
+      "System.out.println(\"Hi\");",
+      "print(\"Hi\");",
+      "echo \"Hi\";"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>System.out.println(\"Hi\");</strong> is correct because <code>System.out.println</code> writes a line of text to standard output.</p>"
+  },
+  {
+    "id": 6154,
+    "text": "Which statement reads as 'x is greater than or equal to y'?",
+    "choices": [
+      "x => y",
+      "x >= y",
+      "x >< y",
+      "x =< y"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>x &gt;= y</strong> is correct because Java uses <code>&gt;=</code> for greater-than-or-equal comparison.</p>"
+  },
+  {
+    "id": 6155,
+    "text": "Which statement reads as 'x is not equal to y'?",
+    "choices": [
+      "x <> y",
+      "x != y",
+      "x ~= y",
+      "x not y"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>x != y</strong> is correct because Java uses <code>!=</code> for inequality comparison.</p>"
+  },
+  {
+    "id": 6156,
+    "text": "Which keyword is used to handle exceptions?",
+    "choices": [
+      "try",
+      "catch",
+      "throw",
+      "All of the above"
+    ],
+    "correctIndex": 3,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>All of the above</strong> is correct because Java exception handling commonly involves <code>try</code>, <code>catch</code>, and <code>throw</code>.</p>"
+  },
+  {
+    "id": 6157,
+    "text": "Which block is guaranteed to run whether or not an exception occurs?",
+    "choices": [
+      "try",
+      "catch",
+      "finally",
+      "throw"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>finally</strong> is correct because it is intended for cleanup logic that should run after the try-catch flow completes.</p>"
+  },
+  {
+    "id": 6158,
+    "text": "Which statement explicitly throws an exception object?",
+    "choices": [
+      "throws new IOException();",
+      "throw new IOException();",
+      "catch new IOException();",
+      "raise new IOException();"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>throw new IOException();</strong> is correct because <code>throw</code> is the statement used to raise an exception instance.</p>"
+  },
+  {
+    "id": 6159,
+    "text": "Where is the throws clause written in a method declaration?",
+    "choices": [
+      "Before the method name",
+      "Inside the parameter list",
+      "After the parameter list",
+      "After the method body"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>After the parameter list</strong> is correct because a Java method places <code>throws</code> between the parameter list and the method body.</p>"
+  },
+  {
+    "id": 6160,
+    "text": "Which declaration is correct for a method that may throw IOException?",
+    "choices": [
+      "void read() throw IOException { }",
+      "void read() throws IOException { }",
+      "void read() thrown IOException { }",
+      "throws IOException void read() { }"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>void read() throws IOException { }</strong> is correct because the checked exception appears in a <code>throws</code> clause after the parameter list.</p>"
+  },
+  {
+    "id": 6161,
+    "text": "Which keyword is used to define a package at the top of a Java file?",
+    "choices": [
+      "package",
+      "namespace",
+      "module",
+      "import"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>package</strong> is correct because Java source files declare their package with the <code>package</code> keyword.</p>"
+  },
+  {
+    "id": 6162,
+    "text": "Where must the package declaration appear in a Java source file if present?",
+    "choices": [
+      "At the end of the file",
+      "Before the class body but after all methods",
+      "As the first non-comment statement",
+      "Anywhere before main"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>As the first non-comment statement</strong> is correct because the package declaration must come before imports and type declarations.</p>"
+  },
+  {
+    "id": 6163,
+    "text": "Which statement correctly declares a one-line comment in Java?",
+    "choices": [
+      "# comment",
+      "// comment",
+      "<!-- comment -->",
+      "/*/ comment"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>// comment</strong> is correct because double slashes start a single-line comment in Java.</p>"
+  },
+  {
+    "id": 6164,
+    "text": "Which syntax starts a block comment in Java?",
+    "choices": [
+      "//",
+      "#",
+      "/*",
+      "<!--"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>/*</strong> is correct because block comments begin with <code>/*</code> and end with <code>*/</code>.</p>"
+  },
+  {
+    "id": 6165,
+    "text": "Which statement correctly declares two int variables on one line?",
+    "choices": [
+      "int a, b;",
+      "int a; b;",
+      "a, b int;",
+      "int: a, b;"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>int a, b;</strong> is correct because Java allows multiple variables of the same type to be declared in a single statement.</p>"
+  },
+  {
+    "id": 6166,
+    "text": "Which of these declarations uses type inference correctly in Java?",
+    "choices": [
+      "var count = 10;",
+      "var count;",
+      "var = 10;",
+      "int var count = 10;"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>var count = 10;</strong> is correct because local variable type inference requires an initializer.</p>"
+  },
+  {
+    "id": 6167,
+    "text": "Where can var be used in Java?",
+    "choices": [
+      "For instance fields",
+      "For method return types",
+      "For local variables with initializers",
+      "For class names"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>For local variables with initializers</strong> is correct because <code>var</code> is limited to local variable declarations where the type can be inferred.</p>"
+  },
+  {
+    "id": 6168,
+    "text": "Which statement correctly declares a variable that can hold large whole numbers?",
+    "choices": [
+      "long total = 100000L;",
+      "long total = 100000;",
+      "Both A and B",
+      "long total = \"100000\";"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>Both A and B</strong> is correct because both assignments are valid when the integer literal fits in range; the <code>L</code> suffix is only required when the literal itself must be a long.</p>"
+  },
+  {
+    "id": 6169,
+    "text": "Which suffix marks a long literal in Java?",
+    "choices": [
+      "F",
+      "D",
+      "L",
+      "S"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>L</strong> is correct because Java long literals may use the <code>L</code> or <code>l</code> suffix, with uppercase preferred for clarity.</p>"
+  },
+  {
+    "id": 6170,
+    "text": "Which suffix marks a float literal in Java?",
+    "choices": [
+      "F",
+      "L",
+      "I",
+      "C"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>F</strong> is correct because Java uses <code>F</code> or <code>f</code> to mark float literals.</p>"
+  },
+  {
+    "id": 6171,
+    "text": "Which cast correctly converts a double named price to an int?",
+    "choices": [
+      "int(price)",
+      "(int) price",
+      "price as int",
+      "cast(int, price)"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>(int) price</strong> is correct because Java uses parenthesized type names for explicit casts.</p>"
+  },
+  {
+    "id": 6172,
+    "text": "What happens when a double is cast to an int in Java?",
+    "choices": [
+      "It rounds to the nearest whole number.",
+      "It truncates the fractional part.",
+      "It becomes a string.",
+      "It causes a compile error."
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>It truncates the fractional part</strong> is correct because Java drops everything after the decimal point during a narrowing cast to <code>int</code>.</p>"
+  },
+  {
+    "id": 6173,
+    "text": "Which statement correctly increments x by 1?",
+    "choices": [
+      "x =+ 1;",
+      "x++;",
+      "++ = x;",
+      "x := x + 1;"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>x++;</strong> is correct because it increments the variable by one using Java's post-increment operator.</p>"
+  },
+  {
+    "id": 6174,
+    "text": "Which statement is equivalent to x = x + 5?",
+    "choices": [
+      "x =+ 5;",
+      "x += 5;",
+      "x++5;",
+      "x := 5;"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>x += 5;</strong> is correct because it is Java's compound assignment operator for adding and assigning in one step.</p>"
+  },
+  {
+    "id": 6175,
+    "text": "Which keyword is used to create a subclass constructor that calls another constructor in the same class?",
+    "choices": [
+      "this",
+      "super",
+      "base",
+      "parent"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>this</strong> is correct because <code>this(...)</code> calls another constructor in the same class.</p>"
+  },
+  {
+    "id": 6176,
+    "text": "Where must a call to this(...) or super(...) appear inside a constructor?",
+    "choices": [
+      "Anywhere in the constructor body",
+      "As the last statement",
+      "As the first statement",
+      "Only inside an if block"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>As the first statement</strong> is correct because constructor chaining calls must be the first statement in a constructor.</p>"
+  },
+  {
+    "id": 6177,
+    "text": "Which statement correctly declares a constructor for class User?",
+    "choices": [
+      "void User() { }",
+      "constructor User() { }",
+      "User() { }",
+      "new User() { }"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>User() { }</strong> is correct because constructors use the class name and have no return type.</p>"
+  },
+  {
+    "id": 6178,
+    "text": "Which statement is true about constructors in Java?",
+    "choices": [
+      "They must declare a return type.",
+      "They can return any object.",
+      "They have the same name as the class.",
+      "They are always static."
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>They have the same name as the class</strong> is correct because that is how Java identifies constructors.</p>"
+  },
+  {
+    "id": 6179,
+    "text": "Which keyword makes a member belong to the class rather than individual objects?",
+    "choices": [
+      "final",
+      "public",
+      "static",
+      "shared"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>static</strong> is correct because static members are associated with the class itself.</p>"
+  },
+  {
+    "id": 6180,
+    "text": "How do you access a static method named parse on class Integer?",
+    "choices": [
+      "new Integer().parse()",
+      "Integer.parse()",
+      "Integer->parse()",
+      "parse.Integer()"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>Integer.parse()</strong> is correct because static members are accessed through the class name.</p>"
+  },
+  {
+    "id": 6181,
+    "text": "Which statement correctly creates an ArrayList of strings?",
+    "choices": [
+      "ArrayList<String> names = new ArrayList<>();",
+      "ArrayList names<String> = new ArrayList();",
+      "List<String> names = new ArrayList<String>(); extra",
+      "ArrayList<String> names = ArrayList<>();"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;();</strong> is correct because it uses valid generic type syntax and the diamond operator.</p>"
+  },
+  {
+    "id": 6182,
+    "text": "Which pair of symbols encloses generic type arguments in Java?",
+    "choices": [
+      "()",
+      "[]",
+      "<>",
+      "{}"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>&lt;&gt;</strong> is correct because Java generics use angle brackets for type arguments.</p>"
+  },
+  {
+    "id": 6183,
+    "text": "Which declaration correctly creates a List of Integer values?",
+    "choices": [
+      "List<int> values = new ArrayList<>();",
+      "List<Integer> values = new ArrayList<>();",
+      "List<number> values = new ArrayList<>();",
+      "List<Integer> values = new List<>();"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>List&lt;Integer&gt; values = new ArrayList&lt;&gt;();</strong> is correct because generics use reference types like <code>Integer</code>, not primitives like <code>int</code>.</p>"
+  },
+  {
+    "id": 6184,
+    "text": "Which keyword is used in a lambda expression parameter list and body separator?",
+    "choices": [
+      "->",
+      "=>",
+      "::",
+      ":"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>-&gt;</strong> is correct because Java lambda expressions separate parameters from the body with the arrow operator.</p>"
+  },
+  {
+    "id": 6185,
+    "text": "Which is a valid lambda expression that returns x + 1?",
+    "choices": [
+      "x => x + 1",
+      "(x) -> x + 1",
+      "function(x) x + 1",
+      "x -> return x + 1"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>(x) -&gt; x + 1</strong> is correct because it uses valid Java lambda syntax with one expression body.</p>"
+  },
+  {
+    "id": 6186,
+    "text": "Which symbol is used for a method reference in Java?",
+    "choices": [
+      "->",
+      "::",
+      "=>",
+      ".:"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>::</strong> is correct because Java method references use a double colon.</p>"
+  },
+  {
+    "id": 6187,
+    "text": "Which statement correctly creates a two-dimensional int array with 2 rows and 3 columns?",
+    "choices": [
+      "int[][] grid = new int[2][3];",
+      "int[2][3] grid = new int[][];",
+      "int[][] grid = new int(2)(3);",
+      "int grid[][] = new [2][3]int;"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>int[][] grid = new int[2][3];</strong> is correct because Java places the dimensions after the type during allocation.</p>"
+  },
+  {
+    "id": 6188,
+    "text": "What is the default value of an uninitialized boolean array element?",
+    "choices": [
+      "false",
+      "true",
+      "0",
+      "null"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>false</strong> is correct because boolean array elements default to <code>false</code>.</p>"
+  },
+  {
+    "id": 6189,
+    "text": "What is the default value of an uninitialized reference array element?",
+    "choices": [
+      "\"\"",
+      "undefined",
+      "null",
+      "0"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>null</strong> is correct because object reference array elements default to <code>null</code>.</p>"
+  },
+  {
+    "id": 6190,
+    "text": "Which statement correctly checks whether a reference named user is null?",
+    "choices": [
+      "if (user = null)",
+      "if (user == null)",
+      "if (user.equals(null))",
+      "if null(user)"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>if (user == null)</strong> is correct because Java uses <code>== null</code> to test whether a reference points to no object.</p>"
+  },
+  {
+    "id": 6191,
+    "text": "Which statement is the correct ternary operator syntax?",
+    "choices": [
+      "condition ? a : b",
+      "condition : a ? b",
+      "if condition then a else b",
+      "condition ?? a :: b"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>condition ? a : b</strong> is correct because the ternary operator uses question mark and colon in that order.</p>"
+  },
+  {
+    "id": 6192,
+    "text": "What is the result of 5 % 2 in Java?",
+    "choices": [
+      "2",
+      "2.5",
+      "1",
+      "0"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>1</strong> is correct because the modulus operator returns the remainder after division.</p>"
+  },
+  {
+    "id": 6193,
+    "text": "Which keyword is used to stop a method and send control back to the caller?",
+    "choices": [
+      "break",
+      "return",
+      "continue",
+      "exit"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>return</strong> is correct because it ends the method execution and optionally provides a value back to the caller.</p>"
+  },
+  {
+    "id": 6194,
+    "text": "Which statement correctly defines a for loop?",
+    "choices": [
+      "for i = 0; i < 5; i++ { }",
+      "for (int i = 0; i < 5; i++) { }",
+      "for (i < 5; i++) { }",
+      "foreach (int i = 0; i < 5; i++) { }"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>for (int i = 0; i &lt; 5; i++) { }</strong> is correct because Java for loops require parentheses with initialization, condition, and update expressions separated by semicolons.</p>"
+  },
+  {
+    "id": 6195,
+    "text": "Which statement correctly defines a while loop?",
+    "choices": [
+      "while x < 5 { }",
+      "while (x < 5) { }",
+      "while x < 5 then { }",
+      "while: (x < 5) { }"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>while (x &lt; 5) { }</strong> is correct because Java while loops require the condition inside parentheses.</p>"
+  },
+  {
+    "id": 6196,
+    "text": "Which statement correctly defines a do-while loop?",
+    "choices": [
+      "do { } while (x < 5);",
+      "do (x < 5) { }",
+      "while { } do (x < 5);",
+      "do while (x < 5) { }"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>do { } while (x &lt; 5);</strong> is correct because Java do-while syntax places the condition after the block and ends the statement with a semicolon.</p>"
+  },
+  {
+    "id": 6197,
+    "text": "Which value can a byte variable store directly?",
+    "choices": [
+      "200",
+      "127",
+      "1000",
+      "\"127\""
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>127</strong> is correct because the byte range is from -128 to 127.</p>"
+  },
+  {
+    "id": 6198,
+    "text": "Which primitive type is best for storing a single true-or-false flag?",
+    "choices": [
+      "char",
+      "String",
+      "boolean",
+      "byte"
+    ],
+    "correctIndex": 2,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>boolean</strong> is correct because it is Java's primitive type for logical true-or-false values.</p>"
+  },
+  {
+    "id": 6199,
+    "text": "Which keyword is used to define an enum in Java?",
+    "choices": [
+      "enumeration",
+      "enum",
+      "constant",
+      "flags"
+    ],
+    "correctIndex": 1,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>enum</strong> is correct because Java defines enumerated types with the <code>enum</code> keyword.</p>"
+  },
+  {
+    "id": 6200,
+    "text": "Which declaration correctly defines an enum named Day?",
+    "choices": [
+      "enum Day { MONDAY, TUESDAY }",
+      "Enum Day = { MONDAY, TUESDAY }",
+      "enum Day = (MONDAY, TUESDAY)",
+      "days Day { MONDAY, TUESDAY }"
+    ],
+    "correctIndex": 0,
+    "topic": "JavaSyntax",
+    "explanation": "<p><strong>enum Day { MONDAY, TUESDAY }</strong> is correct because Java enum constants are declared in braces after the enum name.</p>"
+  }
+]
